@@ -1,0 +1,72 @@
+@import "../../assets/styles/variables.scss";
+
+.footer {
+  background-image: url("../../assets/images/bottom-background.png");
+  background-size: 100% 50%;
+  padding-top: 78px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  margin-bottom: 68px;
+}
+
+.footerTopBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.linksContainer {
+  display: flex;
+  color: $white;
+  justify-content: center;
+  margin-top: 24px;
+  align-items: center;
+  width: 100%;
+  padding: 0 48px;
+}
+
+.linksBlock {
+  display: flex;
+  flex-direction: column;
+  line-height: 34px;
+  letter-spacing: 0.05em;
+}
+
+.linksBlockRightAlign {
+  text-align: right;
+}
+
+.linksBlockLeftAlign {
+  text-align: left;
+  margin-right: 112px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+  margin-top: 38px;
+}
+
+.copyright {
+  color: $darkGray;
+  margin-top: 44px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.footerLine {
+  color: $darkGray;
+  background-color: $darkGray;
+  margin-top: 24px;
+  border: none;
+  height: 1px;
+  width: 100%;
+}

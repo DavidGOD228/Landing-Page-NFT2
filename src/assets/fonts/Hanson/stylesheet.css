@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Hanson';
+    src: local('Hanson'),
+    url('Hanson-Bold.otf') format('opentype'),
+    url('Hanson-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
