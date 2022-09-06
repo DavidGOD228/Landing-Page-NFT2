@@ -1,0 +1,63 @@
+@import "../../../assets/styles/variables";
+
+.topBlock {
+  background-image: url("../../../assets/images/top-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.mainText {
+  font-family: "Hanson", sans-serif;
+  color: $green;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding-top: 105px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 300px;
+  letter-spacing: 0.05em;
+  line-height: 120%;
+}
+
+.morphImage {
+  width: 375px;
+  margin-top: -48px;
+}
+
+.builtOnContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 85px;
+  width: 100%;
+  margin-left: -8px;
+}
+
+.builtOnLine {
+  width: 1px;
+  min-height: 100%;
+  background: #737373;
+}
+
+.builtOn {
+  font-family: 'Hanson', sans-serif;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #737373;
+  margin-bottom: 12px;
+}
+
+.builtBy {
+  display: flex;
+  justify-content: space-between;
+  width: 163.11px;
+
+}
+

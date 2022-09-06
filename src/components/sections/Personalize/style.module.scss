@@ -1,0 +1,55 @@
+.container {
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+.sliderNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.sliderCount {
+  font-family: 'Hanson', sans-serif;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.activeSlide {
+  color: #fff;
+}
+
+.title {
+  font-size: 32px;
+  letter-spacing: 0.03em;
+}
+
+
+.slider {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.sliderItem {
+  width: 210px;
+  text-align: left;
+  margin-right: 38px;
+}
+
+.slider > * {
+  margin-right: 38px;
+  margin-bottom: 60px;
+}
+
+.personalizeContainer {
+  background-image: url("../../../assets/images/personalize.png");
+  background-repeat: no-repeat;
+  height: 843px;
+  margin-top: -86px;
+  padding: 141px 20px 0;
+}
+
