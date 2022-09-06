@@ -4,6 +4,7 @@ import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
 import ListItem from './components/ListItem/ListItem'
+import Dot from '../../common/Dot/Dot'
 
 import classes from './style.module.scss'
 
@@ -11,17 +12,17 @@ const list = [
   {
     id: 1,
     color: '#ACE402',
-    text: 'Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.'
+    text: <p className={classes.listParagraph}>Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo<Dot/></p>
   },
   {
     id: 2,
     color: '#959AA3',
-    text: 'Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.'
+    text: <p className={classes.listParagraph}>Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo<Dot/></p>
   },
   {
     id: 3,
     color: '#FFF',
-    text: 'Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.'
+    text: <p className={classes.listParagraph}>Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo<Dot/></p>
   },
 ]
 
@@ -35,13 +36,10 @@ const Freedom = () => {
             of ACTION </GreenText></p>
         </Title>
         <Paragraph className={classes.paragraph}>
-          Metamorph is built on putting the power of choice into the hands of players. All in game
-          actions are governed by you, with no artificial barriers. We empower you to create your
-          unique story by participating in a world where we expect the unexpected. From moral
-          actions
-          to investments, crusades, businesses operations and gambling – you have the choice play
-          and
-          earn in a style you enjoy.
+          Metamorph is built on putting the power of choice into the hands of players<Dot/> All in game
+          actions are governed by you, with no artificial barriers<Dot/> We empower you to create your
+          unique story by participating in a world where we expect the unexpected<Dot/> From moral
+          actions to investments, crusades, businesses operations and gambling – you have the choice play and earn in a style you enjoy<Dot/>
         </Paragraph>
       </div>
       <div className={classes.listContainer}>

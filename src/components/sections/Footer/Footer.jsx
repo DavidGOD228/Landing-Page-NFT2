@@ -4,6 +4,7 @@ import FooterLogo from '../../../assets/images/footer-logo.svg'
 import Twitter from '../../../assets/images/twitter.svg'
 import Telegram from '../../../assets/images/telegram.svg'
 import Discord from '../../../assets/images/discord.svg'
+import Dot from '../../common/Dot/Dot'
 
 import classes from './style.module.scss'
 
@@ -30,8 +31,8 @@ const Footer = () => {
         <img src={Discord} alt=""/>
       </div>
       <p className={classes.copyright}>
-        Copyright © 2022 Metamorph Inc. <br/>
-        All rights reserved.</p>
+        Copyright © 2022 Metamorph Inc<Dot/> <br/>
+        All rights reserved<Dot/></p>
     </footer>
   )
 }

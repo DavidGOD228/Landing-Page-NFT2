@@ -6,7 +6,7 @@ const ListItem = ({color, text}) => {
   return (
     <div className={classes.list}>
       <span className={classes.circle} style={{backgroundColor: color}}/>
-      <p className={classes.paragraph}>{text}</p>
+      {text}
     </div>
   )
 }
