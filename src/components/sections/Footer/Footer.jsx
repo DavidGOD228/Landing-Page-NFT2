@@ -1,9 +1,9 @@
 import React from 'react'
 
-import FooterLogo from '../../assets/images/footer-logo.svg'
-import Twitter from '../../assets/images/twitter.svg'
-import Telegram from '../../assets/images/telegram.svg'
-import Discord from '../../assets/images/discord.svg'
+import FooterLogo from '../../../assets/images/footer-logo.svg'
+import Twitter from '../../../assets/images/twitter.svg'
+import Telegram from '../../../assets/images/telegram.svg'
+import Discord from '../../../assets/images/discord.svg'
 
 import classes from './style.module.scss'
 

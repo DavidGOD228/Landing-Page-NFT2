@@ -1,0 +1,52 @@
+.title {
+  font-family: 'Hanson', sans-serif;
+  font-size: 36px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-left: 20px;
+  width: 312px;
+  margin-bottom: 36px;
+  color: #FFFFFF;
+}
+
+.privacyContainer {
+  position: relative;
+  z-index: -3;
+}
+
+.privacyContainer:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 193px;
+  left: 0;
+  bottom: -79px;
+  background-image: url("../../../assets/images/vector1.png");
+}
+
+.privacyImage {
+  margin-bottom: 69px;
+}
+
+.confidenceContainer {
+  position: relative;
+}
+
+.smile {
+  position: absolute;
+  right: 35px;
+  top: 0;
+}
+
+.confidenceContainer:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 279px;
+  left: 0;
+  bottom: -105px;
+  background-image: url("../../../assets/images/vector2.png");
+}
+
+
+

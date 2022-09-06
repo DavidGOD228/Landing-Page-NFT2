@@ -1,9 +1,9 @@
 import React from 'react'
 
-import classes from './style.module.scss'
+import Logo from '../../../assets/images/logo.svg'
+import Hamburger from '../../../assets/images/hamburger.svg'
 
-import Logo from '../../assets/images/logo.svg'
-import Hamburger from '../../assets/images/hamburger.svg'
+import classes from './style.module.scss'
 
 const Header = () => {
   return (

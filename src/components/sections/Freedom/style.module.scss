@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+}
+
+.topContent {
+  padding: 0 20px;
+}
+
+.chineseText {
+  font-family: 'DFLiKingHei1B', sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.total {
+  letter-spacing: 0.03em;
+}
+
+.paragraph {
+  display: block;
+  font-size: 13px;
+  margin-top: 29px;
+  padding-left: 3px;
+}
+
+.title {
+  margin-left: 30px;
+}
+
+.greenText {
+  letter-spacing: 0.03em;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  background-image: url("../../../assets/images/face.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 571px;
+  padding: 0 20px;
+}
+
+.listContainer:before {
+  content: "";
+  left: 0;
+  position: absolute;
+  bottom: 151px;
+  width: 100%;
+  height: 255px;
+  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+}
