@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import Paragraph from '../Paragraph/Paragraph'
-
 import ArrowUp from '../../../assets/images/arrow-up.svg'
 import ArrowDown from '../../../assets/images/arrow-down.svg'
 
@@ -24,7 +22,7 @@ const AccordionWithIcon = ({icon, title, subtitle}) => {
             <img className={classes.arrow} src={ArrowDown} alt="Arrow Down"/>
         }
       </div>
-      {isOpen && <Paragraph className={classes.subtitle}>{subtitle}</Paragraph>}
+      {isOpen && subtitle}
     </div>
   )
 }

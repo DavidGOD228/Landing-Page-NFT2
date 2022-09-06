@@ -2,6 +2,7 @@ import React from 'react'
 
 import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
+import Dot from '../../common/Dot/Dot'
 
 import personImage from '../../../assets/images/your-morph.png'
 
@@ -118,14 +119,14 @@ const YourMorph = () => {
           <div className={classes.birth}>
             <h5 className={classes.title}>Birth</h5>
             <h4 className={classes.description}>
-              23.04.1995
+              23<Dot/>04<Dot/>1995
             </h4>
           </div>
           <div className={classes.parameters}>
             <h5 className={classes.title}>Parametres</h5>
             <div className={classes.row}>
               <h4 className={classes.description}>
-                1.86 cm
+                1<Dot/>86 cm
               </h4>
               <h4 style={{marginLeft: 16}} className={classes.description}>
                 85 kg

@@ -3,6 +3,7 @@ import React from 'react'
 import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
+import Dot from '../../common/Dot/Dot'
 
 import GrayLine from '../../../assets/images/grayLine.png'
 
@@ -17,9 +18,9 @@ const FirstLiveSimulator = () => {
       </Title>
       <Paragraph className={classes.paragraph}>Metamorph is an open-world exploration, NFT creature
         collector and life simulator
-        game built on the Polygon Blockchain, releasing on IOS and Android in 2023. Play-to-earn in
+        game built on the Polygon Blockchain, releasing on IOS and Android in 2023<Dot/> Play-to-earn in
         a graphically-rich sci-fi adventure and life builder that allows you to feel the life inside
-        the game.
+        the game<Dot/>
       </Paragraph>
       <p className={classes.backgroundText}>
         IMMERSE YOURSELF

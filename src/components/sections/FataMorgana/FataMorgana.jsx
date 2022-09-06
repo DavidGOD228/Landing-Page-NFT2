@@ -4,6 +4,7 @@ import Title from '../../common/Title/Title'
 
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
+import Dot from '../../common/Dot/Dot'
 
 import City from '../../../assets/images/city-circle.png'
 import GreenCity from '../../../assets/images/greenCity.png'
@@ -22,10 +23,10 @@ export const FataMorgana = () => {
         <span className={classes.code}>D2128NDJK376LAZXWM3NK7</span>
         <Paragraph>
           Metamorph is built on putting the power of choice into the hands of players All in game
-          actions are governed by you, with no artificial barriers. We empower you to create your
+          actions are governed by you, with no artificial barriers<Dot/> We empower you to create your
           unique story by participating in a world where we expect the unexpected. From moral
           actions to investments, crusades, businesses operations and gambling – you have the choice
-          play and earn in a style you enjoy.
+          play and earn in a style you enjoy<Dot/>
         </Paragraph>
       </div>
       <table>
