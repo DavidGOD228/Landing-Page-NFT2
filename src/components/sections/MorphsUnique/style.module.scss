@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+}
+
+.content {
+  padding: 0 15px 0 25px;
+}
+
+.title {
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  margin-left: 21px;
+}
+
+.paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 160%;
+  color: #9BA1AA;
+  margin-top: 18px;
+}
+
+.icons {
+  display: flex;
+  padding: 0 14px 28px;
+  align-items: flex-end;
+  margin-top: 24px;
+}
+
+.inactiveImage {
+  margin-bottom: 6px;
+}
+
+.morphImage {
+  width: 100%;
+}
+
+.container:after {
+  content: "";
+  position: absolute;
+  height: 240px;
+  bottom: -63px;
+  left: 0;
+  right: 0;
+  background-image: url("../../../assets/images/vector4.svg");
+}

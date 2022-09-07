@@ -5,11 +5,27 @@ import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
 import Dot from '../../common/Dot/Dot'
+import Table from '../../common/Table/Table'
 
 import City from '../../../assets/images/city-circle.png'
 import GreenCity from '../../../assets/images/greenCity.png'
 
 import classes from './style.module.scss'
+
+const data = [
+  {
+    amount: '15k',
+    text: 'HOUSES',
+  },
+  {
+    amount: '200k',
+    text: 'APARTMENTS',
+  },
+  {
+    amount: '15k',
+    text: 'HOUSES',
+  },
+]
 
 export const FataMorgana = () => {
   return (
@@ -24,20 +40,12 @@ export const FataMorgana = () => {
         <Paragraph>
           Metamorph is built on putting the power of choice into the hands of players All in game
           actions are governed by you, with no artificial barriers<Dot/> We empower you to create your
-          unique story by participating in a world where we expect the unexpected. From moral
+          unique story by participating in a world where we expect the unexpected<Dot/> From moral
           actions to investments, crusades, businesses operations and gambling – you have the choice
           play and earn in a style you enjoy<Dot/>
         </Paragraph>
       </div>
-      <table>
-        <tbody>
-        <tr>
-          <td><span className={classes.amount}>15k</span>HOUSES</td>
-          <td><span className={classes.amount}>200k</span>APARTMENTS</td>
-          <td><span className={classes.amount}>15k</span>HOUSES</td>
-        </tr>
-        </tbody>
-      </table>
+      <Table style={{margin: "36px auto 0", width: 335}} data={data}/>
       <div className={classes.cityContainer}>
         <p className={classes.cityText}>
           an adventure that will take your breath away

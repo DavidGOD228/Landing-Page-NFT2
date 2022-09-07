@@ -27,7 +27,6 @@
   letter-spacing: 0.03em;
 }
 
-
 .slider {
   display: flex;
   align-items: center;
@@ -48,8 +47,20 @@
 .personalizeContainer {
   background-image: url("../../../assets/images/personalize.png");
   background-repeat: no-repeat;
+  position: relative;
   height: 843px;
-  margin-top: -86px;
-  padding: 141px 20px 0;
+  margin-top: -147px;
+  padding: 202px 20px 0;
+}
+
+.personalizeContainer:after {
+  content: "";
+  position: absolute;
+  height: 215px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+  transform: rotate(-180deg);
 }
 

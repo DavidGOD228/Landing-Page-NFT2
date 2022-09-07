@@ -64,7 +64,7 @@ const YourMorph = () => {
 
   return (
     <div className={classes.container}>
-      <div style={{padding: "0 22px"}}>
+      <div style={{padding: "0 20px"}}>
         <Title>
           <GreenText>Unique CyberDNA </GreenText>
           of your Morph

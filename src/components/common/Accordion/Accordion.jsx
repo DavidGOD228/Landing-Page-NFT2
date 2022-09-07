@@ -16,7 +16,7 @@ const Accordion = ({title, subtitle}) => {
             <img src={ArrowDown} alt="Arrow Down"/>
         }
       </div>
-      {isOpen && <p className={classes.subtitle}>{subtitle}</p>}
+      {isOpen && subtitle}
     </div>
   )
 }

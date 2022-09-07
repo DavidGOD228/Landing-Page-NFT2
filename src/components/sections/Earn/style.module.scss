@@ -1,10 +1,44 @@
 .container {
-  background: #1C1C1F;
-  padding: 61px 20px 150px;
+  position: relative;
+  margin-top: 43px;
+}
+
+.wrapper {
+  background-color: #1c1c1f;
+  margin-top: 55px;
+  padding: 0 20px 150px;
 }
 
 .cards {
   display: block;
   width: 355px;
   margin: 83px auto 0;
+}
+
+.container:before {
+  content: "";
+  top: 16px;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height: 326px;
+  background-image: url("../../../assets/images/vector3.svg");
+  z-index: -3;
+}
+
+.coin {
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.title {
+  width: 305px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 160%;
+  color: #9BA1AA;
 }
