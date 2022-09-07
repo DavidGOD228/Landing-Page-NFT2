@@ -1,0 +1,23 @@
+.container {
+  padding: 96px 0 67px;
+}
+.title {
+  font-family: 'Hanson', sans-serif;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-left: 36px;
+}
+
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  align-items: center;
+  justify-content: center;
+  width: 253px;
+  margin: 29px 0 0 71px;
+
+}

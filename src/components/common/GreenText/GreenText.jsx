@@ -2,9 +2,9 @@ import React from 'react'
 
 import classes from './style.module.scss'
 
-const GreenText = ({children, classname}) => {
+const GreenText = ({children, classname, style}) => {
   return (
-    <span className={`${classes.greenText} ${classname}`}>{children}</span>
+    <span style={style} className={`${classes.greenText} ${classname}`}>{children}</span>
   )
 }
 
