@@ -1,3 +1,4 @@
+// common
 .containerTypesCards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -5,16 +6,40 @@
 
 .morphBlock {
   display: flex;
+  height: min-content;
   gap: 30px;
   justify-content: flex-start;
   align-items: center;
 }
 
-.classiqueContent {
-  display: flex;
+.title {
+  font-family: 'Hanson', sans-serif;
+  font-size: 32px;
+  height: 38px;
+  text-align: center;
+  margin-left: 12px;
+  color: #FFFFFF;
+}
+
+.descr {
+  margin-top: 16px;
+  width: 70%;
+}
+
+.idImage {
+  margin-top: 23px;
+  width: 100%;
+  max-width: 265px;
+}
+
+.contentBlock {
+  height: 750px;
+  display: grid;
+  grid-template-rows: auto 25% auto;
   flex-direction: column;
 }
 
+// Classique or Miho
 .classiqueParagraph {
   display: flex;
   align-items: center;
@@ -26,43 +51,23 @@
   justify-content: flex-end;
 }
 
-.title {
-  font-family: 'Hanson', sans-serif;
-  font-size: 32px;
-  text-align: center;
-  margin-left: 12px;
-  color: #FFFFFF;
-}
-
+// Eternal or Henri
 .mihoText {
-  width: 207px;
   margin-top: 16px;
   text-align: left;
-}
-
-.mihoMainImage {
-  margin-top: 36px;
 }
 
 .eternalBlock {
   margin-left: auto;
 }
 
-.eternalContent {
-  display: flex;
-  flex-direction: column;
-}
-
 .henriText {
-  width: 224px;
-  margin-top: 16px;
   text-align: right;
+  margin-left: auto;
 }
 
-.idImage {
-  margin-top: 23px;
-  width: 100%;
-  max-width: 265PX;
+.idImageHenri {
+  margin-left: auto;
 }
 
 .eternalTitle {
