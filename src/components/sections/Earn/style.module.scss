@@ -3,7 +3,6 @@
 
 .container {
   position: relative;
-  margin-top: 43px;
 }
 
 .wrapper {
@@ -80,9 +79,13 @@
   }
 }
 
+.tableWrapper {
+  padding: 0 130px;
+  border-top: 1px solid #343A3D;
+  border-bottom: 1px solid #343A3D;
+}
+
 .table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border-top: 1px solid #343A3D;
-  border-bottom: 1px solid #343A3D;
 }

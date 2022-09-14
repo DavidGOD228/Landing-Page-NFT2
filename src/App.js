@@ -16,6 +16,7 @@ import Wizard from './components/sections/Wizard/Wizard'
 import Foto from './components/sections/Foto/Foto'
 import CombinedGame from './components/sections/CombinedGame/CombinedGame'
 import Roadmap from './components/sections/Roadmap/Roadmap'
+import TypesCards from './components/sections/TypesCards/TypesCards'
 import {useWindowWidth} from "./hooks/useWindowWidth";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Personalize/>
       <Earn/>
       <MorphId/>
+      <TypesCards/>
       <YourMorph/>
       <MorphsUnique/>
       <Roadmap/>

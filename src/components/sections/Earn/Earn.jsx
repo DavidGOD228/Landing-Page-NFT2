@@ -37,17 +37,13 @@ const Earn = () => {
   return (
     <>
       <div className={classes.container}>
-        {
-          !isDesktop && <img className={classes.coin} src={Coin} alt=""/>
-        }
+        {!isDesktop && <img className={classes.coin} src={Coin} alt=""/>}
         <div className={classes.wrapper}>
           <div className={classes.contentWrapper}>
             <div>
               <Title classname={classes.title}>
                 <GreenText>EARN</GreenText>
-                {
-                  isDesktop && <span className={classes.chineseText}>賺 邊玩邊玩</span>
-                }
+                {isDesktop && <span className={classes.chineseText}>賺 邊玩邊玩</span>}
                 <br/> WHILE PLAY
               </Title>
               <Paragraph className={classes.paragraph}>Earn crypto in MM tokens as in-game rewards through
@@ -58,20 +54,20 @@ const Earn = () => {
             }
           </div>
           <div style={{marginTop: 40}}>
-            {
-              !isDesktop && data.map(({title, subtitle}) => <Accordion title={title} subtitle={subtitle}/>)
-            }
+            {!isDesktop && data.map(({title, subtitle}) => 
+                <Accordion title={title} subtitle={subtitle}/>)}
           </div>
-          {
-            !isDesktop && <img className={classes.cards} src={Cards} alt=""/>
-          }
+          {!isDesktop && <img className={classes.cards} src={Cards} alt=""/>}
         </div>
       </div>
       {
-        isDesktop && <div className={classes.table}>
-          {
-            data.map(({title, subtitle}) => <Column title={title} subtitle={subtitle}/>)
-          }
+        isDesktop &&
+        <div className={classes.tableWrapper}>
+          <div className={classes.container}>
+            <div className={classes.table}>
+              {data.map(({title, subtitle}) => <Column title={title} subtitle={subtitle}/>)}
+            </div>
+          </div>
         </div>
       }
     </>

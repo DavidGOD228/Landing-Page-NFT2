@@ -7,6 +7,11 @@
   padding: 0 40px;
 }
 
+.column:first-child {
+  padding: 0;
+  padding-right: 40px;
+}
+
 .title {
   font-size: 18px;
   line-height: 160%;

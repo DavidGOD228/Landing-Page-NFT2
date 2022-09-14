@@ -5,6 +5,8 @@ import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
 import Dot from '../../common/Dot/Dot'
 
+import morh from '../../../assets/images/morh-1.png'
+
 import WhiteLine from '../../../assets/images/whiteLine.svg'
 import PinkLine from '../../../assets/images/pinkLine.png'
 import Privacy from '../../../assets/images/privacy.png'
@@ -19,10 +21,15 @@ const FirstLiveSimulator = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>
-      <p className={classes.backgroundText}>
-        IMMERSE YOURSELF
-        IN A BREATHING WORLD AND <GreenText>BECOME A LEGEND</GreenText>
-      </p>
+      <div className={classes.textSection}>
+        <p className={classes.backgroundText}>
+          IMMERSE YOURSELF
+          IN A BREATHING WORLD AND <GreenText>BECOME A LEGEND</GreenText>
+        </p>
+        
+        <div className={classes.triangle} />
+        <img className={classes.morh} src={morh} alt="morh" />
+      </div>
       <div className={classes.content}>
         <div>
           <Title classname={classes.title}>

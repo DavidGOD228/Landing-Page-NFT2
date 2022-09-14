@@ -37,6 +37,31 @@
   }
 }
 
+.textSection {
+  position: relative;
+  padding: 195px 0;
+}
+
+.triangle {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 37px 20px 0 20px;
+  border-color: #00f361 transparent transparent transparent;
+  filter: drop-shadow(0px 6px 12px #00F361);
+}
+
+.morh {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .backgroundText {
   font-family: 'Hanson', sans-serif;
   font-size: 36px;
@@ -53,7 +78,7 @@
     text-align: center;
     text-transform: uppercase;
     max-width: none;
-    margin: 271px 0 0 40px;
+    margin: 0;
   }
 }
 
