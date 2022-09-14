@@ -2,7 +2,6 @@
 @import "../../../assets/styles/media.scss";
 
 .topBlock {
-  background-image: url("../../../assets/images/top-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 80%;
   min-height: 100vh;
@@ -38,16 +37,39 @@
   }
 }
 
+.topLeftCorner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+
+.topRightCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -3;
+}
+
+.bottomCorner {
+  position: absolute;
+  bottom: 105px;
+  right: 0;
+  z-index: -3;
+}
+
 .playBtn {
   display: flex;
   align-items: center;
   padding: 8px 12px 8px 16px;
   gap: 12px;
   color: #fff;
-  height: 35px;
+  height: 40px;
+  width: 165px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(4px);
-  margin-top: 27px;
+  margin-top: 42px;
+  border: 1px solid #FFFFFF;
 
   @media screen and (min-width: $desktop) {
     margin-top: 63px;
@@ -59,32 +81,20 @@
 }
 
 .playText {
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.05em;
+  color: #FFFFFF;
 
   @media screen and (min-width: $desktop) {
     font-size: 16px;
   }
 }
 
-.mainText {
-  font-family: "Hanson", sans-serif;
-  color: $green;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 120%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: 215px;
-}
-
 .morphImage {
-  width: 375px;
-  margin-top: -68px;
+  margin-top: -80px;
 }
 
 .builtOnContainer {
@@ -92,9 +102,8 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 85px;
+  bottom: 161px;
   width: 100%;
-  margin-left: -8px;
 
   @media screen and (min-width: $desktop) {
     position: relative;
@@ -112,13 +121,12 @@
 
 .builtOn {
   font-family: 'Hanson', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #737373;
-  margin-bottom: 12px;
+  color: #C1C0C0;
 
   @media screen and (min-width: $desktop) {
     font-size: 20px;
@@ -130,6 +138,7 @@
   display: flex;
   justify-content: space-between;
   width: 163.11px;
+  margin-top: 15px;
 
   @media screen and (min-width: $desktop) {
     width: 207px;
