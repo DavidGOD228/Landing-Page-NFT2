@@ -3,15 +3,12 @@
 
 .greenText {
   text-transform: uppercase;
-  color: $green;
   position: relative;
 
-  @media screen and (min-width: $desktop) {
-    background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%), #B7F201;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    color: transparent;
-  }
+  background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%), #B7F201;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  color: transparent;
 }
