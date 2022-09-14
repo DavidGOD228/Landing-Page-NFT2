@@ -1,7 +1,37 @@
 @import "../../../assets/styles/variables.scss";
 
 .container {
-  margin: 93px 0;
+  padding: 150px 0;
+}
+
+// title
+.titleChooseMorph {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 120px;
+}
+
+.titleLeftSide {
+  font-size: 56px;
+  margin-left: auto;
+  text-align: right;
+  line-height: 1;
+
+  .titleLeftSide {
+    margin-left: auto;
+  }
+}
+
+.titleRightSide {
+  margin-left: 28px;
+  line-height: 26px;
+}
+
+
+// old version
+.wrapperContentTitleLeftSide {
+  margin-left: auto;
 }
 
 .activeCard {
