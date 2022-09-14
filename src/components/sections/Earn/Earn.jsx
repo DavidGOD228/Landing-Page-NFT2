@@ -54,8 +54,8 @@ const Earn = () => {
             }
           </div>
           <div style={{marginTop: 40}}>
-            {!isDesktop && data.map(({title, subtitle}) => 
-                <Accordion title={title} subtitle={subtitle}/>)}
+            {!isDesktop && data.map(({title, subtitle}, i) => 
+                <Accordion key={i} title={title} subtitle={subtitle}/>)}
           </div>
           {!isDesktop && <img className={classes.cards} src={Cards} alt=""/>}
         </div>
@@ -65,7 +65,7 @@ const Earn = () => {
         <div className={classes.tableWrapper}>
           <div className={classes.container}>
             <div className={classes.table}>
-              {data.map(({title, subtitle}) => <Column title={title} subtitle={subtitle}/>)}
+              {data.map(({title, subtitle}, i) => <Column key={i} title={title} subtitle={subtitle}/>)}
             </div>
           </div>
         </div>

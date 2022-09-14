@@ -12,6 +12,10 @@
   padding-right: 40px;
 }
 
+.column:last-child {
+  border: none;
+}
+
 .title {
   font-size: 18px;
   line-height: 160%;
