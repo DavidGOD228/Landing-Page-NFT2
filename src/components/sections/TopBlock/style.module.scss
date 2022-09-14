@@ -1,4 +1,5 @@
-@import "../../../assets/styles/variables";
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/media.scss";
 
 .topBlock {
   background-image: url("../../../assets/images/top-background.jpg");
@@ -6,6 +7,21 @@
   background-size: 100% 80%;
   min-height: 100vh;
   position: relative;
+  @media screen and (min-width: $desktop) {
+    background-image: none;
+    background-color: $background;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 75px 0 52px;
+  }
 }
 
 .mainBlock {
@@ -13,7 +29,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
   padding-top: 85px;
+
+  @media screen and (min-width: $desktop) {
+    justify-content: flex-start;
+    padding-top: 150px;
+  }
 }
 
 .playBtn {
@@ -26,6 +48,14 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(4px);
   margin-top: 27px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 63px;
+    margin-left: -18px;
+    height: 49px;
+    padding: 12px 16px 12px 20px;
+    width: 206px;
+  }
 }
 
 .playText {
@@ -33,6 +63,10 @@
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.05em;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }
 
 .mainText {
@@ -61,6 +95,13 @@
   bottom: 85px;
   width: 100%;
   margin-left: -8px;
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    bottom: 0;
+    margin-top: 143px;
+    margin-left: -10px;
+  }
 }
 
 .builtOnLine {
@@ -78,6 +119,11 @@
   text-transform: uppercase;
   color: #737373;
   margin-bottom: 12px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    color: #A7ACB0;
+  }
 }
 
 .builtBy {
@@ -85,5 +131,21 @@
   justify-content: space-between;
   width: 163.11px;
 
+  @media screen and (min-width: $desktop) {
+    width: 207px;
+    margin-top: 21px;
+  }
 }
 
+
+.topBlockImages {
+  position: relative;
+  margin-top: 28px;
+  margin-left: 173px;
+}
+
+.morphDesktop {
+  position: absolute;
+  top: 131px;
+  right: -92px;
+}

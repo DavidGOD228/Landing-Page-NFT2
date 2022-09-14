@@ -1,14 +1,40 @@
+@import "../../../assets/styles/media.scss";
+
 .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 0 20px;
   margin-top: 2px;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    padding: 0 125px 0 130px;
+    margin-top: 15px;
+  }
 }
 
 .title {
   margin-left: 31px;
+
+  @media screen and (min-width: $desktop) {
+    width: 422px;
+    font-size: 60px;
+    line-height: 100%;
+    margin-left: 42px;
+  }
 }
 
 .paragraph {
   margin-top: 26px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    color: #C1C0C0;
+    width: 498px;
+    margin-left: 43px;
+    margin-top: 35px;
+  }
 }
 
 .backgroundText {
@@ -21,6 +47,19 @@
   color: #737373;
   margin: 143px auto 0;
   max-width: 320px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: none;
+    margin: 271px 0 0 40px;
+  }
+}
+
+.content {
+  display: flex;
+  margin-top: 161px;
 }
 
 .grayLine {
@@ -31,4 +70,61 @@
   position: absolute;
   left: 10px;
   top: 9px;
+}
+
+.mobileContainer {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 78px;
+    margin-top: 20px;
+  }
+}
+
+.privacyText {
+  position: absolute;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  top: -50px;
+  left: 151px;
+  width: 300px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.imageWithBorder {
+  display: inline-block;
+  border: 2px solid #505457;
+  border-radius: 16px;
+  padding: 16px 16px 7px 16px;
+}
+
+.privacyImage {
+  width: 278px;
+  height: 555px;
+  filter: drop-shadow(24px 24px 56px rgba(0, 0, 0, 0.45));
+  border-radius: 12px;
+}
+
+.imagesBlock {
+  position: relative;
+}
+
+.secondImage {
+  position: absolute;
+  z-index: -5;
+  top: 61px;
+  left: 250px;
+}
+
+.smile {
+  position: absolute;
+  bottom: 9px;
+  right: -17px;
 }

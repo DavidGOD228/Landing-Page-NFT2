@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
@@ -7,47 +8,73 @@ import ListItem from './components/ListItem/ListItem'
 import Dot from '../../common/Dot/Dot'
 
 import classes from './style.module.scss'
+import {useWindowWidth} from "../../../hooks/useWindowWidth";
 
 const list = [
   {
     id: 1,
     color: '#ACE402',
-    text: <p className={classes.listParagraph}>Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo<Dot/></p>
+    text: <p className={classes.listParagraph}>Enter the world of the future</p>
   },
   {
     id: 2,
     color: '#959AA3',
-    text: <p className={classes.listParagraph}>Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo<Dot/></p>
+    text: <p className={classes.listParagraph}>Build your dream life</p>
   },
   {
     id: 3,
     color: '#FFF',
-    text: <p className={classes.listParagraph}>Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo<Dot/></p>
+    text: <p className={classes.listParagraph}>Forge your path, whatever it may be<Dot/> Make it big
+      in METAMORPH and see your success transferred to the real world<Dot/></p>
   },
 ]
 
 const Freedom = () => {
+  const isDesktop = useWindowWidth(1024)
+
   return (
-    <div className={classes.container}>
-      <div className={classes.topContent}>
-        <Title classname={classes.title}>
-          <p className={classes.chineseText}>全部的 自由 行動的</p>
-          <p className={classes.total}>TOTAL <GreenText classname={classes.greenText}>FREEDOM
-            of ACTION </GreenText></p>
-        </Title>
-        <Paragraph className={classes.paragraph}>
-          Metamorph is built on putting the power of choice into the hands of players<Dot/> All in game
-          actions are governed by you, with no artificial barriers<Dot/> We empower you to create your
-          unique story by participating in a world where we expect the unexpected<Dot/> From moral
-          actions to investments, crusades, businesses operations and gambling – you have the choice play and earn in a style you enjoy<Dot/>
-        </Paragraph>
-      </div>
-      <div className={classes.listContainer}>
+    <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
+      <div className={classes.container}>
+        <div className={classes.topContent}>
+          <div className={classes.content}>
+            {
+              isDesktop && <Paragraph className={classes.paragraph}>
+                MM is built on putting the power of choice into the hands of players<Dot/> All in-game
+                actions are governed by you, with no artificial barriers<Dot/> We empower you to
+                create your
+                unique story by participating in a world where we expect the unexpected<Dot/> From
+                moral
+                actions to investments, socialize, business operations, and gambling you have the
+                choice to play and earn in a style you enjoy<Dot/>
+              </Paragraph>
+            }
+            <Title classname={classes.title}>
+              <p className={classes.chineseText}>全部的 自由 行動的</p>
+              <p className={classes.total}>TOTAL <GreenText classname={classes.greenText}>FREEDOM
+                of ACTION </GreenText></p>
+            </Title>
+          </div>
+          {
+            !isDesktop && <Paragraph className={classes.paragraph}>
+              MM is built on putting the power of choice into the hands of players<Dot/> All in-game
+              actions are governed by you, with no artificial barriers<Dot/> We empower you to create
+              your
+              unique story by participating in a world where we expect the unexpected<Dot/> From moral
+              actions to investments, socialize, business operations, and gambling you have the choice
+              to play and earn in a style you enjoy<Dot/>
+            </Paragraph>
+          }
+        </div>
         {
-          list.map(({id, color, text}) => <ListItem key={id} color={color} text={text}/>)
+          !isDesktop && <div className={classes.listContainer}>
+            {
+              list.map(({id, color, text}) => <ListItem key={id} color={color} text={text}/>)
+            }
+          </div>
         }
       </div>
-    </div>
+    </ScrollAnimation>
+
   )
 }
 

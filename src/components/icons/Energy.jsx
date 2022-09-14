@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Energy = ({color}) => {
+const Energy = ({color, width, height}) => {
   return (
-    <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width} height={height} viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fillRule="evenodd" clipRule="evenodd" d="M7.12488 4.80243C5.37153 7.44391 3.00778 10.9974 1.87225 12.6998C0.737008 14.4018 -0.101204 15.9456 0.00988453 16.1301C0.133448 16.335 1.28265 16.4655 2.96471 16.4655H5.71757L4.57312 22.007C3.78629 25.8188 3.52461 27.647 3.7358 27.8638C3.94669 28.0803 4.16916 28.0398 4.44866 27.7342C5.45856 26.6295 14.1689 12.1915 13.9975 11.9067C13.8885 11.7252 12.742 11.5868 11.3492 11.5868H8.89368L10.0218 6.17455C11.1166 0.920541 11.2031 0 10.6007 0C10.4424 0 8.87823 2.16094 7.12488 4.80243Z" fill={color}/>
     </svg>
 

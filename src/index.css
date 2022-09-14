@@ -1,5 +1,6 @@
 @import "assets/styles/fonts.scss";
 @import "assets/styles/variables.scss";
+@import "~animate.css/animate.css";
 
 *,
 *::before,

@@ -5,10 +5,10 @@
 
 .videoWrap {
   position: relative;
-  width: 210px;
-  height: 458px;
+  width: 213px;
+  height: 467px;
   border: 3px solid $phoneColor;
-  border-radius: 35px;
+  border-radius: 20px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -27,27 +27,16 @@
   align-items: center;
 }
 
-.video:after {
-  content: '';
-  position: absolute;
-  width: 416px;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  filter: blur(20px);
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
 .videoWrap:before {
   content: "";
   background: $phoneColor;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  width: 154px;
-  height: 24px;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  width: 98px;
+  height: 17px;
   position: absolute;
-  top: -1px;
-  left: 50%;
+  top: 0;
+  left: 49%;
   transform: translateX(-50%);
   z-index: 1620;
 }
@@ -56,12 +45,11 @@
   content: "";
   background: $white;
   border-radius: 5px;
-  width: 124px;
-  height: 5px;
+  width: 91px;
+  height: 3px;
   position: absolute;
   bottom: 8px;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
   z-index: 1620;
-
 }

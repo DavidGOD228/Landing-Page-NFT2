@@ -4,6 +4,15 @@
   margin: 93px 0;
 }
 
+.activeCard {
+  transform: translateY(-15px);
+}
+
+.card {
+  cursor: pointer;
+  transition: transform .5s ease-in;
+}
+
 .cards {
   display: flex;
   justify-content: space-between;
@@ -19,9 +28,6 @@
   column-gap: 80px;
 }
 
-.image {
-  width: 370px;
-}
 
 .about {
   padding-top: 5px;
@@ -44,19 +50,18 @@
   line-height: 32px;
   letter-spacing: 0.05em;
   text-align: center;
-  --b: 1px;   /* thickness of the border */
-  --c: rgba(255, 255, 255, 0.5);   /* color of the border */
-  --w: 7px;  /* width of border */
+  --b: 1px; /* thickness of the border */
+  --c: rgba(255, 255, 255, 0.5); /* color of the border */
+  --w: 7px; /* width of border */
   width: 107px;
 
   border: var(--b) solid #0000; /* space for the border */
-  --_g: #0000 90deg,var(--c) 0;
+  --_g: #0000 90deg, var(--c) 0;
   --_p: var(--w) var(--w) border-box no-repeat;
-  background:
-          conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
-          conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-          conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-          conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0    / var(--_p),
+  conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0    / var(--_p),
+  conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p),
+  conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
 
 }
 
@@ -152,7 +157,7 @@
   color: #FFFFFF;
 }
 
-.description:first-of-type{
+.description:first-of-type {
   margin-top: 6px;
   margin-bottom: 4px;
 }
@@ -188,13 +193,13 @@
 }
 
 .codeImage {
-  -moz-box-shadow: 10px 0 20px rgba(255,255,255, 0.3);
-  -webkit-box-shadow:0 0 20px rgba(255,255,255, 0.3);
-  box-shadow:0 0 20px rgba(255,255,255, 0.3);
+  -moz-box-shadow: 10px 0 20px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 
-.barWrap{
+.barWrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 8px;
@@ -259,8 +264,10 @@
   }
 
   .image {
-    width: 129px;
+    width: 149px;
     height: 417px;
+    margin-left: -21px;
+    margin-top: -12px;
   }
 
 
@@ -311,6 +318,7 @@
   }
 
 }
+
 @media screen and (max-width: 590px) {
   .barImage {
     max-width: 150px;

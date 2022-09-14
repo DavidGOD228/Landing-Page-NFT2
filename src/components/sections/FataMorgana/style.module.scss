@@ -1,15 +1,36 @@
+@import '../../../assets/styles/media.scss';
+
 .topContainer {
   padding: 79px 20px 0;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px 127px 0;
+  }
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-bottom: 160px;
 }
 
 .title {
   margin-left: 30px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 50px;
+  }
 }
 
+.content {
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
 
 .chineseText {
   font-family: 'DFLiKingHei1B', sans-serif;
@@ -28,6 +49,23 @@
   color: #FFFFFF;
   margin-top: 22px;
   margin-bottom: 5px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 25px;
+    margin-top: 23px;
+    margin-bottom: 8px;
+  }
+}
+
+.greenText {
+
+  @media screen and (min-width: $desktop) {
+    font-size: 64px;
+    line-height: 67px;
+    letter-spacing: 0.05em;
+    max-width: 461px;
+  }
 }
 
 .code {
@@ -38,6 +76,17 @@
   color: #9BA1AA;
   margin-top: 11px;
   margin-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 21px;
+    background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 27px 0 28px 50px;
+  }
 }
 
 .cityContainer {
@@ -69,12 +118,22 @@
   text-transform: uppercase;
   color: #FFFFFF;
   width: 308px;
-  margin-top: 88px;
-  margin-left: auto;
-  margin-right: 21px;
+  margin: 88px 21px 0 auto;
   z-index: 5;
   border-right: 3px solid #fff;
   padding-right: 22px;
+
+  @media screen and (min-width: $desktop) {
+    font-family: 'Hanson', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    width: 400px;
+    margin: auto 206px 201px auto;
+  }
+}
+
+.quotes {
+  margin-right: 15px;
 }
 
 .cityCircle {
@@ -107,4 +166,13 @@
   width: 100%;
   background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
   transform: rotate(-180deg);
+}
+
+.paragraph {
+  @media screen and (min-width: $desktop) {
+    width: 552px;
+    margin-left: 50px;
+    font-size: 16px;
+    color: #C1C0C0;
+  }
 }

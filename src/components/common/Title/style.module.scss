@@ -1,3 +1,5 @@
+@import "../../../assets/styles/media.scss";
+
 .content {
   display: flex;
   flex-direction: column;
@@ -20,4 +22,8 @@
   height: 100%;
   background: linear-gradient(180deg, #B7F201 0%, #E6FF98 50.31%, #B7F201 100%);
   width: 3px;
+
+  @media screen and (min-width: $desktop) {
+    background: linear-gradient(180deg, #FBBF9A 0%, #FFE876 12.81%, #12F9F8 29.48%, #9CFD82 53.96%, #FCF16E 75.31%, #FED292 100%), linear-gradient(180deg, #B7F201 0%, #E6FF98 50.31%, #B7F201 100%);
+  }
 }
