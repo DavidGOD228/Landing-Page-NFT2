@@ -42,11 +42,17 @@ export const FataMorgana = () => {
         <div className={classes.content}>
           <div>
             <Title classname={classes.title}>
-              {
-                !isDesktop && <p className={classes.chineseText}>全部的 自由 行動的</p>
-              }
-              <p className={classes.welcome}>WELCOME TO..</p>
-              <GreenText classname={classes.greenText}>FATA <br/> MORGANA</GreenText>
+              <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
+                {
+                  !isDesktop && <p className={classes.chineseText}>全部的 自由 行動的</p>
+                }
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
+                <p className={classes.welcome}>WELCOME TO..</p>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
+                <GreenText classname={classes.greenText}>FATA <br/> MORGANA</GreenText>
+              </ScrollAnimation>
             </Title>
             <span className={classes.code}>D2128NDJK376LAZXWM3NK7</span>
           </div>

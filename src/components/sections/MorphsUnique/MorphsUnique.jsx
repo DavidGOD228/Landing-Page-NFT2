@@ -10,6 +10,7 @@ import Chain from '../../../assets/images/chain.svg'
 import Morph from '../../../assets/images/unique-morphs.png'
 
 import classes from './style.module.scss'
+import Dot from "../../common/Dot/Dot";
 
 const MorphsUnique = () => {
   return (
@@ -19,9 +20,9 @@ const MorphsUnique = () => {
           ALL MORPHS ARE UNIQUE
         </Title>
         <p className={classes.paragraph}>
-          MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself
-          a house, furnish it, dress up your Morph, find them a job and make them earn. Invest in
-          its growth or make a fortune. Everything is alright.
+          MM takes you back to what makes a truly exciting MMORPG<Dot/> You make the rules<Dot/> Buy yourself
+          a house, furnish it, dress up your Morph, find them a job and make them earn<Dot/> Invest in
+          its growth or make a fortune<Dot/> Everything is alright<Dot/>
         </p>
       </div>
       <div className={classes.icons}>

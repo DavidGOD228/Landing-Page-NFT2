@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Logo from '../../../assets/images/logo.svg'
+import Logo from '../../../assets/images/logo-icon.svg'
 import Hamburger from '../../../assets/images/hamburger.svg'
 import LogoIcon from '../../../assets/images/logo-icon.svg'
 
-import {useWindowWidth} from '../../../hooks/useWindowWidth'
+import { useWindowWidth } from '../../../hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 
@@ -25,7 +25,7 @@ const Header = () => {
           <span>Marketplace</span>
         </div> : <>
           <img className={classes.logo} src={Logo} alt=""/>
-          <img src={Hamburger} alt=""/>
+          <img className={classes.hamburger} src={Hamburger} alt=""/>
         </>
       }
     </header>

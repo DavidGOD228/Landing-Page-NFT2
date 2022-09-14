@@ -6,13 +6,13 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: 30px;
+  line-height: 120%;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 
   @media screen and (min-width: $desktop) {
     font-size: 64px;
-    line-height: 120%;
-    text-transform: uppercase;
     margin-left: 42px;
   }
 }
@@ -20,8 +20,11 @@
 .content {
   display: flex;
   justify-content: space-between;
-  padding-left: 42px;
-  padding-top: 6px;
+
+  @media screen and (min-width: $desktop) {
+    padding-left: 42px;
+    padding-top: 6px;
+  }
 }
 
 .paragraph {
