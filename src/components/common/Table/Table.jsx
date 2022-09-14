@@ -7,9 +7,7 @@ import classes from './style.module.scss'
 const Table = ({data, style}) => {
   return (
     <div style={style} className={classes.table}>
-      {
-        data.map(columnData => <Column data={columnData}/>)
-      }
+      {data.map(columnData => <Column data={columnData}/>)}
     </div>
   )
 }

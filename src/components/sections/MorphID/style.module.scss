@@ -1,176 +1,53 @@
-.titleWrapper {
-  margin-left: 36px;
-  margin-top: -54px;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  padding: 100px 130px;
 }
 
+.cardsImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$margin-left: 26px;
 .chineseText {
   font-family: 'DFLiKingHei1B', sans-serif;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+
+  margin: $margin-left 0 0 27px;
+}
+
+.titleWrapper {
+  margin: $margin-left 0 24px 0;
 }
 
 .title {
-  width: 231px;
-}
+  font-size: 64px;
+  line-height: 1;
+}  
 
-.paragraph {
-  margin-top: 16px;
-  padding: 0 22px;
-}
-
-.waysToStartChinese {
-  margin-top: 32px;
-  text-align: center;
-}
-
-.waysToStartEnglish {
+.morhTitle {
   font-family: 'Hanson', sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   line-height: 120%;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-top: 8px;
-  margin-left: -20px;
+
+  margin:  74px 0 16px $margin-left;
 }
 
-.italianBigText {
+.morhDescr {
   font-size: 16px;
-  margin-top: 30px;
-  padding: 0 20px;
+  margin-left: $margin-left;
 }
 
-.line {
-  border: none;
-  height: 1px;
-  background-color: #45474D;
-  margin-top: 32px;
-}
-
-.classiqueBlock {
-  display: flex;
-  gap: 22px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.classiqueContent {
-  display: flex;
-  margin-top: 36px;
-  flex-direction: column;
-}
-
-.classiqueParagraph {
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.eternalParagraph {
-  margin-right: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.classiqueBorder {
-  --b: 1px;   /* thickness of the border */
-  --c: rgba(255, 255, 255, 0.5);   /* color of the border */
-  --w: 5px;  /* width of border */
-  width: 22px;
-  padding: 4px 0;
-  height: 29px;
-  border: var(--b) solid #0000; /* space for the border */
-  --_g: #0000 90deg,var(--c) 0;
-  --_p: var(--w) var(--w) border-box no-repeat;
-  background:
-          conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
-          conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-          conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-          conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
-}
-
-.eternalBorder {
-  --b: 1px;   /* thickness of the border */
-  --c: rgb(183, 242, 1, 0.5);   /* color of the border */
-  --w: 5px;  /* width of border */
-  width: 26px;
-  padding: 4px;
-  height: 29px;
-  border: var(--b) solid #0000; /* space for the border */
-  --_g: #0000 90deg,var(--c) 0;
-  --_p: var(--w) var(--w) border-box no-repeat;
-  background:
-          conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
-          conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-          conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-          conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
-}
-
-.classiqueTitle {
-  font-family: 'Hanson', sans-serif;
-  font-size: 20px;
-  line-height: 21px;
-  text-align: center;
-  margin-left: 16px;
-  color: #FFFFFF;
-}
-
-.eternalTitle {
-  font-family: 'Hanson', sans-serif;
-  font-size: 20px;
-  line-height: 21px;
-  text-align: center;
-  margin-left: 12px;
-  color: #FFFFFF;
-}
-
-.mihoText {
-  width: 207px;
-  padding-left: 20px;
-  margin-top: 16px;
-  text-align: left;
-}
-
-.mihoMainImage {
-  margin-top: 36px;
-}
-
-.mihoIDImage {
-  margin-top: 21px;
-  margin-left: 22px;
-  width: 185px;
-  height: 349px;
-}
-
-.eternalBlock {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 64px;
-}
-
-.eternalContent {
-  display: flex;
-  flex-direction: column;
-}
-
-.henriText {
-  width: 224px;
-  padding-right: 32px;
-  margin-top: 16px;
-  text-align: right;
-}
-
-.henriIDImage {
-  margin-top: 23px;
-  width: 223px;
-  height: 386px;
-}
 
 
 

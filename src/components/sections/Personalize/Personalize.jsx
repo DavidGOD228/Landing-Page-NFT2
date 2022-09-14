@@ -9,6 +9,7 @@ import ArrowRight from '../../../assets/images/arrow-right.svg'
 
 import classes from './style.module.scss'
 import Slider from "./Slider/Slider";
+import Items from "./Items/Items";
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import Paragraph from "../../common/Paragraph/Paragraph";
 import Dot from "../../common/Dot/Dot";
@@ -85,14 +86,15 @@ const Personalize = () => {
       }
       <div className={classes.personalizeContainer}>
         <Title classname={classes.title}>The <br/> <GreenText>MARKETPLACE</GreenText></Title>
-       <div className={classes.content}>
-         {
-           isDesktop && <Paragraph className={classes.paragraph}>
-             Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game<Dot/>
-           </Paragraph>
-         }
-         <Table style={{marginTop: 35, width: 400, height: 114}}  data={data}/>
-       </div>
+        <div className={classes.content}>
+          {
+            isDesktop && <Paragraph className={classes.paragraph}>
+              Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game<Dot/>
+            </Paragraph>
+          }
+          <Table style={{marginTop: 35, width: 400, height: 114}}  data={data}/>
+        </div>
+        <Items />
       </div>
     </>
   )
