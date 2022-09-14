@@ -1,6 +1,36 @@
+@import "../../../assets/styles/media.scss";
+
 .container {
   padding: 0 20px;
   margin-top: 100px;
+}
+
+.title {
+  font-size: 32px;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 64px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-left: 42px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 42px;
+  padding-top: 6px;
+}
+
+.paragraph {
+  width: 411px;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 34px;
+  margin-left: 5px;
+  color: #C1C0C0;
 }
 
 .sliderNav {
@@ -15,52 +45,26 @@
   line-height: 120%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #343a3d;
 }
 
 .activeSlide {
   color: #fff;
 }
 
-.title {
-  font-size: 32px;
-  letter-spacing: 0.03em;
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.sliderItem {
-  width: 210px;
-  text-align: left;
-  margin-right: 38px;
-}
-
-.slider > * {
-  margin-right: 38px;
-  margin-bottom: 60px;
-}
-
 .personalizeContainer {
   background-image: url("../../../assets/images/personalize.png");
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   height: 843px;
   margin-top: -147px;
   padding: 202px 20px 0;
-}
 
-.personalizeContainer:after {
-  content: "";
-  position: absolute;
-  height: 215px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
-  transform: rotate(-180deg);
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../../assets/images/marketplaceDesktop.png");
+    display: flex;
+    flex-direction: column;
+    padding: 220px 191px 56px 233px;
+  }
 }
-

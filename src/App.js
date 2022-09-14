@@ -16,14 +16,19 @@ import Wizard from './components/sections/Wizard/Wizard'
 import Foto from './components/sections/Foto/Foto'
 import CombinedGame from './components/sections/CombinedGame/CombinedGame'
 import Roadmap from './components/sections/Roadmap/Roadmap'
+import {useWindowWidth} from "./hooks/useWindowWidth";
 
 function App() {
+  const isDesktop = useWindowWidth(1024)
+
   return (
     <>
       <TopBlock/>
       <FirstLiveSimulator/>
       <LikeHuman/>
-      <Privacy/>
+      {
+        !isDesktop && <Privacy/>
+      }
       <FataMorgana/>
       <Freedom/>
       <Personalize/>

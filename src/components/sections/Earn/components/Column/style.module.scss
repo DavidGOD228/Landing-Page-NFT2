@@ -1,0 +1,17 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #343A3D;
+  height: 219px;
+  padding: 0 40px;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+

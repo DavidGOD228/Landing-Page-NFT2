@@ -1,12 +1,19 @@
+@import "../../../assets/styles/media.scss";
+
+
 .container {
   position: relative;
   margin-top: 43px;
 }
 
 .wrapper {
-  background-color: #1c1c1f;
   margin-top: 55px;
   padding: 0 20px 150px;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 121px;
+    padding: 0 130px;
+  }
 }
 
 .cards {
@@ -15,15 +22,14 @@
   margin: 83px auto 0;
 }
 
-.container:before {
-  content: "";
-  top: 16px;
-  right: 0;
-  left: 0;
-  position: absolute;
-  height: 326px;
-  background-image: url("../../../assets/images/vector3.svg");
-  z-index: -3;
+.chineseText {
+  font-family: 'DFLiKingHei1B', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: 0.1em;
+  margin-left: 87px;
 }
 
 .coin {
@@ -32,8 +38,23 @@
   z-index: 2;
 }
 
+.contentWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+
 .title {
   width: 305px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    width: 422px;
+  }
 }
 
 .subtitle {
@@ -41,4 +62,27 @@
   font-size: 16px;
   line-height: 160%;
   color: #9BA1AA;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 21px;
+    color: #C1C0C0;
+  }
+}
+
+.paragraph {
+  margin-top: 28px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+    color: #C1C0C0;
+    width: 508px;
+    margin-left: 38px;
+  }
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid #343A3D;
+  border-bottom: 1px solid #343A3D;
 }

@@ -33,8 +33,7 @@ const MorphId = () => {
       <Paragraph className={classes.italianBigText}>
         Metamorph è un avventura dinamica giocabile in terza persona di genere life simulator
         ambientato nel mondo virtuale Fata Morgana<Dot/> Il personaggio giocabile chiamatosi
-        Surrogate è
-        ampliamente personalizzabile con atributi
+        Surrogate è ampliamente personalizzabile con atributi
       </Paragraph>
       <hr className={classes.line}/>
       <div className={classes.classiqueBlock}>
