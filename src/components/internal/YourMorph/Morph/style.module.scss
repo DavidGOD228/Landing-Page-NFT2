@@ -1,0 +1,40 @@
+@mixin activeCard {
+  $wb: 1px;
+  $-wb: -1px;
+  $color: white;
+
+  filter: drop-shadow($wb $wb 0 $color)
+          drop-shadow($-wb $wb 0 $color)
+          drop-shadow($wb $-wb 0 $color)
+          drop-shadow($-wb $-wb 0 $color);
+}
+
+.morphsContainer {
+  display: grid;
+  grid-template-columns: fit-content(26%) auto 1fr;
+  gap: 25px;
+
+  padding: 0 120px;
+}
+
+.morphsCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4vw;
+  width: 100%;
+  align-self: center;
+
+  img {
+    width: 6.378vw;
+    cursor: pointer;
+
+    &:hover {
+      @include activeCard;
+    }
+  }
+}
+
+
+.isActive {
+  @include activeCard;
+}

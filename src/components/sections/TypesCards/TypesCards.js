@@ -1,5 +1,4 @@
-import Paragraph from "../../common/Paragraph/Paragraph";
-import GlobalContainer from "../../common/GlobalContainer/GlobalContainer";
+import { GlobalContainer, Paragraph } from "../../";
 
 import classes from "./styles.module.scss";
 
@@ -19,14 +18,14 @@ export default function TypesCards() {
           <img className={classes.mihoMainImage} src={MihoMorph} alt="miho" />
 
           <div className={classes.contentBlock}>
-            <p className={classes.classiqueParagraph}>
+            <h4 className={classes.classiqueParagraph}>
               <img
                 className={classes.classiqueBorder}
                 src={first}
                 alt="classique"
               />
-              <h4 className={classes.title}>CLASSIQUE</h4>
-            </p>
+              <p className={classes.title}>CLASSIQUE</p>
+            </h4>
             <Paragraph className={`${classes.descr} ${classes.mihoText}`}>
               This is the classic mode of the game where each player can start
               their experience immediately to learn the basic mechanics and then
@@ -38,16 +37,16 @@ export default function TypesCards() {
 
         <div className={`${classes.morphBlock} ${classes.eternalBlock}`}>
           <div className={classes.contentBlock}>
-            <p className={classes.eternalParagraph}>
+            <h4 className={classes.eternalParagraph}>
               <img
                 className={classes.eternalBorder}
                 src={second}
                 alt="eternal border"
               />
-              <h4 className={`${classes.title} ${classes.eternalTitle}`}>
+              <p className={`${classes.title} ${classes.eternalTitle}`}>
                 ETERNAL
-              </h4>
-            </p>
+              </p>
+            </h4>
             <Paragraph className={`${classes.descr} ${classes.henriText}`}>
               The Morph Eternal card allows for a full gaming experience where a
               player can earn in-game currency a Poligon-based cryptocurrency

@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './style.module.scss'
 
-const Title = ({isAfterBorder = false, children, style, classname, classnameWrapper}) => {
+export const Title = ({isAfterBorder = false, children, style, classname, classnameWrapper}) => {
   const isAfterBrd = isAfterBorder ? classes.isAfter : classes.isBefore;
 
   return (
