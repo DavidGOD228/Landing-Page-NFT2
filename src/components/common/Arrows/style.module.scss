@@ -1,0 +1,38 @@
+.triangle {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FFFFFF;
+
+  &.triangleUpLeft {
+    top: 0;
+    left: 0;
+    border-bottom: none;
+    border-right: none;
+  }
+
+  &.triangleUpRight {
+    top: 0;
+    right: 0;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  &.triangleBottomLeft {
+    bottom: 0;
+    left: 0;
+    border-top: none;
+    border-right: none;
+  }
+
+  &.triangleBottomRight {
+    bottom: 0;
+    right: 0;
+    border-top: none;
+    border-left: none;
+  }
+}

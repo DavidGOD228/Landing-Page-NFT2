@@ -4,7 +4,7 @@ import Column from './Column/Column'
 
 import classes from './style.module.scss'
 
-const Table = ({data, style}) => {
+export const Table = ({data, style}) => {
   return (
     <div style={style} className={classes.table}>
       {data.map((columnData, idx) => <Column key={idx} data={columnData}/>)}

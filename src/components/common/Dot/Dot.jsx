@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './style.module.scss'
 
-const Dot = () => {
+export const Dot = () => {
   return (
     <span className={classes.dot}>.</span>
   )

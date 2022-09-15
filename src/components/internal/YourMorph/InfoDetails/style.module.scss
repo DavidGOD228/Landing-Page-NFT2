@@ -1,0 +1,44 @@
+.titleDetail {
+  font-family: 'Poppins';
+  color: #50545A;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.nameTitle {
+  margin-bottom: 0;
+}
+
+.name {
+  font-family: 'Big Pixel';
+  font-size: 32px;
+  color: #fff;
+}
+
+.containerAbout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.code {
+  letter-spacing: 7px;
+  background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%), #B7F201;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+
+.aboutData {
+  font-family: 'Big Pixel';
+  color: #fff;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}

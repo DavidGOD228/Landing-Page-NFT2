@@ -1,0 +1,23 @@
+// bio title
+$color: #50545A;
+.blockInfoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  hr {
+    width: 100%;
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid $color;
+  }
+}
+
+.blockInfo {
+  font-family: 'Hanson', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color;
+}
