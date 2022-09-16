@@ -36,7 +36,7 @@ const data = [
 const sliderData = [
   {
     title: <> Personalize <GreenText>and make it unique</GreenText></>
-  },{
+  }, {
 
     title: <> Personalize <GreenText>and make it unique</GreenText></>
   },
@@ -80,19 +80,25 @@ export const Personalize = () => {
             <ArrowRight onClick={handleNextSlide} width={isDesktop ? 60 : 42} height={isDesktop ? 60 : 42}/>
           </div>
         </div>
-        <Slider sliderData={sliderData} />
+        <Slider sliderData={sliderData}/>
       </div>
       <div className={classes.personalizeContainer}>
-        <Title classname={classes.marketplaceTitle}>The <br/> <GreenText>MARKETPLACE</GreenText></Title>
+        <Title classname={classes.marketplaceTitle}>The <br/>
+          <GreenText>MARKETPLACE</GreenText></Title>
         <div className={classes.content}>
           {
             isDesktop && <Paragraph className={classes.paragraph}>
               Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game.
             </Paragraph>
           }
-          <Table style={{marginTop: 35, width: 400, height: 114}}  data={data}/>
+          <Table style={{
+            marginTop: 35,
+            width: 400,
+            height: isDesktop ? 114 : 89,
+            textTransform: isDesktop ? 'initial' : 'uppercase'
+          }} data={data}/>
         </div>
-        <Items />
+        <Items/>
       </div>
     </>
   )

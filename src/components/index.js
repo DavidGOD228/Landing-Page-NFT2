@@ -2,7 +2,6 @@
 export * from './common/Arrows/Arrows';
 export * from './common/Accordion/Accordion';
 export * from './common/AccordionWithIcon/AccordionWithIcon';
-export * from './common/Dot/Dot';
 export * from './common/GlobalContainer/GlobalContainer';
 export * from './common/GreenText/GreenText';
 export * from './common/Paragraph/Paragraph';
