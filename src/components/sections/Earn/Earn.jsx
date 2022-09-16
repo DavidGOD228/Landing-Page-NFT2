@@ -22,12 +22,14 @@ const data = [
   {
     title: 'Win the challenge',
     subtitle: <p className={classes.subtitle}>We have a lot of funny challenges between our
-      players<Dot/> winners will be rewarded</p>
+      players<Dot/> winners will be rewarded</p>,
+    borderColor: '#35736b'
   },
   {
     title: 'Sell your staff',
     subtitle: <p className={classes.subtitle}>You have a lot of opportunities of building something
-      better than others<Dot/> Be the best one and sell your assets</p>
+      better than others<Dot/> Be the best one and sell your assets</p>,
+    borderColor: '#3f4c35'
   },
 ]
 
@@ -65,7 +67,7 @@ const Earn = () => {
         <div className={classes.tableWrapper}>
           <div className={classes.container}>
             <div className={classes.table}>
-              {data.map(({title, subtitle}, i) => <Column key={i} title={title} subtitle={subtitle}/>)}
+              {data.map(({title, subtitle, borderColor}, i) => <Column key={i} title={title} subtitle={subtitle} borderColor={borderColor}/>)}
             </div>
           </div>
         </div>

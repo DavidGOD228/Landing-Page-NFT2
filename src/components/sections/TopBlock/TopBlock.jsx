@@ -3,7 +3,7 @@ import React from 'react'
 import Header from '../Header/Header'
 
 import TopBlockImage from '../../../assets/images/topBlockImage.png'
-import MetaMorphMain from '../../../assets/images/metaMorphMain.svg'
+import MetaMorphMain from '../../../assets/images/metaMorphMain.png'
 import TopMorphDesktop from '../../../assets/images/topMorphDesktop.png'
 import TopCardDesktop from '../../../assets/images/topCardDesktop.png'
 import TopLeftCorner from '../../../assets/images/topBlock-leftCorner.png'
@@ -35,7 +35,7 @@ const TopBlock = () => {
           }
           <div className={classes.playBtn}>
             <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
-            <p className={classes.playText}>Play teaser</p>
+            <p className={classes.playText}>{isDesktop ? 'Watch Teaser' : 'Play teaser'}</p>
           </div>
           {
             isDesktop && <div className={classes.builtOnContainer}>
