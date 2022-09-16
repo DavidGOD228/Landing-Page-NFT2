@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Big Pixel';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Big Pixel Regular'), url('Big Pixel Regular.woff') format('woff');
+}

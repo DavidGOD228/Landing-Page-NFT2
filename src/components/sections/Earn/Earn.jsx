@@ -4,7 +4,6 @@ import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
 import Accordion from '../../common/Accordion/Accordion'
-import Dot from '../../common/Dot/Dot'
 
 import Cards from '../../../assets/images/earn.png'
 import Coin from '../../../assets/images/coin.png'
@@ -22,13 +21,13 @@ const data = [
   {
     title: 'Win the challenge',
     subtitle: <p className={classes.subtitle}>We have a lot of funny challenges between our
-      players<Dot/> winners will be rewarded</p>,
+      players. winners will be rewarded</p>,
     borderColor: '#35736b'
   },
   {
     title: 'Sell your staff',
     subtitle: <p className={classes.subtitle}>You have a lot of opportunities of building something
-      better than others<Dot/> Be the best one and sell your assets</p>,
+      better than others. Be the best one and sell your assets</p>,
     borderColor: '#3f4c35'
   },
 ]
@@ -49,7 +48,7 @@ const Earn = () => {
                 <br/> WHILE PLAY
               </Title>
               <Paragraph className={classes.paragraph}>Earn crypto in MM tokens as in-game rewards through
-                playing, completing quests, performing special achievements, and win prizes in tournaments and events<Dot/></Paragraph>
+                playing, completing quests, performing special achievements, and win prizes in tournaments and events.</Paragraph>
             </div>
             {
               isDesktop && <img src={Coin} alt=""/>

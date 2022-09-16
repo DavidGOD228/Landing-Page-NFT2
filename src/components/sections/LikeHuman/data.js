@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Paragraph from '../../common/Paragraph/Paragraph'
-import Dot from '../../common/Dot/Dot'
 
 import Cutlery from '../../icons/Cutlery'
 import Energy from '../../icons/Energy'
@@ -17,18 +16,18 @@ export const accordionData = [
     id: 1,
     icon: <Cutlery width={20} height={28} color='#fff'/>,
     title: 'HUNGER',
-    subtitle: <Paragraph className={classes.accordionSubtitle}>Hunger indicates that Morph is full<Dot/> To
+    subtitle: <Paragraph className={classes.accordionSubtitle}>Hunger indicates that Morph is full. To
       feed
       Morph, it must interact with refrigerators, food markets, bars, restaurants, or anything else
-      that can allow you to feed yourself in real life<Dot/></Paragraph>,
+      that can allow you to feed yourself in real life.</Paragraph>,
   },
   {
     id: 2,
     icon: <Energy width={14} height={28} color='#fff'/>,
     title: 'ENERGY',
     subtitle: <Paragraph className={classes.accordionSubtitle}>Indicates that Morph is tired, if it reaches
-      zero, Morph can sleep<Dot/> To meet this need, Morph must rest on the sofa or
-      bed<Dot/></Paragraph>
+      zero, Morph can sleep. To meet this need, Morph must rest on the sofa or
+      bed.</Paragraph>
   },
   {
     id: 3,
@@ -36,7 +35,7 @@ export const accordionData = [
     title: 'SPIRIT',
     subtitle: <Paragraph className={classes.accordionSubtitle}>Morph may like different activities, depending
       on their nature: watching TV, playing a console, reading a book, listening to
-      music<Dot/></Paragraph>
+      music.</Paragraph>
   },
   {
     id: 4,
@@ -44,23 +43,23 @@ export const accordionData = [
     title: 'COMMUNICATION',
     subtitle: <Paragraph className={classes.accordionSubtitle}>Social relations and any interaction with
       other Morphs increases the level of this indicator, while it will decrease in case of betrayal
-      or quarrels<Dot/></Paragraph>
+      or quarrels.</Paragraph>
   },
   {
     id: 5,
     icon: <Eco width={34} height={23} color='#fff'/>,
     title: 'HUNGER',
     subtitle: <Paragraph className={classes.accordionSubtitle}>Indicates anything related to the hygiene of a
-      Morph<Dot/> A low value leads to difficulties in social relationships. To meet this need,
-      Morph must interact with the sink, tub or shower<Dot/></Paragraph>
+      Morph. A low value leads to difficulties in social relationships. To meet this need,
+      Morph must interact with the sink, tub or shower.</Paragraph>
   },
   {
     id: 6,
     icon: <Shower width={23} height={28} color='#fff'/>,
     title: 'hygiene',
     subtitle: <Paragraph className={classes.accordionSubtitle}>A well-kept and clean home increases this
-      indicator, while accumulated waste, moldy foods, and faulty appliances reduce it<Dot/> Some
-      furniture and items (usually more expensive) can increase this indicator<Dot/></Paragraph>
+      indicator, while accumulated waste, moldy foods, and faulty appliances reduce it. Some
+      furniture and items (usually more expensive) can increase this indicator.</Paragraph>
   },
 ]
 
@@ -69,10 +68,10 @@ export const tableData = [
     id: 1,
     icon: <Cutlery width={26} height={36} color='#fff'/>,
     title: 'HUNGER',
-    subtitle: <Paragraph className={classes.columnSubtitle}>Hunger indicates that Morph is full<Dot/> To
+    subtitle: <Paragraph className={classes.columnSubtitle}>Hunger indicates that Morph is full. To
       feed
       Morph, it must interact with refrigerators, food markets, bars, restaurants, or anything else
-      that can allow you to feed yourself in real life<Dot/></Paragraph>,
+      that can allow you to feed yourself in real life.</Paragraph>,
   },
   {
     id: 2,
@@ -80,23 +79,23 @@ export const tableData = [
     title: 'COMMUNICATION',
     subtitle: <Paragraph className={classes.columnSubtitle}>Social relations and any interaction with
       other Morphs increases the level of this indicator, while it will decrease in case of betrayal
-      or quarrels<Dot/></Paragraph>
+      or quarrels.</Paragraph>
   },
   {
     id: 3,
     icon: <Energy width={18} height={36} color='#fff'/>,
     title: 'ENERGY',
     subtitle: <Paragraph className={classes.columnSubtitle}>Indicates that Morph is tired, if it reaches
-      zero, Morph can sleep<Dot/> To meet this need, Morph must rest on the sofa or
-      bed<Dot/></Paragraph>
+      zero, Morph can sleep. To meet this need, Morph must rest on the sofa or
+      bed.</Paragraph>
   },
   {
     id: 4,
     icon: <Eco width={40} height={27} color='#fff'/>,
     title: 'HUNGER',
     subtitle: <Paragraph className={classes.columnSubtitle}>Indicates anything related to the hygiene of a
-      Morph<Dot/> A low value leads to difficulties in social relationships. To meet this need,
-      Morph must interact with the sink, tub or shower<Dot/></Paragraph>
+      Morph. A low value leads to difficulties in social relationships. To meet this need,
+      Morph must interact with the sink, tub or shower.</Paragraph>
   },
   {
     id: 5,
@@ -104,14 +103,14 @@ export const tableData = [
     title: 'SPIRIT',
     subtitle: <Paragraph className={classes.columnSubtitle}>Morph may like different activities, depending
       on their nature: watching TV, playing a console, reading a book, listening to
-      music<Dot/></Paragraph>
+      music.</Paragraph>
   },
   {
     id: 6,
     icon: <Shower width={31} height={38} color='#fff'/>,
     title: 'hygiene',
     subtitle: <Paragraph className={classes.columnSubtitle}>A well-kept and clean home increases this
-      indicator, while accumulated waste, moldy foods, and faulty appliances reduce it<Dot/> Some
-      furniture and items (usually more expensive) can increase this indicator<Dot/></Paragraph>
+      indicator, while accumulated waste, moldy foods, and faulty appliances reduce it. Some
+      furniture and items (usually more expensive) can increase this indicator.</Paragraph>
   },
 ]
