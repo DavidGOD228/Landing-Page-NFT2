@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Dot from '../../../../common/Dot/Dot'
-
 import classes from './style.module.scss'
 
 const Column = ({data}) => {
@@ -16,7 +14,7 @@ const Column = ({data}) => {
         <h4 className={classes.title}>{title}</h4>
         <p className={classes.subtitle}>{subtitle}</p>
         {
-          isComingSoon && <p className={classes.comingSoon}>Coming soon<Dot/><Dot/><Dot/></p>
+          isComingSoon && <p className={classes.comingSoon}>Coming soon...</p>
         }
       </div>
     </div>

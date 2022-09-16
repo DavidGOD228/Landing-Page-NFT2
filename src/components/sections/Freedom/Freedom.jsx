@@ -5,7 +5,6 @@ import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
 import ListItem from './components/ListItem/ListItem'
-import Dot from '../../common/Dot/Dot'
 
 import classes from './style.module.scss'
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
@@ -24,8 +23,8 @@ const list = [
   {
     id: 3,
     color: '#FFF',
-    text: <p className={classes.listParagraph}>Forge your path, whatever it may be<Dot/> Make it big
-      in METAMORPH and see your success transferred to the real world<Dot/></p>
+    text: <p className={classes.listParagraph}>Forge your path, whatever it may be. Make it big
+      in METAMORPH and see your success transferred to the real world.></p>
   },
 ]
 
@@ -39,13 +38,11 @@ const Freedom = () => {
           <div className={classes.content}>
             {
               isDesktop && <Paragraph className={classes.paragraph}>
-                MM is built on putting the power of choice into the hands of players<Dot/> All in-game
-                actions are governed by you, with no artificial barriers<Dot/> We empower you to
-                create your
-                unique story by participating in a world where we expect the unexpected<Dot/> From
-                moral
+                MM is built on putting the power of choice into the hands of players.All in-game
+                actions are governed by you, with no artificial barriers. We empower you to
+                create your unique story by participating in a world where we expect the unexpected. From moral
                 actions to investments, socialize, business operations, and gambling you have the
-                choice to play and earn in a style you enjoy<Dot/>
+                choice to play and earn in a style you enjoy.
               </Paragraph>
             }
             <Title classname={classes.title}>
@@ -56,12 +53,11 @@ const Freedom = () => {
           </div>
           {
             !isDesktop && <Paragraph className={classes.paragraph}>
-              MM is built on putting the power of choice into the hands of players<Dot/> All in-game
-              actions are governed by you, with no artificial barriers<Dot/> We empower you to create
-              your
-              unique story by participating in a world where we expect the unexpected<Dot/> From moral
+              MM is built on putting the power of choice into the hands of players. All in-game
+              actions are governed by you, with no artificial barriers. We empower you to create
+              your unique story by participating in a world where we expect the unexpected. From moral
               actions to investments, socialize, business operations, and gambling you have the choice
-              to play and earn in a style you enjoy<Dot/>
+              to play and earn in a style you enjoy.
             </Paragraph>
           }
         </div>

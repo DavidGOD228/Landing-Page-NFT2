@@ -2,7 +2,6 @@ import React from "react";
 
 import WhiteTitle from "./components/WhiteTitle/WhiteTitle";
 import Member from "./components/Member/Member";
-import Dot from "../../common/Dot/Dot";
 
 import Nazario from "../../../assets/images/nazario.png";
 import NazarioDesktop from "../../../assets/images/nazario-desktop.png";
@@ -22,7 +21,7 @@ const Wizard = () => {
       image: isDesktop ? NazarioDesktop: Nazario,
       text: (
         <p className={classes.text}>
-          Nazario 8+ years of experience in the gaming industry. Worked on Sims, SimCity<Dot/> Early crypto adopter and investor<Dot/>
+          Nazario 8+ years of experience in the gaming industry. Worked on Sims, SimCity. Early crypto adopter and investor.
         </p>
       ),
       top: 7,
@@ -33,7 +32,7 @@ const Wizard = () => {
       image: isDesktop ? JonasDesktop: Jonas,
       text: (
         <p className={classes.text}>
-          Johnas 15+ years of game development experience<Dot/> Managed to work on Clash of Clans, Brawl Stars<Dot/>
+          Johnas 15+ years of game development experience. Managed to work on Clash of Clans, Brawl Stars.
         </p>
       ),
     },
@@ -60,7 +59,7 @@ const Wizard = () => {
           <div className={classes.secondBlock}>
             <div className={classes.membersMobile}>
                 <h4 className={classes.membersAmount}>21 <span className={classes.membersText}>members</span></h4>
-              <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses<Dot/></p>
+              <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses.</p>
             </div>
             <div className={classes.team}>
               <div className={classes.photo}>

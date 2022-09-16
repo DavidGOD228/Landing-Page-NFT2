@@ -4,7 +4,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
-import Dot from '../../common/Dot/Dot'
 
 import morh from '../../../assets/images/morh-1.png'
 
@@ -37,13 +36,8 @@ const FirstLiveSimulator = () => {
             </ScrollAnimation>
           <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
             <Paragraph className={classes.paragraph}>Metamorph is an open-world exploration, NFT
-              creature
-              collector and life simulator
-              game built on the Polygon Blockchain, releasing on IOS and Android in
-              2023<Dot/> Play-to-earn in
-              a graphically-rich sci-fi adventure and life builder that allows you to feel the life
-              inside
-              the game<Dot/>
+              creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and Android in
+              2023. Play-to-earn in a graphically-rich sci-fi adventure and life builder that allows you to feel the life inside the game.
             </Paragraph>
           </ScrollAnimation>
         </div>

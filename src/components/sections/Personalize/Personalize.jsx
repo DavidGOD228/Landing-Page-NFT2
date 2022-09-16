@@ -9,7 +9,6 @@ import Slider from "./Slider/Slider";
 import Items from "./Items/Items";
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import Paragraph from "../../common/Paragraph/Paragraph";
-import Dot from "../../common/Dot/Dot";
 import ArrowLeft from "../../icons/ArrowLeft";
 import ArrowRight from "../../icons/ArrowRight";
 
@@ -88,7 +87,7 @@ const Personalize = () => {
         <div className={classes.content}>
           {
             isDesktop && <Paragraph className={classes.paragraph}>
-              Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game<Dot/>
+              Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game.
             </Paragraph>
           }
           <Table style={{marginTop: 35, width: 400, height: 114}}  data={data}/>
