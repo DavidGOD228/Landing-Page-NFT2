@@ -1,5 +1,5 @@
 @import "../../../assets/styles/media.scss";
-
+@import "../../../assets/styles/mixins.scss";
 
 .container {
   position: relative;
@@ -35,6 +35,8 @@
   display: block;
   margin: 0 auto;
   z-index: 2;
+
+  @include prtnlSclScrnSize(width, 414)
 }
 
 .contentWrapper {
@@ -108,4 +110,10 @@
 .table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: $s-tablet) {
+  .coin {
+    @include prtnlSclScrnSize(width, 274)
+  }
 }
