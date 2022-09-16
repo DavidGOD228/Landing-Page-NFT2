@@ -12,10 +12,10 @@ const getImg = () => Math.round(Math.random() * (arrImg.length - 1));
 
 export const getRandomImg = () => arrImg[getImg()];
 
-export const arrItems = () => {
+export const arrItems = (itemsCount) => {
   const arr = [];
   let idx = 0;
-  while (idx < 50) {
+  while (idx < itemsCount) {
     arr.push(getRandomImg());
     ++idx;
   }
