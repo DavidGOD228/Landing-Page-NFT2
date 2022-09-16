@@ -10,7 +10,7 @@ import MihoID from "../../../assets/images/miho-id.png";
 import HenriMorph from "../../../assets/images/morphs/henrik-hail/henrik-hail-presentation.png";
 import HenriID from "../../../assets/images/henri-id.png";
 
-export default function TypesCards() {
+export function TypesCards() {
   return (
     <GlobalContainer>
       <div className={classes.containerTypesCards}>

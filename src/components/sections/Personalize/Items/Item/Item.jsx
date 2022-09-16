@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { getRandomImg } from './../../../../../utils/ArrItems';
+import { getRandomImg } from 'utils/ArrItems';
 
 
 export default function Item({ imgName }) {
-  const imgImport = require('./../../../../../assets/images/marketplace/' + imgName);
+  const imgImport = require('assets/images/marketplace/' + imgName);
   const [img, setImg] = useState(imgImport);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Item({ imgName }) {
     }
 
     function myFunction() {
-      const newImg = require('./../../../../../assets/images/marketplace/' + getRandomImg());
+      const newImg = require('assets/images/marketplace/' + getRandomImg());
       setImg(newImg);
     }
 

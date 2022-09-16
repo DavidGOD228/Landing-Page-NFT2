@@ -11,7 +11,7 @@ import replaceDot from "utils/replaceDots";
 
 import classes from "./style.module.scss";
 
-const MorphsUnique = () => {
+export const MorphsUnique = () => {
   const text1 =
     "MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it, dress up your Morph, find them a job and make them earn. Invest in its growth or make a fortune. Everything is alright.";
   const textSkill =

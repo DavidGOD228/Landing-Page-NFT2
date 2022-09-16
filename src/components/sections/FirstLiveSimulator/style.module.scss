@@ -1,47 +1,32 @@
-@import "../../../assets/styles/media.scss";
-@import "../../../assets/styles/mixins.scss";
+@import "~assets/styles/media.scss";
+@import "~assets/styles/mixins.scss";
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 20px;
-  margin-top: -208px;
 
-  @media screen and (min-width: $desktop) {
-    flex-direction: row;
-    padding: 0 125px 0 130px;
-    margin-top: 15px;
-  }
+  padding: 0 125px 0 130px;
+  margin-top: 15px;
 }
 
 .title {
   margin-left: 31px;
-
-  @media screen and (min-width: $desktop) {
-    width: 422px;
-    font-size: 60px;
-    line-height: 100%;
-    margin-left: 42px;
-  }
+  width: 422px;
+  font-size: 60px;
+  line-height: 100%;
+  margin-left: 42px;
 }
 
 .paragraph {
-  margin-top: 26px;
-
-  @media screen and (min-width: $desktop) {
-    font-size: 16px;
-    color: #C1C0C0;
-    width: 498px;
-    margin-left: 43px;
-    margin-top: 35px;
-  }
+  font-size: 16px;
+  color: #C1C0C0;
+  margin: 35px 0 0 28px;
 }
 
 .textSection {
   position: relative;
-  @include prtnlSclScrnSize(padding-top, 195);
-  @include prtnlSclScrnSize(padding-bottom, 195);
+  padding: 195px 0;
 }
 
 .triangle {
@@ -87,9 +72,13 @@
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 160px;
+}
+
+.descr {
   position: relative;
-  margin-top: 161px;
 }
 
 .grayLine {
@@ -103,33 +92,19 @@
 }
 
 .mobileContainer {
-  display: none;
-
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 102px;
-    margin-top: 13px;
-  }
-}
-
-.privacyText {
-  font-size: 20px;
-  line-height: 26px;
-  text-align: center;
-  transform: rotate(-19.92deg);
-  width: 300px;
-  letter-spacing: 0.05em;
-  color: #FFFFFF;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 13px;
 }
 
 .privacyImage {
-  width: 22.8vw;
   filter: drop-shadow(24px 24px 56px rgba(0, 0, 0, 0.45));
   border-radius: 12px;
+  width: 100%;
+  max-width: 280px;
 }
 
 .imagesBlock {
@@ -139,27 +114,94 @@
 .secondImage {
   position: absolute;
   z-index: -5;
-  top: 61px;
-  left: 250px;
+  top: 60px;
+  right: -80px;
 }
 
-.smile {
-  position: relative;
-  bottom: 28px;
-  right: -20px;
-}
-
+// smile with text
 .respect {
   display: flex;
-  left: 31%;
+  right: 0;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
   bottom: -65px;
 }
 
+.privacyText {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  transform: rotate(-18deg);
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.smile {
+  position: relative;
+  right: 14%;
+}
+
+@media screen and (max-width: $l-desktop) {
+  .privacyImage {
+    width: 22.8vw;
+  }
+}
+
 @media screen and (max-width: $desktop) {
+  .container {
+    padding: 0 20px;
+  }
+
   .morh {
     width: 11vw;
+  }
+
+  .title {
+    line-height: 1;
+    font-size: 4.86111vw;
+    width: auto;
+  }
+
+  .grayLine img {
+    left: 0;
+    width: 35vw;
+  }
+
+  .paragraph {
+    @include prtnlSclScrnSize(font-size, 23);
+  }
+}
+
+@media screen and (max-width: $m-desktop) {
+  .secondImage {
+    @include prtnlSclScrnSize(top, 60);
+    @include prtnlSclScrnSize(right, -80);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .respect {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    bottom: 0;
+    margin-left: 30px;
+    @include prtnlSclScrnSize(margin-top, 30);
+  }
+
+  .privacyText {
+    @include prtnlSclScrnSize(font-size, 30);
+    transform: rotate(0);
+  }
+
+  .smile {
+    @include prtnlSclScrnSize(max-width, 130);
+    right: 0;
   }
 }

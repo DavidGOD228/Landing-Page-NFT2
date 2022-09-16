@@ -2,9 +2,9 @@ import React from 'react'
 
 import classes from './style.module.scss'
 
-const ColumnItem = ({title, icon, subtitle}) => {
+const ColumnItem = ({className, title, icon, subtitle, ...props}) => {
   return (
-    <div className={classes.column}>
+    <div className={`${classes.column} ${className}`} {...props}>
       <div className={classes.titleWrapper}>
         {icon}
         <h3 className={classes.title}>{title}</h3>

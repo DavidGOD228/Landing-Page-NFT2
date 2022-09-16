@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './style.module.scss'
 
-const Foto = () => {
+export const Foto = () => {
   return (
     <div className={classes.foto}>
       FOTO

@@ -12,7 +12,7 @@ import SuperCell from "../../icons/SuperCell";
 
 import classes from './style.module.scss'
 
-const CombinedGame = () => {
+export const CombinedGame = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>

@@ -1,16 +1,16 @@
 import WhiteTitle from "./components/WhiteTitle/WhiteTitle";
 import Member from "./components/Member/Member";
 
-import Nazario from "assets/images/nazario.png";
-import NazarioDesktop from "assets/images/nazario-desktop.png";
-import Jonas from "assets/images/jonas.png";
-import JonasDesktop from "assets/images/jonas-desktop.png";
+import Nazario from 'assets/images/nazario.png';
+import NazarioDesktop from 'assets/images/nazario-desktop.png';
+import Jonas from 'assets/images/jonas.png';
+import JonasDesktop from 'assets/images/jonas-desktop.png';
 
-import classes from "./style.module.scss";
-import {useWindowWidth} from "hooks/useWindowWidth";
+import classes from './style.module.scss';
+import { useWindowWidth } from 'hooks/useWindowWidth';
 
-const Wizard = () => {
-  const isDesktop = useWindowWidth(1024)
+export const Wizard = () => {
+	const isDesktop = useWindowWidth(1024);
 
   const members = [
     {

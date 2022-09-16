@@ -36,15 +36,13 @@
 }
 
 .accordionSubtitle {
-  margin-top: 11px;
-  width: 299px;
+  margin-top: 15px;
 }
 
 .columnSubtitle {
   color: #C1C0C0;
   font-size: 16px;
   margin-top: 16px;
-  width: 535px;
 }
 
 .table {
@@ -65,7 +63,7 @@
   }
 
   .paragraph {
-    @include prtnlSclScrnSize(font-size, 20.5);
+    @include prtnlSclScrnSize(font-size, 23);
     @include prtnlSclScrnSize(margin-right, 40);
   }
 }

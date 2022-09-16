@@ -12,13 +12,14 @@ import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import classes from "./style.module.scss";
 
 import {accordionData, tableData} from "./data";
+import { GlobalContainer } from "components/common/GlobalContainer/GlobalContainer";
 
-const LikeHuman = () => {
+export const LikeHuman = () => {
   const isDesktop = useWindowWidth(1024);
 
   const table = (
     <div className={classes.table}>
-      {tableData.map(({id, icon, title, subtitle}) => (
+      {tableData.map(({id, icon, title, subtitle}, idx) => (
         <ColumnItem
           key={id}
           icon={icon}
@@ -45,25 +46,27 @@ const LikeHuman = () => {
   )
 
   return (
-    <div className={classes.container}>
-      <div className={classes.titleWrapper}>
-        <Paragraph className={classes.paragraph}>
-          Metamorph is an open-world exploration, NFT creature collector and
-          life simulator game built on the Polygon Blockchain, releasing on
-          IOS and Android in 2023. Play-to-earn in a graphically-rich sci-fi
-          adventure and life builder that allows you to feel the life inside
-          the game.
-        </Paragraph>
-        <ScrollAnimation className={classes.titleAnimWrapper} animateIn="animate__slideInUp" animateOnce>
-          <Title classname={classes.title}>
-            it&apos;s just like <GreenText> a human</GreenText>
-          </Title>
+    <GlobalContainer>
+      <div className={classes.container}>
+        <div className={classes.titleWrapper}>
+          <Paragraph className={classes.paragraph}>
+            Metamorph is an open-world exploration, NFT creature collector and
+            life simulator game built on the Polygon Blockchain, releasing on
+            IOS and Android in 2023. Play-to-earn in a graphically-rich sci-fi
+            adventure and life builder that allows you to feel the life inside
+            the game.
+          </Paragraph>
+          <ScrollAnimation className={classes.titleAnimWrapper} animateIn="animate__slideInUp" animateOnce>
+            <Title classname={classes.title}>
+              it&apos;s just like <GreenText> a human</GreenText>
+            </Title>
+          </ScrollAnimation>
+        </div>
+        <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
+          {isDesktop ? table : accordion}
         </ScrollAnimation>
       </div>
-      <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
-        {isDesktop ? table : accordion}
-      </ScrollAnimation>
-    </div>
+    </GlobalContainer>
   );
 };
 

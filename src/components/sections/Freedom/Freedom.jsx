@@ -7,7 +7,7 @@ import Paragraph from '../../common/Paragraph/Paragraph'
 import ListItem from './components/ListItem/ListItem'
 
 import classes from './style.module.scss'
-import {useWindowWidth} from "../../../hooks/useWindowWidth";
+import {useWindowWidth} from "hooks/useWindowWidth";
 
 const list = [
   {
@@ -24,11 +24,11 @@ const list = [
     id: 3,
     color: '#FFF',
     text: <p className={classes.listParagraph}>Forge your path, whatever it may be. Make it big
-      in METAMORPH and see your success transferred to the real world.></p>
+      in METAMORPH and see your success transferred to the real world.{'>'}</p>
   },
 ]
 
-const Freedom = () => {
+export const Freedom = () => {
   const isDesktop = useWindowWidth(1024)
 
   return (

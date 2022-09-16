@@ -13,7 +13,7 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth'
 import classes from './style.module.scss'
 import {menuData} from "./data/menu";
 
-const Header = () => {
+export const Header = () => {
   const [isVisibleMenu, setVisibleMenu] = useState(false)
 
   const isDesktop = useWindowWidth(1024)
