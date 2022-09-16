@@ -4,7 +4,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
-import Dot from '../../common/Dot/Dot'
 
 import morh from '../../../assets/images/morh-1.png'
 
@@ -23,7 +22,6 @@ const FirstLiveSimulator = () => {
           IMMERSE YOURSELF
           IN A BREATHING WORLD AND <GreenText>BECOME A LEGEND</GreenText>
         </p>
-
         <div className={classes.triangle} />
         <img className={classes.morh} src={morh} alt="morh" />
       </div>
@@ -38,27 +36,22 @@ const FirstLiveSimulator = () => {
             </ScrollAnimation>
           <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
             <Paragraph className={classes.paragraph}>Metamorph is an open-world exploration, NFT
-              creature
-              collector and life simulator
-              game built on the Polygon Blockchain, releasing on IOS and Android in
-              2023<Dot/> Play-to-earn in
-              a graphically-rich sci-fi adventure and life builder that allows you to feel the life
-              inside
-              the game<Dot/>
+              creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and Android in
+              2023. Play-to-earn in a graphically-rich sci-fi adventure and life builder that allows you to feel the life inside the game.
             </Paragraph>
           </ScrollAnimation>
         </div>
         <div className={classes.mobileContainer}>
-          <p className={classes.privacyText}>Respect his Privacy!</p>
           <div className={classes.imagesBlock}>
-            <div className={classes.imageWithBorder}>
               <img className={classes.privacyImage} src={Privacy} alt=""/>
-            </div>
-            <div className={`${classes.imageWithBorder} ${classes.secondImage}`}>
+            <div className={classes.secondImage}>
               <img className={classes.privacyImage} src={Confidence} alt=""/>
-              <img className={classes.smile} src={SmileDesktop} alt=""/>
             </div>
           </div>
+        </div>
+        <div className={classes.respect}>
+          <p className={classes.privacyText}>Respect his Privacy!</p>
+          <img className={classes.smile} src={SmileDesktop} alt=""/>
         </div>
       </div>
     </div>

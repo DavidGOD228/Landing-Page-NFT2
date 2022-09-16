@@ -14,8 +14,21 @@
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(20px);
     padding: 0;
-    border-bottom: 1px solid #343A3D;
     position: relative;
+  }
+
+  &:after {
+    display: none;
+    @media screen and (min-width: $desktop) {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: linear-gradient(90deg, rgba(251, 191, 154, 0.3) -4.09%, rgba(255, 232, 118, 0.3) 9.96%, rgba(18, 249, 248, 0.3) 28.24%, rgba(156, 253, 130, 0.3) 55.1%, rgba(252, 241, 110, 0.3) 78.52%, rgba(254, 210, 146, 0.3) 105.6%);
+    }
   }
 }
 

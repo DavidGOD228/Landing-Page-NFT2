@@ -1,4 +1,4 @@
-import { Title, GreenText, Paragraph, Dot } from 'components'
+import { Title, GreenText, Paragraph } from 'components'
 import Column from './components/Column/Column'
 
 import {useWindowWidth} from 'hooks/useWindowWidth'
@@ -18,7 +18,7 @@ const Roadmap = () => {
           <GreenText style={{textTransform: !iSDesktop && 'initial'}}>We are </GreenText>running!
         </Title>
         <Paragraph className={classes.paragraph}>
-          A dreamer is one who can find his way in the moonlight and see the sunrise before the rest of the world<Dot/>
+          A dreamer is one who can find his way in the moonlight and see the sunrise before the rest of the world.
         </Paragraph>
       </div>
       {

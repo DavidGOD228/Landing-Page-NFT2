@@ -86,6 +86,7 @@
 
 .content {
   display: flex;
+  position: relative;
   margin-top: 161px;
 }
 
@@ -108,28 +109,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 78px;
-    margin-top: 20px;
+    margin-left: 102px;
+    margin-top: 13px;
   }
 }
 
 .privacyText {
-  position: absolute;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
-  top: -50px;
-  left: 151px;
+  transform: rotate(-19.92deg);
   width: 300px;
   letter-spacing: 0.05em;
   color: #FFFFFF;
-}
-
-.imageWithBorder {
-  display: inline-block;
-  border: 2px solid #505457;
-  border-radius: 16px;
-  padding: 16px 16px 7px 16px;
 }
 
 .privacyImage {
@@ -151,7 +143,16 @@
 }
 
 .smile {
+  position: relative;
+  bottom: 28px;
+  right: -20px;
+}
+
+.respect {
+  display: flex;
+  left: 31%;
+  flex-direction: column;
+  align-items: flex-end;
   position: absolute;
-  bottom: 9px;
-  right: -17px;
+  bottom: -65px;
 }

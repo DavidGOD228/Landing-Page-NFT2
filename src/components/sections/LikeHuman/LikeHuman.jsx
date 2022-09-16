@@ -5,7 +5,6 @@ import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Paragraph from '../../common/Paragraph/Paragraph'
 import AccordionWithIcon from '../../common/AccordionWithIcon/AccordionWithIcon'
-import Dot from '../../common/Dot/Dot'
 import ColumnItem from './components/ColumnItem/ColumnItem'
 
 import { useWindowWidth } from '../../../hooks/useWindowWidth'
@@ -24,8 +23,8 @@ const LikeHuman = () => {
           isDesktop &&
           <Paragraph className={classes.paragraph}>Metamorph is an open-world exploration, NFT
             creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and
-            Android in 2023<Dot/> Play-to-earn in a graphically-rich sci-fi adventure and life builder that
-            allows you to feel the life inside the game<Dot/>
+            Android in 2023. Play-to-earn in a graphically-rich sci-fi adventure and life builder that
+            allows you to feel the life inside the game.
           </Paragraph>
         }
         <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
@@ -46,8 +45,8 @@ const LikeHuman = () => {
           </div> : <div className={classes.content}>
             <Paragraph className={classes.paragraph}>Metamorph is an open-world exploration, NFT
               creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and
-              Android in 2023<Dot/> Play-to-earn in a graphically-rich sci-fi adventure and life
-              builder that allows you to feel the life inside the game<Dot/>
+              Android in 2023. Play-to-earn in a graphically-rich sci-fi adventure and life
+              builder that allows you to feel the life inside the game.
             </Paragraph>
             <div className={classes.accordionContainer}>
               {

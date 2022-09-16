@@ -20,7 +20,7 @@ const Wizard = () => {
       image: isDesktop ? NazarioDesktop: Nazario,
       text: (
         <p className={classes.text}>
-          Nazario 8+ years of experience in the gaming industry. Worked on Sims, SimCity<Dot/> Early crypto adopter and investor<Dot/>
+          Nazario 8+ years of experience in the gaming industry. Worked on Sims, SimCity. Early crypto adopter and investor.
         </p>
       ),
       top: 7,
@@ -31,7 +31,7 @@ const Wizard = () => {
       image: isDesktop ? JonasDesktop: Jonas,
       text: (
         <p className={classes.text}>
-          Johnas 15+ years of game development experience<Dot/> Managed to work on Clash of Clans, Brawl Stars<Dot/>
+          Johnas 15+ years of game development experience. Managed to work on Clash of Clans, Brawl Stars.
         </p>
       ),
     },

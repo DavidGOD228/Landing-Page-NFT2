@@ -5,7 +5,6 @@ import GradientLogo from '../../../assets/images/gradientLogo.svg'
 import Twitter from '../../../assets/images/twitter.svg'
 import Telegram from '../../../assets/images/telegram.svg'
 import Discord from '../../../assets/images/discord.svg'
-import Dot from '../../common/Dot/Dot'
 
 import { useWindowWidth } from '../../../hooks/useWindowWidth'
 
@@ -35,7 +34,7 @@ const Footer = () => {
         <img src={Discord} alt=""/>
       </div>
       <p className={classes.copyright}>
-        Copyright © 2022 Metamorph Inc<Dot/> All rights reserved<Dot/></p>
+        Copyright © 2022 Metamorph Inc. All rights reserved.></p>
     </footer>
   )
 }

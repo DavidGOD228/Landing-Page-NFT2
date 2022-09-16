@@ -7,7 +7,28 @@
   margin-top: 100px;
 }
 
-.title {
+.personalizeTitle {
+  font-size: 64px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: 610px;
+}
+
+.personalizeContent {
+  margin-left: 150px;
+}
+
+.personalizeParagraph {
+  font-size: 18px;
+  line-height: 160%;
+  color: #C1C0C0;
+  margin-top: 24px;
+  margin-left: 40px;
+  width: 509px;
+}
+
+.marketplaceTitle {
   font-size: 30px;
   line-height: 120%;
   letter-spacing: 0.03em;
@@ -42,7 +63,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
+  margin-top: 200px;
+  width: 356px;
+  margin-left: 40px;
 }
 
 .sliderCount {
@@ -51,6 +74,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #343a3d;
+
+  @media screen and (min-width: $desktop){
+    font-size: 24px;
+  }
 }
 
 .activeSlide {
