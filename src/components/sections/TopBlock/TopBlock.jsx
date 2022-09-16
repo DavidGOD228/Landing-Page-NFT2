@@ -35,7 +35,7 @@ const TopBlock = () => {
           }
           <div className={classes.playBtn}>
             <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
-            <p className={classes.playText}>{isDesktop ? 'Watch Teaser' : 'Play teaser'}</p>
+            <p className={classes.playText}>Watch Teaser</p>
           </div>
           {
             isDesktop && <div className={classes.builtOnContainer}>
