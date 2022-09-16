@@ -1,18 +1,22 @@
 import React from 'react'
 
 import FooterLogo from '../../../assets/images/footer-logo.svg'
+import GradientLogo from '../../../assets/images/gradientLogo.svg'
 import Twitter from '../../../assets/images/twitter.svg'
 import Telegram from '../../../assets/images/telegram.svg'
 import Discord from '../../../assets/images/discord.svg'
 import Dot from '../../common/Dot/Dot'
 
+import { useWindowWidth } from '../../../hooks/useWindowWidth'
+
 import classes from './style.module.scss'
 
 const Footer = () => {
+  const isDesktop = useWindowWidth(1024)
   return (
     <footer className={classes.footer}>
       <div className={classes.footerTopBlock}>
-        <img src={FooterLogo} alt=""/>
+        <img src={isDesktop ? GradientLogo : FooterLogo} alt=""/>
         <hr className={classes.footerLine}/>
       </div>
       <div className={classes.linksContainer}>
@@ -31,8 +35,7 @@ const Footer = () => {
         <img src={Discord} alt=""/>
       </div>
       <p className={classes.copyright}>
-        Copyright © 2022 Metamorph Inc<Dot/> <br/>
-        All rights reserved<Dot/></p>
+        Copyright © 2022 Metamorph Inc<Dot/> All rights reserved<Dot/></p>
     </footer>
   )
 }

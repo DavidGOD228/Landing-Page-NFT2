@@ -1,20 +1,9 @@
-.phone {
-  margin-top: 28px;
-  margin-left: 38px;
-}
-
-.title {
-  font-size: 32px;
-  letter-spacing: 0.03em;
-  margin-right: 36px;
-}
-
 .slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 42px;
-  margin-bottom: 60px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .row {
@@ -23,7 +12,6 @@
 }
 
 .sliderItem {
-  display: flex;
-  flex-direction: column;
-  margin-right: 33px;
+  //will-change: transform;
+  transform: matrix(1, 0, 0, 1, 0, 0);
 }

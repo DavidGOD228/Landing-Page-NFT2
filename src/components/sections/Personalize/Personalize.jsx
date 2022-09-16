@@ -53,22 +53,16 @@ const sliderData = [
 const Personalize = () => {
   const isDesktop = useWindowWidth(1024)
 
-  const [titleMargin, setTitleMargin] = useState(1140)
-  const [phoneMargin, setPhoneMargin] = useState(700)
   const [activeSlide, setActiveSlide] = useState(1)
 
   const handleNextSlide = () => {
     if (activeSlide === 4) return
     setActiveSlide((prevSlide) => prevSlide + 1)
-    setTitleMargin((left) => left - 740)
-    setPhoneMargin((left) => left - 500)
   }
 
   const handlePrevSlide = () => {
     if (activeSlide === 1) return
     setActiveSlide((prevSlide) => prevSlide - 1)
-    setTitleMargin((left) => left + 740)
-    setPhoneMargin((left) => left + 500)
   }
 
   return (
@@ -80,10 +74,8 @@ const Personalize = () => {
             className={classes.activeSlide}>{activeSlide} </span>of 4</p>
           <img onClick={handleNextSlide} src={ArrowRight} alt=""/>
         </div>
+        <Slider sliderData={sliderData} />
       </div>
-      {
-        !isDesktop && <Slider sliderData={sliderData} titleMargin={titleMargin} phoneMargin={phoneMargin}/>
-      }
       <div className={classes.personalizeContainer}>
         <Title classname={classes.title}>The <br/> <GreenText>MARKETPLACE</GreenText></Title>
         <div className={classes.content}>

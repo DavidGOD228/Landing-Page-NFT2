@@ -1,8 +1,96 @@
+@import "../../../assets/styles/media";
+
 .wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 58px 20px 994px 18px;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 58px 202px 0 217px;
+  }
+}
+
+
+.title {
+
+  @media screen and (min-width: $desktop) {
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    width: 417px;
+  }
 }
 
 .paragraph {
   margin-top: 24px;
   text-align: justify;
+
+  @media screen and (min-width: $desktop) {
+    width: 463px;
+    margin-left: 44px;
+    font-size: 16px;
+    color: #C1C0C0;
+  }
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-image: url("../../../assets/images/running-background.png");
+  background-color: rgba(32, 33, 35, 0.7);
+  border-right: 1px solid #5A5A6B;
+  border-bottom: 1px solid #5A5A6B;
+  margin: 64px 130px 180px 130px;
+}
+
+.playGameOn {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.header {
+  height: 40px;
+  background: #1a1a1c;
+}
+
+.appColumn {
+  border-left: 1px solid #5A5A6B;
+}
+
+.appContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.appBtnContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.appBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  padding: 10px 0;
+  margin-top: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0.74569px solid #FFFFFF;
+}
+
+.appText {
+  font-size: 16px;
+  margin-left: 15px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
 }
