@@ -24,10 +24,6 @@ body {
   /*background-color: $background;*/
 }
 
-.app {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
 
 ul[class],
 ol[class] {
