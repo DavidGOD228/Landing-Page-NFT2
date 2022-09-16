@@ -4,15 +4,14 @@ import Title from '../../common/Title/Title'
 import GreenText from '../../common/GreenText/GreenText'
 import Table from "../../common/Table/Table"
 
-import ArrowLeft from '../../../assets/images/arrow-left.svg'
-import ArrowRight from '../../../assets/images/arrow-right.svg'
-
 import classes from './style.module.scss'
 import Slider from "./Slider/Slider";
 import Items from "./Items/Items";
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import Paragraph from "../../common/Paragraph/Paragraph";
 import Dot from "../../common/Dot/Dot";
+import ArrowLeft from "../../icons/ArrowLeft";
+import ArrowRight from "../../icons/ArrowRight";
 
 const data = [
   {
@@ -68,16 +67,24 @@ const Personalize = () => {
   return (
     <>
       <div className={classes.container}>
-        <div className={classes.sliderNav}>
-          <img onClick={handlePrevSlide} src={ArrowLeft} alt=""/>
-          <p className={classes.sliderCount}><span
-            className={classes.activeSlide}>{activeSlide} </span>of 4</p>
-          <img onClick={handleNextSlide} src={ArrowRight} alt=""/>
+        <div className={classes.personalizeContent}>
+          <Title classname={classes.personalizeTitle}>
+            Personalize <GreenText>and make it unique</GreenText>
+          </Title>
+          <p className={classes.personalizeParagraph}>
+            Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.
+          </p>
+          <div className={classes.sliderNav}>
+            <ArrowLeft onClick={handlePrevSlide} width={isDesktop ? 60 : 42} height={isDesktop ? 60 : 42}/>
+            <p className={classes.sliderCount}><span
+              className={classes.activeSlide}>{activeSlide} </span>of 4</p>
+            <ArrowRight onClick={handleNextSlide} width={isDesktop ? 60 : 42} height={isDesktop ? 60 : 42}/>
+          </div>
         </div>
         <Slider sliderData={sliderData} />
       </div>
       <div className={classes.personalizeContainer}>
-        <Title classname={classes.title}>The <br/> <GreenText>MARKETPLACE</GreenText></Title>
+        <Title classname={classes.marketplaceTitle}>The <br/> <GreenText>MARKETPLACE</GreenText></Title>
         <div className={classes.content}>
           {
             isDesktop && <Paragraph className={classes.paragraph}>

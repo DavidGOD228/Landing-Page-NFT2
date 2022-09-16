@@ -2,14 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: 1px solid #343A3D;
   height: 219px;
   padding: 0 40px;
 }
 
 .column:first-child {
-  padding: 0;
-  padding-right: 40px;
+  padding: 0 40px 0 0;
 }
 
 .column:last-child {

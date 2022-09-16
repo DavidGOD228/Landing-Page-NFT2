@@ -1,12 +1,34 @@
 .column {
-  border-right: 1px solid #343A3D;
   border-bottom: 1px solid #343A3D;
   padding-top: 33px;
   padding-bottom: 31px;
   padding-left: 53px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background:linear-gradient(90deg, rgba(47, 83, 53, 1) 0%, rgba(74, 65, 45, 1) 100%);
+    height: 1px;
+  }
+
   &:nth-child(odd) {
-    background: #111113;
+    background: rgba(17, 17, 19, 0.4);
+    border-right: 1px solid #2f5336;
     padding-left: 130px;
+  }
+
+  &:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(83, 69, 51, 1) 0%, rgba(24, 81, 76, 1) 60%, rgba(46, 83, 53, 1) 100%);
+    height: 1px;
   }
 }
 
