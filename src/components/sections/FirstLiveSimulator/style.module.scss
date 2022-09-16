@@ -1,4 +1,5 @@
 @import "../../../assets/styles/media.scss";
+@import "../../../assets/styles/mixins.scss";
 
 .container {
   display: flex;
@@ -39,7 +40,8 @@
 
 .textSection {
   position: relative;
-  padding: 195px 0;
+  @include prtnlSclScrnSize(padding-top, 195);
+  @include prtnlSclScrnSize(padding-bottom, 195);
 }
 
 .triangle {
@@ -125,8 +127,7 @@
 }
 
 .privacyImage {
-  width: 278px;
-  height: 555px;
+  width: 22.8vw;
   filter: drop-shadow(24px 24px 56px rgba(0, 0, 0, 0.45));
   border-radius: 12px;
 }
@@ -155,4 +156,10 @@
   align-items: flex-end;
   position: absolute;
   bottom: -65px;
+}
+
+@media screen and (max-width: $desktop) {
+  .morh {
+    width: 11vw;
+  }
 }

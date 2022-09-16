@@ -5,7 +5,7 @@ import ArrowDown from 'assets/images/arrow-down.svg'
 
 import classes from './style.module.scss'
 
-const Accordion = ({title, subtitle}) => {
+export const Accordion = ({title, subtitle}) => {
   const [isOpen, setOpen] = useState(false)
   return (
     <div className={classes.content}>
