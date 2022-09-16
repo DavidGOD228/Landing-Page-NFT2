@@ -1,6 +1,5 @@
 import WhiteTitle from "./components/WhiteTitle/WhiteTitle";
 import Member from "./components/Member/Member";
-import { Dot } from "components";
 
 import Nazario from "assets/images/nazario.png";
 import NazarioDesktop from "assets/images/nazario-desktop.png";
@@ -58,7 +57,7 @@ const Wizard = () => {
           <div className={classes.secondBlock}>
             <div className={classes.membersMobile}>
               <h4 className={classes.membersAmount}>21 <span className={classes.membersText}>members</span></h4>
-              <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses<Dot/></p>
+              <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses.</p>
             </div>
             <div className={classes.team}>
               <div className={classes.photo}>

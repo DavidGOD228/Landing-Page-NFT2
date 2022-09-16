@@ -1,15 +1,32 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import Logo from '../../../assets/images/logo-icon.svg'
 import Hamburger from '../../../assets/images/hamburger.svg'
 import LogoIcon from '../../../assets/images/logo-icon.svg'
+import Close from '../../../assets/images/close.svg'
+import Twitter from '../../../assets/images/twitter.svg'
+import Telegram from '../../../assets/images/telegram.svg'
+import Discord from '../../../assets/images/discord.svg'
 
 import { useWindowWidth } from '../../../hooks/useWindowWidth'
 
 import classes from './style.module.scss'
+import {menuData} from "./data/menu";
 
 const Header = () => {
+  const [isVisibleMenu, setVisibleMenu] = useState(false)
+
   const isDesktop = useWindowWidth(1024)
+
+  useEffect(() => {
+    if(isVisibleMenu) {
+     document.body.style.overflowY = 'hidden'
+    }
+    else {
+      document.body.style.overflowY = 'unset'
+    }
+  }, [isVisibleMenu])
+
   return (
     <header className={classes.header}>
       {
@@ -25,7 +42,25 @@ const Header = () => {
           <span>Marketplace</span>
         </div> : <>
           <img className={classes.logo} src={Logo} alt=""/>
-          <img className={classes.hamburger} src={Hamburger} alt=""/>
+          <img className={classes.hamburger} src={Hamburger} onClick={() => setVisibleMenu(true)} alt=""/>
+          <div className={`${classes.menu} ${isVisibleMenu ? classes.active: ''}`}>
+            <div className={classes.menuHeader}>
+              <img src={LogoIcon} alt=""/>
+              <img className={classes.close} src={Close} onClick={() => setVisibleMenu(false)} alt=""/>
+            </div>
+           <div className={classes.menuContent}>
+             <div className={classes.menuItems}>
+               {
+                 menuData.map(menuItem => <h4 className={classes.menuItem}>{menuItem}</h4>)
+               }
+             </div>
+             <div className={classes.socials}>
+               <img src={Twitter} alt=""/>
+               <img src={Telegram} alt=""/>
+               <img src={Discord} alt=""/>
+             </div>
+           </div>
+          </div>
         </>
       }
     </header>
