@@ -1,16 +1,14 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 
-import Title from '../../common/Title/Title'
-import GreenText from '../../common/GreenText/GreenText'
-import Paragraph from '../../common/Paragraph/Paragraph'
+import { Title, GreenText, Paragraph } from 'components'
 
-import morh from '../../../assets/images/morh-1.png'
+import morh from 'assets/images/morh-1.png'
 
-import WhiteLine from '../../../assets/images/whiteLine.svg'
-import Privacy from '../../../assets/images/privacy.png'
-import Confidence from '../../../assets/images/confidence.png'
-import SmileDesktop from '../../../assets/images/smileDesktop.svg'
+import WhiteLine from 'assets/images/whiteLine.svg'
+import toiletVideo from 'assets/video/toilet.video.mp4'
+import Confidence from 'assets/images/confidence.png'
+import SmileDesktop from 'assets/images/smileDesktop.svg'
 
 import classes from './style.module.scss'
 
@@ -43,7 +41,7 @@ const FirstLiveSimulator = () => {
         </div>
         <div className={classes.mobileContainer}>
           <div className={classes.imagesBlock}>
-              <img className={classes.privacyImage} src={Privacy} alt=""/>
+              <video className={classes.privacyImage} src={toiletVideo} autoPlay loop muted />
             <div className={classes.secondImage}>
               <img className={classes.privacyImage} src={Confidence} alt=""/>
             </div>
