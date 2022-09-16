@@ -18,10 +18,6 @@ import classes from './style.module.scss'
 const FirstLiveSimulator = () => {
   return (
     <div className={classes.container}>
-      <p className={classes.backgroundText}>
-        IMMERSE YOURSELF
-        IN A BREATHING WORLD AND <GreenText>BECOME A LEGEND</GreenText>
-      </p>
       <div className={classes.textSection}>
         <p className={classes.backgroundText}>
           IMMERSE YOURSELF

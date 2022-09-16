@@ -1,3 +1,6 @@
+@import "../../../../../assets/styles/media";
+
+
 .name {
   font-family: 'Big Pixel', sans-serif;
   font-style: normal;
@@ -7,6 +10,11 @@
   letter-spacing: 0.11em;
   color: #FFFFFF;
   margin-top: 6px;
+  white-space: pre-line;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+  }
 }
 
 .position {
@@ -16,4 +24,8 @@
   line-height: 120%;
   color: #80898F;
   margin-top: 12px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }

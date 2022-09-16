@@ -40,7 +40,9 @@ function App() {
       <MorphsUnique/>
       <Roadmap/>
       <Wizard/>
-      <Foto/>
+      {
+        !isDesktop && <Foto/>
+      }
       <CombinedGame/>
       <Footer/>
     </>

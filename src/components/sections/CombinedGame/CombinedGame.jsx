@@ -1,27 +1,30 @@
 import React from 'react'
 
-import EA from '../../../assets/images/ea.svg'
-import CDProjectRed from '../../../assets/images/cdProjectRed.svg'
-import Ubisoft from '../../../assets/images/ubisoft.svg'
-import Garena from '../../../assets/images/garena.svg'
-import Valve from '../../../assets/images/valve.svg'
-import SuperCell from '../../../assets/images/superCell.svg'
-import LKWD from '../../../assets/images/lkwd.svg'
+import CDProjectRed from "../../icons/CDProjectRed";
+
+import EA from "../../icons/EA";
+import { useWindowWidth } from "../../../hooks/useWindowWidth"
+import Ubisoft from "../../icons/Ubisoft";
+import LKWD from "../../icons/LKWD";
+import Garena from "../../icons/Garena";
+import Valve from "../../icons/Valve";
+import SuperCell from "../../icons/SuperCell";
 
 import classes from './style.module.scss'
 
 const CombinedGame = () => {
+  const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>
       <h4 className={classes.title}>Combined game expirience</h4>
       <div className={classes.companies}>
-        <img src={EA} alt=""/>
-        <img src={CDProjectRed} alt=""/>
-        <img src={Ubisoft} alt=""/>
-        <img src={Garena} alt=""/>
-        <img src={Valve} alt=""/>
-        <img src={SuperCell} alt=""/>
-        <img src={LKWD} alt=""/>
+        <EA width={isDesktop ? 143: 80} height={isDesktop ? 70 : 40}/>
+        <CDProjectRed width={isDesktop ? 88: 49} height={isDesktop ? 140 : 78}/>
+        <Ubisoft width={isDesktop ? 147: 82} height={isDesktop ? 108 : 60}/>
+        <LKWD width={isDesktop ? 67: 39} height={isDesktop ? 140 : 78}/>
+        <Garena width={isDesktop ? 106: 55} height={isDesktop ? 82 : 43}/>
+        <Valve width={isDesktop ? 197: 110} height={isDesktop ? 55 : 31}/>
+        <SuperCell width={isDesktop ? 86: 49} height={isDesktop ? 77 : 44}/>
       </div>
     </div>
   )
