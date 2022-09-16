@@ -1,48 +1,73 @@
+@import './../../../assets/styles/mixins.scss';
+
 .container {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  @include prtnlSclScrnSize(padding-top, 150);
+  @include prtnlSclScrnSize(padding-right, 120);
+  @include prtnlSclScrnSize(padding-bottom, 300);
+  @include prtnlSclScrnSize(padding-left, 120);
 }
 
-.content {
-  padding: 0 15px 0 25px;
-}
-
+// content
 .title {
-  font-size: 32px;
+  font-size: 64px;
   letter-spacing: 0.03em;
-  margin-left: 21px;
+}
+
+.descrWrapper {
+  width: 75%;
+  padding-left: 30px;
+  margin-top: 30px;
 }
 
 .paragraph {
   font-family: 'Big Pixel', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 160%;
   color: #9BA1AA;
-  margin-top: 18px;
 }
 
+.descrSection {
+  margin-bottom: 50px;
+}
+
+// icons
 .icons {
   display: flex;
-  padding: 0 14px 28px;
-  align-items: flex-end;
-  margin-top: 24px;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
 }
 
-.inactiveImage {
-  margin-bottom: 6px;
+.skillImg {
+  width: 5.7vw;
+
+  &.active {
+    width: 7.16vw;
+  }
 }
 
+// descr of icons
+.skillTitle {
+  font-family: 'Big Pixel', sans-serif;
+  font-size: 20px;
+  background: linear-gradient(90deg, #FF5D5D 0%, #FF55E4 57.6%, #E36A12 100%), #E312C2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+
+// morph fro the right
 .morphImage {
   width: 100%;
-}
-
-.container:after {
-  content: "";
-  position: absolute;
-  height: 240px;
-  bottom: -63px;
-  left: 0;
-  right: 0;
-  background-image: url("../../../assets/images/vector4.svg");
+  max-width: 22.53vw;
+  border-radius: 30px;
+  margin: 0 auto;
 }

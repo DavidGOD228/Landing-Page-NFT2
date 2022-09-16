@@ -1,12 +1,11 @@
 import {useState} from "react";
-import { CardItem, InfoMorh } from "../../../";
+import { CardItem, InfoMorh } from "components";
 
 import classes from "./style.module.scss";
-import {morphsData} from "./../../../../data/morphs/data";
-import knutMoberg from "./../../../../data/morphs/knutMoberg";
+import {morphsData} from "data/morphs/data";
 
 export function Morph() {
-  const [morph, setMorph] = useState(knutMoberg);
+  const [morph, setMorph] = useState(morphsData[0]);
 
   const morphChooseHandler = (m) => setMorph(m);
 

@@ -1,16 +1,14 @@
-import React from "react";
-
 import WhiteTitle from "./components/WhiteTitle/WhiteTitle";
 import Member from "./components/Member/Member";
-import Dot from "../../common/Dot/Dot";
+import { Dot } from "components";
 
-import Nazario from "../../../assets/images/nazario.png";
-import NazarioDesktop from "../../../assets/images/nazario-desktop.png";
-import Jonas from "../../../assets/images/jonas.png";
-import JonasDesktop from "../../../assets/images/jonas-desktop.png";
+import Nazario from "assets/images/nazario.png";
+import NazarioDesktop from "assets/images/nazario-desktop.png";
+import Jonas from "assets/images/jonas.png";
+import JonasDesktop from "assets/images/jonas-desktop.png";
 
 import classes from "./style.module.scss";
-import {useWindowWidth} from "../../../hooks/useWindowWidth";
+import {useWindowWidth} from "hooks/useWindowWidth";
 
 const Wizard = () => {
   const isDesktop = useWindowWidth(1024)
@@ -59,7 +57,7 @@ const Wizard = () => {
           </div>
           <div className={classes.secondBlock}>
             <div className={classes.membersMobile}>
-                <h4 className={classes.membersAmount}>21 <span className={classes.membersText}>members</span></h4>
+              <h4 className={classes.membersAmount}>21 <span className={classes.membersText}>members</span></h4>
               <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses<Dot/></p>
             </div>
             <div className={classes.team}>

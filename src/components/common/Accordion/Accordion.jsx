@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import ArrowUp from '../../../assets/images/arrow-up.svg'
-import ArrowDown from '../../../assets/images/arrow-down.svg'
+import ArrowUp from 'assets/images/arrow-up.svg'
+import ArrowDown from 'assets/images/arrow-down.svg'
 
 import classes from './style.module.scss'
 

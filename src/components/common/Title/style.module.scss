@@ -9,8 +9,9 @@
 }
 
 .title {
+  position: relative;
   text-transform: uppercase;
-  font-family: 'Hanson', sans-serif;
+  font-family: "Hanson", sans-serif;
   font-size: 36px;
   line-height: 120%;
 }
@@ -22,7 +23,16 @@
   position: absolute;
   left: 2px;
   height: 100%;
-  background: linear-gradient(180deg, #FBBF9A 0%, #FFE876 12.81%, #12F9F8 29.48%, #9CFD82 53.96%, #FCF16E 75.31%, #FED292 100%), linear-gradient(180deg, #B7F201 0%, #E6FF98 50.31%, #B7F201 100%);
+  background: linear-gradient(
+      180deg,
+      #fbbf9a 0%,
+      #ffe876 12.81%,
+      #12f9f8 29.48%,
+      #9cfd82 53.96%,
+      #fcf16e 75.31%,
+      #fed292 100%
+    ),
+    linear-gradient(180deg, #b7f201 0%, #e6ff98 50.31%, #b7f201 100%);
   width: 3px;
 }
 
@@ -36,7 +46,7 @@
   display: none;
 }
 
-.isBefore .title{
+.isBefore .title {
   margin-left: 28px;
 }
 
@@ -45,6 +55,6 @@
   display: none;
 }
 
-.isAfter .title{
+.isAfter .title {
   margin-right: 28px;
 }

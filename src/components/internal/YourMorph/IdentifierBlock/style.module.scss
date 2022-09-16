@@ -1,36 +1,12 @@
-.identifierBlock {
-  display: flex;
-  justify-content: space-between;
-}
-
-.fingerPrintWrapper {
-  position: relative;
-  padding: 5px;
-}
-
-.fingerPrint {
-  height: 3.9vw;
-  width: 3.5vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.id {
+//mixins
+@mixin textStyle {
   font-family: "Hanson";
-  position: relative;
-  font-size: 32px;
   font-weight: 700;
-  color: #fff;
-  height: 38px;
-  padding: 7px 15px;
+  text-transform: uppercase;
+}
 
-  p {
-    line-height: 1;
-  }
-
-  .eternal {
-    background: linear-gradient(
+@mixin eternalTextStyle {
+  background: linear-gradient(
       90deg,
       #fbbf9a -4.09%,
       #ffe876 9.96%,
@@ -42,5 +18,54 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+// wrapper block for id & type
+.identifierBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+// type (from the right)
+.typeWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.type {
+  height: 2.9vw;
+}
+
+.textType {
+  font-size: 1.7vw;
+  padding-top: 3px;
+}
+
+//type texts
+.eternal {
+  @include textStyle;
+  @include eternalTextStyle;
+}
+
+.classique {
+  @include textStyle;
+  color: #fff;
+}
+
+// id (from the left)
+.id {
+  position: relative;
+  font-size: 32px;
+  color: #fff;
+  @include textStyle;
+ 
+  height: 38px;
+  padding: 7px 15px;
+
+  p {
+    line-height: 1;
   }
 }

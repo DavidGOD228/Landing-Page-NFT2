@@ -3,13 +3,12 @@ import {
   BlockInfoTitle,
   InfoDetails,
   AttrsDetails,
-} from "../../../";
+} from "components";
 import classes from "./style.module.scss";
 
 export function InfoMorh({morph}) {
-  const {id, bodyImg, type, fingerPrintImg, name, attributes} = morph;
-  const importBodyImg = require("./../../../../assets/images/morphs/" +
-    bodyImg);
+  const {id, bodyImg, type, name, attributes} = morph;
+  const importBodyImg = require("assets/images/morphs/" + bodyImg);
 
   return (
     <>
@@ -20,7 +19,6 @@ export function InfoMorh({morph}) {
           className={classes.identifierBlock}
           id={id}
           type={type}
-          fingerPrintImg={fingerPrintImg}
         />
         <BlockInfoTitle className={classes.infoTitle}>Bio</BlockInfoTitle>
         <InfoDetails className={classes.infoDetails} morph={morph} />
