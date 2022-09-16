@@ -48,7 +48,7 @@ const sliderData = [
   },
 ]
 
-const Personalize = () => {
+export const Personalize = () => {
   const isDesktop = useWindowWidth(1024)
 
   const [activeSlide, setActiveSlide] = useState(1)

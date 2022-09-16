@@ -8,7 +8,7 @@ import TransparentGreenCard from "../../../assets/images/transparent-green-card.
 
 import classes from "./style.module.scss";
 
-const MorphId = () => {
+export const MorphId = () => {
   return (
     <div className={classes.container}>
       <div className={classes.cardsImg}>

@@ -9,7 +9,7 @@ import GooglePlay from 'assets/images/googlePlay.png'
 
 import classes from './style.module.scss'
 
-const Roadmap = () => {
+export const Roadmap = () => {
   const iSDesktop = useWindowWidth(1024)
   return (
     <>

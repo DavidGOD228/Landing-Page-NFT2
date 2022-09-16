@@ -8,7 +8,7 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 
-const Header = () => {
+export const Header = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <header className={classes.header}>

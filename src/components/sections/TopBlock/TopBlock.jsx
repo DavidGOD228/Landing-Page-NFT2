@@ -2,24 +2,24 @@ import React from 'react'
 
 import Header from '../Header/Header'
 
-import TopBlockImage from '../../../assets/images/topBlockImage.png'
-import MetaMorphMain from '../../../assets/images/metaMorphMain.png'
-import TopMorphDesktop from '../../../assets/images/topMorphDesktop.png'
-import TopCardDesktop from '../../../assets/images/topCardDesktop.png'
-import TopLeftCorner from '../../../assets/images/topBlock-leftCorner.png'
-import TopRightCorner from '../../../assets/images/topBlock-rightCorner.png'
-import BottomCorner from '../../../assets/images/topBlock-bottom.png'
+import TopBlockImage from 'assets/images/topBlockImage.png'
+import MetaMorphMain from 'assets/images/metaMorphMain.png'
+import TopMorphDesktop from 'assets/images/topMorphDesktop.png'
+import TopCardDesktop from 'assets/images/topCardDesktop.png'
+import TopLeftCorner from 'assets/images/topBlock-leftCorner.png'
+import TopRightCorner from 'assets/images/topBlock-rightCorner.png'
+import BottomCorner from 'assets/images/topBlock-bottom.png'
 
 import UnrealEngine from '../../icons/UnrealEngine'
 import Polygon from '../../icons/Polygon'
 import Play from '../../icons/Play'
 
-import { useWindowWidth } from '../../../hooks/useWindowWidth'
+import { useWindowWidth } from 'hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 
 
-const TopBlock = () => {
+export const TopBlock = () => {
   const isDesktop = useWindowWidth(1024)
 
   return (

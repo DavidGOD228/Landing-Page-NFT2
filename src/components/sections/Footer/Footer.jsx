@@ -10,7 +10,7 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 
-const Footer = () => {
+export const Footer = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <footer className={classes.footer}>
@@ -34,7 +34,7 @@ const Footer = () => {
         <img src={Discord} alt=""/>
       </div>
       <p className={classes.copyright}>
-        Copyright © 2022 Metamorph Inc. All rights reserved.></p>
+        Copyright © 2022 Metamorph Inc. All rights reserved.{'>'}</p>
     </footer>
   )
 }

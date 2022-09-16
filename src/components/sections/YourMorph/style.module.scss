@@ -1,35 +1,35 @@
-@import "../../../assets/styles/variables.scss";
+@import '~assets/styles/variables.scss';
 
 .container {
-  padding: 150px 0;
+	padding: 150px 0;
 }
 
 // title
 .titleChooseMorph {
-  display: grid;
-  grid-template-columns: 51% 49%;
-  align-items: center;
-  padding: 0 120px;
-  margin-bottom: 80px;
+	display: grid;
+	grid-template-columns: 51% 49%;
+	align-items: center;
+	padding: 0 120px;
+	margin-bottom: 80px;
 }
 
 .titleLeftSide {
-  font-size: 4vw;
-  margin-left: auto;
-  text-align: right;
-  line-height: 1;
+	font-size: 4vw;
+	margin-left: auto;
+	text-align: right;
+	line-height: 1;
 
-  .titleLeftSide {
-    margin-left: auto;
-  }
+	.titleLeftSide {
+		margin-left: auto;
+	}
 }
 
 .titleRightSide {
-  margin-left: 28px;
-  line-height: 26px;
+	margin-left: 28px;
+	line-height: 26px;
 }
 
 .wrapperContentTitleLeftSide {
-  width: 100%;
-  align-items: self-end;
+	width: 100%;
+	align-items: self-end;
 }

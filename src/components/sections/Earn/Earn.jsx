@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-const Earn = () => {
+export const Earn = () => {
   const isDesktop = useWindowWidth(1024);
 
   return (

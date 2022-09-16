@@ -7,7 +7,7 @@ import ConfidenceImage from '../../../assets/images/confidence.png'
 import classes from './style.module.scss'
 import Smile from "../../icons/Smile";
 
-const Privacy = () => {
+export const Privacy = () => {
   return (
     <div>
       <ScrollAnimation animateIn="animate__slideInLeft" animateOnce>
