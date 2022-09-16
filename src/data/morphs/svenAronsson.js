@@ -7,7 +7,7 @@ const svenAronsson = {
   cardImg: `${nameFolder}/card-sven-aronsson.png`,
   bodyImg: `${nameFolder}/body-sven-aronsson.png`,
   fingerPrintImg: `${nameFolder}/fingerprint-sven-aronsson.svg`,
-  name: "Miho Ikuta",
+  name: "Sven Aronsson",
   type: "classique",
   code: "F2124AJXE772LSAWFZ3ZF9",
   birth: '28.02.1999',

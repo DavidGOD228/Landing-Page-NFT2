@@ -1,5 +1,5 @@
 import classes from "./style.module.scss";
-import {Attr} from "../Attr/Attr";
+import {Attr} from "components";
 
 export function AttrsDetails({attributes}) {
   const mapAttrs = attributes.map((attr) => (

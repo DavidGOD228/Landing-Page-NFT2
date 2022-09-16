@@ -12,7 +12,7 @@ const Column = ({data}) => {
       </div>
       <div className={classes.content}>
         <h4 className={classes.title}>{title}</h4>
-        <p className={classes.subtitle}>{subtitle}</p>
+        <div className={classes.subtitle}>{subtitle}</div>
         {
           isComingSoon && <p className={classes.comingSoon}>Coming soon...</p>
         }

@@ -1,4 +1,4 @@
-import { Title, GreenText, Paragraph, Morph } from "../../../components";
+import { Title, GreenText, Paragraph, Morph } from "components";
 import classes from "./style.module.scss";
 
 const YourMorph = () => {

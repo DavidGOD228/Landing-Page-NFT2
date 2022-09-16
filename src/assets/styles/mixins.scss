@@ -1,0 +1,9 @@
+/**
+  * @params
+  * $name: font-size, padding-top, margin, ...
+  * $px: 1px, 15px, 100px, ...
+  */
+@mixin prtnlSclScrnSize($name, $px) {
+  // where 1440(px) - default width of screen
+  #{$name}: ($px * 100vw) / 1440;
+}

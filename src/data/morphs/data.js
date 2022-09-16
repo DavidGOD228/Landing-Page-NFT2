@@ -9,13 +9,13 @@ import henrikHall from "./henrikHall";
 import mihoIkuta from "./mihoIkuta";
 
 export const morphsData = [
-  aamirDatah,
+  thereseGadjigo,
   frankMurphy,
   svenAronsson,
-  thereseGadjigo,
+  henrikHall,
   knutMoberg,
   canE,
   omarTrejo,
-  henrikHall,
+  aamirDatah,
   mihoIkuta
 ]

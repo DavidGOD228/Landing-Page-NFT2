@@ -1,5 +1,5 @@
 import classes from "./style.module.scss";
-import mapGraphic from "../../../../utils/mapGraphic";
+import mapGraphic from "utils/mapGraphic";
 
 export const Stick = ({ isEmpty = false }) => (
   <span className={`${classes.stick} ${isEmpty && classes.empty}`} />

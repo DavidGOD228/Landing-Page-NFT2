@@ -1,4 +1,4 @@
-import { Stick } from './../components'
+import { Stick } from 'components'
 ;
 const mapGraphic = precent => {
   const maxLength = 25;

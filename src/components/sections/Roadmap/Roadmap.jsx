@@ -1,15 +1,11 @@
-import React from 'react'
-
-import Title from '../../common/Title/Title'
-import GreenText from '../../common/GreenText/GreenText'
-import Paragraph from '../../common/Paragraph/Paragraph'
+import { Title, GreenText, Paragraph } from 'components'
 import Column from './components/Column/Column'
 
-import {useWindowWidth} from '../../../hooks/useWindowWidth'
+import {useWindowWidth} from 'hooks/useWindowWidth'
 import {roadmapTableData} from './data/running'
 
-import AppStore from '../../../assets/images/appStore.svg'
-import GooglePlay from '../../../assets/images/googlePlay.png'
+import AppStore from 'assets/images/appStore.svg'
+import GooglePlay from 'assets/images/googlePlay.png'
 
 import classes from './style.module.scss'
 
