@@ -8,6 +8,17 @@
   }
 }
 
+.title {
+  font-size: 36px;
+  line-height: 120%;
+  margin-left: 25px;
+
+  @media screen and (min-width: $desktop){
+    text-transform: uppercase;
+    margin-left: 38px;
+  }
+}
+
 .members {
   display: flex;
   gap: 49px;
@@ -91,3 +102,18 @@
   text-transform: uppercase;
   color: #FFFFFF;
 }
+
+.mobileMembers {
+  display: flex;
+  font-size: 24px;
+  align-items: flex-end;
+  font-family: 'Big Pixel', sans-serif;
+  color: #FFFFFF;
+}
+
+.mobileMembersText {
+  font-size: 12px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
