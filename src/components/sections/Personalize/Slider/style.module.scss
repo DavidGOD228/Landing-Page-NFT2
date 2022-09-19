@@ -1,18 +1,53 @@
+@import "~assets/styles/media.scss";
+@import "~assets/styles/mixins.scss";
+
 .slider {
-  position: absolute;
-  top: 70px;
-  right: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+	position: relative;
+	display: grid;
+	overflow: hidden;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
 }
 
-.row {
-  display: flex;
-  transition: all 1s ease-in-out;
+.shadow {
+	position: absolute;
+	right: 0;
+
+	height: 100%;
+	width: 25%;
+
+  // generator: https://cssgradient.io/
+	background: linear-gradient(
+		90deg,
+		rgba(14, 14, 15, 0) 0%,
+		rgba(14, 14, 15, 0.5) 50%,
+		rgba(14, 14, 15, 1) 100%
+	);
 }
 
-.sliderItem {
-  //will-change: transform;
-  transform: matrix(1, 0, 0, 1, 0, 0);
+@media screen and (max-width: $m-desktop) {
+  .slider  {
+    width: 50%;
+    left: 50%;
+    transform: translateX(calc(-270px / 2));
+  }
 }
+
+@media screen and (max-width: $tablet) {
+  .slider  {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .slider  {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: $m-mobile) {
+  .slider  {
+    @include prtnlSclScrnSize(width, 1300);
+  }
+}
+

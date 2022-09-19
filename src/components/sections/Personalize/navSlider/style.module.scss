@@ -1,0 +1,60 @@
+@import "~assets/styles/media.scss";
+@import "~assets/styles/mixins.scss";
+
+.sliderNav {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  width: fit-content;
+  align-items: center;
+}
+
+.sliderCount {
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Hanson', sans-serif;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #343a3d;
+  margin-top: 6px;
+
+  @media screen and (min-width: $desktop){
+    font-size: 24px;
+  }
+}
+
+.arrowSlider {
+  width: 60px;
+  height: 60px;
+}
+
+.activeSlide {
+  color: #fff;
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: $m-desktop) {
+  .containerSliderSection  {
+    grid-template-columns: 1fr;
+  }
+
+  .arrowSlider {
+    width: 42px;
+    height: 42px;
+  }
+
+  .sliderCount {
+    font-size: 14px;
+    margin: 0 50px;
+  }
+
+  .sliderNav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

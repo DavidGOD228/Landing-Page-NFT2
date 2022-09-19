@@ -7,10 +7,9 @@ import Table from "../../common/Table/Table"
 import classes from './style.module.scss'
 import Slider from "./Slider/Slider";
 import Items from "./Items/Items";
+import NavSlider from "./navSlider/navSlider";
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import Paragraph from "../../common/Paragraph/Paragraph";
-import ArrowLeft from "../../icons/ArrowLeft";
-import ArrowRight from "../../icons/ArrowRight";
 
 const data = [
   {
@@ -33,21 +32,6 @@ const data = [
   },
 ]
 
-const sliderData = [
-  {
-    title: <> Personalize <GreenText>and make it unique</GreenText></>
-  }, {
-
-    title: <> Personalize <GreenText>and make it unique</GreenText></>
-  },
-  {
-    title: <> Personalize <GreenText>and make it unique</GreenText></>
-  },
-  {
-    title: <> Personalize <GreenText>and make it unique</GreenText></>
-  },
-]
-
 export const Personalize = () => {
   const isDesktop = useWindowWidth(1024)
 
@@ -64,44 +48,76 @@ export const Personalize = () => {
   }
 
   return (
-    <>
-      <div className={classes.container}>
-        <div className={classes.personalizeContent}>
-          <Title classname={classes.personalizeTitle}>
-            Personalize <GreenText>and make it unique</GreenText>
-          </Title>
-          <p className={classes.personalizeParagraph}>
-            Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.
-          </p>
-          <div className={classes.sliderNav}>
-            <ArrowLeft onClick={handlePrevSlide} width={isDesktop ? 60 : 42} height={isDesktop ? 60 : 42}/>
-            <p className={classes.sliderCount}><span
-              className={classes.activeSlide}>{activeSlide} </span>of 4</p>
-            <ArrowRight onClick={handleNextSlide} width={isDesktop ? 60 : 42} height={isDesktop ? 60 : 42}/>
-          </div>
-        </div>
-        <Slider sliderData={sliderData}/>
+		<>
+			<div className={`${classes.containerSliderSection} ${classes.desktopVersion}`}>
+				<div className={classes.contentBlock}>
+					<Title classname={classes.personalizeTitle}>
+						Personalize <GreenText>and make it unique</GreenText>
+					</Title>
+					<p className={classes.personalizeParagraph}>
+						Costruisci comunità per vivere le tue idee più sfrenate con soldi
+						veri sul tavolo.
+					</p>
+
+					<NavSlider
+						className={classes.desktopNavSlider}
+						activeSlide={activeSlide}
+						handleNextSlide={handleNextSlide}
+						handlePrevSlide={handlePrevSlide}
+					/>
+				</div>
+
+				<Slider className={classes.slider} activeSlide={activeSlide} />
       </div>
-      <div className={classes.personalizeContainer}>
-        <Title classname={classes.marketplaceTitle}>The <br/>
-          <GreenText>MARKETPLACE</GreenText></Title>
-        <div className={classes.content}>
-          {
-            isDesktop && <Paragraph className={classes.paragraph}>
-              Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game.
-            </Paragraph>
-          }
-          <Table style={{
-            marginTop: 35,
-            width: 400,
-            height: isDesktop ? 114 : 89,
-            textTransform: isDesktop ? 'initial' : 'uppercase'
-          }} data={data}/>
-        </div>
-        <Items/>
+
+      <div className={classes.mobileVersion}>
+				<div className={classes.contentBlock}>
+					<Title classname={classes.personalizeTitle}>
+						Personalize <GreenText>and make it unique</GreenText>
+					</Title>
+					<p className={classes.personalizeParagraph}>
+						Costruisci comunità per vivere le tue idee più sfrenate con soldi
+						veri sul tavolo.
+					</p>
+				</div>
+
+				<Slider className={classes.slider} activeSlide={activeSlide} />
+
+        <NavSlider
+          className={classes.mobileNavSlider}
+          activeSlide={activeSlide}
+          handleNextSlide={handleNextSlide}
+          handlePrevSlide={handlePrevSlide}
+        />
       </div>
-    </>
-  )
+
+
+			<div className={classes.personalizeContainer}>
+				<Title classname={classes.marketplaceTitle}>
+					The <br />
+					<GreenText>MARKETPLACE</GreenText>
+				</Title>
+				<div className={classes.content}>
+					{isDesktop && (
+						<Paragraph className={classes.paragraph}>
+							Buy and sell your assets and services on the METAMORPH
+							Marketplace, both in and outside the game.
+						</Paragraph>
+					)}
+					<Table
+						style={{
+							marginTop: 35,
+							width: 400,
+							height: isDesktop ? 114 : 89,
+							textTransform: isDesktop ? 'initial' : 'uppercase'
+						}}
+						data={data}
+					/>
+				</div>
+				<Items />
+			</div>
+		</>
+	);
 }
 
 export default Personalize

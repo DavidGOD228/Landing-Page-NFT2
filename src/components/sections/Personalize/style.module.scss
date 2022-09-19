@@ -1,22 +1,21 @@
 @import "~assets/styles/media.scss";
+@import "~assets/styles/mixins.scss";
 
-.container {
-  padding: 0 20px;
+.containerSliderSection {
   position: relative;
-  height: 750px;
-  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 200px;
+  padding: 150px 0 150px 130px;
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .personalizeTitle {
   font-size: 64px;
-  line-height: 120%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 610px;
-}
-
-.personalizeContent {
-  margin-left: 150px;
 }
 
 .personalizeParagraph {
@@ -24,13 +23,12 @@
   line-height: 160%;
   color: #C1C0C0;
   margin-top: 24px;
-  margin-left: 40px;
-  width: 509px;
+  margin-left: 32px;
 }
 
 .marketplaceTitle {
   font-size: 30px;
-  line-height: 120%;
+  line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
@@ -51,37 +49,11 @@
 }
 
 .paragraph {
-  width: 411px;
   font-size: 16px;
   line-height: 160%;
   margin-top: 34px;
   margin-left: 5px;
   color: #C1C0C0;
-}
-
-.sliderNav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 200px;
-  width: 356px;
-  margin-left: 40px;
-}
-
-.sliderCount {
-  font-family: 'Hanson', sans-serif;
-  line-height: 120%;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #343a3d;
-
-  @media screen and (min-width: $desktop){
-    font-size: 24px;
-  }
-}
-
-.activeSlide {
-  color: #fff;
 }
 
 .personalizeContainer {
@@ -90,7 +62,6 @@
   background-size: cover;
   position: relative;
   height: 843px;
-  margin-top: -147px;
   padding: 100px 20px 0;
 
   @media screen and (min-width: $desktop) {
@@ -98,5 +69,99 @@
     display: flex;
     flex-direction: column;
     padding: 220px 191px 56px 233px;
+  }
+}
+
+.contentBlock {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+}
+
+.desktopNavSlider {
+  padding-left: 30px;
+}
+
+.mobileVersion {
+  display: none;
+}
+
+
+@media screen and (max-width: $l-desktop) {
+  .containerSliderSection {
+    @include prtnlSclScrnSize(gap, 100);
+  }
+}
+
+@media screen and (max-width: $m-desktop) {
+  .desktopVersion {
+    display: none;
+  }
+
+  .mobileVersion {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 150px 0;
+  }
+
+  .personalizeParagraph {
+    display: none;
+  }
+
+  .contentBlock {
+    grid-template-rows: 1fr;
+    padding: 0 120px;
+  }
+
+  .mobileNavSlider {
+    margin-top: 25px !important;
+  }
+
+  .slider {
+    @include prtnlSclScrnSize(margin-top, 100);
+  }
+
+  .desktopNavSlider {
+    display: none !important;
+  }
+
+  .containerSliderSection  {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .arrowSlider {
+    @include prtnlSclScrnSize(width, 60);
+    @include prtnlSclScrnSize(height, 60);
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .personalizeTitle {
+    @include prtnlSclScrnSize(font-size, 70);
+  }
+
+  .contentBlock {
+    grid-template-rows: 1fr;
+    padding: 0 20px;
+  }
+}
+
+
+@media screen and (max-width: $s-tablet) {
+  .personalizeTitle {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: $m-mobile) {
+  .personalizeTitle {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  .personalizeTitle {
+    $fontSizePx: 100vw * 30 / 360;
+    font-size: $fontSizePx;
   }
 }

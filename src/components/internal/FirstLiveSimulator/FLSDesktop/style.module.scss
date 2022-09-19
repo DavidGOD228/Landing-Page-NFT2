@@ -98,10 +98,10 @@
 	justify-content: center;
 	flex-direction: column;
 	margin-top: 13px;
+  filter: drop-shadow(30px 35px 20px rgba(0, 0, 0, 0.45));
 }
 
 .privacyImage {
-	filter: drop-shadow(24px 24px 56px rgba(0, 0, 0, 0.45));
 	border-radius: 12px;
 	width: 100%;
 	max-width: 280px;
