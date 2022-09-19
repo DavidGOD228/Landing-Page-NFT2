@@ -21,12 +21,19 @@
 $margin-left: 26px;
 .chineseText {
   font-family: 'DFLiKingHei1B', sans-serif;
-  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+  margin: 0 0 0 30px;
 
-  margin: $margin-left 0 0 27px;
+  @media screen and (min-width: $desktop){
+    font-size: 24px;
+    line-height: 27px;
+    margin: $margin-left 0 0 27px;
+  }
 }
 
 .titleWrapper {
