@@ -8,6 +8,7 @@ import TransparentGreenCard from "../../../assets/images/transparent-green-card.
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
+import {morphIDText} from "../../../data/morphID/text";
 
 export const MorphId = () => {
   const isDesktop = useWindowWidth(1024)
@@ -15,7 +16,7 @@ export const MorphId = () => {
   return (
     <div className={classes.container}>
       <div className={classes.cardsImg}>
-        {isDesktop && <img src={TransparentGreenCard} alt="cards" />}
+        {isDesktop && <img src={TransparentGreenCard} alt="cards"/>}
       </div>
 
       <div className={classes.description}>
@@ -29,18 +30,13 @@ export const MorphId = () => {
         </div>
 
         <Paragraph className={classes.morhDescr}>
-          Morph - ID is an identification card with a single genetic code
-          essential to access the game that represents the identity of your
-          Morph that stands out in each user.
+          {isDesktop ? morphIDText.titleDesktop : morphIDText.titleMobile}
         </Paragraph>
 
-          <p className={classes.waysToStartChinese}>2 種 方式開始</p>
-          <p className={classes.morhTitle}>2 ways to start</p>
+        <p className={classes.waysToStartChinese}>2 種 方式開始</p>
+        <p className={classes.morhTitle}>2 ways to start</p>
         <Paragraph className={`${classes.morhDescr} ${classes.waysToStartParagraph}`}>
-          The game offers 2 experience scenarios based on the starting Morph ID
-          card a player chooses. Each scenario satisfies different game modes.
-          Classique card is more suitable for explorers and the Eternal one for
-          true competition lovers.
+          {isDesktop ? morphIDText.waysToStartDesktop : morphIDText.waysToStartMobile}
         </Paragraph>
       </div>
     </div>
