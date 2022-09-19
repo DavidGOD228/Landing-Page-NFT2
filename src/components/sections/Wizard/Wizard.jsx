@@ -1,4 +1,4 @@
-import WhiteTitle from "./components/WhiteTitle/WhiteTitle";
+import WhiteTitle from "../../common/WhiteTitle/WhiteTitle";
 import Member from "./components/Member/Member";
 
 import Nazario from 'assets/images/nazario.png';
@@ -38,7 +38,11 @@ export const Wizard = () => {
   return (
     <>
       <div className={classes.titleWrapper}>
-        <WhiteTitle/>
+        <WhiteTitle classname={classes.title} title='wizard team'>
+          {!isDesktop &&
+            <p className={classes.mobileMembers}>21<span className={classes.mobileMembersText}>members</span></p>
+          }
+        </WhiteTitle>
       </div>
       {
         isDesktop ? <div className={classes.table}>

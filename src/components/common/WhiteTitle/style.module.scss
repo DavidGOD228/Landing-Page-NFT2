@@ -1,0 +1,23 @@
+@import "../../../assets/styles/media";
+
+.content {
+  display: flex;
+  position: relative;
+  color: #fff;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Hanson', sans-serif;
+}
+
+.content:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  height: 100%;
+  background: #fff;
+  width: 3px;
+}
+
