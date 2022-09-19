@@ -12,6 +12,7 @@ import HenriID from "../../../assets/images/henri-id.png";
 
 export function TypesCards() {
   return (
+    <div className={classes.wrapper}>
     <GlobalContainer>
       <div className={classes.containerTypesCards}>
         <div className={classes.morphBlock}>
@@ -63,5 +64,6 @@ export function TypesCards() {
         </div>
       </div>
     </GlobalContainer>
+    </div>
   );
 }

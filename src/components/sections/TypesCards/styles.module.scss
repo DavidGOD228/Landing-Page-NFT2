@@ -1,8 +1,20 @@
+@import '~assets/styles/media.scss';
+
+.wrapper {
+  border-top: 1px solid #343A3D;
+
+  @media screen and (min-width: $desktop) {
+    border-bottom: 1px solid #343A3D;
+  }
+}
+
 // common
 .containerTypesCards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 75px 0 150px 0;
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .morphBlock {
@@ -11,20 +23,42 @@
   gap: 30px;
   justify-content: flex-start;
   align-items: center;
+
+
+  &:nth-child(1) {
+    padding-left: 20px;
+    @media screen and (min-width: $desktop) {
+      border-right: 1px solid #343A3D;
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 75px 0 150px 0;
+  }
 }
 
 .title {
   font-family: 'Hanson', sans-serif;
-  font-size: 32px;
-  height: 38px;
-  text-align: center;
-  margin-left: 12px;
+  font-size: 20px;
+  line-height: 21px;
   color: #FFFFFF;
+  margin-left: 16px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    height: 38px;
+    text-align: center;
+    line-height: 33px;
+    margin-left: 12px;
+  }
 }
 
 .descr {
-  margin-top: 16px;
-  width: 70%;
+  @media screen and (min-width: $desktop){
+    margin-top: 16px;
+    width: 70%;
+  }
 }
 
 .idImage {
@@ -73,4 +107,20 @@
 
 .eternalTitle {
   color: #B7F201
+}
+
+.mihoMainImage {
+  order: 1;
+  width: 216px;
+  height: 597px;
+  @media screen and (min-width: $desktop) {
+    order: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.classiqueBorder {
+  width: 22px;
+  height: 29px;
 }
