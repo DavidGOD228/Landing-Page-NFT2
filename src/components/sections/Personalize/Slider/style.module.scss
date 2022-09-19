@@ -27,8 +27,27 @@
 
 @media screen and (max-width: $m-desktop) {
   .slider  {
-    width: 60%;
+    width: 50%;
     left: 50%;
-    transform: translateX(-35.7%);
+    transform: translateX(calc(-270px / 2));
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .slider  {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .slider  {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: $m-mobile) {
+  .slider  {
+    @include prtnlSclScrnSize(width, 1300);
+  }
+}
+

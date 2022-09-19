@@ -49,8 +49,8 @@ export const Personalize = () => {
 
   return (
 		<>
-			<div className={classes.containerSliderSection}>
-				<div className={classes.personalizeContent}>
+			<div className={`${classes.containerSliderSection} ${classes.desktopVersion}`}>
+				<div className={classes.contentBlock}>
 					<Title classname={classes.personalizeTitle}>
 						Personalize <GreenText>and make it unique</GreenText>
 					</Title>
@@ -68,6 +68,20 @@ export const Personalize = () => {
 				</div>
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
+      </div>
+
+      <div className={classes.mobileVersion}>
+				<div className={classes.contentBlock}>
+					<Title classname={classes.personalizeTitle}>
+						Personalize <GreenText>and make it unique</GreenText>
+					</Title>
+					<p className={classes.personalizeParagraph}>
+						Costruisci comunità per vivere le tue idee più sfrenate con soldi
+						veri sul tavolo.
+					</p>
+				</div>
+
+				<Slider className={classes.slider} activeSlide={activeSlide} />
 
         <NavSlider
           className={classes.mobileNavSlider}
@@ -76,6 +90,7 @@ export const Personalize = () => {
           handlePrevSlide={handlePrevSlide}
         />
       </div>
+
 
 			<div className={classes.personalizeContainer}>
 				<Title classname={classes.marketplaceTitle}>
