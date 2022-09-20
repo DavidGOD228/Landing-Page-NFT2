@@ -2,9 +2,10 @@
 	$wb: 1px;
 	$-wb: -1px;
 	$color: white;
-
-	filter: drop-shadow($wb $wb 0 $color) drop-shadow($-wb $wb 0 $color)
-		drop-shadow($wb $-wb 0 $color) drop-shadow($-wb $-wb 0 $color);
+	filter:
+    drop-shadow($wb $wb 0 $color) drop-shadow($-wb $wb 0 $color)
+		drop-shadow($wb $-wb 0 $color) drop-shadow($-wb $-wb 0 $color)
+    drop-shadow(0 0 10px rgba($color, 0.75));
 }
 
 .isActive {
@@ -27,8 +28,4 @@
 			@include activeCard;
 		}
 	}
-}
-
-@media screen and (max-width: 1286px) {
-
 }

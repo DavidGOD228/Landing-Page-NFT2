@@ -42,10 +42,6 @@ $wStick: 3.5px;
   background: red;
   transform: skew(-30deg);
 
-  &.empty {
-    background: #343A3D;
-  }
-
   &:nth-child(1) {
     background: #FBBF9A;
   }
@@ -120,6 +116,10 @@ $wStick: 3.5px;
   }
   &:nth-child(25) {
     background: #F1F270;
+  }
+
+  &.empty {
+    background: #343A3D;
   }
 }
 
