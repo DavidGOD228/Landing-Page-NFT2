@@ -47,10 +47,19 @@
 
 .table {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr;
-  border-top: 1px solid #343A3D;
-  border-bottom: 1px solid #343A3D;
   margin-top: 87px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background:linear-gradient(90deg, rgba(48, 41, 33, 1) 0%, rgba(30, 46, 39, 1) 20%, rgba(16, 47, 45, 1) 33%, rgba(33, 56, 38, 1) 50%, rgba(38, 46, 29, 1) 69%, rgba(47, 45, 27, 1) 84%, rgba(105, 145, 84, 1) 100%);
+  }
 }
 
 @media screen and (max-width: $desktop) {
