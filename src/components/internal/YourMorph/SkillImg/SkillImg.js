@@ -1,4 +1,3 @@
-import { Arrows } from "../../../";
 import classes from "./style.module.scss";
 
 export function SkillImg({skillImgName}) {
@@ -11,7 +10,6 @@ export function SkillImg({skillImgName}) {
         src={importskillImg}
         alt={skillImgName}
       />
-      <Arrows />
     </div>
   );
 }
