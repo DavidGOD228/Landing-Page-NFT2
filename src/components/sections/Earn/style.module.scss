@@ -33,9 +33,9 @@
 
 .coin {
   display: block;
-  margin: 0 auto;
   z-index: 2;
-
+  min-width: 274px;
+  margin: 12px auto 0;
   @include prtnlSclScrnSize(width, 414)
 }
 
