@@ -1,11 +1,12 @@
 import React from 'react'
 
 import classes from './style.module.scss'
+import Circle from '../../../../../assets/images/circle.svg'
 
-const ListItem = ({color, text}) => {
+const ListItem = ({text}) => {
   return (
     <div className={classes.list}>
-      <span className={classes.circle} style={{backgroundColor: color}}/>
+      <img className={classes.circle} src={Circle} alt=""/>
       {text}
     </div>
   )
