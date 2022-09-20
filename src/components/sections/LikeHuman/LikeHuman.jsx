@@ -12,7 +12,6 @@ import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import classes from "./style.module.scss";
 
 import {accordionData, tableData} from "./data";
-import { GlobalContainer } from "components/common/GlobalContainer/GlobalContainer";
 
 export const LikeHuman = () => {
   const isDesktop = useWindowWidth(1024);
@@ -46,7 +45,6 @@ export const LikeHuman = () => {
   )
 
   return (
-    <GlobalContainer>
       <div className={classes.container}>
         <div className={classes.titleWrapper}>
           <Paragraph className={classes.paragraph}>
@@ -66,7 +64,6 @@ export const LikeHuman = () => {
           {isDesktop ? table : accordion}
         </ScrollAnimation>
       </div>
-    </GlobalContainer>
   );
 };
 
