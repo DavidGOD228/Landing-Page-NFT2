@@ -40,10 +40,11 @@
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   @media screen and (min-width: $desktop) {
     padding-left: 42px;
+    justify-content: space-between;
     padding-top: 6px;
   }
 }
@@ -53,6 +54,7 @@
   line-height: 160%;
   margin-top: 34px;
   margin-left: 5px;
+  width: 411px;
   color: #C1C0C0;
 }
 
@@ -62,13 +64,24 @@
   background-size: cover;
   position: relative;
   height: 843px;
-  padding: 100px 20px 0;
+  padding: 150px 20px 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 215px;
+    background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+    transform: rotate(-180deg);
+  }
 
   @media screen and (min-width: $desktop) {
     background-image: url("../../../assets/images/marketplaceDesktop.png");
     display: flex;
     flex-direction: column;
-    padding: 220px 191px 56px 233px;
+    padding: 80px 191px 56px 233px;
   }
 }
 
