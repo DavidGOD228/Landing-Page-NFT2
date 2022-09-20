@@ -5,7 +5,6 @@ import Hamburger from '../../../assets/images/hamburger.svg'
 import LogoIcon from '../../../assets/images/logo-icon.svg'
 import Close from '../../../assets/images/close.svg'
 import Twitter from '../../../assets/images/twitter.svg'
-import Telegram from '../../../assets/images/telegram.svg'
 import Discord from '../../../assets/images/discord.svg'
 
 import { useWindowWidth } from '../../../hooks/useWindowWidth'
@@ -56,7 +55,6 @@ export const Header = () => {
              </div>
              <div className={classes.socials}>
                <img src={Twitter} alt=""/>
-               <img src={Telegram} alt=""/>
                <img src={Discord} alt=""/>
              </div>
            </div>
