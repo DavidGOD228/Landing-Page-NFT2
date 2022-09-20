@@ -1,0 +1,47 @@
+@import '~assets/styles/media.scss';
+@import '~assets/styles/mixins.scss';
+
+@media screen and (max-width: $desktop) {
+  .infoMorphMobile {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .imgMorphChooseMobile {
+    width: 100%;
+    max-width: 21vw;
+  }
+
+  .infoTitleAttr {
+    margin-top: 3vw;
+  }
+
+  .infoBlockMobile {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .infoMorphMobile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 0 20px 0 0;
+  }
+
+  .infoBlockMobile {
+    width: 100%;
+  }
+
+  .infoTitleAttr {
+    display: none;
+  }
+  .attrTabletDesktop {
+    display: none;
+  }
+  .imgMorphChooseMobile {
+    position: relative;
+    width: 100%;
+    max-width: 149px;
+  }
+}

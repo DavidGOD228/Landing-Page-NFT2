@@ -1,12 +1,16 @@
-import { Title, GreenText, Paragraph, Morph } from 'components';
+import { Title, GreenText, Paragraph, Morph, MorphMobile } from 'components';
 import classes from './style.module.scss';
+import { useWindowWidth } from 'hooks/useWindowWidth';
+import { media } from 'utils/media';
 
 export const YourMorph = () => {
+  const isAfterBorder = useWindowWidth(media.mDesktop);
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.titleChooseMorph}>
 				<Title
-					isAfterBorder
+					isAfterBorder={isAfterBorder} // if false - after, true - before 
 					classname={classes.titleLeftSide}
 					classnameWrapper={classes.wrapperContentTitleLeftSide}
 				>
@@ -23,6 +27,7 @@ export const YourMorph = () => {
 			</div>
 
 			<Morph />
+      <MorphMobile />
 		</div>
 	);
 };

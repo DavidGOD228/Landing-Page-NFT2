@@ -13,7 +13,7 @@ const thereseGadjigo = {
 	birth: '11.07.2000',
 	location: 'Dakar | Senegal',
 	parametrs: '1.82 cm, 55 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png', 'skill-4.png'],
 	attributes: [
 		{
 			id: 1,

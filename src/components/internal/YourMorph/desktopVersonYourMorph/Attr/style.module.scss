@@ -1,0 +1,194 @@
+@import '~assets/styles/media.scss';
+
+@mixin text {
+  font-family: 'Big Pixel';
+  color: #fff;
+}
+
+.titleSkill {
+  @include text;
+  margin-bottom: 0.7vw;
+  width: fit-content;
+  letter-spacing: 0.16em;
+}
+
+.counterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: fit-content
+}
+
+.percent {
+  @include text;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+$wStick: 3.5px;
+.graphic {
+  position: relative;
+  display: flex;
+  gap: $wStick;
+  overflow: hidden;
+}
+
+.stick {
+  content: "";
+  display: block;
+  height: 1.4vw;
+  width: $wStick;
+  background: red;
+  transform: skew(-30deg);
+
+  &:nth-child(1) {
+    background: #FBBF9A;
+  }
+  &:nth-child(2) {
+    background: #F4C19D;
+  }
+  &:nth-child(3) {
+    background: #DFC6A5;
+  }
+  &:nth-child(4) {
+    background: #C3CDB1;
+  }
+  &:nth-child(5) {
+    background: #A8D4BB;
+  }
+  &:nth-child(6) {
+    background: #8CDBC7;
+  }
+  &:nth-child(7) {
+    background: #6EE2D3;
+  }
+  &:nth-child(8) {
+    background: #52E9DE;
+  }
+  &:nth-child(9) {
+    background: #32F1EB;
+  }
+  &:nth-child(10) {
+    background: #16F8F7;
+  }
+  &:nth-child(11) {
+    background: #23F9E9;
+  }
+  &:nth-child(12) {
+    background: #35FADA;
+  }
+  &:nth-child(13) {
+    background: #48FBCA;
+  }
+  &:nth-child(14) {
+    background: #5AFBBB;
+  }
+  &:nth-child(15) {
+    background: #6FFCA9;
+  }
+  &:nth-child(16) {
+    background: #82FC98;
+  }
+  &:nth-child(17) {
+    background: #94FD89;
+  }
+  &:nth-child(18) {
+    background: #A3FC80;
+  }
+  &:nth-child(19) {
+    background: #AEFB7E;
+  }
+  &:nth-child(20) {
+    background: #B9F97C;
+  }
+  &:nth-child(21) {
+    background: #C5F879;
+  }
+  &:nth-child(22) {
+    background: #D0F777;
+  }
+  &:nth-child(23) {
+    background: #DBF575;
+  }
+  &:nth-child(24) {
+    background: #E7F472;
+  }
+  &:nth-child(25) {
+    background: #F1F270;
+  }
+
+  &.empty {
+    background: #343A3D;
+  }
+}
+
+@media screen and (max-width: $l-desktop) {
+  $wStickAdaptive: 0.22vw;
+	.graphic {
+    gap: $wStickAdaptive;
+	}
+  .stick  {
+    width: $wStickAdaptive;
+  }
+}
+
+@media screen and (max-width: $m-desktop) {
+	.titleSkill {
+    font-size: 0.8vw;
+	}
+
+  .percent {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .counterContainer {
+    align-items: center;
+  }
+
+  $wStickAdaptive: 0.32vw;
+	.graphic {
+    gap: $wStickAdaptive;
+	}
+  .stick  {
+    width: $wStickAdaptive;
+    height: 2vw;
+  }
+  .titleSkill {
+    font-size: 1.43vw;
+	}
+  .percent {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .titleSkill {
+    font-size: 11px;
+  }
+  .percent {
+    font-size: 14px;
+  }
+
+  $wStickAdaptive: 2.2px;
+	.graphic {
+    gap: $wStickAdaptive;
+	}
+  .stick  {
+    width: $wStickAdaptive;
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  $wStickAdaptive: 1.7px;
+	.graphic {
+    gap: $wStickAdaptive;
+	}
+  .stick  {
+    width: $wStickAdaptive;
+    height: 18px;
+  }
+}

@@ -1,4 +1,6 @@
 @import '~assets/styles/variables.scss';
+@import '~assets/styles/media.scss';
+@import '~assets/styles/mixins.scss';
 
 .container {
 	padding: 150px 0;
@@ -25,6 +27,7 @@
 }
 
 .titleRightSide {
+  font-size: 16px;
 	margin-left: 28px;
 	line-height: 26px;
 }
@@ -32,4 +35,67 @@
 .wrapperContentTitleLeftSide {
 	width: 100%;
 	align-items: self-end;
+}
+
+@media screen and (max-width: $m-desktop) {
+  .container {
+    padding: 0;
+  }
+
+  .titleRightSide {
+    display: none;
+  }
+
+  .titleLeftSide {
+    text-align: left;
+  }
+
+  .titleChooseMorph {
+    grid-template-columns: 1fr;
+    padding: 0 120px;
+    margin-bottom: 7vw;
+  }
+  
+  .wrapperContentTitleLeftSide {
+    align-items: self-start;
+  }
+}
+
+@media screen and (max-width: $m-desktop) {
+  .titleLeftSide {
+    font-size: 64px;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .container {
+    margin-bottom: 120px;
+  }
+
+  .titleChooseMorph {
+    padding: 0 20px;
+  }
+
+  .titleLeftSide {
+    @include prtnlSclScrnSize(font-size, 70);
+  }
+}
+
+@media screen and (max-width: $s-tablet) {
+  .titleLeftSide {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: $m-mobile) {
+  .titleLeftSide {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: $s-mobile) {
+  .titleLeftSide {
+    $fontSizePx: 100vw * 30 / 360;
+    font-size: $fontSizePx;
+  }
 }
