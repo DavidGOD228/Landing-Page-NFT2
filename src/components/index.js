@@ -33,13 +33,17 @@ export * from './sections/YourMorph/YourMorph';
 export * from './internal/FirstLiveSimulator/FLSDesktop/FLSDesktop';
 export * from './internal/FirstLiveSimulator/FLSMobile/FLSMobile';
 
-// section "Choose Your Morph"
-export * from './internal/YourMorph/Attr/Attr';
-export * from './internal/YourMorph/AttrsDetails/AttrsDetails';
-export * from './internal/YourMorph/BlockInfoTitle/BlockInfoTitle';
-export * from './internal/YourMorph/CardItem/CardItem';
-export * from './internal/YourMorph/IdentifierBlock/IdentifierBlock';
-export * from './internal/YourMorph/InfoDetails/InfoDetails';
-export * from './internal/YourMorph/InfoMorh/InfoMorh';
-export * from './internal/YourMorph/Morph/Morph';
-export * from './internal/YourMorph/SkillImg/SkillImg';
+// section "Choose Your Morph"(desktop)
+export * from './internal/YourMorph/desktopVersonYourMorph/Attr/Attr';
+export * from './internal/YourMorph/desktopVersonYourMorph/AttrsDetails/AttrsDetails';
+export * from './internal/YourMorph/desktopVersonYourMorph/BlockInfoTitle/BlockInfoTitle';
+export * from './internal/YourMorph/desktopVersonYourMorph/CardItem/CardItem';
+export * from './internal/YourMorph/desktopVersonYourMorph/IdentifierBlock/IdentifierBlock';
+export * from './internal/YourMorph/desktopVersonYourMorph/InfoDetails/InfoDetails';
+export * from './internal/YourMorph/desktopVersonYourMorph/InfoMorh/InfoMorh';
+export * from './internal/YourMorph/desktopVersonYourMorph/Morph/Morph';
+export * from './internal/YourMorph/desktopVersonYourMorph/SkillImg/SkillImg';
+
+// section "Choose Your Morph"(mobile)
+export * from './internal/YourMorph/mobileVersionYourMorph/MorphMobile/MorphMobile';
+export * from './internal/YourMorph/mobileVersionYourMorph/InfoMorphMobile/InfoMorphMobile';

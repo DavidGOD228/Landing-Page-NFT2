@@ -5,9 +5,9 @@ export const Stick = ({ isEmpty = false }) => (
   <span className={`${classes.stick} ${isEmpty && classes.empty}`} />
 );
 
-export const Attr = ({name, precent}) => {
+export const Attr = ({name, precent, ...props}) => {
   return (
-    <div className={classes.skilContainer}>
+    <div className={classes.skilContainer} {...props}>
         <p className={classes.titleSkill}>{name}</p>
         <div className={classes.counterContainer}>
           <div className={classes.graphic}>{mapGraphic(precent)}</div>

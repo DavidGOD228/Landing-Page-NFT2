@@ -1,0 +1,34 @@
+@mixin activeCard {
+	$wb: 1px;
+	$-wb: -1px;
+	$color: white;
+
+	filter: drop-shadow($wb $wb 0 $color) drop-shadow($-wb $wb 0 $color)
+		drop-shadow($wb $-wb 0 $color) drop-shadow($-wb $-wb 0 $color);
+}
+
+.isActive {
+	@include activeCard;
+}
+
+.morphsCards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.4vw;
+	width: 100%;
+  margin-top: 4.1vw;
+  align-self: baseline;
+
+	img {
+		width: 6.52vw;
+		cursor: pointer;
+
+		&:hover {
+			@include activeCard;
+		}
+	}
+}
+
+@media screen and (max-width: 1286px) {
+
+}

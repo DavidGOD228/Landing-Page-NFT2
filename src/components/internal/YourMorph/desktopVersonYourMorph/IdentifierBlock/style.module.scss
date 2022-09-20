@@ -1,3 +1,5 @@
+@import '~assets/styles/media.scss';
+
 //mixins
 @mixin textStyle {
   font-family: "Hanson";
@@ -35,13 +37,8 @@
   gap: 15px;
 }
 
-.type {
-  height: 2.9vw;
-}
-
 .textType {
   font-size: 1.7vw;
-  padding-top: 3px;
 }
 
 //type texts
@@ -64,8 +61,54 @@
  
   height: 38px;
   padding: 7px 15px;
+}
 
-  p {
-    line-height: 1;
+@media screen and (max-width: $m-desktop) {
+	.id {
+    font-size: 2.5vw;
+	}
+
+  .textType {
+    display: none;
+  }
+
+  .type {
+    margin-top: -1px;
   }
 }
+
+@media screen and (max-width: $desktop) {
+	.morphsContainer {
+    display: none;
+	}
+
+  .textType {
+    display: none;
+  }
+
+  .type {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+	.id {
+    font-size: 24px;
+	}
+
+  .identifierBlock {
+    margin-bottom: 11px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+	.id {
+    width: fit-content;
+  }
+  
+  .identifierBlock {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

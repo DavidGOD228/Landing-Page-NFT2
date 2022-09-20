@@ -22,6 +22,7 @@ export function InfoMorh({morph}) {
         />
         <BlockInfoTitle className={classes.infoTitle}>Bio</BlockInfoTitle>
         <InfoDetails className={classes.infoDetails} morph={morph} />
+
         <BlockInfoTitle className={classes.infoTitle}>
           Attributes
         </BlockInfoTitle>
