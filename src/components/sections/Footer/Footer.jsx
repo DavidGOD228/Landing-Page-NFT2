@@ -3,7 +3,6 @@ import React from 'react'
 import FooterLogo from '../../../assets/images/footer-logo.svg'
 import GradientLogo from '../../../assets/images/gradientLogo.svg'
 import Twitter from '../../../assets/images/twitter.svg'
-import Telegram from '../../../assets/images/telegram.svg'
 import Discord from '../../../assets/images/discord.svg'
 
 import { useWindowWidth } from '../../../hooks/useWindowWidth'
@@ -30,7 +29,6 @@ export const Footer = () => {
       </div>
       <div className={classes.socials}>
         <img src={Twitter} alt=""/>
-        <img src={Telegram} alt=""/>
         <img src={Discord} alt=""/>
       </div>
       <p className={classes.copyright}>
