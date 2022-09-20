@@ -1,13 +1,27 @@
+@import "~assets/styles/media";
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
 .list {
   display: flex;
-  margin-top: 17px;
+  align-items: flex-start;
   z-index: 5;
+
+  @media screen and (max-width: $desktop) {
+    margin-top: 17px;
+  }
 }
 
 .circle {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
   margin-right: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.line {
+  margin-right: 30px;
 }
 

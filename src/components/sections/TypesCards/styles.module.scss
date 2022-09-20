@@ -1,8 +1,20 @@
+@import '~assets/styles/media.scss';
+
+.wrapper {
+  border-top: 1px solid #343A3D;
+
+  @media screen and (min-width: $desktop) {
+    border-bottom: 1px solid #343A3D;
+  }
+}
+
 // common
 .containerTypesCards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 75px 0 150px 0;
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .morphBlock {
@@ -10,34 +22,71 @@
   height: min-content;
   gap: 30px;
   justify-content: flex-start;
-  align-items: center;
+
+
+  &:nth-child(1) {
+    padding: 35px 0 0 20px;
+    @media screen and (min-width: $desktop) {
+      border-right: 1px solid #343A3D;
+      padding: 75px 0 150px 0;
+    }
+  }
+
+  &:nth-child(2) {
+    padding: 0 20px 0 0;
+    @media screen and (min-width: $desktop) {
+      padding: 75px 0 150px 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop){
+    align-items: center;
+  }
 }
 
 .title {
   font-family: 'Hanson', sans-serif;
-  font-size: 32px;
-  height: 38px;
-  text-align: center;
-  margin-left: 12px;
+  font-size: 20px;
+  line-height: 21px;
   color: #FFFFFF;
+  margin-left: 16px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    height: 38px;
+    text-align: center;
+    line-height: 33px;
+    margin-left: 12px;
+  }
 }
 
 .descr {
   margin-top: 16px;
-  width: 70%;
+  @media screen and (min-width: $desktop){
+    width: 70%;
+  }
 }
 
 .idImage {
+  width: 186px;
+  height: 352px;
   margin-top: 23px;
-  width: 100%;
-  max-width: 265px;
+
+  @media screen and (min-width: $desktop){
+    width: 100%;
+    height: auto;
+    max-width: 265px;
+  }
 }
 
 .contentBlock {
-  height: 750px;
-  display: grid;
-  grid-template-rows: auto 25% auto;
-  flex-direction: column;
+
+  @media screen and (min-width: $desktop){
+    display: grid;
+    grid-template-rows: auto 25% auto;
+    flex-direction: column;
+    height: 750px;
+  }
 }
 
 // Classique or Miho
@@ -54,12 +103,16 @@
 
 // Eternal or Henri
 .mihoText {
-  margin-top: 16px;
   text-align: left;
 }
 
 .eternalBlock {
-  margin-left: auto;
+
+  margin-top: 64px;
+  @media screen and (min-width: $desktop){
+    margin-left: auto;
+    margin-top: 0;
+  }
 }
 
 .henriText {
@@ -68,9 +121,44 @@
 }
 
 .idImageHenri {
+  display: block;
   margin-left: auto;
 }
 
 .eternalTitle {
   color: #B7F201
+}
+
+.mihoMainImage {
+  order: 1;
+  @media screen and (min-width: $desktop) {
+    order: 0;
+  }
+}
+
+.classiqueBorder {
+  width: 22px;
+  height: 29px;
+
+  @media screen and (min-width: $desktop){
+    width: 32px;
+    height: 42px;
+  }
+}
+
+.eternalBorder {
+  width: 25.55px;
+  height: 29px;
+
+  @media screen and (min-width: $desktop){
+    width: 37px;
+    height: 42px;
+  }
+}
+
+.henriMainImage {
+  order: -1;
+  @media screen and (min-width: $desktop){
+    order: 0;
+  }
 }

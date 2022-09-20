@@ -1,9 +1,15 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+@import '~assets/styles/media.scss';
 
-  padding: 100px 130px;
+.container {
+  padding: 0 20px;
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    padding: 100px 130px;
+  }
 }
 
 .cardsImg {
@@ -15,12 +21,19 @@
 $margin-left: 26px;
 .chineseText {
   font-family: 'DFLiKingHei1B', sans-serif;
-  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+  margin: 0 0 0 30px;
 
-  margin: $margin-left 0 0 27px;
+  @media screen and (min-width: $desktop){
+    font-size: 24px;
+    line-height: 27px;
+    margin: $margin-left 0 0 27px;
+  }
 }
 
 .titleWrapper {
@@ -28,28 +41,63 @@ $margin-left: 26px;
 }
 
 .title {
-  font-size: 64px;
-  line-height: 1;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 64px;
+    line-height: 1;
+  }
 }
 
 .morhTitle {
   font-family: 'Hanson', sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 120%;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  text-align: center;
   color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
 
-  margin:  74px 0 16px $margin-left;
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    margin: 74px 0 16px $margin-left;
+  }
 }
 
 .morhDescr {
-  font-size: 16px;
-  margin-left: $margin-left;
+  font-size: 14px;
+  margin-left: 0;
+  color: #C1C0C0;
+  line-height: 160%;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: $margin-left;
+    font-size: 16px;
+  }
 }
 
+.waysToStartParagraph {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
 
-
+.waysToStartChinese {
+  display: block;
+  font-family: 'DFLiKingHei1B', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  margin-top: 32px;
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
 
 
 

@@ -6,16 +6,22 @@ import first from "../../../assets/images/first.svg";
 import second from "../../../assets/images/second.svg";
 
 import MihoMorph from "../../../assets/images/morphs/miho-ikuta/miho-morph-presentation.png";
+import MihoMorphMobile from "../../../assets/images/miho-morph.png";
 import MihoID from "../../../assets/images/miho-id.png";
 import HenriMorph from "../../../assets/images/morphs/henrik-hail/henrik-hail-presentation.png";
+import HenriMorphDesktop from "../../../assets/images/henri-morph.png";
 import HenriID from "../../../assets/images/henri-id.png";
+import {useWindowWidth} from "../../../hooks/useWindowWidth";
+import {morphIDText} from "../../../data/morphID/text";
 
 export function TypesCards() {
+  const isDesktop = useWindowWidth(1024)
   return (
+    <div className={classes.wrapper}>
     <GlobalContainer>
       <div className={classes.containerTypesCards}>
         <div className={classes.morphBlock}>
-          <img className={classes.mihoMainImage} src={MihoMorph} alt="miho" />
+          <img className={classes.mihoMainImage} src={isDesktop ? MihoMorph: MihoMorphMobile} alt="miho" />
 
           <div className={classes.contentBlock}>
             <h4 className={classes.classiqueParagraph}>
@@ -27,9 +33,7 @@ export function TypesCards() {
               <p className={classes.title}>CLASSIQUE</p>
             </h4>
             <Paragraph className={`${classes.descr} ${classes.mihoText}`}>
-              This is the classic mode of the game where each player can start
-              their experience immediately to learn the basic mechanics and then
-              decide whether to switch to Eternal mode
+              {isDesktop ? morphIDText.classiqueDesktop: morphIDText.classiqueMobile}
             </Paragraph>
             <img className={classes.idImage} src={MihoID} alt="miho id" />
           </div>
@@ -48,9 +52,7 @@ export function TypesCards() {
               </p>
             </h4>
             <Paragraph className={`${classes.descr} ${classes.henriText}`}>
-              The Morph Eternal card allows for a full gaming experience where a
-              player can earn in-game currency a Poligon-based cryptocurrency
-              called Morganis
+              {isDesktop ? morphIDText.eternalDesktop: morphIDText.eternalMobile}
             </Paragraph>
             <img
               className={`${classes.idImage} ${classes.idImageHenri}`}
@@ -59,9 +61,10 @@ export function TypesCards() {
             />
           </div>
 
-          <img src={HenriMorph} alt="henri morph" />
+          <img className={classes.henriMainImage} src={isDesktop ? HenriMorph: HenriMorphDesktop} alt="henri morph" />
         </div>
       </div>
     </GlobalContainer>
+    </div>
   );
 }
