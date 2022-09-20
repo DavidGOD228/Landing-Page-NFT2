@@ -34,7 +34,7 @@ export const Footer = () => {
         <img src={Discord} alt=""/>
       </div>
       <p className={classes.copyright}>
-        Copyright © 2022 Metamorph Inc. All rights reserved.{'>'}</p>
+        Copyright © 2022 Metamorph Inc. All rights reserved.</p>
     </footer>
   )
 }

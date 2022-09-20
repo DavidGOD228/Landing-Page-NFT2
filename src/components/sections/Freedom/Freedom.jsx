@@ -24,7 +24,7 @@ const list = [
     id: 3,
     color: '#FFF',
     text: <p className={classes.listParagraph}>Forge your path, whatever it may be. Make it big
-      in METAMORPH and see your success transferred to the real world.{'>'}</p>
+      in METAMORPH and see your success transferred to the real world.</p>
   },
 ]
 
