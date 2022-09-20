@@ -23,7 +23,6 @@ export const arrItems = () => {
     itemsLength = 18
   }
 
-  console.log(itemsLength)
   const arr = [];
   let idx = 0;
   while (idx < itemsLength) {
