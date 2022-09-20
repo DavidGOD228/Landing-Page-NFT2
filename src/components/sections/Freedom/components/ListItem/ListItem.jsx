@@ -1,14 +1,26 @@
 import React from 'react'
 
-import classes from './style.module.scss'
 import Circle from '../../../../../assets/images/circle.svg'
+import CircleActive from '../../../../../assets/images/circle-active.svg'
 
-const ListItem = ({text}) => {
+import {useWindowWidth} from '../../../../../hooks/useWindowWidth'
+
+import classes from './style.module.scss'
+
+const ListItem = ({text, line, isActive}) => {
+  const isDesktop = useWindowWidth(1024)
   return (
-    <div className={classes.list}>
-      <img className={classes.circle} src={Circle} alt=""/>
-      {text}
+    <div className={classes.container}>
+      {isDesktop && <img className={classes.line} src={line} alt=""/>}
+      <div className={classes.list}>
+        {
+          isActive ? <img className={classes.circle} src={CircleActive} alt=""/> :
+            <img className={classes.circle} src={Circle} alt=""/>
+        }
+        {text}
+      </div>
     </div>
+
   )
 }
 
