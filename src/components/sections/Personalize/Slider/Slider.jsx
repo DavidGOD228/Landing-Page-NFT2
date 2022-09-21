@@ -6,6 +6,7 @@ const Slider = ({ activeSlide, className }) => {
 
   const renderSLide = (idx) => {
     return <motion.div
+      key={idx}
       initial={{
         opacity: 1, 
         scale: 1, 
