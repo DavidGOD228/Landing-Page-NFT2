@@ -9,9 +9,11 @@ const Slider = ({ activeSlide, className }) => {
       initial={{
         opacity: 1, 
         scale: 1, 
-        marginRight: 20
+        marginRight: 20,
+        zIndex: idx
       }}
       animate={() => {
+        // if slide is leaving
         if(idx < activeSlide) return {
           opacity: 0, 
           scale: 0.85,
@@ -19,6 +21,7 @@ const Slider = ({ activeSlide, className }) => {
           marginRight: 0
         }
 
+        // if slide is current or next
         if(idx === activeSlide) return {
           opacity: 1, 
           scale: 1,
