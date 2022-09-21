@@ -9,8 +9,8 @@ export function InfoDetails({className, morph, ...props}) {
   const importfingerPrintImg = require("assets/images/morphs/" +
     fingerPrintImg);
 
-  const mapSkills = skills.map((skill) => (
-    <SkillImg key={skill} skillImgName={skill} />
+  const mapSkills = skills.map((skill, idx) => (
+    <SkillImg key={idx + skill} skillImgName={skill} />
   ));
 
   return (

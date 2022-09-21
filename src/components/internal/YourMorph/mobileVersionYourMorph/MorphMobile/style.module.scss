@@ -12,28 +12,41 @@
   .morphsContainerMobile {
     display: grid;
     grid-template-columns: 1fr;
-    
-    &::before {
+  }
+  
+  // cards
+  .cardsWrapper {
+    position: relative;
+
+    .shadowMorpMobile {
       position: absolute;
       z-index: 999;
-      margin-top: -1%;
       content: '';
       display: block;
-      height: 20%;
+      height: 100%;
       width: 100%;
       background: linear-gradient(90deg, rgba(14,14,15,0.850577731092437) 0%, rgba(14,14,15,0.2987570028011205) 15%, rgba(14,14,15,0) 50%, rgba(14,14,15,0.30155812324929976) 85%, rgba(14,14,15,0.8533788515406162) 100%);
       pointer-events: none;
     }
-  }
   
-  .morphsCardsMobile {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    cursor: pointer;
-    column-gap: 15px;
-    margin-bottom: 8vw;
-    width: 100vw;
+    .morphsCardsMobile {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+      cursor: pointer;
+      column-gap: 15px;
+      padding: 5vw 0 12vw 0;
+      width: 100vw;
+      transition: all 0.25s ease-out;
+    }
+  }
+
+  .imgCardNotActive {
+    position: absolute;
+    z-index: 998;
+    width: 66px;
+    left: -81px;
+
   }
 
   .imgCard {

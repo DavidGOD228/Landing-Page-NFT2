@@ -49,7 +49,7 @@ export const Header = () => {
            <div className={classes.menuContent}>
              <div className={classes.menuItems}>
                {
-                 menuData.map((menuItem, index) => <h4 key={index} className={classes.menuItem}>{menuItem}</h4>)
+                 menuData.map((menuItem, idx) => <h4 key={idx} className={classes.menuItem}>{menuItem}</h4>)
                }
              </div>
              <div className={classes.socials}>

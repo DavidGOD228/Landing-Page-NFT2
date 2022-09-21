@@ -1,6 +1,6 @@
 import { Stick } from 'components';
 
-const mapGraphic = precent => {
+const mapGraphic = (precent, isEternal) => {
 	const maxLength = 25;
 	/**
 	 * maxLength = max stick in block
@@ -16,8 +16,8 @@ const mapGraphic = precent => {
 	let i = 0;
 	while (i < 25) {
 		i <= countActiveSticks
-			? arrSticks.push(<Stick key={i} />)
-			: arrSticks.push(<Stick key={i} isEmpty />);
+			? arrSticks.push(<Stick key={i} isEternal={isEternal} />) // fill color stick
+			: arrSticks.push(<Stick key={i} isEmpty  />); // empty stick
 		i++;
 	}
 

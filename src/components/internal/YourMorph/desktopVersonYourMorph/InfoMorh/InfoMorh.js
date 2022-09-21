@@ -26,7 +26,7 @@ export function InfoMorh({morph}) {
         <BlockInfoTitle className={classes.infoTitle}>
           Attributes
         </BlockInfoTitle>
-        <AttrsDetails attributes={attributes} />
+        <AttrsDetails attributes={attributes} type={type} />
       </div>
     </>
   );

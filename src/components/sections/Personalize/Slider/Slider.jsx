@@ -6,12 +6,15 @@ const Slider = ({ activeSlide, className }) => {
 
   const renderSLide = (idx) => {
     return <motion.div
+      key={idx}
       initial={{
         opacity: 1, 
         scale: 1, 
-        marginRight: 20
+        marginRight: 20,
+        zIndex: idx
       }}
       animate={() => {
+        // if slide is leaving
         if(idx < activeSlide) return {
           opacity: 0, 
           scale: 0.85,
@@ -19,6 +22,7 @@ const Slider = ({ activeSlide, className }) => {
           marginRight: 0
         }
 
+        // if slide is current or next
         if(idx === activeSlide) return {
           opacity: 1, 
           scale: 1,
@@ -45,34 +49,6 @@ const Slider = ({ activeSlide, className }) => {
           {renderSLide(3)}
           {renderSLide(4)}
         </AnimatePresence>
-        {/* {videos.map((item, idx) => {
-          //prev slide
-          if(idx - 1 === activeSlide - 1) return <motion.div
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.85 }}
-            transition={{
-              duration: 1,
-		          ease: 'easeInOut'
-            }}
-          >
-            <Phone key={item} classname={classes.sliderItem} />
-          </motion.div>;
-
-          //prev slide
-          // if(idx + 1 < activeSlide) return <></>;
-         
-
-          return <motion.div
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.85 }}
-            transition={{
-              duration: 1,
-		          ease: 'easeInOut'
-            }}
-          >
-            <Phone key={item} classname={classes.sliderItem} />
-          </motion.div>;
-        })} */}
     </div>
   )
 }
