@@ -3,10 +3,8 @@
 
 .slider {
 	position: relative;
-	display: grid;
+	display: flex;
 	overflow: hidden;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
 }
 
 .shadow {
@@ -15,6 +13,8 @@
 
 	height: 100%;
 	width: 25%;
+
+  z-index: 999;
 
   // generator: https://cssgradient.io/
 	background: linear-gradient(
@@ -47,7 +47,7 @@
 
 @media screen and (max-width: $m-mobile) {
   .slider  {
-    @include prtnlSclScrnSize(width, 1300);
+    width: 80%;
   }
 }
 
