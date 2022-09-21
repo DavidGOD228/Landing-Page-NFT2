@@ -3,9 +3,10 @@
 
 .sliderNav {
   display: grid;
-  grid-template-columns: 1fr 3.5fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   width: fit-content;
   align-items: center;
+  margin-right: 13px;
 }
 
 .sliderCount {
