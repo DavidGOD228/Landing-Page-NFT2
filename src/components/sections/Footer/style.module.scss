@@ -10,11 +10,12 @@
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
-  margin-bottom: 68px;
+  padding-bottom: 44px;
 
   @media screen and (min-width: $desktop) {
     background-image: url("../../../assets/images/bottom-background-desktop.png");
     background-size: cover;
+    padding-top: 213px;
   }
 }
 
@@ -77,6 +78,13 @@
   justify-content: space-evenly;
   width: 200px;
   margin-top: 38px;
+
+  @media screen and (min-width: $desktop){
+
+    & > img {
+      height: 50px;
+    }
+  }
 }
 
 .copyright {
@@ -91,6 +99,9 @@
 
   @media screen and (min-width: $desktop) {
     width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 0;
   }
 }
 
