@@ -40,7 +40,7 @@ export const Wizard = () => {
       <div className={classes.titleWrapper}>
         <WhiteTitle classname={classes.title} title='wizard team'>
           {!isDesktop &&
-            <p className={classes.mobileMembers}>21<span className={classes.mobileMembersText}>members</span></p>
+            <p className={classes.mobileMembers}>24<span className={classes.mobileMembersText}>members</span></p>
           }
         </WhiteTitle>
       </div>
@@ -60,7 +60,7 @@ export const Wizard = () => {
           </div>
           <div className={classes.secondBlock}>
             <div className={classes.membersMobile}>
-              <h4 className={classes.membersAmount}>21 <span className={classes.membersText}>members</span></h4>
+              <h4 className={classes.membersAmount}>24 <span className={classes.membersText}>members</span></h4>
               <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses.</p>
             </div>
             <div className={classes.team}>

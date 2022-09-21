@@ -2,6 +2,10 @@
 
 .container {
   padding: 96px 0 67px;
+
+  @media screen and (min-width: $desktop){
+    padding: 111px 0 139px;
+  }
 }
 
 .title {

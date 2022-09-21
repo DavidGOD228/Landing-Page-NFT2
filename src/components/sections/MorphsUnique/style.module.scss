@@ -11,7 +11,6 @@
     align-items: center;
     @include prtnlSclScrnSize(padding-top, 150);
     @include prtnlSclScrnSize(padding-right, 120);
-    @include prtnlSclScrnSize(padding-bottom, 300);
     @include prtnlSclScrnSize(padding-left, 120);
   }
 }
