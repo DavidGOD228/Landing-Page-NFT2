@@ -11,17 +11,18 @@
 }
 
 .title {
-	margin-left: 31px;
-	width: 422px;
-	font-size: 60px;
-	line-height: 100%;
-	margin-left: 42px;
+	margin-left: 40px !important;
+  width: 75%;
+	font-size: 61px;
+	line-height: 107%;
+	margin-left: 12px;
 }
 
 .paragraph {
 	font-size: 16px;
 	color: #c1c0c0;
-	margin: 35px 0 0 28px;
+	margin: 35px 0 0 43px;
+  width: 80%;
 }
 
 .textSection {
@@ -83,6 +84,10 @@
 
 .grayLine {
 	position: relative;
+  background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%), #B7F201;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .grayLine img {
@@ -94,28 +99,26 @@
 .mobileContainer {
 	display: flex;
 	position: relative;
-	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	margin-top: 13px;
   filter: drop-shadow(30px 35px 20px rgba(0, 0, 0, 0.45));
 }
 
 .privacyImage {
 	border-radius: 12px;
-	width: 100%;
-	max-width: 280px;
+  width: 260px;
 }
 
 .imagesBlock {
 	position: relative;
+  margin-left: 40px;
 }
 
 .secondImage {
 	position: absolute;
 	z-index: -5;
-	top: 60px;
-	right: -80px;
+  top: 56px;
+  right: 46px;
 }
 
 // smile with text
@@ -125,27 +128,72 @@
 	flex-direction: column;
 	align-items: flex-end;
 	position: absolute;
-	bottom: -65px;
+	bottom: -93px;
 }
 
 .privacyText {
+  position: relative;
 	font-size: 20px;
 	line-height: 26px;
 	text-align: center;
-	transform: rotate(-18deg);
+  left: -14px;
+	transform: rotate(-19deg);
 	letter-spacing: 0.05em;
 	color: #ffffff;
 }
 
 .smile {
 	position: relative;
-	right: 14%;
+	right: 18%;
 }
 
 @media screen and (max-width: $l-desktop) {
-	.privacyImage {
-		width: 22.8vw;
-	}
+  .title {
+    font-size: 4.22vw;
+  }
+
+  .privacyImage {
+    width: 18vw;
+  }
+
+  .imagesBlock {
+    margin-left: 4vw;
+  }
+
+  .secondImage {
+    top: 3.9vw;
+    right: 1.1vw;
+  }  
+}
+
+@media screen and (max-width: $m-desktop) {
+  .title {
+    font-size: 4vw;
+  }
+
+  .privacyImage {
+    width: 18vw;
+  }
+
+  .imagesBlock {
+    margin-left: 5vw;
+  }
+
+  .secondImage {
+    right: -1.1vw;
+  }  
+
+  .grayLine img {
+    width: 27vw;
+  }
+
+  .privacyText {
+    font-size: 1.2vw;
+  }
+
+  .smile {
+    width: 5.2vw;
+  }
 }
 
 @media screen and (max-width: $desktop) {
@@ -166,29 +214,32 @@
 	.grayLine img {
 		left: 0;
 		width: 35vw;
+    top: 0.5vw;
 	}
+
+  .secondImage {
+    right: 8vw;
+  }
 
 	.paragraph {
 		@include prtnlSclScrnSize(font-size, 23);
 	}
 }
 
-@media screen and (max-width: $m-desktop) {
-	.secondImage {
-		@include prtnlSclScrnSize(top, 60);
-		@include prtnlSclScrnSize(right, -80);
-	}
-}
-
 @media screen and (max-width: $tablet) {
+  .title {
+    margin-left: 28px !important;
+  }
+
 	.paragraph {
 		font-size: 14px;
+    margin-left: 28px !important;
 	}
 
 	.respect {
 		position: relative;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-direction: row;
 		bottom: 0;
 		margin-left: 30px;
@@ -198,6 +249,7 @@
 	.privacyText {
 		@include prtnlSclScrnSize(font-size, 30);
 		transform: rotate(0);
+    margin-left: 14px;
 	}
 
 	.smile {
