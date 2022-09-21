@@ -95,6 +95,7 @@ export function MorphMobile() {
 				<AttrsDetails
 					className={classes.attrMobileTablet}
 					attributes={morph.attributes}
+          type={morph.type}
 				/>
 			</div>
 		</div>

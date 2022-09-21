@@ -9,17 +9,17 @@
 
 @mixin eternalTextStyle {
   background: linear-gradient(
-      90deg,
-      #fbbf9a -4.09%,
-      #ffe876 9.96%,
-      #12f9f8 28.24%,
-      #9cfd82 55.1%,
-      #fcf16e 78.52%,
-      #fed292 105.6%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    90deg,
+    #fbbf9a -4.09%,
+    #ffe876 9.96%,
+    #12f9f8 28.24%,
+    #9cfd82 55.1%,
+    #fcf16e 78.52%,
+    #fed292 105.6%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 // wrapper block for id & type
@@ -60,7 +60,7 @@
   @include textStyle;
  
   height: 38px;
-  padding: 7px 15px;
+  padding: 0 15px;
 }
 
 @media screen and (max-width: $m-desktop) {

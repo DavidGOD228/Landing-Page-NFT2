@@ -27,11 +27,15 @@ export function InfoMorphMobile({ className, morph, ...props }) {
 				<BlockInfoTitle className={classes.infoTitle}>Bio</BlockInfoTitle>
 				<InfoDetails className={classes.infoDetails} morph={morph} />
 
-        {/* will hidden on $tablet in scss */}
-        <BlockInfoTitle className={classes.infoTitleAttr}>
-          Attributes
-        </BlockInfoTitle>
-				<AttrsDetails className={classes.attrTabletDesktop} attributes={attributes} />
+				{/* will hidden on $tablet in scss */}
+				<BlockInfoTitle className={classes.infoTitleAttr}>
+					Attributes
+				</BlockInfoTitle>
+				<AttrsDetails
+					className={classes.attrTabletDesktop}
+					attributes={attributes}
+          type={type}
+				/>
 			</div>
 		</div>
 	);
