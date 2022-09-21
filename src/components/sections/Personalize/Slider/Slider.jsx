@@ -2,13 +2,6 @@ import { Phone } from 'components';
 import classes from './style.module.scss';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const videos = [
-  "name video from asse1",
-  "name video from asset2",
-  "name video from asset3",
-  "name video from asset4",
-]
-
 const Slider = ({ activeSlide, className }) => {
 
   const renderSLide = (idx) => {
