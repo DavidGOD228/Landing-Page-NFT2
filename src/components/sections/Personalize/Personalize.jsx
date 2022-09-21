@@ -1,57 +1,59 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 
-import Title from '../../common/Title/Title'
-import GreenText from '../../common/GreenText/GreenText'
-import Table from "../../common/Table/Table"
+import Title from '../../common/Title/Title';
+import GreenText from '../../common/GreenText/GreenText';
+import Table from '../../common/Table/Table';
 
-import classes from './style.module.scss'
-import Slider from "./Slider/Slider";
-import Items from "./Items/Items";
-import NavSlider from "./navSlider/navSlider";
-import {useWindowWidth} from "../../../hooks/useWindowWidth";
-import Paragraph from "../../common/Paragraph/Paragraph";
+import classes from './style.module.scss';
+import Slider from './Slider/Slider';
+import Items from './Items/Items';
+import NavSlider from './navSlider/navSlider';
+import { useWindowWidth } from '../../../hooks/useWindowWidth';
+import Paragraph from '../../common/Paragraph/Paragraph';
 
 const data = [
-  {
-    end: 25,
-    text: 'Lands \n appartments',
-    suffix: 'k',
-    prefix: '＞',
-  },
-  {
-    end: 35,
-    text: 'Clothing',
-    suffix: 'k',
-    prefix: '＞',
-  },
-  {
-    end: 20,
-    text: 'Furniture',
-    suffix: 'k',
-    prefix: '＞',
-  },
-]
+	{
+		end: 25,
+		text: 'Lands \n appartments',
+		suffix: 'k',
+		prefix: '＞'
+	},
+	{
+		end: 35,
+		text: 'Clothing',
+		suffix: 'k',
+		prefix: '＞'
+	},
+	{
+		end: 20,
+		text: 'Furniture',
+		suffix: 'k',
+		prefix: '＞'
+	}
+];
 
 export const Personalize = () => {
-  const isDesktop = useWindowWidth(1024)
+	const isDesktop = useWindowWidth(1024);
 
-  const [activeSlide, setActiveSlide] = useState(1)
+	const [activeSlide, setActiveSlide] = useState(1);
 
-  const handleNextSlide = () => {
-    if (activeSlide === 4) return
-    setActiveSlide((prevSlide) => prevSlide + 1)
-  }
+	const handleNextSlide = () => {
+		if (activeSlide === 4) return;
+		setActiveSlide(prevSlide => prevSlide + 1);
+	};
 
-  const handlePrevSlide = () => {
-    if (activeSlide === 1) return
-    setActiveSlide((prevSlide) => prevSlide - 1)
-  }
+	const handlePrevSlide = () => {
+		if (activeSlide === 1) return;
+		setActiveSlide(prevSlide => prevSlide - 1);
+	};
 
-  return (
+	return (
 		<>
-			<div className={`${classes.containerSliderSection} ${classes.desktopVersion}`}>
+			<div
+				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
+			>
 				<div className={classes.contentBlock}>
-					<Title classname={classes.personalizeTitle}>
+					<Title classname={classes.personalizeTitle} classnameWrapper={classes.personalizeline}>
 						Personalize <GreenText>and make it unique</GreenText>
 					</Title>
 					<p className={classes.personalizeParagraph}>
@@ -68,11 +70,13 @@ export const Personalize = () => {
 				</div>
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
-      </div>
+			</div>
 
-      <div className={classes.mobileVersion}>
+			<div className={classes.mobileVersion}>
 				<div className={classes.contentBlock}>
-					<Title classname={classes.personalizeTitle}>
+					<Title
+						classname={classes.personalizeTitle}
+					>
 						Personalize <GreenText>and make it unique</GreenText>
 					</Title>
 					<p className={classes.personalizeParagraph}>
@@ -83,14 +87,13 @@ export const Personalize = () => {
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
 
-        <NavSlider
-          className={classes.mobileNavSlider}
-          activeSlide={activeSlide}
-          handleNextSlide={handleNextSlide}
-          handlePrevSlide={handlePrevSlide}
-        />
-      </div>
-
+				<NavSlider
+					className={classes.mobileNavSlider}
+					activeSlide={activeSlide}
+					handleNextSlide={handleNextSlide}
+					handlePrevSlide={handlePrevSlide}
+				/>
+			</div>
 
 			<div className={classes.personalizeContainer}>
 				<Title classname={classes.marketplaceTitle}>
@@ -118,6 +121,6 @@ export const Personalize = () => {
 			</div>
 		</>
 	);
-}
+};
 
-export default Personalize
+export default Personalize;

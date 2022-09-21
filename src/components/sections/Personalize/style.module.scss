@@ -16,14 +16,21 @@
   font-size: 64px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-left: 43px !important;
+}
+
+.personalizeline {
+  &:before,
+  &:after {
+    height: 80% !important;
+  } 
 }
 
 .personalizeParagraph {
   font-size: 18px;
   line-height: 160%;
   color: #C1C0C0;
-  margin-top: 24px;
-  margin-left: 32px;
+  margin-left: 43px !important;
 }
 
 .marketplaceTitle {
@@ -91,7 +98,7 @@
 }
 
 .desktopNavSlider {
-  padding-left: 30px;
+  padding-left: 43px;
 }
 
 .mobileVersion {
@@ -101,7 +108,7 @@
 
 @media screen and (max-width: $l-desktop) {
   .containerSliderSection {
-    @include prtnlSclScrnSize(gap, 100);
+    gap: 10vw;
   }
 }
 

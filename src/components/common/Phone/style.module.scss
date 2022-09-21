@@ -1,13 +1,6 @@
 @import "~assets/styles/variables.scss";
 @import "~assets/styles/media.scss";
 
-.phoneWrapper,
 .phoneItem {
   height: 100%;
-}
-
-@media screen and (max-width: $m-desktop) {
-  .phoneItem {
-    height: auto;
-  }
 }
