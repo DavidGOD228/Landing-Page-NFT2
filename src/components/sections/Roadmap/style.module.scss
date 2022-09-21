@@ -1,14 +1,17 @@
 @import "~assets/styles/media";
 
+.container {
+  margin-top: 309px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  padding: 58px 20px 994px 18px;
+  padding: 0 20px 994px 18px;
 
   @media screen and (min-width: $desktop) {
     flex-direction: row;
-    justify-content: center;
-    padding: 58px 202px 0 217px;
+    padding: 58px 202px 0 214px;
   }
 }
 
@@ -17,6 +20,7 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 64px;
+    margin-left: 44px;
     line-height: 120%;
     letter-spacing: 0.03em;
     width: 417px;
@@ -24,12 +28,12 @@
 }
 
 .paragraph {
-  margin-top: 24px;
+  margin-top: 10px;
   text-align: justify;
 
   @media screen and (min-width: $desktop) {
-    width: 463px;
-    margin-left: 44px;
+    width: 521px;
+    margin-left: 58px;
     font-size: 16px;
     color: #C1C0C0;
   }
@@ -42,7 +46,7 @@
   background-color: rgba(32, 33, 35, 0.7);
   border-right: 1px solid #5A5A6B;
   border-bottom: 1px solid #5A5A6B;
-  margin: 64px 130px 180px 130px;
+  margin: 90px 130px 180px 130px;
 }
 
 .playGameOn {
@@ -77,6 +81,7 @@
 }
 
 .appBtn {
+  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
