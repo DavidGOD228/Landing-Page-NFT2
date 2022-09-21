@@ -45,34 +45,6 @@ const Slider = ({ activeSlide, className }) => {
           {renderSLide(3)}
           {renderSLide(4)}
         </AnimatePresence>
-        {/* {videos.map((item, idx) => {
-          //prev slide
-          if(idx - 1 === activeSlide - 1) return <motion.div
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.85 }}
-            transition={{
-              duration: 1,
-		          ease: 'easeInOut'
-            }}
-          >
-            <Phone key={item} classname={classes.sliderItem} />
-          </motion.div>;
-
-          //prev slide
-          // if(idx + 1 < activeSlide) return <></>;
-         
-
-          return <motion.div
-          initial={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.85 }}
-            transition={{
-              duration: 1,
-		          ease: 'easeInOut'
-            }}
-          >
-            <Phone key={item} classname={classes.sliderItem} />
-          </motion.div>;
-        })} */}
     </div>
   )
 }
