@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from "framer-motion";
 
-const AnimatedTextCharacter = ({text, className}) => {
+const AnimatedTextCharacter = ({text, className, delay}) => {
 // splitting text into letters
   const letters = Array.from(text);
 
@@ -10,7 +10,7 @@ const AnimatedTextCharacter = ({text, className}) => {
     hidden: {opacity: 0},
     visible: (i = 1) => ({
       opacity: 1,
-      transition: {delay: 2, staggerChildren: 0.03, delayChildren: 2 + 0.04 * i},
+      transition: {delay: delay, staggerChildren: 0.03, delayChildren: delay + 0.04 * i},
     }),
   };
 
