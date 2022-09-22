@@ -84,7 +84,7 @@
   @media screen and (min-width: $desktop) {
     font-size: 16px;
     line-height: 21px;
-    margin: 27px 0 28px 50px;
+    margin: 27px 0 28px 32px;
   }
 }
 
@@ -170,7 +170,7 @@
 .paragraph {
   @media screen and (min-width: $desktop) {
     width: 552px;
-    margin-left: 50px;
+    margin-left: 32px;
     font-size: 16px;
     color: #C1C0C0;
   }

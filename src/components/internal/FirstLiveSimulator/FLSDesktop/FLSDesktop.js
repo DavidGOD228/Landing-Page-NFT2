@@ -1,6 +1,7 @@
 import ScrollAnimation from 'react-animate-on-scroll';
+import {motion} from 'framer-motion';
 
-import { GlobalContainer, GreenText, Title, Paragraph } from 'components';
+import {GlobalContainer, GreenText, Title, Paragraph} from 'components';
 
 import morh from 'assets/images/morh-1.png';
 
@@ -12,64 +13,97 @@ import SmileDesktop from 'assets/images/smileDesktop.svg';
 import classes from './style.module.scss';
 
 export function FLSDesktop() {
-	return (
-		<GlobalContainer>
-			<div className={classes.flsDesktopContainer}>
-				<div className={classes.textSection}>
-					<p className={classes.backgroundText}>
-						IMMERSE YOURSELF IN A BREATHING WORLD AND{' '}
-						<GreenText>BECOME A LEGEND</GreenText>
-					</p>
-					<div className={classes.triangle} />
-					<img className={classes.morh} src={morh} alt='morh' />
-				</div>
 
-				<div className={classes.content}>
-					<div className={classes.descr}>
-						<ScrollAnimation animateIn='animate__slideInUp' animateOnce>
-							<Title classname={classes.title}>
-								First{' '}
-								<GreenText>
-									live{' '}
-									<span className={classes.grayLine}>
-										simulator <img src={WhiteLine} alt='' />
+
+  return (
+    <GlobalContainer>
+      <div className={classes.flsDesktopContainer}>
+        <div className={classes.textSection}>
+          <p className={classes.backgroundText}>
+            IMMERSE YOURSELF IN A BREATHING WORLD AND{' '}
+            <GreenText>BECOME A LEGEND</GreenText>
+          </p>
+          <div className={classes.triangle}/>
+          <img className={classes.morh} src={morh} alt='morh'/>
+        </div>
+
+        <div className={classes.content}>
+            <motion.div
+              className={classes.descr}
+              initial={{y: 500}}
+              whileInView={{y: 0}}
+              transition={{
+                delay: .5,
+                duration: 1,
+                ease: 'easeInOut'
+              }}
+              viewport={{once: true}}
+            >
+              <Title classname={classes.title}>
+                First{' '}
+                <GreenText>
+                  live{' '}
+                  <span className={classes.grayLine}>
+										simulator <img src={WhiteLine} alt=''/>
 									</span>{' '}
-								</GreenText>
-								on web 3
-							</Title>
-						</ScrollAnimation>
-						<ScrollAnimation animateIn='animate__slideInUp' animateOnce>
-							<Paragraph className={classes.paragraph}>
-								Metamorph is an open-world exploration, NFT creature collector
-								and life simulator game built on the Polygon Blockchain,
-								releasing on IOS and Android in 2023. Play-to-earn in a
-								graphically-rich sci-fi adventure and life builder that allows
-								you to feel the life inside the game.
-							</Paragraph>
-						</ScrollAnimation>
+                </GreenText>
+                on web 3
+              </Title>
+              <Paragraph className={classes.paragraph}>
+                Metamorph is an open-world exploration, NFT creature collector
+                and life simulator game built on the Polygon Blockchain,
+                releasing on IOS and Android in 2023. Play-to-earn in a
+                graphically-rich sci-fi adventure and life builder that allows
+                you to feel the life inside the game.
+              </Paragraph>
 
-						<div className={classes.respect}>
-							<p className={classes.privacyText}>Respect his Privacy!</p>
-							<img className={classes.smile} src={SmileDesktop} alt='' />
-						</div>
-					</div>
+            <div className={classes.respect}>
+              <p className={classes.privacyText}>Respect his Privacy!</p>
+              <img className={classes.smile} src={SmileDesktop} alt=''/>
+            </div>
+            </motion.div>
 
-					<div className={classes.mobileContainer}>
-						<div className={classes.imagesBlock}>
-							<video
-								className={classes.privacyImage}
-								src={toiletVideo}
-								autoPlay
-								loop
-								muted
-							/>
-							<div className={classes.secondImage}>
-								<img className={classes.privacyImage} src={Confidence} alt='' />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</GlobalContainer>
-	);
+
+          <div className={classes.mobileContainer}>
+
+
+            <div className={classes.imagesBlock}>
+              <motion.div
+                className={classes.mobileContainer}
+                initial={{y: 500}}
+                whileInView={{y: 0}}
+                transition={{
+                  duration: 1.5,
+                  ease: 'easeInOut'
+                }}
+                viewport={{once: true}}
+              >
+              <video
+                className={classes.privacyImage}
+                src={toiletVideo}
+                autoPlay
+                loop
+                muted
+              />
+          </motion.div>
+              <motion.div
+                className={classes.secondImage}
+                initial={{y: 500}}
+                whileInView={{y: 0}}
+                transition={{
+                  duration: 1,
+                  ease: 'easeInOut'
+                }}
+                viewport={{once: true}}
+              >
+                <img className={classes.privacyImage} src={Confidence} alt=''/>
+              </motion.div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </GlobalContainer>
+  );
 }
