@@ -47,14 +47,6 @@ export const LikeHuman = () => {
   return (
       <div className={classes.container}>
         <div className={classes.titleWrapper}>
-          <motion.div
-            initial={{x: -500}}
-            whileInView={{x: 0}}
-            transition={{
-              duration: 1,
-              ease: 'easeInOut'
-            }}
-            viewport={{once: true}}>
           <Paragraph className={classes.paragraph}>
             Metamorph is an open-world exploration, NFT creature collector and
             life simulator game built on the Polygon Blockchain, releasing on
@@ -62,19 +54,19 @@ export const LikeHuman = () => {
             adventure and life builder that allows you to feel the life inside
             the game.
           </Paragraph>
-          </motion.div>
           <motion.div
-            initial={{x: 500}}
+            initial={{x: 50}}
             whileInView={{x: 0}}
             transition={{
               duration: 1,
               ease: 'easeInOut'
             }}
             viewport={{once: true}}>
-            <Title classname={classes.title}>
-              it&apos;s just like <GreenText> a human</GreenText>
-            </Title>
-          </motion.div>
+              <Title classname={classes.title}>
+                it&apos;s just like <GreenText> a human</GreenText>
+              </Title>
+            </motion.div>
+            
         </div>
           {isDesktop ? table : accordion}
       </div>

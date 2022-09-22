@@ -1,4 +1,3 @@
-import ScrollAnimation from 'react-animate-on-scroll';
 import {motion} from 'framer-motion';
 
 import {GlobalContainer, GreenText, Title, Paragraph} from 'components';
@@ -12,8 +11,15 @@ import SmileDesktop from 'assets/images/smileDesktop.svg';
 
 import classes from './style.module.scss';
 
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+
 export function FLSDesktop() {
 
+  const textPar = `Metamorph is an open-world exploration, NFT creature collector
+  and life simulator game built on the Polygon Blockchain,
+  releasing on IOS and Android in 2023. Play-to-earn in a
+  graphically-rich sci-fi adventure and life builder that allows
+  you to feel the life inside the game.`
 
   return (
     <GlobalContainer>
@@ -51,11 +57,7 @@ export function FLSDesktop() {
                 on web 3
               </Title>
               <Paragraph className={classes.paragraph}>
-                Metamorph is an open-world exploration, NFT creature collector
-                and life simulator game built on the Polygon Blockchain,
-                releasing on IOS and Android in 2023. Play-to-earn in a
-                graphically-rich sci-fi adventure and life builder that allows
-                you to feel the life inside the game.
+                {paragraphAnimation(textPar)}
               </Paragraph>
 
             <div className={classes.respect}>

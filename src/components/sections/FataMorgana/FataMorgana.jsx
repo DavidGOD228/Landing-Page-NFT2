@@ -1,4 +1,3 @@
-import ScrollAnimation from "react-animate-on-scroll";
 import {motion} from 'framer-motion';
 
 import {Title, GreenText, Paragraph, Table} from "components";
@@ -9,6 +8,8 @@ import Quotes from "assets/images/quotes.svg";
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
+
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
 const data = [
   {
@@ -31,6 +32,8 @@ const data = [
 export const FataMorgana = () => {
   const isDesktop = useWindowWidth(1024);
 
+  const parg1 = 'Metamorph is built on putting the power of choice into the hands of players All in game actions are governed by you, with no artificial barriers. We empower you to create your unique story by participating in a world where we expect the unexpected. From moral actions to investments, crusades, businesses operations and gambling – you havethe choice play and earn in a style you enjoy.';
+
   return (
     <div className={classes.container}>
       <div className={classes.topContainer}>
@@ -40,13 +43,14 @@ export const FataMorgana = () => {
               {!isDesktop && (
                 <motion.p
                   className={classes.chineseText}
-                  initial={{y: 500}}
+                  initial={{y: 25}}
                   whileInView={{y: 0}}
                   transition={{
                     duration: 1,
                     ease: 'easeInOut'
                   }}
-                  viewport={{once: true}}>
+                  // viewport={{once: true}}
+                >
                   全部的 自由 行動的
                 </motion.p>
               )}
@@ -115,12 +119,7 @@ export const FataMorgana = () => {
           }}
           viewport={{once: true}}>
           <Paragraph className={classes.paragraph}>
-            Metamorph is built on putting the power of choice into the hands of
-            players All in game actions are governed by you, with no artificial
-            barriers. We empower you to create your unique story by participating
-            in a world where we expect the unexpected. From moral actions to
-            investments, crusades, businesses operations and gambling – you have
-            the choice play and earn in a style you enjoy.
+            {paragraphAnimation(parg1)}
           </Paragraph>
         </motion.div>
       </div>
