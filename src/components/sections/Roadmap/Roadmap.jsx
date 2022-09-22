@@ -1,4 +1,4 @@
-import { Title, GreenText, Paragraph } from 'components'
+import { Title, GreenText, Paragraph, RoadmapMobile } from 'components'
 import Column from './components/Column/Column'
 
 import {useWindowWidth} from 'hooks/useWindowWidth'
@@ -26,6 +26,7 @@ export const Roadmap = () => {
           {
             roadmapTableData.map((data) => <Column key={data.title} data={data}/>)
           }
+
           <div className={classes.appColumn}>
             <div className={classes.header}/>
             <div className={classes.appContent}>
@@ -44,6 +45,8 @@ export const Roadmap = () => {
           </div>
         </div>
       }
+
+      <RoadmapMobile />
     </div>
   )
 }

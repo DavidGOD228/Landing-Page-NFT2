@@ -47,3 +47,6 @@ export * from './internal/YourMorph/desktopVersonYourMorph/SkillImg/SkillImg';
 // section "Choose Your Morph"(mobile)
 export * from './internal/YourMorph/mobileVersionYourMorph/MorphMobile/MorphMobile';
 export * from './internal/YourMorph/mobileVersionYourMorph/InfoMorphMobile/InfoMorphMobile';
+
+// Roadmap(mobile)
+export * from './internal/RoadmapMobile/RoadmapMobile';

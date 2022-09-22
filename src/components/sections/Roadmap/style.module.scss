@@ -99,3 +99,9 @@
   letter-spacing: 0.03em;
   color: #FFFFFF;
 }
+
+@media screen and (max-width: $desktop) {
+  .wrapper {
+    padding: 37px 20px;
+  }
+}

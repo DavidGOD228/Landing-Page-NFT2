@@ -1,9 +1,7 @@
-import React from 'react'
+import Circle from 'assets/images/circle.svg'
+import CircleActive from 'assets/images/circle-active.svg'
 
-import Circle from '../../../../../assets/images/circle.svg'
-import CircleActive from '../../../../../assets/images/circle-active.svg'
-
-import {useWindowWidth} from '../../../../../hooks/useWindowWidth'
+import {useWindowWidth} from 'hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 
