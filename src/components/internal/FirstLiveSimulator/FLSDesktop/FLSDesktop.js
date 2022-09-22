@@ -1,4 +1,3 @@
-import ScrollAnimation from 'react-animate-on-scroll';
 import {motion} from 'framer-motion';
 
 import {GlobalContainer, GreenText, Title, Paragraph} from 'components';
@@ -84,6 +83,7 @@ export function FLSDesktop() {
                 autoPlay
                 loop
                 muted
+                playsinline
               />
           </motion.div>
               <motion.div

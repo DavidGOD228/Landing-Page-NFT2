@@ -10,9 +10,10 @@ import AgressiveMobile from "assets/images/agressive-mobile.png";
 
 
 import classes from "./style.module.scss";
-import {useWindowWidth} from "../../../hooks/useWindowWidth";
-
+import {useWindowWidth} from "hooks/useWindowWidth";
 import WhiteTitle from "../../common/WhiteTitle/WhiteTitle";
+
+import toiletVideo from 'assets/video/toilet.video.mp4';
 
 export const MorphsUnique = () => {
   const isDesktop = useWindowWidth(1024)
@@ -32,11 +33,18 @@ export const MorphsUnique = () => {
               <img className={classes.skillImg} src={Skull} alt="skill" />
               <img className={classes.skillImg} src={Slime} alt="skill" />
               <img className={classes.skillImg} src={Bricks} alt="skill" />
-              <img
-                className={`${classes.skillImg} ${classes.active}`}
-                src={isDesktop ? Fish : AgressiveMobile}
-                alt="skill"
-              />
+
+
+              <div className={classes.wrapperSkill}>
+                <img
+                  className={`${classes.skillImg} ${classes.active}`}
+                  src={Fish}
+                  alt="skill"
+                />
+                <div className={classes.skillTitleMobile}>Agressive</div>
+              </div>
+
+
               <img className={classes.skillImg} src={Chain} alt="skill" />
             </div>
             {
@@ -50,7 +58,14 @@ export const MorphsUnique = () => {
         <img className={classes.morphImage} src={Morph} alt="morph"/>
       </div>
       {!isDesktop && <div className={classes.mobileMorph}>
-        <img src={Morph} alt="morph"/>
+        <video
+          className={classes.mobileMorphVideo}
+          src={toiletVideo}
+          autoPlay
+          loop
+          muted
+          playsinline
+        />
       </div>}
     </>
   );

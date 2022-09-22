@@ -26,8 +26,24 @@
 }
 
 .arrowSlider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 60px;
   height: 60px;
+  padding: 12px;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+  }
+
+  &.flip {
+    transform: rotateZ(180deg);
+  }
 }
 
 .activeSlide {
@@ -44,6 +60,7 @@
   .arrowSlider {
     width: 42px;
     height: 42px;
+    padding: 8px;
   }
 
   .sliderCount {

@@ -32,7 +32,7 @@ export const TopBlock = () => {
           <button onClick={() => setVideoOpen(false)} className={classes.closeBtn}>
             <img src={Close} alt=""/>
           </button>
-          <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
+          <Video autoPlay playsinline loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
             <source src={TeaserVideo}/>
           </Video>
         </div> :
