@@ -168,6 +168,11 @@
 
 
 @media screen and (max-width: $s-tablet) {
+  .personalizeTitle,
+  .personalizeParagraph {
+    margin-left: 28px !important;
+  }
+
   .personalizeTitle {
     font-size: 36px;
   }

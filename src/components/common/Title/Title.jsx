@@ -1,5 +1,3 @@
-import React from 'react'
-
 import classes from './style.module.scss'
 
 export const Title = ({isAfterBorder = false, children, style, classname, classnameWrapper}) => {
@@ -7,7 +5,9 @@ export const Title = ({isAfterBorder = false, children, style, classname, classn
 
   return (
     <div className={`${classes.content} ${isAfterBrd} ${classnameWrapper}`}>
-      <h2 style={style} className={`${classes.title} ${classname}`}>{children}</h2>
+      <h2 style={style} className={`${classes.title} ${classname}`}>
+        {children}
+      </h2>
     </div>
   )
 }

@@ -1,11 +1,14 @@
-import React from 'react'
+import classes from './style.module.scss';
 
-import classes from './style.module.scss'
+export const Paragraph = ({ children, style, className }) => {
+	return (
+		<p
+      className={`${classes.paragraph} ${className}`}
+      style={{...style}}
+    >
+      {children}
+		</p>
+	);
+};
 
-export const Paragraph = ({children, style, className}) => {
-  return (
-    <p style={style} className={`${classes.paragraph} ${className}`}>{children}</p>
-  )
-}
-
-export default Paragraph
+export default Paragraph;

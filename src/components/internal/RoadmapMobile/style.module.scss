@@ -201,3 +201,9 @@ $thickness: 2px;
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 376px) {
+  .sixBlock .pointsDown {
+    top: 60px
+  }
+}

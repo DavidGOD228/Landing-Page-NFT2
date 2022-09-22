@@ -88,16 +88,19 @@
 }
 
 // descr of icons
-.skillTitle {
+.skillTitle,
+.skillTitleMobile {
   font-family: 'Big Pixel', sans-serif;
-  font-size: 20px;
   background: linear-gradient(90deg, #FF5D5D 0%, #FF55E4 57.6%, #E36A12 100%), #E312C2;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 15px;
 }
 
+.skillTitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
 
 // morph fro the right
 .morphImage {
@@ -122,5 +125,35 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 2;
+  }
+}
+
+.mobileMorphVideo {
+  width: 100%;
+}
+
+.skillTitleMobile {
+  display: none;
+}
+
+.wrapperSkill {
+  position: relative;
+  align-self: center;
+  display: flex;
+}
+
+@media screen and (max-width: $desktop){
+  .icons {
+    margin-top: 40px;
+  }
+
+  .skillTitleMobile {
+    position: absolute;
+    display: block;
+    top: -20px;
+    font-size: 8px;
+    text-align: center;
+    width: 100%;
   }
 }

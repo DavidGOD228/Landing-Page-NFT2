@@ -9,6 +9,8 @@ import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 import Column from "./components/Column/Column";
 
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+
 const data = [
   {
     title: "Complete the task",
@@ -61,9 +63,7 @@ export const Earn = () => {
                 <br /> WHILE PLAY
               </Title>
               <Paragraph className={classes.paragraph}>
-                Earn crypto in MM tokens as in-game rewards through playing,
-                completing quests, performing special achievements, and win
-                prizes in tournaments and events.
+                {paragraphAnimation('Earn crypto in MM tokens as in-game rewards through playing, completing quests, performing special achievements, and win prizes in tournaments and events.')}
               </Paragraph>
             </div>
             {isDesktop && (

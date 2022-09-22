@@ -24,7 +24,7 @@ export function FLSMobile() {
 					autoPlay
 					loop
 					muted
-				/>
+        />
 				<img className={classes.blackSpot} src={blackSpot1} alt='' />
 			</div>
 
