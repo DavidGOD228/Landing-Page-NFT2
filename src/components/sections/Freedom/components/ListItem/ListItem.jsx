@@ -2,7 +2,6 @@ import React from 'react'
 import {motion} from 'framer-motion';
 
 import Circle from '../../../../../assets/images/circle.svg'
-import CircleActive from '../../../../../assets/images/circle-active.svg'
 
 import {useWindowWidth} from '../../../../../hooks/useWindowWidth'
 
