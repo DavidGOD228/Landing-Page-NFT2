@@ -7,6 +7,7 @@ const Column = ({data}) => {
   const {end, text, suffix, prefix} = data
   return (
     <CountUp
+      delay={5}
       enableScrollSpy
       scrollSpyOnce
       end={end}

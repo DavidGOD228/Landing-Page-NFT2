@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+import {motion} from 'framer-motion';
 
 import Title from "../../common/Title/Title";
 import GreenText from "../../common/GreenText/GreenText";
@@ -47,6 +47,14 @@ export const LikeHuman = () => {
   return (
       <div className={classes.container}>
         <div className={classes.titleWrapper}>
+          <motion.div
+            initial={{x: -500}}
+            whileInView={{x: 0}}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut'
+            }}
+            viewport={{once: true}}>
           <Paragraph className={classes.paragraph}>
             Metamorph is an open-world exploration, NFT creature collector and
             life simulator game built on the Polygon Blockchain, releasing on
@@ -54,15 +62,21 @@ export const LikeHuman = () => {
             adventure and life builder that allows you to feel the life inside
             the game.
           </Paragraph>
-          <ScrollAnimation className={classes.titleAnimWrapper} animateIn="animate__slideInUp" animateOnce>
+          </motion.div>
+          <motion.div
+            initial={{x: 500}}
+            whileInView={{x: 0}}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut'
+            }}
+            viewport={{once: true}}>
             <Title classname={classes.title}>
               it&apos;s just like <GreenText> a human</GreenText>
             </Title>
-          </ScrollAnimation>
+          </motion.div>
         </div>
-        <ScrollAnimation animateIn="animate__slideInUp" animateOnce>
           {isDesktop ? table : accordion}
-        </ScrollAnimation>
       </div>
   );
 };
