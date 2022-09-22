@@ -37,7 +37,7 @@ export function FLSDesktop() {
             <motion.div
               key="firstLiveTitle"
               className={classes.descr}
-              initial={{y: 50}}
+              initial={{y: 150}}
               whileInView={{y: 0}}
               transition={{
                 delay: .5,
@@ -74,7 +74,7 @@ export function FLSDesktop() {
               <motion.div
                 key="firstLiveFirstImage"
                 className={classes.mobileContainer}
-                initial={{y: 50}}
+                initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1.5,
@@ -93,7 +93,7 @@ export function FLSDesktop() {
               <motion.div
                 key="firstLiveSecondImage"
                 className={classes.secondImage}
-                initial={{y: 50}}
+                initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1,
