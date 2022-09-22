@@ -1,4 +1,4 @@
-import {Title} from "components";
+import {Paragraph, Title} from "components";
 
 import Skull from "assets/images/skills/skill-5.svg";
 import Slime from "assets/images/skills/skill-6.svg";
@@ -6,14 +6,13 @@ import Bricks from "assets/images/skills/skill-7.svg";
 import Fish from "assets/images/skills/agressive-active.svg";
 import Chain from "assets/images/skills/skill-8.svg";
 import Morph from "assets/images/unique-morphs.png";
-import AgressiveMobile from "assets/images/agressive-mobile.png";
-
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 import WhiteTitle from "../../common/WhiteTitle/WhiteTitle";
 
 import toiletVideo from 'assets/video/toilet.video.mp4';
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
 export const MorphsUnique = () => {
   const isDesktop = useWindowWidth(1024)
@@ -26,9 +25,9 @@ export const MorphsUnique = () => {
               <WhiteTitle classname={classes.title} title='ALL MORPHS ARE UNIQUE'/>
           }
           <div className={classes.descrWrapper}>
-            <p className={`${classes.paragraph} ${classes.descrSection}`}>
-              MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it, dress up your Morph, find them a job and make them earn. Invest in its growth or make a fortune. Everything is alright.
-            </p>
+            <Paragraph className={`${classes.paragraph} ${classes.descrSection}`}>
+              {paragraphAnimation('MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it, dress up your Morph, find them a job and make them earn. Invest in its growth or make a fortune. Everything is alright.')}
+            </Paragraph>
             <div className={classes.icons}>
               <img className={classes.skillImg} src={Skull} alt="skill" />
               <img className={classes.skillImg} src={Slime} alt="skill" />
@@ -50,7 +49,9 @@ export const MorphsUnique = () => {
             {
               isDesktop && <>
                 <div className={classes.skillTitle}>Agressive</div>
-                <p className={`${classes.paragraph}`}>MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it.</p>
+                <p className={`${classes.paragraph}`}>
+                  {paragraphAnimation('MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it.')}
+                </p>
               </>
             }
           </div>
@@ -64,7 +65,6 @@ export const MorphsUnique = () => {
           autoPlay
           loop
           muted
-          playsinline
         />
       </div>}
     </>

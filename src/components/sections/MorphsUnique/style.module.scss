@@ -133,17 +133,24 @@
   width: 100%;
 }
 
+.skillTitleMobile {
+  display: none;
+}
+
+.wrapperSkill {
+  position: relative;
+  align-self: center;
+  display: flex;
+}
+
 @media screen and (max-width: $desktop){
   .icons {
     margin-top: 40px;
   }
 
-  .wrapperSkill {
-    position: relative;
-  }
-
   .skillTitleMobile {
     position: absolute;
+    display: block;
     top: -20px;
     font-size: 8px;
     text-align: center;
