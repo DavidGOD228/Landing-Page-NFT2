@@ -71,8 +71,8 @@ $thickness: 2px;
   .leftDownRoadLine,
   .leftDownOpacityRoadLine {
     width: $thickness;
-    height: 25%;
-    bottom: -25%;
+    height: 99%;
+    bottom: -99%;
     left: 0;
   }
 
@@ -123,27 +123,35 @@ $thickness: 2px;
     top: 38px;
   }
 
-  .leftRoadLine {
-    height: 80%;
-    width: $thickness;
-    top: 20%;
-  }
-
   .rightDownRoadLine {
     width: $thickness;
-    height: 25%;
-    bottom: -25%;
+    height: 100%;
+    bottom: -100%;
     right: 0;
+  }
+
+  .rightDownRoadSecondBlockLine {
+    width: $thickness;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+  }
+
+  .rightUpRoadLine {
+    width: $thickness;
+    height: 99%;
+    top: -99%;
+    right: 0;
+  }
+
+  .leftUpRoadLine {
+    left: 0;
+    height: 100%;
+    top: -100%;
+    width: $thickness;
   }
 
   //thirdBlock
-  .rightRoadLineThirdBlock {
-    right: 0;
-    width: $thickness;
-    height: 80%;
-    top: 20%;
-  }
-
   .downRoadLineThirdBlockRight {
     width: 67.5vw;
     right: 0;
@@ -180,7 +188,7 @@ $thickness: 2px;
 
   // six block
   .sixBlock .pointsDown {
-    top: 38px;
+    top: 42px;
   }
 
   .sixBlock .downRoadLine {
