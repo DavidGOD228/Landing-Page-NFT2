@@ -97,6 +97,7 @@
 
   @media screen and (min-width: $desktop) {
     background-image: url("../../../assets/images/marketplaceDesktop.png");
+    margin-left: -4px;
     display: flex;
     flex-direction: column;
     padding: 80px 191px 56px 233px;

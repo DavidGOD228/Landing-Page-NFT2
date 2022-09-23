@@ -97,7 +97,7 @@ export const Personalize = () => {
 
 			<div className={classes.personalizeContainer}>
 				<Title classname={classes.marketplaceTitle}>
-					Thea <br />
+					The <br />
 					<GreenText>MARKETPLACE</GreenText>
 				</Title>
 				<div className={classes.content}>
