@@ -24,7 +24,7 @@ const ThirdLine = () => {
         key="TD_secondLine"
         className={classes.secondLine}
         initial={{width: 0}}
-        whileInView={{width: 150}}
+        whileInView={{width: 200}}
         transition={{
           delay: 5.5,
           duration: .5,

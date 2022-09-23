@@ -29,7 +29,7 @@ const data = [
         rewarded
       </p>
     ),
-    borderColor: "#35736b",
+    borderColor: "rgba(53,115,107,0.3)",
   },
   {
     title: "Sell your staff",
@@ -39,7 +39,7 @@ const data = [
         others. Be the best one and sell your assets
       </p>
     ),
-    borderColor: "#3f4c35",
+    borderColor: "rgba(63,76,53,0.3)",
   },
 ];
 

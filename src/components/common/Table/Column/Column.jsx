@@ -3,7 +3,7 @@ import CountUp from 'react-countup'
 
 import classes from './style.module.scss'
 
-const Column = ({data}) => {
+const Column = ({data, isGrayTable}) => {
   const {end, text, suffix, prefix} = data
   return (
     <CountUp
@@ -16,7 +16,7 @@ const Column = ({data}) => {
       prefix={prefix ?? ''}
     >
       {({countUpRef}) => (
-        <div className={classes.column}>
+        <div className={`${classes.column} ${isGrayTable && classes.grayColumn}`}>
           <span className={classes.amount} ref={countUpRef} />
           <p className={classes.text}>{text}</p>
         </div>
