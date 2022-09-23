@@ -13,7 +13,7 @@ import classes from './style.module.scss';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
-export function FLSDesktop() {
+export function FirstLiveSimulator() {
 
   const textPar = `Metamorph is an open-world exploration, NFT creature collector
   and life simulator game built on the Polygon Blockchain,

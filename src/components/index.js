@@ -29,9 +29,6 @@ export * from './sections/TypesCards/TypesCards';
 export * from './sections/Wizard/Wizard';
 export * from './sections/YourMorph/YourMorph';
 
-// section "FirstLiveSimulator"
-export * from './internal/FirstLiveSimulator/FLSDesktop/FLSDesktop';
-export * from './internal/FirstLiveSimulator/FLSMobile/FLSMobile';
 
 // section "Choose Your Morph"(desktop)
 export * from './internal/YourMorph/desktopVersonYourMorph/Attr/Attr';

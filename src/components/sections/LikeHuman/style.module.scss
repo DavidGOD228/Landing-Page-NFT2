@@ -7,6 +7,10 @@
 
 .container {
   padding: 220px 0 70px;
+
+  @media screen and (max-width: $desktop){
+    padding: 220px 0 120px;
+  }
 }
 
 .paragraph {
