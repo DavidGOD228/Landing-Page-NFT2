@@ -80,6 +80,9 @@
 }
 
 .contentBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media screen and (min-width: $desktop){
     display: grid;
