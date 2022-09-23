@@ -9,7 +9,7 @@ import Smile from "../../icons/Smile";
 
 export const Privacy = () => {
   return (
-    <div>
+    <div className={classes.container}>
       <ScrollAnimation animateIn="animate__slideInLeft" animateOnce>
         <h3 className={classes.title}>RESPECT His PRIVACY!</h3>
       </ScrollAnimation>
