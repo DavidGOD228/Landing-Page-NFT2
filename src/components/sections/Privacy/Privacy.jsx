@@ -1,28 +1,60 @@
 import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { motion } from 'framer-motion'
 
 import PrivacyImage from '../../../assets/images/privacy.png'
 import ConfidenceImage from '../../../assets/images/confidence.png'
 
+import Smile from '../../icons/Smile'
+
 import classes from './style.module.scss'
-import Smile from "../../icons/Smile";
 
 export const Privacy = () => {
   return (
     <div className={classes.container}>
-      <ScrollAnimation animateIn="animate__slideInLeft" animateOnce>
-        <h3 className={classes.title}>RESPECT His PRIVACY!</h3>
-      </ScrollAnimation>
+      <motion.h3
+        key="respectPrivacy"
+        className={classes.title}
+        initial={{x: 150}}
+        whileInView={{x: 0}}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut'
+        }}
+        viewport={{once: true}}>
+        RESPECT His PRIVACY!
+      </motion.h3>
       <div className={classes.privacyContainer}>
         <img className={classes.privacyImage} src={PrivacyImage} alt=""/>
       </div>
       <div className={classes.confidenceContainer}>
-        <ScrollAnimation animateIn="animate__slideInLeft" animateOnce>
-          <h3 className={classes.title}>But without too much confideNce</h3>
-        </ScrollAnimation>
-        <ScrollAnimation className={classes.smile} animateIn="animate__slideInRight" animateOnce>
+        <motion.h3
+          key="confidence"
+          className={classes.title}
+          initial={{x: -100}}
+          whileInView={{x: 0}}
+          transition={{
+            duration: 1,
+            ease: 'easeInOut'
+          }}
+          viewport={{once: true}}>
+          But without too much confideNce
+        </motion.h3>
+        <motion.div
+          key="smile"
+          initial={{x: 100}}
+          whileInView={{
+            x: 0,
+            position: "absolute",
+            right: 35,
+            top: 0
+          }}
+          transition={{
+            duration: 1,
+            ease: 'easeInOut'
+          }}
+          viewport={{once: true}}>
           <Smile width={53} height={59}/>
-        </ScrollAnimation>
+        </motion.div>
         <img src={ConfidenceImage} alt=""/>
       </div>
     </div>
