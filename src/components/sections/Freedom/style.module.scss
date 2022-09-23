@@ -45,12 +45,14 @@
 }
 
 .paragraph {
-  display: block;
   font-size: 13px;
   margin-top: 29px;
   padding-left: 3px;
+  display: flex;
+  flex-wrap: wrap;
 
   @media screen and (min-width: $desktop) {
+    justify-content: flex-end;
     line-height: 160%;
     font-size: 16px;
     text-align: right;

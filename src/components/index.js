@@ -8,6 +8,8 @@ export * from './common/Paragraph/Paragraph';
 export * from './common/Phone/Phone';
 export * from './common/Table/Table';
 export * from './common/Title/Title';
+export * from './common/GenerateCode/GenerateCode';
+export * from './common/GenerateCodeForMorph/GenerateCodeForMorph';
 
 // all sections
 export * from './sections/CombinedGame/CombinedGame';
@@ -28,7 +30,6 @@ export * from './sections/TopBlock/TopBlock';
 export * from './sections/TypesCards/TypesCards';
 export * from './sections/Wizard/Wizard';
 export * from './sections/YourMorph/YourMorph';
-
 
 // section "Choose Your Morph"(desktop)
 export * from './internal/YourMorph/desktopVersonYourMorph/Attr/Attr';

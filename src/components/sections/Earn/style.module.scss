@@ -45,9 +45,9 @@
   justify-content: space-between;
 }
 
-
 .title {
   width: 305px;
+  margin-left: 28px;
 
   @media screen and (min-width: $desktop) {
     font-size: 50px;
@@ -55,6 +55,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     width: 422px;
+    margin-left: 40px;
   }
 }
 

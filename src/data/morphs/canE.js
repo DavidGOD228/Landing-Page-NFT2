@@ -9,7 +9,7 @@ const canE = {
 	fingerPrintImg: `${nameFolder}/fingerprint-can-e.svg`,
 	name: 'Can E',
 	type: 'classique',
-	code: 'U1201JXI512XDYPAZ1ZF2',
+	code: 'U1201JXI512XDYPAZ1ZF21',
 	birth: '10.07.1994',
 	location: 'Los Angeles | United States',
 	parametrs: '1.74 cm, 69 kg',
