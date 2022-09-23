@@ -90,24 +90,14 @@
 .cityContainer {
   position: relative;
   display: flex;
-  justify-content: center;
-  background-image: url("../../../assets/images/city.png");
-  height: 635px;
-  margin-top: -53px;
-  z-index: -5;
-}
-
-.cityContainer:before {
-  content: "";
-  position: absolute;
-  height: 265px;
-  left: 0;
-  top: -1px;
-  width: 100%;
-  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+  flex-direction: column;
+  margin-top: 35px;
 }
 
 .cityText {
+  position: absolute;
+  right: 21px;
+  top: 150px;
   font-size: 20px;
   line-height: 120%;
   text-align: right;
@@ -116,7 +106,6 @@
   text-transform: uppercase;
   color: #FFFFFF;
   width: 308px;
-  margin: 88px 21px 0 auto;
   z-index: 5;
   border-right: 3px solid #fff;
   padding-right: 22px;
@@ -135,37 +124,6 @@
   margin-bottom: -5px;
 }
 
-.cityCircle {
-  position: absolute;
-  bottom: -70px;
-  z-index: 6;
-}
-
-.greenCity {
-  position: absolute;
-  right: 62px;
-  bottom: 251px;
-}
-
-.light {
-  position: absolute;
-  width: 291.5px;
-  height: 214px;
-  rotate: 338deg;
-  right: 44px;
-  bottom: 53px;
-  background: linear-gradient(206.29deg, rgba(255, 255, 255, 0.4) 8.58%, rgba(255, 255, 255, 0) 40.78%);
-}
-
-.cityContainer:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 215px;
-  width: 100%;
-  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
-  transform: rotate(-180deg);
-}
 
 .paragraph {
   @media screen and (min-width: $desktop) {
@@ -174,4 +132,55 @@
     font-size: 16px;
     color: #C1C0C0;
   }
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.mobileCity {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.videoWrapper:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 115px;
+  width: 100%;
+  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+  transform: rotate(-180deg);
+}
+
+.mobileTableWrapper {
+  padding: 0 20px;
+  top: -40px;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+
+.videoWrapper:before {
+  content: "";
+  position: absolute;
+  height: 165px;
+  z-index: 5;
+  left: 0;
+  top: -1px;
+  width: 100%;
+  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
 }
