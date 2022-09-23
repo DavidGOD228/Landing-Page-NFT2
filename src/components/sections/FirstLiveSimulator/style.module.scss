@@ -1,6 +1,16 @@
 @import '~assets/styles/media.scss';
 @import '~assets/styles/mixins.scss';
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+
+  @media screen and (max-width: $desktop){
+    margin-top: 0;
+  }
+}
+
 .flsDesktopContainer {
   display: flex;
   flex-direction: column;
@@ -8,6 +18,14 @@
 
   padding: 0 125px 0 130px;
   margin-top: 15px;
+}
+
+.morphVideo {
+  width: 100%;
+  @media screen and (max-width: $desktop){
+    order: 1;
+    margin-top: 100px;
+  }
 }
 
 .title {
@@ -30,66 +48,6 @@
   }
 }
 
-.textSection {
-  position: relative;
-  padding: 195px 0;
-
-  @media screen and (max-width: $desktop) {
-    order: 1;
-    padding: 0;
-  }
-}
-
-.triangle {
-  position: absolute;
-  top: 7%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 37px 20px 0 20px;
-  border-color: #00f361 transparent transparent transparent;
-  filter: drop-shadow(0px 6px 12px #00f361);
-
-  @media screen and (max-width: $desktop){
-    display: none;
-  }
-}
-
-.morh {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  @media screen and (max-width: $desktop){
-    top: 71%;
-    width: 103px;
-  }
-}
-
-.backgroundText {
-  font-family: 'Hanson', sans-serif;
-  font-size: 36px;
-  line-height: 120%;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #737373;
-  margin: 143px auto 0;
-  max-width: 320px;
-  order: 1;
-
-  @media screen and (min-width: $desktop) {
-    font-size: 80px;
-    text-align: center;
-    text-transform: uppercase;
-    max-width: none;
-    margin: 0;
-    order: 0;
-  }
-}
 
 .content {
   display: grid;
