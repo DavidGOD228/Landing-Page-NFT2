@@ -21,8 +21,6 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
       y: 0,
       transition: {
         type: "linear",
-        // damping: 12,
-        // stiffness: 100,
       },
     },
     hidden: {
@@ -31,8 +29,6 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
       y: 5,
       transition: {
         type: "linear",
-        // damping: 12,
-        // stiffness: 100,
       },
     },
   };
