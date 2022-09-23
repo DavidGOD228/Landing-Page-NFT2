@@ -11,6 +11,11 @@ $durationAnim: 0.16s;
   transition: all $durationAnim ease-out;
 }
 
+@mixin focusCard {
+	filter: drop-shadow(0 0 10px rgba($color, 0.75)) !important;
+  transition: all $durationAnim ease-out;
+}
+
 .isActive {
   @include activeCard;
 }
@@ -37,8 +42,8 @@ $durationAnim: 0.16s;
 		width: 6.52vw;
 		cursor: pointer;
 
-		&:hover {
-			@include activeCard;
+		&:not(.isActive):hover {
+			@include focusCard;
 		}
 	}
 }
