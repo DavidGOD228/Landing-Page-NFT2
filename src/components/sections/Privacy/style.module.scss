@@ -1,3 +1,9 @@
+.container {
+  & img {
+    width: 100%;
+  }
+}
+
 .title {
   font-family: 'Hanson', sans-serif;
   font-size: 36px;

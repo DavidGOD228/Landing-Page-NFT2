@@ -84,15 +84,28 @@
   margin-top: 25px;
   background-image: url("../../../assets/images/face.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: left bottom;
   height: 571px;
   padding: 0 20px;
 
   @media screen and (min-width: $desktop) {
     background-image: none;
     justify-content: flex-start;
-    padding-left: 295px;
-    padding-top: 68px;
+    padding-left: 315px;
+    padding-top: 92px;
+  }
+
+  @media screen and (max-width: $desktop) {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 215px;
+      background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+      transform: rotate(-180deg);
+    }
   }
 }
 
@@ -111,12 +124,14 @@
 }
 
 .listParagraph {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 13px;
   min-width: 296px;
   line-height: 160%;
 
   @media screen and (min-width: $desktop) {
-    max-width: 509px;
+    width: 503px;
     font-size: 18px;
     color: #C1C0C0;
   }

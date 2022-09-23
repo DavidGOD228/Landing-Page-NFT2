@@ -9,26 +9,30 @@ import ListItem from './components/ListItem/ListItem'
 import classes from './style.module.scss'
 import {useWindowWidth} from "hooks/useWindowWidth";
 
-import FirstLine from 'assets/images/freedom-first-line.svg'
-import SecondLine from 'assets/images/freedom-second-line.svg'
-import ThirdLine from 'assets/images/freedom-third-line.svg'
 import AnimatedTextCharacter from "../../common/AnimatedTextCharacter/AnimatedTextCharacter";
+import FirstLine from "./components/FirstLine/FirstLine";
+import SecondLine from "./components/SecondLine/SecondLine";
+import ThirdLine from "./components/ThirdLine/ThirdLine";
 
 const list = [
   {
     id: 1,
-    text: <AnimatedTextCharacter className={classes.listParagraph} text="Enter the world of the future"/>,
-    line: FirstLine,
+    delay: 1,
+    text: <AnimatedTextCharacter delay={1.5} className={classes.listParagraph} text="Enter the world of the future"/>,
+    line: <FirstLine/>,
   },
   {
     id: 2,
-    text: <AnimatedTextCharacter className={classes.listParagraph} text="Build your dream life"/>,
-    line: SecondLine
+    delay: 3.5,
+    text: <AnimatedTextCharacter delay={4} className={classes.listParagraph} text="Build your dream life"/>,
+    line: <SecondLine/>
   },
   {
     id: 3,
-    text: <AnimatedTextCharacter className={classes.listParagraph} text="Forge your path, whatever it may be. Make it big in METAMORPH and see your success transferred to the real world."/>,
-    line: ThirdLine
+    delay: 6,
+    text: <AnimatedTextCharacter delay={6.5} className={classes.listParagraph} text="Forge your path, whatever it may be. Make it big in METAMORPH and see your success transferred to the real world."/>,
+    line: <ThirdLine/>
+
   },
 ]
 
@@ -41,7 +45,7 @@ export const Freedom = () => {
         <div className={classes.content}>
           {
             isDesktop && <motion.div
-              initial={{x: -500}}
+              initial={{x: -150}}
               whileInView={{x: 0}}
               transition={{
                 duration: 1,
@@ -59,7 +63,7 @@ export const Freedom = () => {
             </motion.div>
           }
           <motion.div
-            initial={{x: 500}}
+            initial={{x: 150}}
             whileInView={{x: 0}}
             transition={{
               duration: 1,
@@ -85,7 +89,7 @@ export const Freedom = () => {
       </div>
       <div className={classes.listContainer}>
         {
-          list.map(({id, line, text}, index) => <ListItem position={index} key={id} line={line} text={text}/>)
+          list.map(({id, line, text, delay}) => <ListItem delay={delay} key={id} line={line} text={text}/>)
         }
       </div>
     </div>

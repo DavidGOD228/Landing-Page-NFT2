@@ -13,7 +13,7 @@ import classes from './style.module.scss';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
-export function FLSDesktop() {
+export function FirstLiveSimulator() {
 
   const textPar = `Metamorph is an open-world exploration, NFT creature collector
   and life simulator game built on the Polygon Blockchain,
@@ -35,8 +35,9 @@ export function FLSDesktop() {
 
         <div className={classes.content}>
             <motion.div
+              key="firstLiveTitle"
               className={classes.descr}
-              initial={{y: 500}}
+              initial={{y: 150}}
               whileInView={{y: 0}}
               transition={{
                 delay: .5,
@@ -71,8 +72,9 @@ export function FLSDesktop() {
 
             <div className={classes.imagesBlock}>
               <motion.div
+                key="firstLiveFirstImage"
                 className={classes.mobileContainer}
-                initial={{y: 500}}
+                initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1.5,
@@ -89,8 +91,9 @@ export function FLSDesktop() {
               />
           </motion.div>
               <motion.div
+                key="firstLiveSecondImage"
                 className={classes.secondImage}
-                initial={{y: 500}}
+                initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1,
