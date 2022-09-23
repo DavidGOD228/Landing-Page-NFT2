@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
-import Logo from '../../../assets/images/logo-icon.png'
+// import Logo from '../../../assets/images/logo-icon.png'
+ import Logo from '../../../assets/images/logo.png'
 import Hamburger from '../../../assets/images/hamburger.svg'
 import Close from '../../../assets/images/close.svg'
 import Twitter from '../../../assets/images/twitter.svg'
@@ -33,7 +34,7 @@ export const Header = () => {
           <span>Morph ID</span>
           <span>Marketplace</span>
           <div className={classes.logoContainer}>
-            <img className={classes.logoIcon} src={Logo} alt=""/>
+            <img className={classes.logo} src={Logo} alt=""/>
           </div>
           <span>Gameplay</span>
           <span>Morph ID</span>
@@ -43,7 +44,7 @@ export const Header = () => {
           <img className={classes.hamburger} src={Hamburger} onClick={() => setVisibleMenu(true)} alt=""/>
           <div className={`${classes.menu} ${isVisibleMenu ? classes.active: ''}`}>
             <div className={classes.menuHeader}>
-              <img src={Logo} alt=""/>
+              <img className={`${classes.logo} ${classes.logoMenu}`} src={Logo} alt="Logo"/>
               <img className={classes.close} src={Close} onClick={() => setVisibleMenu(false)} alt=""/>
             </div>
            <div className={classes.menuContent}>
