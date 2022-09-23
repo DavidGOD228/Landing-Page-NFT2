@@ -110,7 +110,7 @@ export const Personalize = () => {
 					<Table
 						style={{
 							marginTop: 35,
-							width: 400,
+							width: isDesktop ? 400: '100%',
 							height: isDesktop ? 114 : 89,
 							textTransform: isDesktop ? 'initial' : 'uppercase'
 						}}
