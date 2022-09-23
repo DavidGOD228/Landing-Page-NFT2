@@ -114,6 +114,7 @@ export const Personalize = () => {
 							height: isDesktop ? 114 : 89,
 							textTransform: isDesktop ? 'initial' : 'uppercase'
 						}}
+						isGrayTable
 						data={data}
 					/>
 				</div>
