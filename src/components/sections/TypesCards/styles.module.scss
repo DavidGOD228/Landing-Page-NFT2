@@ -129,7 +129,11 @@
 }
 
 .eternalTitle {
-  color: #B7F201
+  background: linear-gradient(180deg, #B0E901 0%, #75E901 57.08%, #01E95E 100%), #B7F201;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .mihoMainImage {
