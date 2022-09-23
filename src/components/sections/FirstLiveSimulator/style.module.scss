@@ -12,7 +12,7 @@
 
 .title {
   margin-left: 40px !important;
-  width: 75%;
+  width: 85%;
   font-size: 61px;
   line-height: 107%;
   margin-left: 12px;
@@ -179,8 +179,6 @@
 }
 
 @media screen and (max-width: $l-desktop) {
-
-
   .privacyImage {
     width: 18vw;
   }
@@ -196,14 +194,12 @@
 }
 
 @media screen and (max-width: $m-desktop) {
-
-
   .privacyImage {
     width: 18vw;
   }
 
   .imagesBlock {
-    margin-left: 5vw;
+    margin-left: 12vw;
   }
 
   .secondImage {
@@ -211,7 +207,7 @@
   }
 
   .grayLine img {
-    width: 27vw;
+    width: 40vw;
   }
 
   .privacyText {
@@ -238,7 +234,7 @@
   .grayLine img {
     left: 0;
     width: 100%;
-    top: 1.5vw;
+    top: 0;
   }
 
   .secondImage {

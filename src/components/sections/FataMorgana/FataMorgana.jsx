@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
 
-import {Title, GreenText, Paragraph, Table} from "components";
+import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 
 import City from "assets/images/city-circle.png";
 import GreenCity from "assets/images/greenCity.png";
@@ -73,7 +73,8 @@ export const FataMorgana = () => {
                   delay: 0.2,
                   ease: 'easeInOut'
                 }}
-                viewport={{once: true}}>
+                viewport={{once: true}}
+              >
                 <GreenText classname={classes.greenText}>
                   FATA <br/> MORGANA
                 </GreenText>
@@ -89,7 +90,7 @@ export const FataMorgana = () => {
                 ease: 'easeInOut'
               }}
               viewport={{once: true}}>
-              D2128NDJK376LAZXWM3NK7
+              <GenerateCode>D2128NDJK376LAZXWM3NK7</GenerateCode>
             </motion.span>
           </div>
           {isDesktop && (
