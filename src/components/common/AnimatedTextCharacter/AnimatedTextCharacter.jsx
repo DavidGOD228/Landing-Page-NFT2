@@ -21,18 +21,18 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
       y: 0,
       transition: {
         type: "linear",
-        damping: 12,
-        stiffness: 100,
+        // damping: 12,
+        // stiffness: 100,
       },
     },
     hidden: {
       opacity: 0,
-      x: -20,
-      y: 10,
+      x: -10,
+      y: 5,
       transition: {
         type: "linear",
-        damping: 12,
-        stiffness: 100,
+        // damping: 12,
+        // stiffness: 100,
       },
     },
   };
@@ -42,7 +42,7 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
       className={className}
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index}>
