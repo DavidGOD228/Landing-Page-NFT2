@@ -9,7 +9,7 @@ import Quotes from "assets/images/quotes.svg";
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 
-import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 
 const data = [
   {
@@ -125,10 +125,11 @@ export const FataMorgana = () => {
         </motion.div>
       </div>
       {!isDesktop && (
-        <Table
-          style={{margin: "36px auto 0", width: 335, height: 89}}
-          data={data}
-        />
+        <div style={{padding: '0 20px'}}>
+          <Table
+            style={{margin: "36px auto 0", width: isDesktop ? 335 : '100%', height: 89}}
+            data={data}/>
+        </div>
       )}
       <div className={classes.cityContainer}>
         <motion.p
@@ -141,10 +142,10 @@ export const FataMorgana = () => {
             ease: 'easeInOut'
           }}
           viewport={{once: true}}>
-            {isDesktop && (
-              <img className={classes.quotes} src={Quotes} alt=""/>
-            )}
-            an adventure that will take your breath away
+          {isDesktop && (
+            <img className={classes.quotes} src={Quotes} alt=""/>
+          )}
+          an adventure that will take your breath away
         </motion.p>
         <span className={classes.light}/>
         <img className={classes.greenCity} src={GreenCity} alt=""/>
