@@ -1,10 +1,11 @@
+import React from 'react'
+
 import {motion} from 'framer-motion';
 
 import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 
-import City from "assets/images/city-circle.png";
-import GreenCity from "assets/images/greenCity.png";
 import Quotes from "assets/images/quotes.svg";
+import MobileCity from '../../../assets/video/mobileCity.video.mp4'
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
@@ -124,14 +125,14 @@ export const FataMorgana = () => {
           </Paragraph>
         </motion.div>
       </div>
-      {!isDesktop && (
-        <div style={{padding: '0 20px'}}>
-          <Table
-            style={{margin: "36px auto 0", width: isDesktop ? 335 : '100%', height: 89}}
-            data={data}/>
-        </div>
-      )}
       <div className={classes.cityContainer}>
+        {!isDesktop && (
+          <div className={classes.mobileTableWrapper}>
+            <Table
+              style={{margin: "36px auto 0", width: '100%', height: 89}}
+              data={data}/>
+          </div>
+        )}
         <motion.p
           className={classes.cityText}
           initial={{y: 150}}
@@ -147,9 +148,9 @@ export const FataMorgana = () => {
           )}
           an adventure that will take your breath away
         </motion.p>
-        <span className={classes.light}/>
-        <img className={classes.greenCity} src={GreenCity} alt=""/>
-        <img className={classes.cityCircle} src={City} alt=""/>
+        <div className={classes.videoWrapper}>
+          <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted/>
+        </div>
       </div>
     </div>
   );
