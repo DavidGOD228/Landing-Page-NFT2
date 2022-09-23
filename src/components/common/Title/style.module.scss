@@ -38,6 +38,11 @@
 	right: 0;
 }
 
+.line.isBefore {
+	right: auto;
+	left: 0;
+}
+
 .shadowUnderLine {
 	content: '';
 	position: absolute;
@@ -64,6 +69,16 @@
   animation-name: shadowLineAnim;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+}
+
+.shadowUnderLine.isAfter {
+	left: auto;
+	right: -13px;
+}
+
+.shadowUnderLine.isBefore {
+	right: auto;
+	left: -13px;
 }
 
 @keyframes shadowLineAnim {

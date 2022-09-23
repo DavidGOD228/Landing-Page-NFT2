@@ -19,13 +19,6 @@
   margin-left: 43px !important;
 }
 
-.personalizeline {
-  &:before,
-  &:after {
-    height: 80% !important;
-  } 
-}
-
 .personalizeParagraph {
   font-size: 18px;
   line-height: 160%;
@@ -38,6 +31,7 @@
   line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-left: 28px;
 
   @media screen and (min-width: $desktop) {
     font-size: 64px;
@@ -54,6 +48,10 @@
     justify-content: space-between;
     padding-top: 6px;
   }
+}
+
+.personalizeline {
+  height: 85%;
 }
 
 .paragraph {
@@ -177,7 +175,6 @@
     padding: 0 20px;
   }
 }
-
 
 @media screen and (max-width: $s-tablet) {
   .personalizeTitle,

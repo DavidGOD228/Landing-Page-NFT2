@@ -89,8 +89,8 @@ export function FirstLiveSimulator() {
                 loop
                 muted
               />
-          </motion.div>
-              <motion.div
+            </motion.div>
+            <motion.div
                 key="firstLiveSecondImage"
                 className={classes.secondImage}
                 initial={{y: 150}}

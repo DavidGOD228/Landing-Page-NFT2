@@ -9,7 +9,7 @@ const omarTrejo = {
 	fingerPrintImg: `${nameFolder}/fingerprint-omar-trejo.svg`,
 	name: 'Omar Trejo',
 	type: 'classique',
-	code: 'H9577LYI310LJHWEQ1SS6',
+	code: 'H9577LYI310LJHWEQ1SS6W',
 	birth: '23.12.1990',
 	location: 'León | Mexico',
 	parametrs: '1.83 cm, 79 kg',

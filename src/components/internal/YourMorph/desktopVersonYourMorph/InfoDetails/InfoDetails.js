@@ -1,11 +1,11 @@
-import {SkillImg, Arrows} from "components";
+import {SkillImg, Arrows, GenerateCodeForMorph} from "components";
 import replaceDots from "utils/replaceDots";
 import classes from "./style.module.scss";
 
 export function InfoDetails({className, morph, ...props}) {
   const {name, code, birth, location, parametrs, skills, fingerPrintImg} =
     morph;
-
+    
   const importfingerPrintImg = require("assets/images/morphs/" +
     fingerPrintImg);
 
@@ -26,7 +26,9 @@ export function InfoDetails({className, morph, ...props}) {
           </div>
         </div>
       </div>
-      <p className={classes.code}>{code}</p>
+      <div className={classes.code}>
+        <GenerateCodeForMorph>{code}</GenerateCodeForMorph>
+      </div>
 
       {/* info Details */}
       <div className={classes.containerAbout}>
