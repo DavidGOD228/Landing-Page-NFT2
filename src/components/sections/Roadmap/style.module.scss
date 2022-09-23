@@ -1,7 +1,10 @@
 @import "~assets/styles/media";
 
 .container {
-  margin-top: 309px;
+
+  @media screen and (min-width: $desktop){
+    margin-top: 309px;
+  }
 }
 
 .wrapper {
