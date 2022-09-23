@@ -84,6 +84,17 @@
     transform: rotate(-180deg);
   }
 
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 215px;
+    background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+    //transform: rotate(-180deg);
+  }
+
   @media screen and (min-width: $desktop) {
     background-image: url("../../../assets/images/marketplaceDesktop.png");
     display: flex;
