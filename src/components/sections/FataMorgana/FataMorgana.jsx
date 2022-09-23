@@ -49,14 +49,14 @@ export const FataMorgana = () => {
                     duration: 1,
                     ease: 'easeInOut'
                   }}
-                  // viewport={{once: true}}
+                  viewport={{once: true}}
                 >
                   全部的 自由 行動的
                 </motion.p>
               )}
               <motion.p
                 className={classes.welcome}
-                initial={{y: 500}}
+                initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1,
@@ -66,7 +66,7 @@ export const FataMorgana = () => {
                 WELCOME TO..
               </motion.p>
               <motion.div
-                initial={{y: 500}}
+                initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1,
@@ -81,7 +81,7 @@ export const FataMorgana = () => {
             </Title>
             <motion.span
               className={classes.code}
-              initial={{y: 500}}
+              initial={{y: 150}}
               whileInView={{y: 0}}
               transition={{
                 duration: 1,
@@ -95,7 +95,7 @@ export const FataMorgana = () => {
           {isDesktop && (
             <motion.div
               style={{margin: "69px 56px 0px auto"}}
-              initial={{y: 500}}
+              initial={{y: 150}}
               whileInView={{y: 0}}
               transition={{
                 duration: 1,
@@ -110,7 +110,7 @@ export const FataMorgana = () => {
           )}
         </div>
         <motion.div
-          initial={{y: 500}}
+          initial={{y: 150}}
           whileInView={{y: 0}}
           transition={{
             duration: 1,
@@ -132,7 +132,7 @@ export const FataMorgana = () => {
       <div className={classes.cityContainer}>
         <motion.p
           className={classes.cityText}
-          initial={{y: 500}}
+          initial={{y: 150}}
           whileInView={{y: 0}}
           transition={{
             duration: 1,

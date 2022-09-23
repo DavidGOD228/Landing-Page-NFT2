@@ -91,9 +91,8 @@
   @media screen and (min-width: $desktop) {
     background-image: none;
     justify-content: flex-start;
-    padding-left: 320px;
-    padding-top: 69px;
-
+    padding-left: 315px;
+    padding-top: 92px;
   }
 }
 
@@ -112,12 +111,14 @@
 }
 
 .listParagraph {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 13px;
   min-width: 296px;
   line-height: 160%;
 
   @media screen and (min-width: $desktop) {
-    max-width: 509px;
+    width: 503px;
     font-size: 18px;
     color: #C1C0C0;
   }

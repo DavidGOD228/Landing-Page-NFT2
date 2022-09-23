@@ -1,6 +1,4 @@
 import classes from './style.module.scss';
-import ArrowLeft from "../../../icons/ArrowLeft";
-import ArrowRight from "../../../icons/ArrowRight";
 import Arrow from 'assets/images/mobile-slider/arrow.svg';
 
 const navSlider = ({ handlePrevSlide, handleNextSlide, activeSlide, className, ...props }) => {

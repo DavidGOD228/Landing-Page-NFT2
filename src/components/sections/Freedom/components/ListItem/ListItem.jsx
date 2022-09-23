@@ -11,20 +11,7 @@ const ListItem = ({text, line, delay}) => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>
-      {/*{isDesktop && <motion.img*/}
-      {/*  src={line}*/}
-      {/*  className={classes.line}*/}
-      {/*  initial={{width: 0}}*/}
-      {/*  whileInView={{width: 'auto'}}*/}
-      {/*  transition={{*/}
-      {/*    delay: delay,*/}
-      {/*    duration: 1,*/}
-      {/*    ease: 'linear'*/}
-      {/*  }}*/}
-      {/*  viewport={{once: true}}>*/}
-      {/*</motion.img>*/}
-      {/*} */}
-      {isDesktop && line }
+      {isDesktop && line}
       <div className={classes.list}>
         <motion.img
           className={classes.circle}
@@ -32,8 +19,8 @@ const ListItem = ({text, line, delay}) => {
           initial={{opacity: 0}}
           whileInView={{opacity: 1}}
           transition={{
-            delay: delay + 1,
-            duration: 1,
+            delay: delay,
+            duration: .5  ,
             ease: 'linear'
           }}
           viewport={{once: true}}>

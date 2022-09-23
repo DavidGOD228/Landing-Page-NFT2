@@ -17,20 +17,20 @@ import ThirdLine from "./components/ThirdLine/ThirdLine";
 const list = [
   {
     id: 1,
-    delay: 0,
-    text: <AnimatedTextCharacter delay={2} className={classes.listParagraph} text="Enter the world of the future"/>,
+    delay: 1,
+    text: <AnimatedTextCharacter delay={1.5} className={classes.listParagraph} text="Enter the world of the future"/>,
     line: <FirstLine/>,
   },
   {
     id: 2,
-    delay: 3,
+    delay: 3.5,
     text: <AnimatedTextCharacter delay={4} className={classes.listParagraph} text="Build your dream life"/>,
     line: <SecondLine/>
   },
   {
     id: 3,
-    delay: 5,
-    text: <AnimatedTextCharacter delay={6} className={classes.listParagraph} text="Forge your path, whatever it may be. Make it big in METAMORPH and see your success transferred to the real world."/>,
+    delay: 6,
+    text: <AnimatedTextCharacter delay={6.5} className={classes.listParagraph} text="Forge your path, whatever it may be. Make it big in METAMORPH and see your success transferred to the real world."/>,
     line: <ThirdLine/>
 
   },
@@ -45,7 +45,7 @@ export const Freedom = () => {
         <div className={classes.content}>
           {
             isDesktop && <motion.div
-              initial={{x: -500}}
+              initial={{x: -150}}
               whileInView={{x: 0}}
               transition={{
                 duration: 1,
@@ -63,7 +63,7 @@ export const Freedom = () => {
             </motion.div>
           }
           <motion.div
-            initial={{x: 500}}
+            initial={{x: 150}}
             whileInView={{x: 0}}
             transition={{
               duration: 1,
