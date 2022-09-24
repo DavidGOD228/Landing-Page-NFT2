@@ -5,7 +5,8 @@ import {motion} from 'framer-motion';
 import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 
 import Quotes from "assets/images/quotes.svg";
-import MobileCity from '../../../assets/video/mobileCity.video.mp4'
+import MobileCity from 'assets/video/mobileCity.video.mp4'
+import DesktopCity from 'assets/video/desktopCity.video.mp4'
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
@@ -149,7 +150,8 @@ export const FataMorgana = () => {
           an adventure that will take your breath away
         </motion.p>
         <div className={classes.videoWrapper}>
-          <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted/>
+          <video className={classes.desktopCity} src={DesktopCity} autoPlay loop muted />
+          <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted />
         </div>
       </div>
     </div>
