@@ -111,6 +111,7 @@
   padding-right: 22px;
 
   @media screen and (min-width: $desktop) {
+    display: none;
     font-family: 'Hanson', sans-serif;
     font-size: 24px;
     letter-spacing: 0.05em;
@@ -146,13 +147,17 @@
   z-index: -1;
 }
 
-.mobileCity {
+.desktopCity {
   object-fit: cover;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.mobileCity {
+  display: none;
 }
 
 .videoWrapper:after {
@@ -183,4 +188,14 @@
   top: -1px;
   width: 100%;
   background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+}
+
+@media screen and (max-width: $desktop) {
+  .mobileCity {
+    display: block;
+  }
+
+  .desktopCity {
+    display: none;
+  }
 }
