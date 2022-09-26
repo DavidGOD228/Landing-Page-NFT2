@@ -15,12 +15,18 @@ export const getRandomImg = () => arrImg[getImg()];
 export const arrItems = () => {
   const width = window.screen.width;
   let itemsLength = 50
-  if (width >= 550 && width <= 1200) {
+  if (width > 655 && width <= 1200) {
     itemsLength = 40
-  } else if (width > 400 && width <= 550) {
+  } else if (width > 500 && width <= 655) {
     itemsLength = 30
-  } else if (width <= 400) {
+  } else if (width > 422 && width <= 500) {
+    itemsLength = 25
+  }
+  else if (width > 348 && width <= 422) {
     itemsLength = 18
+  }
+  else if (width <= 348) {
+    itemsLength = 15
   }
 
   const arr = [];
