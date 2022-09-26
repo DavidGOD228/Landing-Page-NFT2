@@ -1,21 +1,49 @@
+import { useState, useCallback } from 'react';
 import classes from './style.module.scss';
 import Arrow from 'assets/images/mobile-slider/arrow.svg';
 
-const navSlider = ({ handlePrevSlide, handleNextSlide, activeSlide, className, ...props }) => {
-  return (
-    <div className={`${classes.sliderNav} ${className}`} {...props}>
-      <div className={classes.arrowSlider} onClick={handlePrevSlide}>
-        <img src={Arrow} alt="" />
-      </div>
-      
-      <p className={classes.sliderCount}><span
-        className={classes.activeSlide}>{activeSlide}</span>of 4</p>
+const NavSlider = ({
+	handlePrevSlide,
+	handleNextSlide,
+	activeSlide,
+	className,
+	...props
+}) => {
+	const [isClickLeftBtn, setIsClickLeftBtn] = useState(false);
+	const [isClickRightBtn, setIsClickRightBtn] = useState(false);
 
-      <div className={`${classes.arrowSlider} ${classes.flip}`} onClick={handleNextSlide}>
-        <img src={Arrow} alt="" />
-      </div>
-    </div>
-  )
-}
+	const pressLeftBtn = () => {
+    setIsClickLeftBtn(true);
+    setTimeout(() => setIsClickLeftBtn(false), 250);
+    handlePrevSlide();
+  };
+	const pressRightBtn = () => {
+    setIsClickRightBtn(true);
+    setTimeout(() => setIsClickRightBtn(false), 250);
+    handleNextSlide();
+  };
 
-export default navSlider;
+	return (
+		<div className={`${classes.sliderNav} ${className}`} {...props}>
+			<div
+				onClick={pressLeftBtn}
+				className={`${classes.arrowSlider} ${isClickLeftBtn && classes.animateByClick}`}
+			>
+				<img src={Arrow} alt='' />
+			</div>
+
+			<p className={classes.sliderCount}>
+				<span className={classes.activeSlide}>{activeSlide}</span>of 4
+			</p>
+
+			<div
+				className={`${classes.arrowSlider} ${classes.flip}  ${isClickRightBtn && classes.animateByClick}`}
+				onClick={pressRightBtn}
+			>
+				<img src={Arrow} alt='' />
+			</div>
+		</div>
+	);
+};
+
+export default NavSlider;

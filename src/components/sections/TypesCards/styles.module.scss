@@ -26,16 +26,18 @@
 
   &:nth-child(1) {
     padding: 35px 0 0 20px;
-    @media screen and (min-width: $desktop) {
-      border-right: 1px solid #343A3D;
-      padding: 75px 0 150px 0;
+    border-right: 1px solid #343A3D;
+    padding: 75px 0 150px 0;
+    @media screen and (max-width: $desktop) {
+      
     }
   }
 
   &:nth-child(2) {
     padding: 0 20px 0 0;
+    padding: 75px 0 150px 0;
     @media screen and (min-width: $desktop) {
-      padding: 75px 0 150px 0;
+      
     }
   }
 
@@ -53,18 +55,16 @@
 
   @media screen and (min-width: $desktop) {
     font-size: 32px;
-    height: 38px;
-    text-align: center;
-    line-height: 33px;
+    line-height: 1;
+    transform: translateY(10%);
+    top: 50%;
     margin-left: 12px;
   }
 }
 
 .descr {
   margin-top: 16px;
-  @media screen and (min-width: $desktop){
-    width: 70%;
-  }
+  width: 70%;
 }
 
 .idImage {
@@ -102,6 +102,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  max-height: 42px;
 }
 
 // Eternal or Henri
@@ -167,5 +168,11 @@
   order: -1;
   @media screen and (min-width: $desktop){
     order: 0;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .descr {
+    width: 90%;
   }
 }

@@ -31,8 +31,10 @@
   align-items: center;
 
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+
+  $sizeArrowBtn: 54px;
+  width:  $sizeArrowBtn;
+  height:  $sizeArrowBtn;
   padding: 12px;
 
   border: 2px solid #fff;
@@ -55,6 +57,48 @@
 
   &.flip {
     transform: rotateZ(180deg);
+
+    &.animateByClick {
+      animation-duration: .25s;
+      animation-name: animateByClickRightArrow;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+    }
+  }
+
+  &.animateByClick {
+    animation-duration: .25s;
+    animation-name: animateByClickLeftArrow;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes animateByClickLeftArrow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateByClickRightArrow {
+  0% {
+    transform: rotateZ(180deg) scale(1);
+  }
+
+  50% {
+    transform: rotateZ(180deg) scale(0.98);
+  }
+
+  100% {
+    transform: rotateZ(180deg) scale(1);
   }
 }
 

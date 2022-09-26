@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion';
 
 import {Title, GreenText, Paragraph, Accordion} from "components";
 
@@ -46,6 +47,40 @@ const data = [
 export const Earn = () => {
   const isDesktop = useWindowWidth(1024);
 
+  const animFromDown = {
+    initial: { 
+      y: 50, 
+      opacity: 0,
+    },
+    whileInView: { 
+      y: 0, 
+      opacity: 1
+    },
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
+  const animFromRight = {
+    initial: { 
+      x: 200, 
+      opacity: 0,
+    },
+    whileInView: { 
+      x: 0, 
+      opacity: 1
+    },
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
+  const GreenText1 = motion(GreenText);
+
   return (
     <>
       <div className={classes.container}>
@@ -56,24 +91,36 @@ export const Earn = () => {
           <div className={classes.contentWrapper}>
             <div>
               <Title classname={classes.title}>
-                <GreenText>EARN</GreenText>
-                {isDesktop && (
-                  <span className={classes.chineseText}>賺 邊玩邊玩</span>
-                )}
-                <br /> WHILE PLAY
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: 'center',
+                    flexWrap: 'nowrap'
+                  }}
+                >
+                  <GreenText1>EARN</GreenText1>
+                  {isDesktop && (
+                    <motion.span {...animFromDown} className={classes.chineseText}>賺 邊玩邊玩</motion.span>
+                  )}
+                </div>
+                <motion.span {...animFromDown}>WHILE PLAY</motion.span>
               </Title>
               <Paragraph className={classes.paragraph}>
                 {paragraphAnimation('Earn crypto in MM tokens as in-game rewards through playing, completing quests, performing special achievements, and win prizes in tournaments and events.')}
               </Paragraph>
             </div>
             {isDesktop && (
-              <video
-                className={classes.coin}
-                src={CoinVideo}
-                autoPlay
-                loop
-                muted
-              />
+              <motion.div
+                {...animFromRight}
+              >
+                 <video
+                  className={classes.coin}
+                  src={CoinVideo}
+                  autoPlay
+                  loop
+                  muted
+                />
+              </motion.div>
             )}
           </div>
           <div style={{marginTop: 40}}>
