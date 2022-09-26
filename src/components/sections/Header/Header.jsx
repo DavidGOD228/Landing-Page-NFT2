@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-// import Logo from '../../../assets/images/logo-icon.png'
- import Logo from '../../../assets/images/logo.png'
+import Logo from '../../../assets/images/logo.png'
 import Hamburger from '../../../assets/images/hamburger.svg'
 import Close from '../../../assets/images/close.svg'
 import Twitter from '../../../assets/images/twitter.svg'
