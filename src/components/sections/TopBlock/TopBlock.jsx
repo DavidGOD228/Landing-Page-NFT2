@@ -3,6 +3,7 @@ import {DefaultPlayer as Video} from 'react-html5video';
 
 import Header from '../Header/Header'
 import TopBlockImage from 'assets/images/topBlockImage.png'
+import MetaMorphMobile from '../../../assets/images/metaMorphMobile.png'
 import MetaMorphMain from 'assets/images/metaMorphMain.png'
 import TopMorphDesktop from 'assets/images/topMorphDesktop.png'
 import TopCardDesktop from 'assets/images/topCardDesktop.png'
@@ -46,10 +47,12 @@ export const TopBlock = () => {
               {
                 isDesktop && <img src={MetaMorphMain} alt=""/>
               }
-              <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
-                <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
-                <p className={classes.playText}>Watch Teaser</p>
-              </div>
+              {
+                isDesktop ? <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
+                  <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
+                  <p className={classes.playText}>Watch Teaser</p>
+                </div> : <img src={MetaMorphMobile} alt=""/>
+              }
               {
                 isDesktop && <div className={classes.builtOnContainer}>
                   <span className={classes.builtOn}>Built on</span>
