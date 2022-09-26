@@ -1,10 +1,10 @@
 import {Paragraph, Title} from "components";
 
-import Skull from "assets/images/skills/skill-5.svg";
-import Slime from "assets/images/skills/skill-6.svg";
-import Bricks from "assets/images/skills/skill-7.svg";
-import Fish from "assets/images/skills/agressive-active.svg";
-import Chain from "assets/images/skills/skill-8.svg";
+import Skull from "assets/images/skills/skill-5.png";
+import Slime from "assets/images/skills/skill-6.png";
+import Bricks from "assets/images/skills/skill-7.png";
+import Fish from "assets/images/skills/agressive-active.png";
+import Chain from "assets/images/skills/skill-8.png";
 import Morph from "assets/images/unique-morphs.png";
 
 import classes from "./style.module.scss";

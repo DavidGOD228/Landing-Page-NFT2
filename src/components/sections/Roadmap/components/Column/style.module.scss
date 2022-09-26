@@ -7,6 +7,16 @@
   background: #242427;
 }
 
+.column {
+
+  &:nth-child(1n+5) {
+    & .header {
+      border-bottom: 1px solid #5A5A6B;
+      border-top: 1px solid #5A5A6B;
+    }
+  }
+}
+
 .headerText {
   position: absolute;
   top: -22px;
