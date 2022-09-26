@@ -4,7 +4,6 @@ const arrImg = [
   'bed-2.png',
   'bed-3.png',
   'bench.png',
-  'boot-1.png',
   'boot-2.png',
   'boot-3.png',
   'boot-4.png',
