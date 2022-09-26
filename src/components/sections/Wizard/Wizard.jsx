@@ -64,9 +64,7 @@ export const Wizard = () => {
               <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses.</p>
             </div>
             <div className={classes.team}>
-              <div className={classes.photo}>
-                PHOTO
-              </div>
+              <div className={classes.photo}/>
             </div>
           </div>
         </div> : <div className={classes.members}>
