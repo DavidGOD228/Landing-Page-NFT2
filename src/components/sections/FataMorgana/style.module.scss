@@ -147,7 +147,8 @@
   z-index: -1;
 }
 
-.desktopCity {
+.desktopCity,
+.mobileCity{
   object-fit: cover;
   height: 100%;
   width: 100%;
