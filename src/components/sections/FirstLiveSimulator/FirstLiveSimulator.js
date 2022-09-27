@@ -4,7 +4,8 @@ import {GlobalContainer, GreenText, Title, Paragraph} from 'components';
 
 import WhiteLine from 'assets/images/whiteLine.svg';
 import toiletVideo from 'assets/video/toilet.video.mp4';
-import Confidence from 'assets/images/confidence.png';
+import bedVideo from 'assets/video/bed.video.mp4';
+
 import SmileDesktop from 'assets/images/smileDesktop.svg';
 import MorphDesktop from 'assets/video/morphDesktop.video.mp4'
 import MorphMobile from 'assets/video/morphMobile.video.mp4'
@@ -24,7 +25,8 @@ export function FirstLiveSimulator() {
 
   return (
     <div className={classes.wrapper}>
-      <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay muted/>
+      <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay
+             muted playsInline/>
       <GlobalContainer>
         <div className={classes.flsDesktopContainer}>
           <div className={classes.content}>
@@ -77,6 +79,7 @@ export function FirstLiveSimulator() {
                     autoPlay
                     loop
                     muted
+                    playsInline
                   />
                 </motion.div>
                 <motion.div
@@ -90,7 +93,12 @@ export function FirstLiveSimulator() {
                   }}
                   viewport={{once: true}}
                 >
-                  <img className={classes.privacyImage} src={Confidence} alt=''/>
+                  <video src={bedVideo}
+                         className={classes.privacyImage}
+                         autoPlay
+                         loop
+                         playsInline
+                         muted/>
                 </motion.div>
               </div>
             </div>

@@ -5,13 +5,13 @@ import Slime from "assets/images/skills/skill-6.png";
 import Bricks from "assets/images/skills/skill-7.png";
 import Fish from "assets/images/skills/agressive-active.png";
 import Chain from "assets/images/skills/skill-8.png";
-import Morph from "assets/images/unique-morphs.png";
+import MorphDesktop from 'assets/video/agressive_desktop.video.mp4'
+import MorphMobile from 'assets/video/agressive_desktop.video.mp4'
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 import WhiteTitle from "../../common/WhiteTitle/WhiteTitle";
 
-import toiletVideo from 'assets/video/toilet.video.mp4';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
 export const MorphsUnique = () => {
@@ -56,13 +56,21 @@ export const MorphsUnique = () => {
             }
           </div>
         </div>
-        <img className={classes.morphImage} src={Morph} alt="morph"/>
+        <video
+          className={classes.morphImage}
+          src={MorphDesktop}
+          autoPlay
+          loop
+          playsInline
+          muted
+        />
       </div>
       {!isDesktop && <div className={classes.mobileMorph}>
         <video
           className={classes.mobileMorphVideo}
-          src={toiletVideo}
+          src={MorphMobile}
           autoPlay
+          playsInline
           loop
           muted
         />
