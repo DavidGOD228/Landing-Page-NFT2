@@ -1,16 +1,16 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import {Title, GreenText, Paragraph, Accordion} from "components";
 
-import Cards from "assets/images/earn.png";
 import CoinVideo from "assets/video/coin.video.mp4";
+import ComparingCards from 'assets/video/comp.video.mp4';
 
 import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 import Column from "./components/Column/Column";
 
-import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 
 const data = [
   {
@@ -48,12 +48,12 @@ export const Earn = () => {
   const isDesktop = useWindowWidth(1024);
 
   const animFromDown = {
-    initial: { 
-      y: 50, 
+    initial: {
+      y: 50,
       opacity: 0,
     },
-    whileInView: { 
-      y: 0, 
+    whileInView: {
+      y: 0,
       opacity: 1
     },
     transition: {
@@ -64,12 +64,12 @@ export const Earn = () => {
   }
 
   const animFromRight = {
-    initial: { 
-      x: 200, 
+    initial: {
+      x: 200,
       opacity: 0,
     },
-    whileInView: { 
-      x: 0, 
+    whileInView: {
+      x: 0,
       opacity: 1
     },
     transition: {
@@ -85,7 +85,7 @@ export const Earn = () => {
     <>
       <div className={classes.container}>
         {!isDesktop && (
-          <video className={classes.coin} src={CoinVideo} autoPlay loop muted />
+          <video className={classes.coin} src={CoinVideo} autoPlay loop muted/>
         )}
         <div className={classes.wrapper}>
           <div className={classes.contentWrapper}>
@@ -100,7 +100,8 @@ export const Earn = () => {
                 >
                   <GreenText1>EARN</GreenText1>
                   {isDesktop && (
-                    <motion.span {...animFromDown} className={classes.chineseText}>賺 邊玩邊玩</motion.span>
+                    <motion.span {...animFromDown} className={classes.chineseText}>賺
+                      邊玩邊玩</motion.span>
                   )}
                 </div>
                 <motion.span {...animFromDown}>WHILE PLAY</motion.span>
@@ -113,7 +114,7 @@ export const Earn = () => {
               <motion.div
                 {...animFromRight}
               >
-                 <video
+                <video
                   className={classes.coin}
                   src={CoinVideo}
                   autoPlay
@@ -126,10 +127,16 @@ export const Earn = () => {
           <div style={{marginTop: 40}}>
             {!isDesktop &&
               data.map(({title, subtitle}, i) => (
-                <Accordion key={i} title={title} subtitle={subtitle} />
+                <Accordion key={i} title={title} subtitle={subtitle}/>
               ))}
           </div>
-          {!isDesktop && <img className={classes.cards} src={Cards} alt="" />}
+          {!isDesktop && <video
+            className={classes.comparingVideo}
+            src={ComparingCards}
+            autoPlay
+            loop
+            muted
+          />}
         </div>
       </div>
       {isDesktop && (

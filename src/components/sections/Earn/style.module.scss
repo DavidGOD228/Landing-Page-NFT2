@@ -15,12 +15,6 @@
   }
 }
 
-.cards {
-  display: block;
-  width: 355px;
-  margin: 83px auto 0;
-}
-
 .chineseText {
   font-family: 'DFLiKingHei1B', sans-serif;
   font-style: normal;
@@ -117,4 +111,10 @@
   .coin {
     @include prtnlSclScrnSize(width, 274)
   }
+}
+
+.comparingVideo {
+  margin: 83px auto 0;
+  display: block;
+  height: 422px;
 }
