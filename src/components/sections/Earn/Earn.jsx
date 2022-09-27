@@ -85,7 +85,7 @@ export const Earn = () => {
     <>
       <div className={classes.container}>
         {!isDesktop && (
-          <video className={classes.coin} src={CoinVideo} autoPlay loop muted/>
+          <video className={classes.coin} src={CoinVideo} autoPlay loop muted playsInline/>
         )}
         <div className={classes.wrapper}>
           <div className={classes.contentWrapper}>
@@ -119,6 +119,7 @@ export const Earn = () => {
                   src={CoinVideo}
                   autoPlay
                   loop
+                  playsInline
                   muted
                 />
               </motion.div>
@@ -134,6 +135,7 @@ export const Earn = () => {
             className={classes.comparingVideo}
             src={ComparingCards}
             autoPlay
+            playsInline
             loop
             muted
           />}

@@ -29,6 +29,7 @@ export const Privacy = () => {
           src={ToiletVideo}
           autoPlay
           loop
+          playsInline
           muted
         />
       </div>
@@ -67,6 +68,7 @@ export const Privacy = () => {
             src={BedVideo}
             autoPlay
             loop
+            playsInline
             muted
           />
         </div>

@@ -61,6 +61,7 @@ export const MorphsUnique = () => {
           src={MorphDesktop}
           autoPlay
           loop
+          playsInline
           muted
         />
       </div>
@@ -69,6 +70,7 @@ export const MorphsUnique = () => {
           className={classes.mobileMorphVideo}
           src={MorphMobile}
           autoPlay
+          playsInline
           loop
           muted
         />

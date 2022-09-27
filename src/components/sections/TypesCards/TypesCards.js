@@ -44,6 +44,7 @@ export function TypesCards() {
               <video src={MihoID}
                      className={classes.idImage}
                      autoPlay
+                     playsInline
                      loop
                      muted/>
             </div>
@@ -70,6 +71,7 @@ export function TypesCards() {
                 className={`${classes.idImage} ${classes.idImageHenri}`}
                 src={HenriID}
 								autoPlay
+                playsInline
 								loop
 								muted
               />

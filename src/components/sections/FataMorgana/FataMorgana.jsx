@@ -150,8 +150,8 @@ export const FataMorgana = () => {
           an adventure that will take your breath away
         </motion.p>
         <div className={classes.videoWrapper}>
-          <video className={classes.desktopCity} src={DesktopCity} autoPlay loop muted />
-          <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted />
+          <video className={classes.desktopCity} src={DesktopCity} playsInline autoPlay loop muted />
+          <video className={classes.mobileCity} src={MobileCity} playsInline autoPlay loop muted />
         </div>
       </div>
     </div>

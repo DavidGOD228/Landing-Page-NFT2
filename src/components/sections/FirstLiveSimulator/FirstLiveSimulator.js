@@ -26,7 +26,7 @@ export function FirstLiveSimulator() {
   return (
     <div className={classes.wrapper}>
       <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay
-             muted/>
+             muted playsInline/>
       <GlobalContainer>
         <div className={classes.flsDesktopContainer}>
           <div className={classes.content}>
@@ -79,6 +79,7 @@ export function FirstLiveSimulator() {
                     autoPlay
                     loop
                     muted
+                    playsInline
                   />
                 </motion.div>
                 <motion.div
@@ -96,6 +97,7 @@ export function FirstLiveSimulator() {
                          className={classes.privacyImage}
                          autoPlay
                          loop
+                         playsInline
                          muted/>
                 </motion.div>
               </div>
