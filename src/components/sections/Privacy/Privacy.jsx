@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import PrivacyImage from '../../../assets/images/privacy.png'
-import ConfidenceImage from '../../../assets/images/confidence.png'
+import ToiletVideo from 'assets/video/toilet.video.mp4'
+import BedVideo from 'assets/video/bed.video.mp4'
 
 import Smile from '../../icons/Smile'
 
@@ -23,8 +23,14 @@ export const Privacy = () => {
         viewport={{once: true}}>
         RESPECT His PRIVACY!
       </motion.h3>
-      <div className={classes.privacyContainer}>
-        <img className={classes.privacyImage} src={PrivacyImage} alt=""/>
+      <div className={`${classes.videoWrapper} ${classes.privacyContainer}`}>
+        <video
+          className={classes.privacyVideo}
+          src={ToiletVideo}
+          autoPlay
+          loop
+          muted
+        />
       </div>
       <div className={classes.confidenceContainer}>
         <motion.h3
@@ -55,7 +61,15 @@ export const Privacy = () => {
           viewport={{once: true}}>
           <Smile width={53} height={59}/>
         </motion.div>
-        <img src={ConfidenceImage} alt=""/>
+        <div className={`${classes.videoWrapper} ${classes.confidenceContainer}`}>
+          <video
+            className={classes.privacyVideo}
+            src={BedVideo}
+            autoPlay
+            loop
+            muted
+          />
+        </div>
       </div>
     </div>
   )
