@@ -2,16 +2,14 @@ import React, {useState} from 'react'
 import {DefaultPlayer as Video} from 'react-html5video';
 
 import Header from '../Header/Header'
-import TopBlockImage from 'assets/images/topBlockImage.png'
 import MetaMorphMobile from '../../../assets/images/metaMorphMobile.png'
 import MetaMorphMain from 'assets/images/metaMorphMain.png'
-import TopMorphDesktop from 'assets/images/topMorphDesktop.png'
-import TopCardDesktop from 'assets/images/topCardDesktop.png'
 import TopLeftCorner from 'assets/images/topBlock-leftCorner.png'
 import TopRightCorner from 'assets/images/topBlock-rightCorner.png'
 import BottomCorner from 'assets/images/topBlock-bottom.png'
 import TeaserVideo from 'assets/video/teaser.video.mp4';
 import Close from 'assets/images/close.svg'
+import MorphBlock from "../Header/components/MorphBlock/MorphBlock";
 
 import UnrealEngine from '../../icons/UnrealEngine'
 import Polygon from '../../icons/Polygon'
@@ -28,7 +26,7 @@ export const TopBlock = () => {
   const [isVideoOpen, setVideoOpen] = useState(false)
 
   return (
-    <>
+    <div id="game">
       {isVideoOpen ? <div className={classes.videoBlock}>
           <button onClick={() => setVideoOpen(false)} className={classes.closeBtn}>
             <img src={Close} alt=""/>
@@ -45,7 +43,7 @@ export const TopBlock = () => {
           <div className={classes.container}>
             <div className={classes.mainBlock}>
               {
-                isDesktop && <img src={MetaMorphMain} alt=""/>
+                isDesktop && <img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/>
               }
               {
                 isDesktop ? <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
@@ -65,7 +63,7 @@ export const TopBlock = () => {
               }
             </div>
             {
-              !isDesktop && <img className={classes.morphImage} src={TopBlockImage} alt=""/>
+              !isDesktop && <MorphBlock/>
             }
             {
               !isDesktop && <div className={classes.builtOnContainer}>
@@ -78,16 +76,13 @@ export const TopBlock = () => {
               </div>
             }
             {
-              isDesktop && <div className={classes.topBlockImages}>
-                <img src={TopMorphDesktop} alt=""/>
-                <img className={classes.morphDesktop} src={TopCardDesktop} alt=""/>
-              </div>
+              isDesktop &&  <MorphBlock/>
             }
           </div>
         </div>
       }
 
-    </>
+    </div>
   )
 }
 

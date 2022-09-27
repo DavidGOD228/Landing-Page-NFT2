@@ -8,7 +8,7 @@ import second from 'assets/images/second.svg';
 
 import MihoMorph from 'assets/images/morphs/miho-ikuta/miho-morph-presentation.png';
 import MihoMorphMobile from 'assets/images/miho-morph.png';
-import MihoID from 'assets/images/miho-id.png';
+import MihoID from 'assets/video/white_card.video.mp4';
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
 import HenriID from 'assets/images/henri-id.png';

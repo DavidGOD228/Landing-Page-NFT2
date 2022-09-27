@@ -37,7 +37,7 @@ export const FataMorgana = () => {
   const parg1 = 'Metamorph is built on putting the power of choice into the hands of players All in game actions are governed by you, with no artificial barriers. We empower you to create your unique story by participating in a world where we expect the unexpected. From moral actions to investments, crusades, businesses operations and gambling – you havethe choice play and earn in a style you enjoy.';
 
   return (
-    <div className={classes.container}>
+    <div id="fataMorgana" className={classes.container}>
       <div className={classes.topContainer}>
         <div className={classes.content}>
           <div>

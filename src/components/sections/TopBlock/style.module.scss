@@ -16,6 +16,11 @@
   position: relative;
 }
 
+.metaMorphMain {
+  width: 505px;
+  height: 176px;
+}
+
 .closeBtn {
   display: flex;
   align-items: center;
@@ -48,7 +53,7 @@
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0 116px 0 120px;
+    padding: 65px 116px 0 120px;
   }
 }
 
@@ -178,15 +183,3 @@
   }
 }
 
-
-.topBlockImages {
-  position: relative;
-  margin-top: 28px;
-  margin-left: 57px;
-}
-
-.morphDesktop {
-  position: absolute;
-  top: 131px;
-  right: -92px;
-}

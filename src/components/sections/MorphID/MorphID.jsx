@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 import { Title, Paragraph, GreenText } from 'components';
 
-import TransparentGreenCard from 'assets/images/transparent-green-card.png';
+import ComparingCards from 'assets/video/comp.video.mp4';
 
 import { paragraphAnimationFromRight } from 'farmerMotionsAnimations/paragraphAnimation';
 
@@ -72,13 +72,16 @@ export const MorphId = () => {
 	const GreenText1 = motion(GreenText);
 
 	return (
-		<div className={classes.container}>
+		<div id="morphID" className={classes.container}>
 			<div className={classes.cardsImg}>
 				{isDesktop && (
-					<motion.img
+					<motion.video
+						className={classes.comparingVideo}
 						{...animFromLeftImg}
-						src={TransparentGreenCard}
-						alt='cards'
+						src={ComparingCards}
+						autoPlay
+						loop
+						muted
 					/>
 				)}
 			</div>

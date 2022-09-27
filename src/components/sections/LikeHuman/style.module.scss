@@ -6,10 +6,10 @@
 }
 
 .container {
-  padding: 220px 0 70px;
-
+  margin: 150px 0 70px;
+  padding-top: 70px;
   @media screen and (max-width: $desktop){
-    padding: 100px 0 120px;
+    margin: 100px 0 120px;
   }
 }
 

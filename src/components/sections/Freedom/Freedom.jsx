@@ -17,48 +17,49 @@ import ThirdLine from './components/ThirdLine/ThirdLine';
 import { media } from 'utils/media';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 
-const list = [
-	{
-		id: 1,
-		delay: 1,
-		text: (
-			<AnimatedTextCharacter
-				delay={1.5}
-				className={classes.listParagraph}
-				text='Enter the world of the future'
-			/>
-		),
-		line: <FirstLine />
-	},
-	{
-		id: 2,
-		delay: 3.5,
-		text: (
-			<AnimatedTextCharacter
-				delay={4}
-				className={classes.listParagraph}
-				text='Build your dream life'
-			/>
-		),
-		line: <SecondLine />
-	},
-	{
-		id: 3,
-		delay: 6,
-		text: (
-			<AnimatedTextCharacter
-				delay={6.5}
-				className={classes.listParagraph}
-				text='Forge your path, whatever it may be. Make it big in METAMORPH and see your success transferred to the real world.'
-			/>
-		),
-		line: <ThirdLine />
-	}
-];
 
 export const Freedom = () => {
+
 	const isDesktop = useWindowWidth(1024);
 
+	const list = [
+		{
+			id: 1,
+			delay: 1,
+			text: (
+				<AnimatedTextCharacter
+					delay={1.5}
+					className={classes.listParagraph}
+					text='Enter the world of the future'
+				/>
+			),
+			line: <FirstLine />
+		},
+		{
+			id: 2,
+			delay: isDesktop ? 3.5 : 2,
+			text: (
+				<AnimatedTextCharacter
+					delay={isDesktop ? 4 : 2.5}
+					className={classes.listParagraph}
+					text='Build your dream life'
+				/>
+			),
+			line: <SecondLine />
+		},
+		{
+			id: 3,
+			delay: isDesktop ? 6 : 3,
+			text: (
+				<AnimatedTextCharacter
+					delay={isDesktop ? 6.5 : 3.5}
+					className={classes.listParagraph}
+					text='Forge your path, whatever it may be. Make it big in METAMORPH and see your success transferred to the real world.'
+				/>
+			),
+			line: <ThirdLine />
+		}
+	];
 	const parghText1 =
 		'MM is built on putting the power of choice into the hands of players. All in-game actions are governed by you, with no artificial barriers. We empower you to create your unique story by participating in a world where we expect the unexpected. From moral actions to investments, socialize, business operations, and gambling you have the choice to play and earn in a style you enjoy.';
 

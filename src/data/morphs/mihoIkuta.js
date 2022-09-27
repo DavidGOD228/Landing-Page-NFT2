@@ -6,6 +6,7 @@ const mihoIkuta = {
 	id: 740,
 	cardImg: `${nameFolder}/card-miho-ikuta.png`,
 	bodyImg: `${nameFolder}/body-miho-ikuta.png`,
+	bodyMobileImg: `${nameFolder}/mobile-miho-ikuta.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-miho-ikuta.svg`,
 	name: 'Miho Ikuta',
 	type: 'classique',

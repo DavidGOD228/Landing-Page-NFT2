@@ -35,7 +35,7 @@ export const Roadmap = () => {
 	};
 
   return (
-    <div className={classes.container}>
+    <div id="roadmap" className={classes.container}>
       <div className={classes.wrapper}>
         <Title 
           classname={classes.title}

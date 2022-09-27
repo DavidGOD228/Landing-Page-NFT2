@@ -6,6 +6,7 @@ const omarTrejo = {
 	id: 4102,
 	cardImg: `${nameFolder}/card-omar-trejo.png`,
 	bodyImg: `${nameFolder}/body-omar-trejo.png`,
+	bodyMobileImg: `${nameFolder}/mobile-omar-trejo.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-omar-trejo.svg`,
 	name: 'Omar Trejo',
 	type: 'classique',

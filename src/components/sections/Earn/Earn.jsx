@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 import { Title, GreenText, Paragraph, Accordion } from 'components';
 
 import Cards from 'assets/images/earn.png';
-import CoinVideo from 'assets/video/coin.video.mp4';
+import CoinVideo from "assets/video/coin.video.mp4";
+import ComparingCards from 'assets/video/comp.video.mp4';
 
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import Column from './components/Column/Column';
 
-import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 
 const data = [
 	{
@@ -127,7 +128,7 @@ export const Earn = () => {
 							<motion.div {...animFromRight}>
 								<video
 									className={classes.coin}
-									src={CoinVideo}
+									src={ComparingCards}
 									autoPlay
 									loop
 									muted

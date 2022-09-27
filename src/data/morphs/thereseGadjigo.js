@@ -6,6 +6,7 @@ const thereseGadjigo = {
 	id: 7077,
 	cardImg: `${nameFolder}/card-therese-gadjigo.png`,
 	bodyImg: `${nameFolder}/body-therese-gadjigo.png`,
+	bodyMobileImg: `${nameFolder}/mobile-therese-gadjigo.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-therese-gadjigo.svg`,
 	name: 'Therese Gadjigo',
 	type: 'eternal',

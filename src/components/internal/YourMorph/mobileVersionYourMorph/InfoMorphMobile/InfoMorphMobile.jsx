@@ -7,8 +7,9 @@ import {
 import classes from './style.module.scss';
 
 export function InfoMorphMobile({ className, morph, ...props }) {
-	const { id, bodyImg, type, name, attributes } = morph;
-	const importBodyImg = require('assets/images/morphs/' + bodyImg);
+	const { id, type, name, attributes, bodyMobileImg } = morph;
+
+	const importBodyImg = require('assets/images/morphs/' + bodyMobileImg);
 
 	return (
 		<div className={classes.infoMorphMobile} {...props}>
