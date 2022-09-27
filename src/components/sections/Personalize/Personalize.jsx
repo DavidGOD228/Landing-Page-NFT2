@@ -139,7 +139,7 @@ export const Personalize = () => {
 				/>
 			</div>
 
-			<div className={classes.personalizeContainer}>
+			<div id="marketplace" className={classes.personalizeContainer}>
 				<Title
 					classname={classes.marketplaceTitle}
 					style={{

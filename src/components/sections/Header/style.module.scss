@@ -11,10 +11,10 @@
   background: linear-gradient(180deg, #0B0B0C 11.77%, rgba(11, 11, 12, 0) 100%);
 
   @media screen and (min-width: $desktop) {
+    position: fixed;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(20px);
     padding: 0;
-    position: relative;
   }
 
   &:after {
@@ -33,40 +33,16 @@
   }
 }
 
-.container {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 892px;
   margin: 0 auto;
-
-  & > span {
-    line-height: 160%;
-    letter-spacing: 0.04em;
-    color: #FFFFFF;
-  }
 }
 
 .logoContainer {
   position: relative;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  background: #B7F201;
-  width: 86px;
-  height: 2px;
-
-  @media screen and (min-width: $desktop) {
-    display: block;
-  }
 }
 
 .hamburger {
@@ -130,6 +106,7 @@
   border-bottom: 1px solid #343A3D;
   width: 100%;
   padding: 28px 0;
+  text-decoration: none;
 }
 
 .socials {

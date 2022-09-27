@@ -89,7 +89,7 @@ export const LikeHuman = () => {
   }
 
 	return (
-		<div className={classes.container}>
+		<div id="features" className={classes.container}>
 			<div className={classes.titleWrapper}>
 
         {/* paragraph descktop */}
