@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 import { Title, GreenText, Paragraph, Accordion } from 'components';
 
-import Cards from 'assets/images/earn.png';
 import CoinVideo from "assets/video/coin.video.mp4";
 import ComparingCards from 'assets/video/comp.video.mp4';
 
@@ -143,7 +142,14 @@ export const Earn = () => {
 								<Accordion key={i} title={title} subtitle={subtitle} />
 							))}
 					</div>
-					{!isDesktop && <img className={classes.cards} src={Cards} alt='' />}
+					{!isDesktop && <video
+            className={classes.comparingVideo}
+            src={ComparingCards}
+            autoPlay
+            playsInline
+            loop
+            muted
+          />}
 				</div>
 			</div>
 			{isDesktop && (
