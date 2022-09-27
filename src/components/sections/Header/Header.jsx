@@ -36,14 +36,12 @@ export const Header = () => {
         isDesktop ? <nav className={classes.nav}>
           {
             menuData.map(({id, title}, index) => {
-              return index === 3 ? <>
+              return index === 3 ? <React.Fragment key={title}>
                 <div className={classes.logoContainer}>
                   <img className={classes.logo} src={Logo} alt=""/>
                 </div>
-                <NavItem onClick={() => setActiveLink(index)} isActive={activeLink === index}
-                         title={title} link={id}/>
-              </> : <NavItem onClick={() => setActiveLink(index)} isActive={activeLink === index}
-                             title={title} link={id}/>
+                <NavItem key={title} onClick={() => setActiveLink(index)} isActive={activeLink === index} title={title} link={id}/>
+              </React.Fragment> : <NavItem key={title} onClick={() => setActiveLink(index)} isActive={activeLink === index} title={title} link={id}/>
             })
           }
         </nav> : <>

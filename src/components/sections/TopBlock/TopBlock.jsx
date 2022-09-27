@@ -45,7 +45,7 @@ export const TopBlock = () => {
           <div className={classes.container}>
             <div className={classes.mainBlock}>
               {
-                isDesktop && <img src={MetaMorphMain} alt=""/>
+                isDesktop && <img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/>
               }
               {
                 isDesktop ? <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
@@ -79,8 +79,8 @@ export const TopBlock = () => {
             }
             {
               isDesktop && <div className={classes.topBlockImages}>
-                <img src={TopMorphDesktop} alt=""/>
-                <img className={classes.morphDesktop} src={TopCardDesktop} alt=""/>
+                <img className={classes.morphDesktop} src={TopMorphDesktop} alt=""/>
+                <img className={classes.morphCardDesktop} src={TopCardDesktop} alt=""/>
               </div>
             }
           </div>
