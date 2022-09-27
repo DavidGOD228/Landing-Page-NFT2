@@ -63,6 +63,15 @@ export const MorphsUnique = () => {
 							<motion.img className={classes.skillImg} src={Slime} alt='skill' />
 							<motion.img className={classes.skillImg} src={Bricks} alt='skill' />
 
+              <div className={classes.wrapperSkill}>
+                <img
+                  className={`${classes.skillImg} ${classes.active}`}
+                  src={Fish}
+                  alt="skill"
+                />
+                <div className={classes.skillTitleMobile}>Agressive</div>
+              </div>
+
               <img className={classes.skillImg} src={Chain} alt="skill" />
             </div>
             {
