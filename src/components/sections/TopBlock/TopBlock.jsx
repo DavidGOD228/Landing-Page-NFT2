@@ -28,7 +28,7 @@ export const TopBlock = () => {
   const [isVideoOpen, setVideoOpen] = useState(false)
 
   return (
-    <>
+    <div id="game">
       {isVideoOpen ? <div className={classes.videoBlock}>
           <button onClick={() => setVideoOpen(false)} className={classes.closeBtn}>
             <img src={Close} alt=""/>
@@ -87,7 +87,7 @@ export const TopBlock = () => {
         </div>
       }
 
-    </>
+    </div>
   )
 }
 

@@ -12,7 +12,7 @@ import classes from './style.module.scss'
 export const Roadmap = () => {
   const iSDesktop = useWindowWidth(1024)
   return (
-    <div className={classes.container}>
+    <div id="roadmap" className={classes.container}>
       <div className={classes.wrapper}>
         <Title classname={classes.title} style={{textTransform: !iSDesktop && 'initial'}}>
           <GreenText style={{textTransform: !iSDesktop && 'initial'}}>We are </GreenText>running!
