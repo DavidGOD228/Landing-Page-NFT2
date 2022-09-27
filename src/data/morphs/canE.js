@@ -6,6 +6,7 @@ const canE = {
 	id: 902,
 	cardImg: `${nameFolder}/card-can-e.png`,
 	bodyImg: `${nameFolder}/body-can-e.png`,
+	bodyMobileImg: `${nameFolder}/mobile-can-e.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-can-e.svg`,
 	name: 'Can E',
 	type: 'classique',

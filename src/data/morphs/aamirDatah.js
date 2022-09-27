@@ -6,6 +6,7 @@ const aamirDatah = {
 	id: 2933,
 	cardImg: `${nameFolder}/card-aamir-datah.png`,
 	bodyImg: `${nameFolder}/body-aamir-datah.png`,
+	bodyMobileImg: `${nameFolder}/mobile-aamir-datah.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-aamir-datah.svg`,
 	name: 'Aamir Datah',
 	type: 'classique',

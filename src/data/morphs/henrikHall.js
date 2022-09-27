@@ -6,6 +6,7 @@ const henrikHall = {
 	id: 995,
 	cardImg: `${nameFolder}/card-henrik-hail.png`,
 	bodyImg: `${nameFolder}/body-henrik-hail.png`,
+	bodyMobileImg: `${nameFolder}/mobile-henrik-hail.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-henrik-hail.svg`,
 	name: 'Henrik Hall',
 	type: 'eternal',
