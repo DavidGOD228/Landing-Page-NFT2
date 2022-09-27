@@ -25,20 +25,12 @@
 
 
   &:nth-child(1) {
-    padding: 35px 0 0 20px;
     border-right: 1px solid #343A3D;
     padding: 75px 0 150px 0;
-    @media screen and (max-width: $desktop) {
-      
-    }
   }
 
   &:nth-child(2) {
-    padding: 0 20px 0 0;
     padding: 75px 0 150px 0;
-    @media screen and (min-width: $desktop) {
-      
-    }
   }
 
   @media screen and (min-width: $desktop){
@@ -93,16 +85,14 @@
 }
 
 // Classique or Miho
-.classiqueParagraph {
+.classiqueParagraph,
+.eternalParagraph  {
   display: flex;
   align-items: center;
 }
 
-.eternalParagraph {
-  display: flex;
-  align-items: center;
+.eternalParagraph  {
   justify-content: flex-end;
-  max-height: 42px;
 }
 
 // Eternal or Henri
@@ -135,6 +125,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.mihoMainImage,
+.henriMainImage {
+  max-width: 306px;
 }
 
 .mihoMainImage {
@@ -176,3 +171,56 @@
     width: 90%;
   }
 }
+
+@media screen and (max-width: 1300px){
+  .mihoMainImage,
+  .henriMainImage {
+    max-width: 20vw;
+  }
+
+  .idImage {
+    max-width: 18.9vw;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .title {
+    font-size: 2.6vw;
+  }
+}
+
+@media screen and (max-width: $desktop){
+  .title {
+    font-size: 20px;
+  }
+
+  .mihoMainImage,
+  .henriMainImage,
+  .idImage {
+    max-width: none;
+  }
+
+  .eternalBlock {
+    margin-top: 40px;
+  }
+
+  .morphBlock {
+    display: flex;
+    height: min-content;
+    gap: 30px;
+    justify-content: flex-start;
+  
+  
+    &:nth-child(1) {
+      border-right: 1px solid #343A3D;
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+  
+    &:nth-child(2) {
+      padding: 0 20px 0 0;
+    }
+  }
+}
+
+

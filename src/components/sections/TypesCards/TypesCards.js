@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { GlobalContainer, Paragraph } from 'components';
 
 import classes from './styles.module.scss';
@@ -13,41 +14,113 @@ import HenriMorphDesktop from 'assets/images/henri-morph.png';
 import HenriID from 'assets/images/henri-id.png';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { morphIDText } from 'data/morphID/text';
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import { useWindowSize } from 'hooks/useWindowDimensions';
+import { media } from 'utils/media';
 
 export function TypesCards() {
 	const isDesktop = useWindowWidth(1024);
+  
+	const { width } = useWindowSize();
+
+  const getStartInitVal = () => {
+    if(width > media.mDesktop) return 200;
+    if(width > media.tablet) return 100;
+    if(width > media.lMobile) return 50;
+    return 25;
+  }
+
+  const animFromRight = {
+    initial: { 
+      x: getStartInitVal(), 
+      opacity: 0,
+    },
+    whileInView: { 
+      x: 0, 
+      opacity: 1,
+    },
+    transition: {
+      duration: 2,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
+  const animFromLeft = {
+    initial: { 
+      x: getStartInitVal() * -1, 
+      opacity: 0,
+      scale: 0.9
+    },
+    whileInView: { 
+      x: 0, 
+      opacity: 1,
+      scale: 1
+    },
+    transition: {
+      duration: 2,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
+  const animFromDown = {
+    initial: { 
+      y: 50, 
+      opacity: 0,
+    },
+    whileInView: { 
+      y: 0, 
+      opacity: 1,
+    },
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
 	return (
 		<div className={classes.wrapper}>
 			<GlobalContainer>
 				<div className={classes.containerTypesCards}>
 					<div className={classes.morphBlock}>
-						<img
+            {isDesktop && <motion.img
+              key="miho-d"
 							className={classes.mihoMainImage}
-							src={isDesktop ? MihoMorph : MihoMorphMobile}
+							src={MihoMorph}
 							alt='miho'
-						/>
+              {...animFromLeft}
+						/>}
+            {!isDesktop && <motion.img
+              key="miho-m"
+							className={classes.mihoMainImage}
+							src={MihoMorphMobile}
+							alt='miho'
+              {...animFromRight}
+						/>}
 
 						<div className={classes.contentBlock}>
-							<h4 className={classes.classiqueParagraph}>
+							<motion.h4 {...animFromDown} className={classes.classiqueParagraph}>
 								<img
 									className={classes.classiqueBorder}
 									src={first}
 									alt='classique'
 								/>
 								<p className={classes.title}>CLASSIQUE</p>
-							</h4>
+							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
-								{isDesktop
+								{paragraphAnimation(isDesktop
 									? morphIDText.classiqueDesktop
-									: morphIDText.classiqueMobile}
+									: morphIDText.classiqueMobile)}
 							</Paragraph>
-							<img className={classes.idImage} src={MihoID} alt='miho id' />
+							<motion.img  {...animFromDown} className={classes.idImage} src={MihoID} alt='miho id' />
 						</div>
 					</div>
 
 					<div className={`${classes.morphBlock} ${classes.eternalBlock}`}>
 						<div className={classes.contentBlock}>
-							<h4 className={classes.eternalParagraph}>
+							<motion.h4 {...animFromDown} className={classes.eternalParagraph}>
 								<img
 									className={classes.eternalBorder}
 									src={second}
@@ -56,24 +129,34 @@ export function TypesCards() {
 								<p className={`${classes.title} ${classes.eternalTitle}`}>
 									ETERNAL
 								</p>
-							</h4>
+							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.henriText}`}>
-								{isDesktop
+								{paragraphAnimation(isDesktop
 									? morphIDText.eternalDesktop
-									: morphIDText.eternalMobile}
+									: morphIDText.eternalMobile)}
 							</Paragraph>
-							<img
+							<motion.img
+                {...animFromDown}
 								className={`${classes.idImage} ${classes.idImageHenri}`}
 								src={HenriID}
 								alt='hneri id card'
 							/>
 						</div>
 
-						<img
+            {isDesktop && <motion.img
+              key="henri-d"
 							className={classes.henriMainImage}
-							src={isDesktop ? HenriMorph : HenriMorphDesktop}
+							src={HenriMorph}
 							alt='henri morph'
-						/>
+              {...animFromRight}
+						/>}
+            {!isDesktop && <motion.img
+              key="henri-m"
+							className={classes.henriMainImage}
+							src={HenriMorphDesktop}
+							alt='henri morph'
+              {...animFromLeft}
+						/>}
 					</div>
 				</div>
 			</GlobalContainer>

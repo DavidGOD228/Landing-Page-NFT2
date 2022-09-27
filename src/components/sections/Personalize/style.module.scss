@@ -12,6 +12,16 @@
   margin: 0 auto;
 }
 
+.greenText {
+  text-transform: uppercase;
+  position: relative;
+
+  background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%), #B7F201;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .personalizeTitle {
   font-size: 64px;
   letter-spacing: 0.03em;

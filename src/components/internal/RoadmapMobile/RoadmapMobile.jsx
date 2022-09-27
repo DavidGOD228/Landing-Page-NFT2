@@ -1,76 +1,72 @@
 import { motion } from 'framer-motion';
-  
-import CircleOn from 'assets/images/roadmap/circle-on.svg';
-import CircleOff from 'assets/images/roadmap/circle-off.svg';
+
+import CircleOn from 'assets/images/roadmap/circle-on.png';
+import CircleOff from 'assets/images/roadmap/circle-off.png';
 import classes from './style.module.scss';
 
 export function RoadmapMobile({ className, ...props }) {
-  const farmerMotionOptions = {
-    initial: {
-      y: 150,
-    },
+	const farmerMotionOptions = {
+		initial: {
+			y: 150
+		},
 		whileInView: {
-      y: 0
-    },
+			y: 0
+		},
 		transition: {
-      ease: 'easeOut',
-      duration: 1,
-    },
-    viewport: { once: true },
-  }
+			ease: 'easeOut',
+			duration: 1
+		},
+		viewport: { once: true }
+	};
 
-  const textAnim = {
-    initial: {
-      y: 25,
-      opacity: 0,
-      scale: 0
-    },
+	const textAnim = {
+		initial: {
+			y: 25,
+			opacity: 0,
+			scale: 0
+		},
 		whileInView: {
-      y: 0,
-      opacity: 1,
-      scale: 1
-    },
+			y: 0,
+			opacity: 1,
+			scale: 1
+		},
 		transition: {
-      ease: 'easeOut',
-      duration: 1,
-    },
-    viewport: { once: true },
-  }
+			ease: 'easeOut',
+			duration: 1
+		},
+		viewport: { once: true }
+	};
 
-  const circleAnim = {
-    initial: {
-      y: 0,
-      opacity: 0,
-      scale: 0
-    },
+	const circleAnim = {
+		initial: {
+			y: 0,
+			opacity: 0,
+			scale: 0
+		},
 		whileInView: {
-      y: 0,
-      opacity: 1,
-      scale: 1
-    },
+			y: 0,
+			opacity: 1,
+			scale: 1
+		},
 		transition: {
-      ease: 'easeOut',
-      duration: 1,
-    },
-    viewport: { once: true },
-  }
+			ease: 'easeOut',
+			duration: 1
+		},
+		viewport: { once: true }
+	};
 
-  return (
+	return (
 		<div className={`${classes.roadmapMobile} ${className}`} {...props}>
-			<motion.div 
-        className={classes.firstBlock}
-        {...farmerMotionOptions}
-        key={1}
-      >
+			<div className={classes.firstBlock}>
 				<div className={classes.roadDot} />
 				<div className={classes.pointsUp}>
 					<div className={classes.textInfo}>
-						<motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
-						<motion.div {...textAnim}>Define Concept</motion.div>
+						<img className={classes.circle} src={CircleOn} alt='' />
+						<div>Define Concept</div>
 					</div>
 					<div className={classes.textInfo}>
-            <motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
-						<motion.div {...textAnim}>Market Research</motion.div>
+						<img className={classes.circle} src={CircleOn} alt='' />
+						<div>Market Research</div>
 					</div>
 				</div>
 				<span className={`${classes.roadLine} ${classes.upRoadLine}`} />
@@ -78,48 +74,38 @@ export function RoadmapMobile({ className, ...props }) {
 				<span className={`${classes.roadLine} ${classes.downRoadLine}`} />
 
 				<div className={classes.pointsDown}>
-          <motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
-          <motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={CircleOn} alt='' />
 				</div>
 
 				<span className={`${classes.roadLine} ${classes.leftDownRoadLine}`} />
-			</motion.div>
+			</div>
 
-			<motion.div
-        className={classes.secondBlock}
-        {...farmerMotionOptions}
-        key={2}
-      >
+			<div className={classes.secondBlock}>
 				<div className={`${classes.pointsUp} ${classes.pointsUpWithoutImg}`}>
-          <motion.div {...textAnim} className={classes.textInfo}>Team onboarding</motion.div>
-					<motion.div {...textAnim} className={classes.textInfo}>Start of game development</motion.div>
+					<div className={classes.textInfo}>Team onboarding</div>
+					<div className={classes.textInfo}>Start of game development</div>
 				</div>
 				<span className={`${classes.roadLine} ${classes.leftRoadLine}`} />
 				<span className={`${classes.roadLine} ${classes.downRoadLine}`} />
 
 				<div className={classes.pointsDown}>
-          <motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
-					<motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={CircleOn} alt='' />
 				</div>
 
 				<span
-          className={`${classes.roadLine}
+					className={`${classes.roadLine}
           ${classes.rightDownRoadSecondBlockLine}`}
-        />
-      </motion.div>
-
-			<motion.div
-        className={classes.thirdBlock}
-        {...farmerMotionOptions}
-        key={3}
-      >
-				<div className={`${classes.pointsUp} ${classes.pointsUpWithoutImg}`}>
-          <motion.div {...textAnim} className={classes.textInfo}>Official Announcements</motion.div>
-					<motion.div {...textAnim} className={classes.textInfo}>Internal test of beta version</motion.div>
-				</div>
-				<span
-					className={`${classes.roadLine}`}
 				/>
+			</div>
+
+			<div className={classes.thirdBlock}>
+				<div className={`${classes.pointsUp} ${classes.pointsUpWithoutImg}`}>
+					<div className={classes.textInfo}>Official Announcements</div>
+					<div className={classes.textInfo}>Internal test of beta version</div>
+				</div>
+				<span className={`${classes.roadLine}`} />
 
 				{/* half colors lines */}
 				<span
@@ -130,21 +116,23 @@ export function RoadmapMobile({ className, ...props }) {
 				/>
 
 				<div className={classes.pointsDown}>
-          <motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
-					<motion.img {...circleAnim} className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={CircleOn} alt='' />
 				</div>
 
-				<span className={`${classes.roadLine} ${classes.leftDownOpacityRoadLine} ${classes.opacityRoad}`} />
-			</motion.div>
+				<span
+					className={`${classes.roadLine} ${classes.leftDownOpacityRoadLine} ${classes.opacityRoad}`}
+				/>
+			</div>
 
-      <motion.div
-        className={classes.fourthBlock}
-        {...farmerMotionOptions}
-        key={4}
-      >
+			<div className={classes.fourthBlock} key={4}>
 				<div className={`${classes.pointsUp} ${classes.pointsUpWithoutImg}`}>
-					<motion.div {...textAnim} className={`${classes.textInfo} ${classes.opacityRoad}`}>Smart Contract Audit</motion.div>
-					<motion.div {...textAnim} className={`${classes.textInfo} ${classes.opacityRoad}`}>Beta version</motion.div>
+					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+						Smart Contract Audit
+					</div>
+					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+						Beta version
+					</div>
 				</div>
 
 				<span
@@ -155,24 +143,27 @@ export function RoadmapMobile({ className, ...props }) {
 				/>
 
 				<div className={classes.pointsDown}>
-          <motion.img {...circleAnim} className={`${classes.circle} ${classes.isNotActive}`} src={CircleOff} alt='' />
-					<motion.img {...circleAnim} className={`${classes.circle} ${classes.isNotActive}`} src={CircleOff} alt='' />
+					<img
+						className={`${classes.circle} ${classes.isNotActive}`}
+						src={CircleOff}
+						alt=''
+					/>
+					<img
+						className={`${classes.circle} ${classes.isNotActive}`}
+						src={CircleOff}
+						alt=''
+					/>
 				</div>
-			</motion.div>
+			</div>
 
-      <motion.div
-        className={classes.fifthBlock}
-        {...farmerMotionOptions}
-        key={5}
-      >
+			<div className={classes.fifthBlock}>
 				<div className={`${classes.pointsUp} ${classes.pointsUpWithoutImg}`}>
-					<motion.div
-          {...textAnim}
-            className={`${classes.textInfo} ${classes.opacityRoad}`}
-          >
-            TGE
-          </motion.div>
-					<motion.div {...textAnim} className={`${classes.textInfo} ${classes.opacityRoad}`}>Game Realize</motion.div>
+					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+						TGE
+					</div>
+					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+						Game Realize
+					</div>
 				</div>
 
 				<span
@@ -184,21 +175,31 @@ export function RoadmapMobile({ className, ...props }) {
 				/>
 
 				<div className={classes.pointsDown}>
-          <motion.img {...circleAnim} className={`${classes.circle} ${classes.isNotActive}`} src={CircleOff} alt='' />
-					<motion.img {...circleAnim} className={`${classes.circle} ${classes.isNotActive}`} src={CircleOff} alt='' />
+					<img
+						className={`${classes.circle} ${classes.isNotActive}`}
+						src={CircleOff}
+						alt=''
+					/>
+					<img
+						className={`${classes.circle} ${classes.isNotActive}`}
+						src={CircleOff}
+						alt=''
+					/>
 				</div>
 
-				<span className={`${classes.roadLine} ${classes.leftDownRoadLine} ${classes.opacityRoad}`} />
-			</motion.div>
+				<span
+					className={`${classes.roadLine} ${classes.leftDownRoadLine} ${classes.opacityRoad}`}
+				/>
+			</div>
 
-      <motion.div
-        className={classes.sixBlock}
-        {...farmerMotionOptions}
-        key={6}
-      >
+			<div className={classes.sixBlock} key={6}>
 				<div className={`${classes.pointsUp} ${classes.pointsUpWithoutImg}`}>
-          <motion.div {...textAnim}  className={`${classes.textInfo} ${classes.opacityRoad}`}>Smart Contract Audit</motion.div>
-          <motion.div {...textAnim}  className={`${classes.textInfo} ${classes.opacityRoad}`}>Beta version</motion.div>
+					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+						Smart Contract Audit
+					</div>
+					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+						Beta version
+					</div>
 				</div>
 
 				<span
@@ -209,16 +210,28 @@ export function RoadmapMobile({ className, ...props }) {
 				/>
 
 				<div className={classes.pointsDown}>
-          <div className={classes.textInfo}>
-            <motion.img {...circleAnim} className={`${classes.circle} ${classes.isNotActive}`} src={CircleOff} alt='' />
-            <motion.div {...textAnim} className={`${classes.textInfo} ${classes.opacityRoad}`}>NFT Marketplace</motion.div>
-          </div>
-          <div className={classes.textInfo}>
-            <motion.img {...circleAnim} className={`${classes.circle} ${classes.isNotActive}`} src={CircleOff} alt='' />
-            <motion.div {...textAnim} className={`${classes.textInfo} ${classes.opacityRoad}`}>Creators API</motion.div>
-          </div>
+					<div className={classes.textInfo}>
+						<img
+							className={`${classes.circle} ${classes.isNotActive}`}
+							src={CircleOff}
+							alt=''
+						/>
+						<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+							NFT Marketplace
+						</div>
+					</div>
+					<div className={classes.textInfo}>
+						<img
+							className={`${classes.circle} ${classes.isNotActive}`}
+							src={CircleOff}
+							alt=''
+						/>
+						<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
+							Creators API
+						</div>
+					</div>
 				</div>
-			</motion.div>
+			</div>
 		</div>
 	);
 }

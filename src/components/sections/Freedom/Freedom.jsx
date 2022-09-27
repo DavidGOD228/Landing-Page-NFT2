@@ -71,6 +71,24 @@ export const Freedom = () => {
 		return -25;
 	};
 
+  const animFromRight = {
+    initial: { 
+      x: 100,
+      opacity: 0,
+    },
+    whileInView: { 
+      x: 0,
+      opacity: 1,
+    },
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    },
+    viewport: { once: true }
+  }
+
+  const GreenText1 = motion(GreenText);
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.topContent}>
@@ -99,25 +117,35 @@ export const Freedom = () => {
 					)}
 
 					{isDesktop && (
-						<motion.div
-							initial={{ x: 150 }}
-							whileInView={{ x: 0 }}
-							transition={{
-								duration: 1,
-								ease: 'easeInOut'
-							}}
-							viewport={{ once: true }}
-						>
-							<Title classname={classes.title}>
-								<p className={classes.chineseText}>全部的 自由 行動的</p>
-								<p className={classes.total}>
-									TOTAL{' '}
-									<GreenText classname={classes.greenText}>
-										FREEDOM of ACTION{' '}
-									</GreenText>
-								</p>
-							</Title>
-						</motion.div>
+            <Title 
+              classname={classes.title}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-start'
+              }}
+            >
+              <motion.p {...animFromRight} className={classes.chineseText}>全部的 自由 行動的</motion.p>
+              <motion.span {...animFromRight} className={classes.total}>
+                TOTAL
+              </motion.span>
+
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'flex-start',
+              }}>
+                <GreenText1 {...animFromRight} classname={classes.greenText}>
+                  FREEDOM{'\u00A0'}
+                </GreenText1>
+                <GreenText1 {...animFromRight} classname={classes.greenText}>
+                  OF{'\u00A0'}
+                </GreenText1>
+                <GreenText1 {...animFromRight} classname={classes.greenText}>
+                  ACTION
+                </GreenText1>
+              </div>
+            </Title>
 					)}
 
 					{/* mobile */}
