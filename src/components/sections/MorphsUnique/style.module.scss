@@ -22,6 +22,8 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-left: 18px;
+  display: flex;
+  flex-wrap: wrap;
 
   @media screen and (min-width: $desktop) {
     display: flex;
@@ -75,19 +77,28 @@
 }
 
 .skillImg {
+  position: relative;
   width: 57px;
+  max-width: 65px;
 
   @media screen and (min-width: $desktop){
     width: 4.8vw;
+    max-width: 76px;
   }
 
   &.active {
     width: 71px;
+    max-width: 76px;
 
     @media screen and (min-width: $desktop){
       width: 5.7vw;
+      max-width: 90px;
     }
   }
+}
+
+.fish {
+  position: absolute;
 }
 
 // descr of icons
@@ -145,6 +156,9 @@
   position: relative;
   align-self: center;
   display: flex;
+
+  width: 4.8vw;
+  height: 4.8vw;
 }
 
 @media screen and (max-width: $desktop){
@@ -159,5 +173,25 @@
     font-size: 8px;
     text-align: center;
     width: 100%;
+    letter-spacing: 0.5px;
   }
+
+  $size: 55px;
+  $sizeActive: 63px;
+  .wrapperSkill {
+    width: $size;
+    height: $size;
+  }
+
+  .skillImg {
+    width: $size;
+    max-width: $size;
+
+    &.active {
+      width: $sizeActive;
+      height: $sizeActive;
+      max-width: $sizeActive;
+    }
+  }
+  
 }
