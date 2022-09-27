@@ -84,10 +84,18 @@ export const Personalize = () => {
 						}}
 					>
 						<motion.span {...animFromDown}>Personalize{'\u00A0'}</motion.span>
-						<GreenText1 {...animFromDown}>and{'\u00A0'}</GreenText1>
-						<GreenText1 {...animFromDown}>make{'\u00A0'}</GreenText1>
-						<GreenText1 {...animFromDown}>it{'\u00A0'}</GreenText1>
-						<GreenText1 {...animFromDown}>unique</GreenText1>
+						<motion.span className={classes.greenText} {...animFromDown}>
+							and{'\u00A0'}
+						</motion.span>
+						<motion.span className={classes.greenText} {...animFromDown}>
+							make{'\u00A0'}
+						</motion.span>
+						<motion.span className={classes.greenText} {...animFromDown}>
+							it{'\u00A0'}
+						</motion.span>
+						<motion.span className={classes.greenText} {...animFromDown}>
+							unique
+						</motion.span>
 					</Title>
 					<p className={classes.personalizeParagraph}>
 						{paragraphAnimation(
@@ -116,11 +124,11 @@ export const Personalize = () => {
 							justifyContent: 'flex-start'
 						}}
 					>
-						<motion.span {...animFromDown}>Personalize{'\u00A0'}</motion.span>
-						<GreenText1 {...animFromDown}>and{'\u00A0'}</GreenText1>
-						<GreenText1 {...animFromDown}>make{'\u00A0'}</GreenText1>
-						<GreenText1 {...animFromDown}>it{'\u00A0'}</GreenText1>
-						<GreenText1 {...animFromDown}>unique</GreenText1>
+						<motion.span  key={Math.random()} {...animFromDown}>Personalize{'\u00A0'}</motion.span>
+						<GreenText1 key={Math.random()} {...animFromDown}>and{'\u00A0'}</GreenText1>
+						<GreenText1 key={Math.random()} {...animFromDown}>make{'\u00A0'}</GreenText1>
+						<GreenText1 key={Math.random()} {...animFromDown}>it{'\u00A0'}</GreenText1>
+						<GreenText1 key={Math.random()} {...animFromDown}>unique</GreenText1>
 					</Title>
 					<p className={classes.personalizeParagraph}>
 						{paragraphAnimation(
@@ -144,12 +152,11 @@ export const Personalize = () => {
 					classname={classes.marketplaceTitle}
 					style={{
 						display: 'flex',
-						flexWrap: 'wrap',
+						flexDirection: 'column',
 						justifyContent: 'flex-start'
 					}}
 				>
-					<motion.span {...animFromDown}>The</motion.span>
-					<br />
+					<motion.p {...animFromDown}>The</motion.p>
 					<GreenText1 {...animFromDown}>MARKETPLACE</GreenText1>
 				</Title>
 				<div className={classes.content}>

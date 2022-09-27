@@ -25,8 +25,7 @@ export function FirstLiveSimulator() {
 
   return (
     <div className={classes.wrapper}>
-      <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay
-             muted playsInline/>
+      <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay muted playsInline />
       <GlobalContainer>
         <div className={classes.flsDesktopContainer}>
           <div className={classes.content}>

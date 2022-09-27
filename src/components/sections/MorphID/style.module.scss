@@ -3,12 +3,16 @@
 .container {
   padding: 0 20px;
 
+  @media screen and (min-width: $l-desktop) {
+    padding: 170px 130px;
+  }
+
   @media screen and (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
-    padding: 170px 130px;
+    padding: 170px 20px;
   }
 }
 

@@ -16,6 +16,10 @@
 }
 
 .titleLeftSide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
 	font-size: 4vw;
 	margin-left: auto;
 	text-align: right;
@@ -24,15 +28,18 @@
   margin-right: 28px;
 }
 
-.titleRightSide {
-  font-size: 16px;
-	margin-left: 28px;
-	line-height: 26px;
-}
-
 .wrapperContentTitleLeftSide {
 	width: 100%;
 	align-items: self-end;
+}
+
+.titleRightSide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 16px;
+	margin-left: 28px;
+	line-height: 26px;
 }
 
 @media screen and (max-width: $m-desktop) {
@@ -45,7 +52,7 @@
   }
 
   .titleLeftSide {
-    text-align: left;
+    justify-content: flex-start;
   }
 
   .titleChooseMorph {
@@ -57,21 +64,19 @@
   .wrapperContentTitleLeftSide {
     align-items: self-start;
   }
-}
 
-@media screen and (max-width: $m-desktop) {
   .titleChooseMorph {
     margin-top: 120px;
   }
 
   .titleLeftSide {
-    @include prtnlSclScrnSize(font-size, 70);
+    font-size: 64px;
     margin-left: 28px;
     margin-right: 0;
   }
 
-  .titleLeftSide {
-    font-size: 64px;
+  .titleRightSide {
+    margin-top: 25px;
   }
 }
 
@@ -82,12 +87,23 @@
 
   .titleChooseMorph {
     padding: 0 20px;
+    margin-bottom: 30px;
   }
 
   .titleLeftSide {
     @include prtnlSclScrnSize(font-size, 70);
     margin-left: 28px;
     margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+
+    br {
+      display: none;
+    }
+  }
+
+  .titleRightSide {
+    display: none;
   }
 }
 

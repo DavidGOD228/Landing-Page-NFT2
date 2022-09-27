@@ -1,4 +1,5 @@
-import {GlobalContainer, Paragraph} from 'components';
+import { motion } from 'framer-motion';
+import { GlobalContainer, Paragraph } from 'components';
 
 import classes from './styles.module.scss';
 
@@ -10,81 +11,155 @@ import MihoMorphMobile from 'assets/images/miho-morph.png';
 import MihoID from 'assets/video/white_card.video.mp4';
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
-import HenriID from 'assets/video/green_card.video.mp4';
-import {useWindowWidth} from 'hooks/useWindowWidth';
-import {morphIDText} from 'data/morphID/text';
+import HenriID from 'assets/images/henri-id.png';
+import { useWindowWidth } from 'hooks/useWindowWidth';
+import { morphIDText } from 'data/morphID/text';
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import { useWindowSize } from 'hooks/useWindowDimensions';
+import { media } from 'utils/media';
 
 export function TypesCards() {
-  const isDesktop = useWindowWidth(1024);
-  return (
-    <div className={classes.wrapper}>
-      <GlobalContainer>
-        <div className={classes.containerTypesCards}>
-          <div className={classes.morphBlock}>
-            <img
-              className={classes.mihoMainImage}
-              src={isDesktop ? MihoMorph : MihoMorphMobile}
-              alt='miho'
-            />
+	const isDesktop = useWindowWidth(1024);
+  
+	const { width } = useWindowSize();
 
-            <div className={classes.contentBlock}>
-              <h4 className={classes.classiqueParagraph}>
-                <img
-                  className={classes.classiqueBorder}
-                  src={first}
-                  alt='classique'
-                />
-                <p className={classes.title}>CLASSIQUE</p>
-              </h4>
-              <Paragraph className={`${classes.descr} ${classes.mihoText}`}>
-                {isDesktop
-                  ? morphIDText.classiqueDesktop
-                  : morphIDText.classiqueMobile}
-              </Paragraph>
-              <video src={MihoID}
-                     className={classes.idImage}
-                     autoPlay
-                     playsInline
-                     loop
-                     muted/>
-            </div>
-          </div>
+  const getStartInitVal = () => {
+    if(width > media.mDesktop) return 200;
+    if(width > media.tablet) return 100;
+    if(width > media.lMobile) return 50;
+    return 25;
+  }
 
-          <div className={`${classes.morphBlock} ${classes.eternalBlock}`}>
-            <div className={classes.contentBlock}>
-              <h4 className={classes.eternalParagraph}>
-                <img
-                  className={classes.eternalBorder}
-                  src={second}
-                  alt='eternal border'
-                />
-                <p className={`${classes.title} ${classes.eternalTitle}`}>
-                  ETERNAL
-                </p>
-              </h4>
-              <Paragraph className={`${classes.descr} ${classes.henriText}`}>
-                {isDesktop
-                  ? morphIDText.eternalDesktop
-                  : morphIDText.eternalMobile}
-              </Paragraph>
-              <video
-                className={`${classes.idImage} ${classes.idImageHenri}`}
-                src={HenriID}
-								autoPlay
-                playsInline
-								loop
-								muted
-              />
-            </div>
+  const animFromRight = {
+    initial: { 
+      x: getStartInitVal(), 
+      opacity: 0,
+    },
+    whileInView: { 
+      x: 0, 
+      opacity: 1,
+    },
+    transition: {
+      duration: 2,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
 
-            <img
-              className={classes.henriMainImage}
-              src={isDesktop ? HenriMorph : HenriMorphDesktop}
-              alt='henri morph'
-            />
-          </div>
-        </div>
-      </GlobalContainer>
-    </div>
-  );
+  const animFromLeft = {
+    initial: { 
+      x: getStartInitVal() * -1, 
+      opacity: 0,
+      scale: 0.9
+    },
+    whileInView: { 
+      x: 0, 
+      opacity: 1,
+      scale: 1
+    },
+    transition: {
+      duration: 2,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
+  const animFromDown = {
+    initial: { 
+      y: 50, 
+      opacity: 0,
+    },
+    whileInView: { 
+      y: 0, 
+      opacity: 1,
+    },
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    },
+    viewport: {once: true}
+  }
+
+	return (
+		<div className={classes.wrapper}>
+			<GlobalContainer>
+				<div className={classes.containerTypesCards}>
+					<div className={classes.morphBlock}>
+            {isDesktop && <motion.img
+              key="miho-d"
+							className={classes.mihoMainImage}
+							src={MihoMorph}
+							alt='miho'
+              {...animFromLeft}
+						/>}
+            {!isDesktop && <motion.img
+              key="miho-m"
+							className={classes.mihoMainImage}
+							src={MihoMorphMobile}
+							alt='miho'
+              {...animFromRight}
+						/>}
+
+						<div className={classes.contentBlock}>
+							<motion.h4 {...animFromDown} className={classes.classiqueParagraph}>
+								<img
+									className={classes.classiqueBorder}
+									src={first}
+									alt='classique'
+								/>
+								<p className={classes.title}>CLASSIQUE</p>
+							</motion.h4>
+							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
+								{paragraphAnimation(isDesktop
+									? morphIDText.classiqueDesktop
+									: morphIDText.classiqueMobile)}
+							</Paragraph>
+							<motion.img  {...animFromDown} className={classes.idImage} src={MihoID} alt='miho id' />
+						</div>
+					</div>
+
+					<div className={`${classes.morphBlock} ${classes.eternalBlock}`}>
+						<div className={classes.contentBlock}>
+							<motion.h4 {...animFromDown} className={classes.eternalParagraph}>
+								<img
+									className={classes.eternalBorder}
+									src={second}
+									alt='eternal border'
+								/>
+								<p className={`${classes.title} ${classes.eternalTitle}`}>
+									ETERNAL
+								</p>
+							</motion.h4>
+							<Paragraph className={`${classes.descr} ${classes.henriText}`}>
+								{paragraphAnimation(isDesktop
+									? morphIDText.eternalDesktop
+									: morphIDText.eternalMobile)}
+							</Paragraph>
+							<motion.img
+                {...animFromDown}
+								className={`${classes.idImage} ${classes.idImageHenri}`}
+								src={HenriID}
+								alt='hneri id card'
+							/>
+						</div>
+
+            {isDesktop && <motion.img
+              key="henri-d"
+							className={classes.henriMainImage}
+							src={HenriMorph}
+							alt='henri morph'
+              {...animFromRight}
+						/>}
+            {!isDesktop && <motion.img
+              key="henri-m"
+							className={classes.henriMainImage}
+							src={HenriMorphDesktop}
+							alt='henri morph'
+              {...animFromLeft}
+						/>}
+					</div>
+				</div>
+			</GlobalContainer>
+		</div>
+	);
 }
