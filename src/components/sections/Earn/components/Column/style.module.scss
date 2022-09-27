@@ -1,17 +1,17 @@
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 219px;
-  padding: 0 40px;
+  justify-content: flex-start;
+  padding: 30px 40px;
 }
 
 .column:first-child {
-  padding: 0 40px 0 0;
+  padding-left: 0;
 }
 
 .column:last-child {
   border: none;
+  padding-right: 0;
 }
 
 .title {

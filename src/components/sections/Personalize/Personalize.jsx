@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import Title from '../../common/Title/Title';
 import GreenText from '../../common/GreenText/GreenText';
@@ -10,6 +11,8 @@ import Items from './Items/Items';
 import NavSlider from './navSlider/navSlider';
 import { useWindowWidth } from '../../../hooks/useWindowWidth';
 import Paragraph from '../../common/Paragraph/Paragraph';
+
+import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
 const data = [
 	{
@@ -47,18 +50,49 @@ export const Personalize = () => {
 		setActiveSlide(prevSlide => prevSlide - 1);
 	};
 
+	const animFromDown = {
+		initial: {
+			y: 50,
+			opacity: 0
+		},
+		whileInView: {
+			y: 0,
+			opacity: 1
+		},
+		transition: {
+			duration: 1,
+			ease: 'easeInOut'
+		},
+		viewport: {once: true}
+	};
+
+	const GreenText1 = motion(GreenText);
+
 	return (
 		<>
 			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
 				<div className={classes.contentBlock}>
-					<Title classname={classes.personalizeTitle} classnameWrapper={classes.personalizeline}>
-						Personalize <GreenText>and make it unique</GreenText>
+					<Title
+						classname={classes.personalizeTitle}
+						classnameWrapper={classes.personalizeline}
+						style={{
+							display: 'flex',
+							flexWrap: 'wrap',
+							justifyContent: 'flex-start'
+						}}
+					>
+						<motion.span {...animFromDown}>Personalize{'\u00A0'}</motion.span>
+						<GreenText1 {...animFromDown}>and{'\u00A0'}</GreenText1>
+						<GreenText1 {...animFromDown}>make{'\u00A0'}</GreenText1>
+						<GreenText1 {...animFromDown}>it{'\u00A0'}</GreenText1>
+						<GreenText1 {...animFromDown}>unique</GreenText1>
 					</Title>
 					<p className={classes.personalizeParagraph}>
-						Costruisci comunità per vivere le tue idee più sfrenate con soldi
-						veri sul tavolo.
+						{paragraphAnimation(
+							'Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.'
+						)}
 					</p>
 
 					<NavSlider
@@ -76,12 +110,22 @@ export const Personalize = () => {
 				<div className={classes.contentBlock}>
 					<Title
 						classname={classes.personalizeTitle}
+						style={{
+							display: 'flex',
+							flexWrap: 'wrap',
+							justifyContent: 'flex-start'
+						}}
 					>
-						Personalize <GreenText>and make it unique</GreenText>
+						<motion.span {...animFromDown}>Personalize{'\u00A0'}</motion.span>
+						<GreenText1 {...animFromDown}>and{'\u00A0'}</GreenText1>
+						<GreenText1 {...animFromDown}>make{'\u00A0'}</GreenText1>
+						<GreenText1 {...animFromDown}>it{'\u00A0'}</GreenText1>
+						<GreenText1 {...animFromDown}>unique</GreenText1>
 					</Title>
 					<p className={classes.personalizeParagraph}>
-						Costruisci comunità per vivere le tue idee più sfrenate con soldi
-						veri sul tavolo.
+						{paragraphAnimation(
+							'Costruisci comunità per vivere le tue idee più sfrenate con soldiveri sul tavolo.'
+						)}
 					</p>
 				</div>
 
@@ -96,21 +140,30 @@ export const Personalize = () => {
 			</div>
 
 			<div id="marketplace" className={classes.personalizeContainer}>
-				<Title classname={classes.marketplaceTitle}>
-					The <br />
-					<GreenText>MARKETPLACE</GreenText>
+				<Title
+					classname={classes.marketplaceTitle}
+					style={{
+						display: 'flex',
+						flexWrap: 'wrap',
+						justifyContent: 'flex-start'
+					}}
+				>
+					<motion.span {...animFromDown}>The</motion.span>
+					<br />
+					<GreenText1 {...animFromDown}>MARKETPLACE</GreenText1>
 				</Title>
 				<div className={classes.content}>
 					{isDesktop && (
 						<Paragraph className={classes.paragraph}>
-							Buy and sell your assets and services on the METAMORPH
-							Marketplace, both in and outside the game.
+							{paragraphAnimation(
+								'Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game.'
+							)}
 						</Paragraph>
 					)}
 					<Table
 						style={{
 							marginTop: 35,
-							width: isDesktop ? 400: '100%',
+							width: isDesktop ? 400 : '100%',
 							height: isDesktop ? 114 : 89,
 							textTransform: isDesktop ? 'initial' : 'uppercase'
 						}}
