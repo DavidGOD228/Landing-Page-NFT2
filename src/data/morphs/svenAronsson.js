@@ -6,6 +6,7 @@ const svenAronsson = {
 	id: 365,
 	cardImg: `${nameFolder}/card-sven-aronsson.png`,
 	bodyImg: `${nameFolder}/body-sven-aronsson.png`,
+	bodyMobileImg: `${nameFolder}/mobile-sven-aronsson.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-sven-aronsson.svg`,
 	name: 'Sven Aronsson',
 	type: 'classique',

@@ -12,7 +12,9 @@ export function InfoMorh({morph}) {
 
   return (
     <>
-      <img className={classes.imgMorphChoose} src={importBodyImg} alt={name} />
+      <div className={classes.morphWrapper}>
+        <img className={classes.imgMorphChoose} src={importBodyImg} alt={name} />
+      </div>
 
       <div className={classes.infoBlock}>
         <IdentifierBlock

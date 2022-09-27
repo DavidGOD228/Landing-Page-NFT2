@@ -6,6 +6,7 @@ const knutMoberg = {
 	id: 3665,
 	cardImg: `${nameFolder}/card-knut-moberg.png`,
 	bodyImg: `${nameFolder}/body-knut-moberg.png`,
+	bodyMobileImg: `${nameFolder}/mobile-knut-moberg.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-knut-moberg.svg`,
 	name: 'Knut Moberg',
 	type: 'classique',

@@ -6,6 +6,7 @@ const frankMurphy = {
 	id: 153,
 	cardImg: `${nameFolder}/card-frank-murphy.png`,
 	bodyImg: `${nameFolder}/body-frank-murphy.png`,
+	bodyMobileImg: `${nameFolder}/mobile-frank-murphy.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-frank-murphy.svg`,
 	name: 'Frank Murphy',
 	type: 'classique',
