@@ -16,6 +16,7 @@ import ThirdLine from './components/ThirdLine/ThirdLine';
 
 import { media } from 'utils/media';
 import { useWindowSize } from 'hooks/useWindowDimensions';
+import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 
 
 export const Freedom = () => {
@@ -93,6 +94,9 @@ export const Freedom = () => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.topContent}>
+				{
+					isDesktop && <DesktopSplashes/>
+				}
 				<div className={classes.content}>
 					{/* desktop */}
 					{isDesktop && (

@@ -13,6 +13,7 @@
 
 .topContent {
   padding: 0 20px;
+  position: relative;
 
   @media screen and (min-width: $desktop) {
     display: flex;
