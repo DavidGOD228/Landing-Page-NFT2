@@ -13,6 +13,7 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth';
 import Paragraph from '../../common/Paragraph/Paragraph';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
 
 const data = [
 	{
@@ -70,6 +71,11 @@ export const Personalize = () => {
 
 	return (
 		<>
+			{
+				isDesktop && <div style={{position: 'relative'}}>
+					<DesktopSplashes/>
+				</div>
+			}
 			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
