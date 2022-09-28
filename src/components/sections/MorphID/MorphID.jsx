@@ -96,35 +96,14 @@ export const MorphId = () => {
           )}
         </div>
 
-        <div className={classes.description}>
-          {isDesktop && (
-            <motion.div {...animFromRight} className={classes.chineseText}>
-              變形 相同的代碼
-            </motion.div>
-          )}
-        </div>
-
 				<div className={classes.titleWrapper}>
-					{/* Desktop  version */}
-					{isDesktop && (
-						<Title
-							classname={classes.title}
-              isShadowAnim={false}
-							style={{
-								display: 'flex',
-								flexWrap: 'wrap',
-								justifyContent: 'flex-start'
-							}}
-							animWrapperContainer={{
-								whileInView: {
-									height: '80%'
-								}
-							}}
-						>
-							<motion.span {...animFromRight}>Morph{'\u00A0'}</motion.span>
-							<GreenText1 {...animFromRight}>id</GreenText1>
-						</Title>
-					)}
+          <div className={classes.description}>
+            {isDesktop && (
+              <motion.div {...animFromRight} className={classes.chineseText}>
+                變形 相同的代碼
+              </motion.div>
+            )}
+          </div>
 
           <div className={classes.titleWrapper}>
             {/* Desktop  version */}

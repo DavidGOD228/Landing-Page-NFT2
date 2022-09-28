@@ -58,7 +58,7 @@ export const Attr = ({ name, precent, type, ...props }) => {
 						end={precent}
 						duration={durationFromVal}
 						suffix='%'
-						delay={1.2}
+						delay={0.4}
 					>
 						{({ countUpRef, start }) => (
 							<VisibilitySensor
