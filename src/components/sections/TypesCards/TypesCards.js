@@ -95,12 +95,10 @@ export function TypesCards() {
 							/>
 						)}
 						{!isDesktop && (
-							<motion.img
-								key='miho-m'
+							<img
 								className={classes.mihoMainImage}
 								src={MihoMorphMobile}
 								alt='miho'
-								{...animFromRight}
 							/>
 						)}
 
@@ -175,12 +173,10 @@ export function TypesCards() {
 							/>
 						)}
 						{!isDesktop && (
-							<motion.img
-								key='henri-m'
+							<img
 								className={classes.henriMainImage}
 								src={HenriMorphDesktop}
 								alt='henri morph'
-								{...animFromLeft}
 							/>
 						)}
 					</div>
