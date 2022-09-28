@@ -78,6 +78,9 @@
   }
 
   .paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     @include prtnlSclScrnSize(font-size, 23);
     @include prtnlSclScrnSize(margin-right, 40);
   }
