@@ -1,21 +1,76 @@
-import classes from "./style.module.scss";
-import mapGraphic from "utils/mapGraphic";
+import { useState } from 'react';
+import classes from './style.module.scss';
+import mapGraphic from 'utils/mapGraphic';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import { motion } from 'framer-motion';
 
-export const Stick = ({ isEmpty = false, isEternal }) => (
-  <span className={`${classes.stick} ${isEmpty && classes.empty} ${isEternal && classes.eternal}`} />
-);
-
-export const Attr = ({name, precent, type, ...props}) => {
-  const isEternal = type === 'eternal';
+export const Stick = ({ isEmpty = false, isEternal, idx }) => {
   return (
-    <div className={classes.skilContainer} {...props}>
-      <p className={classes.titleSkill}>{name}</p>
-      <div className={classes.counterContainer}>
-        <div className={classes.graphic}>{mapGraphic(precent, isEternal)}</div>
-        <div className={classes.percent}>
-          {precent}%
-        </div>
-      </div>
-    </div>
-  )
-}
+    <motion.span
+      className={`${classes.stick} ${isEmpty && classes.empty} ${
+        isEternal && classes.eternal
+      }`}
+    />)
+};
+
+export const Attr = ({ name, precent, type, ...props }) => {
+	const isEternal = type === 'eternal';
+
+	const [wasAnimate, setWasAnimate] = useState(false);
+
+	function handlerStart(isVisible, start) {
+		if (!wasAnimate && isVisible) {
+			start();
+			setWasAnimate(true);
+		}
+	}
+
+	const durVal = 2;
+	const durationFromVal = (durVal * precent) / 100;
+
+	return (
+		<div className={classes.skillContainer} {...props}>
+			<p className={classes.titleSkill}>{name}</p>
+			<div className={classes.counterContainer}>
+				<motion.div
+					initial={{
+						width: 0,
+					}}
+					whileInView={{
+						width: 'auto',
+					}}
+					transition={{
+						delay: 0.4,
+						duration: durVal,
+						ease: 'easeInOut'
+					}}
+					viewport={{
+						once: true
+					}}
+					className={classes.graphic}
+				>
+					{mapGraphic(precent, isEternal)}
+				</motion.div>
+				<div className={classes.percent}>
+					<CountUp
+						start={0}
+						end={precent}
+						duration={durationFromVal}
+						suffix='%'
+						delay={1.2}
+					>
+						{({ countUpRef, start }) => (
+							<VisibilitySensor
+								onChange={isVisible => handlerStart(isVisible, start)}
+								delayedCall
+							>
+								<span ref={countUpRef} />
+							</VisibilitySensor>
+						)}
+					</CountUp>
+				</div>
+			</div>
+		</div>
+	);
+};
