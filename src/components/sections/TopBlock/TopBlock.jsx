@@ -19,6 +19,7 @@ import {useWindowWidth} from 'hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 import 'react-html5video/dist/styles.css'
+import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 
 
 export const TopBlock = () => {
@@ -36,9 +37,13 @@ export const TopBlock = () => {
           </Video>
         </div> :
         <div className={classes.topBlock}>
-          <img className={classes.topLeftCorner} src={TopLeftCorner} alt=""/>
-          <img className={classes.topRightCorner} src={TopRightCorner} alt=""/>
-          <img className={classes.bottomCorner} src={BottomCorner} alt=""/>
+          {isDesktop ? <DesktopSplashes/> :
+            <>
+              <img className={classes.topLeftCorner} src={TopLeftCorner} alt=""/>
+              <img className={classes.topRightCorner} src={TopRightCorner} alt=""/>
+              <img className={classes.bottomCorner} src={BottomCorner} alt=""/>
+            </>
+          }
           <Header/>
           <div className={classes.container}>
             <div className={classes.mainBlock}>
@@ -76,7 +81,7 @@ export const TopBlock = () => {
               </div>
             }
             {
-              isDesktop &&  <MorphBlock/>
+              isDesktop && <MorphBlock/>
             }
           </div>
         </div>
