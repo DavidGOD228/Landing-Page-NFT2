@@ -2,7 +2,7 @@
 
 .container {
   position: relative;
-
+  z-index: 5;
   @media screen and (min-width: $desktop) {
     background-image: url("../../../assets/images/freedom-desktop.png");
     background-size: contain;
