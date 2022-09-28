@@ -1,12 +1,7 @@
 .foto {
-  background: rgba(255, 0, 0, 0.2);
+  background-image: url("../../../assets/images/teamMain.png");
   margin-top: 17px;
   height: 207px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  line-height: 120%;
-  letter-spacing: 0.11em;
-  color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
