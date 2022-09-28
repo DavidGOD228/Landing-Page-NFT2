@@ -12,8 +12,8 @@
 
   @media screen and (min-width: $desktop) {
     position: fixed;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
     padding: 0;
   }
 

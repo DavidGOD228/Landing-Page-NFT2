@@ -130,6 +130,7 @@
 .mihoMainImage,
 .henriMainImage {
   max-width: 306px;
+  z-index: 5;
 }
 
 .mihoMainImage {
@@ -213,7 +214,7 @@
   
     &:nth-child(1) {
       border-right: 1px solid #343A3D;
-      padding: 0 20px;
+      padding: 0 0 0 20px;
       margin-top: 40px;
     }
   

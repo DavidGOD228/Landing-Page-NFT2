@@ -4,9 +4,7 @@ import classes from './style.module.scss'
 
 export const Foto = () => {
   return (
-    <div className={classes.foto}>
-      FOTO
-    </div>
+    <div className={classes.foto}/>
   )
 }
 

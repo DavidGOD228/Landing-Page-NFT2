@@ -1,0 +1,47 @@
+.container {
+  z-index: -5;
+  opacity: 0.3;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  height: 923.89px;
+}
+
+.left {
+  position: absolute;
+  top: -175px;
+  left: 0;
+  height: 767.62px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  height: 833px;
+}
+
+
+.leftEllipse {
+  position: absolute;
+  width: 575px;
+  height: 634px;
+  left: 107px;
+  top: 0;
+  background: rgba(11, 11, 12, 0.8);
+  filter: blur(75px);
+  transform: rotate(90deg);
+}
+
+.rightEllipse {
+  position: absolute;
+  width: 538px;
+  height: 593px;
+  right: 0;
+  top: 312px;
+  background: #0B0B0C;
+  filter: blur(75px);
+  transform: rotate(90deg);
+}

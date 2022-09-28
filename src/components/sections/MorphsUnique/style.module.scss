@@ -21,7 +21,7 @@
   line-height: 120%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-left: 18px;
+  margin-left: 24px;
   display: flex;
   flex-wrap: wrap;
 
@@ -34,7 +34,7 @@
 }
 
 .descrWrapper {
-  margin-top: 13px;
+  margin-top: 24px;
 
   @media screen and (min-width: $desktop){
     margin-top: 30px;
