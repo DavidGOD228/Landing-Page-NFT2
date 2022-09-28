@@ -98,6 +98,7 @@ export const MorphId = () => {
 					{isDesktop && (
 						<Title
 							classname={classes.title}
+              isShadowAnim={false}
 							style={{
 								display: 'flex',
 								flexWrap: 'wrap',
