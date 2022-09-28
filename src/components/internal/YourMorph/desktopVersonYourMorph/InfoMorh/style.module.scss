@@ -19,11 +19,18 @@
 
 // img im the middle
 .imgMorphChoose {
-  width: 19.483vw;
+  position: absolute;
+  width: 100%;
+}
+
+.identifierBlock {
+  // position: absolute;
 }
 
 .morphWrapper {
+  overflow: hidden;
   position: relative;
+  width: 19.483vw;
 
   @media screen and (min-width: $desktop) {
     &:after {

@@ -1,18 +1,13 @@
 @import '~assets/styles/media.scss';
 
 .attrs {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   row-gap: 1.6vw;
+  column-gap: 3vw;
 }
 
 @media screen and (max-width: $desktop) {
-  .attrs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
   .attrs > div:nth-child(2n) {
     margin-left: auto;
   }
@@ -20,7 +15,6 @@
 
 @media screen and (max-width: $tablet) {
   .attrs {
-    display: grid;
     grid-template-columns: auto auto;
     justify-content: flex-start;
     row-gap: 20px;
@@ -34,8 +28,6 @@
 
 @media screen and (max-width: $m-mobile) {
   .attrs {
-    display: grid;
-    grid-template-columns: auto auto;
     justify-content: space-between;
     column-gap: 8px;
   }
