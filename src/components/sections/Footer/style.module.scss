@@ -2,8 +2,6 @@
 @import "~assets/styles/media";
 
 .footer {
-  background-image: url("../../../assets/images/bottom-background.png");
-  background-size: 100% 50%;
   padding-top: 78px;
   display: flex;
   flex-direction: column;
@@ -25,6 +23,29 @@
   align-items: center;
   padding: 0 20px;
   width: 100%;
+
+  @media screen and (max-width: $desktop){
+    position: relative;
+    background-image: url("../../../assets/images/bottom-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 79px 20px 0;
+    height: 180px;
+
+    & > * {
+      z-index: 5;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 200px;
+      right: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(11, 11, 12, 0) 0%, #0B0B0C 65.94%);
+    }
+  }
 }
 
 .linksContainer {
