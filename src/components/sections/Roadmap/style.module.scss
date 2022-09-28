@@ -16,18 +16,16 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   width: 100%;
-
-	font-size: 64px;
+  font-size: 64px;
   line-height: 120%;
   letter-spacing: 0.03em;
   text-align: right;
-
   margin-right: 28px;
 }
 
 .wrapperContentTitleLeftSide {
-	width: 100%;
-	align-items: self-end;
+  width: 100%;
+  align-items: self-end;
 }
 
 .paragraph {
@@ -114,6 +112,8 @@
   color: #FFFFFF;
 }
 
+
+
 @media screen and (max-width: $desktop) {
   .wrapperContentTitleLeftSide {
     flex-direction: row;
@@ -127,10 +127,16 @@
   .title {
     padding: 0 20px;
     justify-content: flex-start;
+    text-transform: initial;
+    font-size: 36px;
   }
 
   .paragraph {
     width: 100%;
     margin-left: 0;
   }
+  .greenText {
+    text-transform: initial;
+  }
+
 }
