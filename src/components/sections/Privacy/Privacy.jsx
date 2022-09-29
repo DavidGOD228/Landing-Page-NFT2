@@ -7,10 +7,12 @@ import BedVideo from 'assets/video/bed.video.mp4'
 import Smile from '../../icons/Smile'
 
 import classes from './style.module.scss'
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export const Privacy = () => {
   return (
     <div className={classes.container}>
+      <MobileSplashes/>
       <motion.h3
         key="respectPrivacy"
         className={classes.title}

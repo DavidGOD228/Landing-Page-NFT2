@@ -15,6 +15,7 @@ import classes from './style.module.scss';
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export function FirstLiveSimulator() {
   const isDesktop = useWindowWidth(1024)
@@ -29,9 +30,7 @@ export function FirstLiveSimulator() {
       <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay muted playsInline />
       <GlobalContainer>
         <div className={classes.flsDesktopContainer}>
-          {
-            isDesktop && <DesktopSplashes/>
-          }
+          {isDesktop ? <DesktopSplashes/> : <MobileSplashes/>}
           <div className={classes.content}>
             <motion.div
               key="firstLiveTitle"

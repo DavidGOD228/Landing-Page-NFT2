@@ -17,7 +17,7 @@ import {useWindowWidth} from 'hooks/useWindowWidth'
 import classes from './style.module.scss'
 import 'react-html5video/dist/styles.css'
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
-import MobileSplashes from "./components/MobileSplashes/DesktopSplashes";
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 
 export const TopBlock = () => {
