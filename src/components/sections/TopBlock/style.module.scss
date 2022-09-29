@@ -16,6 +16,11 @@
   position: relative;
 }
 
+.metaMorphMobile {
+  width: 201.65px;
+  height: 70.28px;
+}
+
 .metaMorphMain {
   width: 505px;
   height: 176px;
@@ -37,7 +42,7 @@
   height: 60px;
   width: 60px;
 
-  @media screen and (max-width: $desktop){
+  @media screen and (max-width: $desktop) {
     height: 35px;
     width: 35px;
     & img {
@@ -58,7 +63,7 @@
 }
 
 .mainBlock {
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

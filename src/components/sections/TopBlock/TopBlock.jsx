@@ -54,7 +54,7 @@ export const TopBlock = () => {
                 isDesktop ? <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
                   <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
                   <p className={classes.playText}>Watch Teaser</p>
-                </div> : <img src={MetaMorphMobile} alt=""/>
+                </div> : <img className={classes.metaMorphMobile} src={MetaMorphMobile} alt=""/>
               }
               {
                 isDesktop && <div className={classes.builtOnContainer}>
