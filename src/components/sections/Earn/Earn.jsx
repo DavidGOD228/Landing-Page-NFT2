@@ -11,6 +11,7 @@ import { useWindowWidth } from 'hooks/useWindowWidth';
 import Column from './components/Column/Column';
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 const data = [
 	{
@@ -129,6 +130,9 @@ export const Earn = () => {
 							</motion.div>
 						)}
 					</div>
+					{
+						!isDesktop && <MobileSplashes/>
+					}
 					<div style={{ marginTop: 40 }}>
 						{!isDesktop &&
 							data.map(({ title, subtitle }, i) => (
