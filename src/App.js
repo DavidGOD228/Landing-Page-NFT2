@@ -41,33 +41,30 @@ function App() {
       document.body.style.height = 'auto';
     }
 
-  }, [isLoading])
-
+  }, [isLoading]);
 
 	return (
 		<>
-      {isLoading && <Loader setIsloading={setIsloading}/>}
-      <TopBlock/>
-      <FirstLiveSimulator/>
-      <LikeHuman/>
-      {
-        !isDesktop && <Privacy/>
-      }
-      <FataMorgana/>
-      <Freedom/>
-      <Personalize/>
-      <Earn/>
-      <MorphId/>
-      <TypesCards/>
-      <YourMorph/>
-      <MorphsUnique/>
-      <Roadmap/>
-      <Wizard/>
-      {!isDesktop && <Foto/>}
-      <CombinedGame/>
-      <Footer/>
-    </>
-  );
+			{isLoading && <Loader setIsloading={setIsloading} />}
+			<TopBlock />
+			<FirstLiveSimulator />
+			<LikeHuman />
+			{!isDesktop && <Privacy />}
+			<FataMorgana />
+			<Freedom />
+			<Personalize />
+			<Earn />
+			<MorphId />
+			<TypesCards />
+			<YourMorph />
+			<MorphsUnique />
+			<Roadmap />
+			<Wizard />
+			{!isDesktop && <Foto />}
+			<CombinedGame />
+			<Footer />
+		</>
+	);
 }
 
 export default App;

@@ -3,7 +3,8 @@ import LazyLoad from 'react-lazy-load';
 
 import {Title, Paragraph, GreenText} from 'components';
 
-import ComparingCards from 'assets/video/comp.video.mp4';
+import ComparingCardsWebm from 'assets/video/green_card.video.webm';
+import ComparingCardsMp4 from 'assets/video/green_card.video.mp4';
 
 import {paragraphAnimationFromRight} from 'farmerMotionsAnimations/paragraphAnimation';
 
@@ -92,12 +93,14 @@ export const MorphId = () => {
               <motion.video
                 className={classes.comparingVideo}
                 {...animFromLeftImg}
-                src={ComparingCards}
                 autoPlay
                 loop
                 muted
                 playsInline
-              />
+              >
+                <source src={ComparingCardsWebm} type="video/webm" />
+                <source src={ComparingCardsMp4} type="video/mp4" />
+              </motion.video>
             </LazyLoad>
           )}
         </div>
@@ -126,6 +129,7 @@ export const MorphId = () => {
                     height: '80%'
                   }
                 }}
+                isShadowAnim={false}
               >
                 <motion.span {...animFromRight}>Morph{'\u00A0'}</motion.span>
                 <GreenText1 {...animFromRight}>id</GreenText1>
@@ -146,6 +150,7 @@ export const MorphId = () => {
                     height: '80%'
                   }
                 }}
+                isShadowAnim={false}
               >
                 <motion.span {...animFromDown}>Morph{'\u00A0'}</motion.span>
                 <br/>

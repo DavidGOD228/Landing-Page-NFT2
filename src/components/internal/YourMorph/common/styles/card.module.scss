@@ -39,8 +39,10 @@ $durationAnim: 0.16s;
   align-self: baseline;
 
 	img {
+    position: relative;
 		width: 6.52vw;
 		cursor: pointer;
+    z-index: 10;
 
 		&:not(.isActive):hover {
 			@include focusCard;
