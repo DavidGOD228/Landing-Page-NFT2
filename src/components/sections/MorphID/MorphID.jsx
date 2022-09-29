@@ -10,6 +10,7 @@ import classes from './style.module.scss';
 import {useWindowWidth} from 'hooks/useWindowWidth';
 import {morphIDText} from 'data/morphID/text';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export const MorphId = () => {
   const isDesktop = useWindowWidth(1024);
@@ -77,7 +78,7 @@ export const MorphId = () => {
       {
         <div style={{position: 'relative'}}>
           {
-            isDesktop && <DesktopSplashes/>
+            isDesktop ? <DesktopSplashes/> : <MobileSplashes/>
           }
         </div>
       }
