@@ -7,9 +7,11 @@ import first from 'assets/images/first.svg';
 import second from 'assets/images/second.svg';
 
 import MihoMorph from 'assets/images/morphs/miho-ikuta/miho-morph-presentation.png';
+import MihoFull from 'assets/images/morphs/miho-ikuta/body-miho-ikuta.png'
 import MihoMorphMobile from 'assets/images/miho-morph.png';
 import MihoID from 'assets/video/white_card.video.mp4';
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
+import HenriFull from 'assets/images/morphs/henrik-hail/body-henrik-hail.png'
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
 import HenriID from 'assets/video/green_card.video.mp4';
 import { useWindowWidth } from 'hooks/useWindowWidth';
@@ -89,7 +91,7 @@ export function TypesCards() {
 							<motion.img
 								key='miho-d'
 								className={classes.mihoMainImage}
-								src={MihoMorph}
+								src={width > media.lDesktop ? MihoFull : MihoMorph}
 								alt='miho'
 								{...animFromLeft}
 							/>
@@ -167,7 +169,7 @@ export function TypesCards() {
 							<motion.img
 								key='henri-d'
 								className={classes.henriMainImage}
-								src={HenriMorph}
+								src={width > media.lDesktop ? HenriFull: HenriMorph}
 								alt='henri morph'
 								{...animFromRight}
 							/>
