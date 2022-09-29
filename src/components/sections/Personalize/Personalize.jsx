@@ -14,6 +14,7 @@ import Paragraph from '../../common/Paragraph/Paragraph';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./MobileSplashes/MobileSplashes";
 
 const data = [
 	{
@@ -72,9 +73,9 @@ export const Personalize = () => {
 	return (
 		<>
 			{
-				isDesktop && <div style={{position: 'relative'}}>
+				isDesktop ? <div style={{position: 'relative'}}>
 					<DesktopSplashes/>
-				</div>
+				</div>: <MobileSplashes/>
 			}
 			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
