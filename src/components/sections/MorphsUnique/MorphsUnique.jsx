@@ -14,6 +14,7 @@ import { motion, useInView } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 
 export const MorphsUnique = () => {
 	const isDesktop = useWindowWidth(1024);
@@ -33,6 +34,11 @@ export const MorphsUnique = () => {
 
 	return (
 		<>
+			<div style={{position: 'relative'}}>
+				{
+					isDesktop && <DesktopSplashes/>
+				}
+			</div>
 			<div className={classes.container}>
 				<div className={classes.content}>
 					<Title classname={classes.title}>

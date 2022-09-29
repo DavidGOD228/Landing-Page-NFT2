@@ -11,11 +11,15 @@ import Valve from "../../icons/Valve";
 import SuperCell from "../../icons/SuperCell";
 
 import classes from './style.module.scss'
+import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 
 export const CombinedGame = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>
+      {
+        isDesktop && <DesktopSplashes/>
+      }
       <h4 className={classes.title}>Combined game expirience</h4>
       <div className={classes.companies}>
         <EA width={isDesktop ? 143: 80} height={isDesktop ? 70 : 40}/>

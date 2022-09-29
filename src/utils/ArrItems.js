@@ -15,7 +15,7 @@ const arrImg = [
   '14.png',
   '15.png',
   '16.png',
-  '17.png',
+  '1.png',
   '18.png',
   '19.png',
   '20.png',

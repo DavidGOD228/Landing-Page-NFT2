@@ -2,6 +2,7 @@
 
 .container {
   padding: 96px 0 67px;
+  position: relative;
 
   @media screen and (min-width: $desktop){
     padding: 111px 0 139px;
@@ -44,40 +45,5 @@
     width: 100%;
     gap: 0;
     margin: 64px 0 0 0;
-
-
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -200px;
-      width: 463px;
-      height: 662px;
-      background: rgba(11, 11, 12, 0.6);
-      filter: blur(85px);
-      transform: rotate(90deg);
-    }
-
-    &:after {
-      content: "";
-      background-image: url("../../../assets/images/footer-circles.png");
-      position: absolute;
-      height: 700px;
-      top: 0;
-      z-index: -5;
-      left: 0;
-      right: 0;
-    }
-  }
-
-  &:after {
-    content: "";
-    background-image: url("../../../assets/images/footer-circles-mobile.png");
-    position: absolute;
-    height: 307px;
-    top: 96px;
-    z-index: -5;
-    left: 0;
-    right: 0;
   }
 }
