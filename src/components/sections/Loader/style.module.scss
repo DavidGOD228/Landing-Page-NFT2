@@ -27,20 +27,15 @@
   position: relative;
 }
 
-.blik {
+.shadow {
   position: absolute;
-  z-index: -1;
-
-  max-height: fit-content;
-  left: 0;
-  top: -40%;
+  z-index: 1;
+  width: 200%;
+  height: 100%;
 
   display: block;
   content: "";
-  background: linear-gradient(90deg, rgba(131,58,180,0) 0%, rgba(255,255,255,1) 50%, rgba(252,176,69,0) 100%);
-
-  width: 15vw;
-  height: 160%;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
 
   animation-duration: 5s;
   animation-name: shadowLineAnim;
@@ -50,21 +45,15 @@
 
 @keyframes shadowLineAnim {
   0% {
-    left: 0;
-    opacity: 0;
+    transform: translateX(0);
   }
 
   50% {
-    opacity: 1;
-  }
-
-  65% {
-    opacity: 0;
+    transform: translateX(-50%);
   }
 
   100% {
-    opacity: 0;
-    left: 100%;
+    transform: translateX(0);
   }
 }
 
