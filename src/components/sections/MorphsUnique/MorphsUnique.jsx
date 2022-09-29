@@ -15,6 +15,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export const MorphsUnique = () => {
 	const isDesktop = useWindowWidth(1024);
@@ -35,9 +36,7 @@ export const MorphsUnique = () => {
 	return (
 		<>
 			<div style={{position: 'relative'}}>
-				{
-					isDesktop && <DesktopSplashes/>
-				}
+				{isDesktop ? <DesktopSplashes/>: <MobileSplashes/>}
 			</div>
 			<div className={classes.container}>
 				<div className={classes.content}>
