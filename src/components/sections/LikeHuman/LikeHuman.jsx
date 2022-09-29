@@ -16,6 +16,7 @@ import {accordionData, tableData} from './data';
 import {useWindowSize} from 'hooks/useWindowDimensions';
 import {media} from 'utils/media';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export const LikeHuman = () => {
   const isDesktop = useWindowWidth(1024);
@@ -169,6 +170,7 @@ export const LikeHuman = () => {
         </motion.div>}
 
         {/* title mobile */}
+        {!isDesktop && <MobileSplashes/>}
         {!isDesktop && <motion.div>
           <Title
             classname={classes.title}
