@@ -1,7 +1,10 @@
 @import "~assets/styles/media";
 
 .container {
+  overflow-x: hidden;
+
   @media screen and (min-width: $desktop) {
+    overflow-x: hidden;
     margin-top: 309px;
   }
 }

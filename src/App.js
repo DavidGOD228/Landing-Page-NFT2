@@ -21,7 +21,6 @@ import {
 } from 'components';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { media } from 'utils/media';
-import { AnimatePresence } from 'framer-motion'
 
 function App() {
 	const isDesktop = useWindowWidth(media.desktop);
@@ -29,22 +28,25 @@ function App() {
   const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+    document.body.style.overflowY = 'hidden';
     document.body.style.height = '100vh';
-    window.offsetTop = 0;
+    document.body.style.pointerEvents = 'none';
 
-    setTimeout(() => {
-      document.body.style.overflow = 'auto';
+    if(!isLoading) {
+      document.body.style.pointerEvents = 'auto';
+      document.body.style.overflowY = 'auto';
       document.body.style.height = 'auto';
-      setIsloading(false);
-    }, 5000);
+    }
 
   }, [isLoading])
 
 
 	return (
 		<>
-      {isLoading && <Loader />}
+      {isLoading && <Loader setIsloading={setIsloading}/>}
       <TopBlock/>
       <FirstLiveSimulator/>
       <LikeHuman/>

@@ -1,9 +1,9 @@
 import loaderTitle from 'assets/images/loader-title.png';
 import CountUp from 'react-countup';
 import classes from './style.module.scss';
-import {motion, AnimatePresence} from 'framer-motion'
+import {motion} from 'framer-motion'
 
-export function Loader() {
+export function Loader({ setIsloading }) {
   return (
       <motion.div
         className={classes.loaderWrapper}
@@ -24,6 +24,7 @@ export function Loader() {
           start={0}
           end={100}
           suffix={'%'}
+          onEnd={() => setIsloading(false)}
         />
       </motion.div>
   )
