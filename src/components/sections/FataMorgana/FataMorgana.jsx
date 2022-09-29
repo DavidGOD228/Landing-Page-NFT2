@@ -4,6 +4,8 @@ import {motion} from 'framer-motion';
 
 import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 
+import LazyLoad from 'react-lazy-load';
+
 import Quotes from "assets/images/quotes.svg";
 import MobileCity from 'assets/video/mobileCity.video.mp4'
 import DesktopCity from 'assets/video/desktopCity.video.mp4'
@@ -12,6 +14,7 @@ import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
+import { offset } from 'utils/lazyload';
 
 const data = [
   {
@@ -76,9 +79,16 @@ export const FataMorgana = () => {
                   ease: 'easeInOut'
                 }}
                 viewport={{once: true}}
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap'
+                }}
               >
                 <GreenText classname={classes.greenText}>
-                  FATA <br/> MORGANA
+                  FATA
+                </GreenText>
+                <GreenText classname={classes.greenText}>
+                  MORGANA
                 </GreenText>
               </motion.div>
             </Title>
@@ -146,13 +156,19 @@ export const FataMorgana = () => {
           }}
           viewport={{once: true}}>
           {isDesktop && (
-            <img className={classes.quotes} src={Quotes} alt=""/>
+            <LazyLoad offset={offset}>
+              <img className={classes.quotes} src={Quotes} alt=""/>
+            </LazyLoad>
           )}
           an adventure that will take your breath away
         </motion.p>
         <div className={classes.videoWrapper}>
-          <video className={classes.desktopCity} src={DesktopCity} autoPlay loop muted playsInline />
-          <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted playsInline />
+        <LazyLoad offset={offset}>
+            <video className={classes.desktopCity} src={DesktopCity} autoPlay loop muted playsInline />
+          </LazyLoad>
+          <LazyLoad offset={offset}>
+            <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted playsInline />
+          </LazyLoad>
         </div>
       </div>
     </div>

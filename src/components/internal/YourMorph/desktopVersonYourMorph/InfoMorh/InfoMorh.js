@@ -6,6 +6,8 @@ import {
 } from "components";
 import classes from "./style.module.scss";
 import { motion, AnimatePresence } from 'framer-motion';
+import LazyLoad from "react-lazy-load";
+import { offset } from 'utils/lazyload';
 
 export function InfoMorh({morph}) {
   const {id, bodyImg, type, name, attributes} = morph;
@@ -56,22 +58,24 @@ export function InfoMorh({morph}) {
   return (
     <>
       <div className={classes.morphWrapper}>
-        <AnimatePresence>
-          <motion.img
-            key={id}
-            className={classes.imgMorphChoose}
-            src={importBodyImg}
-            alt={name}
-            initial={{
-              ...initial,
-              scale: 0.9,
-            }}
-            animate={animate}
-            exit={exit}
-            transition={transition}
-            viewport={viewport}
-          />
-        </AnimatePresence>
+        <LazyLoad offset={offset}>
+          <AnimatePresence>
+            <motion.img
+              key={id}
+              className={classes.imgMorphChoose}
+              src={importBodyImg}
+              alt={name}
+              initial={{
+                ...initial,
+                scale: 0.9,
+              }}
+              animate={animate}
+              exit={exit}
+              transition={transition}
+              viewport={viewport}
+            />
+          </AnimatePresence>
+        </LazyLoad>
       </div>
 
       <div className={classes.infoBlock}>
@@ -89,7 +93,7 @@ export function InfoMorh({morph}) {
             type={type}
           />  
         </motion.div>
-        
+
         <motion.div
           key={id + 'InfoDetails'}
           {...animBlockDetails}
@@ -115,7 +119,6 @@ export function InfoMorh({morph}) {
           </BlockInfoTitle>
           <AttrsDetails attributes={attributes} type={type} />
         </motion.div>
-       
       </div>
     </>
   );

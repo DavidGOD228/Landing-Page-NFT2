@@ -36,7 +36,7 @@ const Slider = ({ activeSlide, className }) => {
         ease: 'easeInOut'
       }}
     >
-      <Phone idx={idx} classname={classes.sliderItem} />
+      <Phone idx={idx} />
     </motion.div>;
   }
 

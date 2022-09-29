@@ -74,7 +74,7 @@
 }
 
 .personalizeContainer {
-  background-image: url("../../../assets/images/personalize.png");
+  background-image: url("~assets/images/personalize.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -104,7 +104,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    background-image: url("../../../assets/images/marketplaceDesktop.png");
+    background-image: url("~assets/images/marketplaceDesktop.png");
     margin-left: -4px;
     display: flex;
     flex-direction: column;

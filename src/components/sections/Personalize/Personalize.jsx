@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 import Title from '../../common/Title/Title';
@@ -13,7 +13,12 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth';
 import Paragraph from '../../common/Paragraph/Paragraph';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
-import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
+import DesktopSplashes from './DesktopSplashes/DesktopSplashes';
+
+import { useLazyBackgroundLoad } from 'hooks/useLazyBackgroundLoad';
+
+import descktopBackgroundImg from 'assets/images/marketplaceDesktop.png';
+import mobileBackgroundImg from 'assets/images/personalize.png';
 
 const data = [
 	{
@@ -64,18 +69,18 @@ export const Personalize = () => {
 			duration: 1,
 			ease: 'easeInOut'
 		},
-		viewport: {once: true}
+		viewport: { once: true }
 	};
 
 	const GreenText1 = motion(GreenText);
 
 	return (
 		<>
-			{
-				isDesktop && <div style={{position: 'relative'}}>
-					<DesktopSplashes/>
+			{isDesktop && (
+				<div style={{ position: 'relative' }}>
+					<DesktopSplashes />
 				</div>
-			}
+			)}
 			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
@@ -130,11 +135,21 @@ export const Personalize = () => {
 							justifyContent: 'flex-start'
 						}}
 					>
-						<motion.span  key={Math.random()} {...animFromDown}>Personalize{'\u00A0'}</motion.span>
-						<GreenText1 key={Math.random()} {...animFromDown}>and{'\u00A0'}</GreenText1>
-						<GreenText1 key={Math.random()} {...animFromDown}>make{'\u00A0'}</GreenText1>
-						<GreenText1 key={Math.random()} {...animFromDown}>it{'\u00A0'}</GreenText1>
-						<GreenText1 key={Math.random()} {...animFromDown}>unique</GreenText1>
+						<motion.span key={Math.random()} {...animFromDown}>
+							Personalize{'\u00A0'}
+						</motion.span>
+						<GreenText1 key={Math.random()} {...animFromDown}>
+							and{'\u00A0'}
+						</GreenText1>
+						<GreenText1 key={Math.random()} {...animFromDown}>
+							make{'\u00A0'}
+						</GreenText1>
+						<GreenText1 key={Math.random()} {...animFromDown}>
+							it{'\u00A0'}
+						</GreenText1>
+						<GreenText1 key={Math.random()} {...animFromDown}>
+							unique
+						</GreenText1>
 					</Title>
 					<p className={classes.personalizeParagraph}>
 						{paragraphAnimation(
@@ -153,7 +168,10 @@ export const Personalize = () => {
 				/>
 			</div>
 
-			<div id="marketplace" className={classes.personalizeContainer}>
+			<div
+				id='marketplace'
+				className={classes.personalizeContainer}
+			>
 				<Title
 					classname={classes.marketplaceTitle}
 					style={{

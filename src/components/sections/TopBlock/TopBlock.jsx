@@ -17,9 +17,12 @@ import Play from '../../icons/Play'
 
 import {useWindowWidth} from 'hooks/useWindowWidth'
 
+import LazyLoad from 'react-lazy-load';
+
 import classes from './style.module.scss'
 import 'react-html5video/dist/styles.css'
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import { offset } from 'utils/lazyload';
 
 
 export const TopBlock = () => {
@@ -30,31 +33,37 @@ export const TopBlock = () => {
     <div id="game">
       {isVideoOpen ? <div className={classes.videoBlock}>
           <button onClick={() => setVideoOpen(false)} className={classes.closeBtn}>
-            <img src={Close} alt=""/>
+            <LazyLoad offset={offset}>
+              <img src={Close} alt=""/>
+            </LazyLoad>
           </button>
-          <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
-            <source src={TeaserVideo}/>
-          </Video>
+          <LazyLoad offset={offset}>
+            <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
+              <source src={TeaserVideo}/>
+            </Video>
+          </LazyLoad>
         </div> :
         <div className={classes.topBlock}>
           {isDesktop ? <DesktopSplashes/> :
             <>
-              <img className={classes.topLeftCorner} src={TopLeftCorner} alt=""/>
-              <img className={classes.topRightCorner} src={TopRightCorner} alt=""/>
-              <img className={classes.bottomCorner} src={BottomCorner} alt=""/>
+              <LazyLoad offset={offset}>
+                <img className={classes.topLeftCorner} src={TopLeftCorner} alt=""/>
+              </LazyLoad>
+              <LazyLoad offset={offset}><img className={classes.topRightCorner} src={TopRightCorner} alt=""/></LazyLoad>
+              <LazyLoad offset={offset}><img className={classes.bottomCorner} src={BottomCorner} alt=""/></LazyLoad>
             </>
           }
           <Header/>
           <div className={classes.container}>
             <div className={classes.mainBlock}>
               {
-                isDesktop && <img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/>
+                isDesktop && <LazyLoad offset={offset}><img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/></LazyLoad>
               }
               {
                 isDesktop ? <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
                   <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
                   <p className={classes.playText}>Watch Teaser</p>
-                </div> : <img src={MetaMorphMobile} alt=""/>
+                </div> : <LazyLoad offset={offset}><img src={MetaMorphMobile} alt=""/></LazyLoad>
               }
               {
                 isDesktop && <div className={classes.builtOnContainer}>

@@ -8,6 +8,9 @@ import Smile from '../../icons/Smile'
 
 import classes from './style.module.scss'
 
+import LazyLoad from 'react-lazy-load';
+import { offset } from 'utils/lazyload'
+
 export const Privacy = () => {
   return (
     <div className={classes.container}>
@@ -24,14 +27,16 @@ export const Privacy = () => {
         RESPECT His PRIVACY!
       </motion.h3>
       <div className={`${classes.videoWrapper} ${classes.privacyContainer}`}>
-        <video
-          className={classes.privacyVideo}
-          src={ToiletVideo}
-          autoPlay
-          loop
-          playsInline
-          muted
-        />
+        <LazyLoad offset={offset}>
+          <video
+            className={classes.privacyVideo}
+            src={ToiletVideo}
+            autoPlay
+            loop
+            playsInline
+            muted
+          />
+        </LazyLoad>
       </div>
       <div className={classes.confidenceContainer}>
         <motion.h3
@@ -63,14 +68,16 @@ export const Privacy = () => {
           <Smile width={53} height={59}/>
         </motion.div>
         <div className={`${classes.videoWrapper} ${classes.confidenceContainer}`}>
-          <video
-            className={classes.privacyVideo}
-            src={BedVideo}
-            autoPlay
-            loop
-            playsInline
-            muted
-          />
+          <LazyLoad offset={offset}>
+            <video
+              className={classes.privacyVideo}
+              src={BedVideo}
+              autoPlay
+              loop
+              playsInline
+              muted
+            />
+          </LazyLoad>
         </div>
       </div>
     </div>

@@ -5,9 +5,7 @@ import classes from './style.module.scss';
 export default function Item({ imgName }) {
 	const initFirstImg = require('assets/images/marketplace/' + getRandomImg());
 	const secondecondImg = require('assets/images/marketplace/' + getRandomImg());
-	const [firstImg, setfirstImg] = useState(initFirstImg);
-	const [secondImg, setSecondImg] = useState(secondecondImg);
-	const [fliped, setFliped] = useState(false);
+	const [imgs, setImgs] = useState({ fliped: false, first: initFirstImg, second: secondecondImg});
 
 	useEffect(() => {
 		let handle;
@@ -23,29 +21,31 @@ export default function Item({ imgName }) {
 				getRandomImg());
 			const newSecondImg = require('assets/images/marketplace/' +
 				getRandomImg());
-			setfirstImg(newFirstImg);
-			setSecondImg(newSecondImg);
-			setFliped(s => !s);
+      setImgs(s => ({
+        fliped: !s.fliped,
+        first: newFirstImg,
+        second: newSecondImg
+      }));
 		}
 
 		start();
 
 		return () => clearTimeout(handle);
-	}, [fliped]);
+	}, [imgs]);
 
 	return (
 		<div className={classes.scene}>
-			<div className={`${classes.card} ${fliped && classes.isFlipped}`}>
-				<img
-					className={`${classes.cardFace} ${classes.cardFaceFront}`}
-					src={firstImg}
-					alt='imgName'
-				/>
-				<img
-					className={`${classes.cardFace} ${classes.cardFaceBack}`}
-					src={secondImg}
-					alt='imgName'
-				/>
+			<div className={`${classes.card} ${imgs.fliped && classes.isFlipped}`}>
+        <img
+          className={`${classes.cardFace} ${classes.cardFaceFront}`}
+          src={imgs.first}
+          alt='imgName'
+        />
+        <img
+          className={`${classes.cardFace} ${classes.cardFaceBack}`}
+          src={imgs.second}
+          alt='imgName'
+        />
 			</div>
 		</div>
 	);

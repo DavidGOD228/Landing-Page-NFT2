@@ -7,6 +7,7 @@
     "url": "https://github.com/DavidGOD228/Landing-Page-NFT2"
   },
   "dependencies": {
+    "@react-hook/window-scroll": "^1.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,6 +17,8 @@
     "react-countup": "^6.3.1",
     "react-dom": "^18.2.0",
     "react-html5video": "^2.5.1",
+    "react-lazy-load": "^4.0.1",
+    "react-lazy-load-image-component": "^1.5.5",
     "react-scripts": "5.0.1",
     "react-type-animation": "^2.1.1",
     "react-visibility-sensor": "^5.1.1",

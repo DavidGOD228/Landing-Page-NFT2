@@ -1,3 +1,4 @@
+import LazyLoad from 'react-lazy-load';
 import {
 	InfoDetails,
 	IdentifierBlock,
@@ -13,11 +14,11 @@ export function InfoMorphMobile({ className, morph, ...props }) {
 
 	return (
 		<div className={classes.infoMorphMobile} {...props}>
-			<img
-				className={classes.imgMorphChooseMobile}
-				src={importBodyImg}
-				alt={name}
-			/>
+      <img 
+        className={classes.imgMorphChooseMobile}
+        src={importBodyImg}
+        alt={name} 
+      />
 
 			<div className={classes.infoBlockMobile}>
 				<IdentifierBlock

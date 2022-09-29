@@ -1,30 +1,50 @@
+import { useEffect, useState } from 'react';
 import {
-  TopBlock,
-  FataMorgana,
-  Footer,
-  FirstLiveSimulator,
-  LikeHuman,
-  Freedom,
-  Earn,
-  YourMorph,
-  Personalize,
-  MorphId,
-  MorphsUnique,
-  Wizard,
-  Foto,
-  CombinedGame,
-  Roadmap,
-  TypesCards,
-  Privacy
+	TopBlock,
+	FataMorgana,
+	Footer,
+	FirstLiveSimulator,
+	LikeHuman,
+	Freedom,
+	Earn,
+	YourMorph,
+	Personalize,
+	MorphId,
+	MorphsUnique,
+	Wizard,
+	Foto,
+	CombinedGame,
+	Roadmap,
+	TypesCards,
+	Privacy,
+  Loader
 } from 'components';
-import {useWindowWidth} from 'hooks/useWindowWidth';
-import {media} from 'utils/media';
+import { useWindowWidth } from 'hooks/useWindowWidth';
+import { media } from 'utils/media';
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
-  const isDesktop = useWindowWidth(media.desktop);
+	const isDesktop = useWindowWidth(media.desktop);
 
-  return (
-    <>
+  const [isLoading, setIsloading] = useState(true);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100vh';
+    window.offsetTop = 0;
+
+    setTimeout(() => {
+      document.body.style.overflow = 'auto';
+      document.body.style.height = 'auto';
+      setIsloading(false);
+    }, 5000);
+
+  }, [isLoading])
+
+
+	return (
+		<>
+      {isLoading && <Loader />}
       <TopBlock/>
       <FirstLiveSimulator/>
       <LikeHuman/>
