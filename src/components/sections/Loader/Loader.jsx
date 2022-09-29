@@ -15,7 +15,7 @@ export function Loader({ setIsloading }) {
         }}
       >
         <div className={classes.loaderTitleBlock}>
-          <div className={classes.blik} />
+          <div className={classes.shadow} />
           <img className={classes.loaderTitleImg} src={loaderTitle} alt="" />
         </div>
         <CountUp
