@@ -51,6 +51,8 @@
 
 .table {
   display: grid;
+  z-index: 5;
+  position: relative;
   grid-template-columns: repeat(4, 1fr);
   background-image: url("../../../assets/images/running-background.png");
   background-color: rgba(32, 33, 35, 0.7);
