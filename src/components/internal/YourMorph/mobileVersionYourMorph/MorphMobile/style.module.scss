@@ -5,6 +5,7 @@
 .attrsTabletWrapper,
 .morphsContainerMobile {
   display: none;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: $desktop) {
