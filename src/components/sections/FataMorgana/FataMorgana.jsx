@@ -12,6 +12,7 @@ import classes from "./style.module.scss";
 import {useWindowWidth} from "hooks/useWindowWidth";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 const data = [
   {
@@ -37,125 +38,129 @@ export const FataMorgana = () => {
   const parg1 = 'Metamorph is built on putting the power of choice into the hands of players All in game actions are governed by you, with no artificial barriers. We empower you to create your unique story by participating in a world where we expect the unexpected. From moral actions to investments, crusades, businesses operations and gambling – you havethe choice play and earn in a style you enjoy.';
 
   return (
-    <div id="fataMorgana" className={classes.container}>
-      <div className={classes.topContainer}>
-        <div className={classes.content}>
-          <div>
-            <Title classname={classes.title}>
-              {!isDesktop && (
+    <>
+      <div id="fataMorgana" className={classes.container}>
+        {!isDesktop && <MobileSplashes/>}
+        <div className={classes.topContainer}>
+          <div className={classes.content}>
+            <div>
+              <Title classname={classes.title}>
+                {!isDesktop && (
+                  <motion.p
+                    className={classes.chineseText}
+                    initial={{y: 25}}
+                    whileInView={{y: 0}}
+                    transition={{
+                      duration: 1,
+                      ease: 'easeInOut'
+                    }}
+                    viewport={{once: true}}
+                  >
+                    全部的 自由 行動的
+                  </motion.p>
+                )}
                 <motion.p
-                  className={classes.chineseText}
-                  initial={{y: 25}}
+                  className={classes.welcome}
+                  initial={{y: 150}}
                   whileInView={{y: 0}}
                   transition={{
                     duration: 1,
                     ease: 'easeInOut'
                   }}
+                  viewport={{once: true}}>
+                  WELCOME TO..
+                </motion.p>
+                <motion.div
+                  initial={{y: 150}}
+                  whileInView={{y: 0}}
+                  transition={{
+                    duration: 1,
+                    delay: 0.2,
+                    ease: 'easeInOut'
+                  }}
                   viewport={{once: true}}
                 >
-                  全部的 自由 行動的
-                </motion.p>
-              )}
-              <motion.p
-                className={classes.welcome}
+                  <GreenText classname={classes.greenText}>
+                    FATA <br/> MORGANA
+                  </GreenText>
+                </motion.div>
+              </Title>
+              <motion.span
+                className={classes.code}
                 initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1,
+                  delay: 0.3,
                   ease: 'easeInOut'
                 }}
                 viewport={{once: true}}>
-                WELCOME TO..
-              </motion.p>
+                <GenerateCode>D2128NDJK376LAZXWM3NK7</GenerateCode>
+              </motion.span>
+            </div>
+            {isDesktop && (
               <motion.div
+                style={{margin: "69px 56px 0px auto"}}
                 initial={{y: 150}}
                 whileInView={{y: 0}}
                 transition={{
                   duration: 1,
-                  delay: 0.2,
+                  delay: 0.3,
                   ease: 'easeInOut'
                 }}
-                viewport={{once: true}}
-              >
-                <GreenText classname={classes.greenText}>
-                  FATA <br/> MORGANA
-                </GreenText>
+                viewport={{once: true}}>
+                <Table
+                  style={{width: 400, height: 114}}
+                  data={data}/>
               </motion.div>
-            </Title>
-            <motion.span
-              className={classes.code}
-              initial={{y: 150}}
-              whileInView={{y: 0}}
-              transition={{
-                duration: 1,
-                delay: 0.3,
-                ease: 'easeInOut'
-              }}
-              viewport={{once: true}}>
-              <GenerateCode>D2128NDJK376LAZXWM3NK7</GenerateCode>
-            </motion.span>
+            )}
           </div>
-          {isDesktop && (
-            <motion.div
-              style={{margin: "69px 56px 0px auto"}}
-              initial={{y: 150}}
-              whileInView={{y: 0}}
-              transition={{
-                duration: 1,
-                delay: 0.3,
-                ease: 'easeInOut'
-              }}
-              viewport={{once: true}}>
+          <motion.div
+            initial={{y: 150}}
+            whileInView={{y: 0}}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: 'easeInOut'
+            }}
+            viewport={{once: true}}>
+            <Paragraph className={classes.paragraph}>
+              {paragraphAnimation(parg1)}
+            </Paragraph>
+          </motion.div>
+        </div>
+        <div className={classes.cityContainer}>
+          {!isDesktop && (
+            <div className={classes.mobileTableWrapper}>
               <Table
-                style={{width: 400, height: 114}}
+                style={{margin: "36px auto 0", width: '100%', height: 89}}
+                isGrayTable
                 data={data}/>
-            </motion.div>
+            </div>
           )}
-        </div>
-        <motion.div
-          initial={{y: 150}}
-          whileInView={{y: 0}}
-          transition={{
-            duration: 1,
-            delay: 0.3,
-            ease: 'easeInOut'
-          }}
-          viewport={{once: true}}>
-          <Paragraph className={classes.paragraph}>
-            {paragraphAnimation(parg1)}
-          </Paragraph>
-        </motion.div>
-      </div>
-      <div className={classes.cityContainer}>
-        {!isDesktop && (
-          <div className={classes.mobileTableWrapper}>
-            <Table
-              style={{margin: "36px auto 0", width: '100%', height: 89}}
-              isGrayTable
-              data={data}/>
+          <motion.p
+            className={classes.cityText}
+            initial={{y: 150}}
+            whileInView={{y: 0}}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: 'easeInOut'
+            }}
+            viewport={{once: true}}>
+            {isDesktop && (
+              <img className={classes.quotes} src={Quotes} alt=""/>
+            )}
+            an adventure that will take your breath away
+          </motion.p>
+          <div className={classes.videoWrapper}>
+            <video className={classes.desktopCity} src={DesktopCity} autoPlay loop muted
+                   playsInline/>
+            <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted playsInline/>
           </div>
-        )}
-        <motion.p
-          className={classes.cityText}
-          initial={{y: 150}}
-          whileInView={{y: 0}}
-          transition={{
-            duration: 1,
-            delay: 0.3,
-            ease: 'easeInOut'
-          }}
-          viewport={{once: true}}>
-          {isDesktop && (
-            <img className={classes.quotes} src={Quotes} alt=""/>
-          )}
-          an adventure that will take your breath away
-        </motion.p>
-        <div className={classes.videoWrapper}>
-          <video className={classes.desktopCity} src={DesktopCity} autoPlay loop muted playsInline />
-          <video className={classes.mobileCity} src={MobileCity} autoPlay loop muted playsInline />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
