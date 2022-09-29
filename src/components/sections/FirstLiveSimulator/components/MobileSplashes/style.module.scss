@@ -1,0 +1,26 @@
+.container {
+  z-index: -5;
+  opacity: 0.3;
+}
+
+.top {
+  position: absolute;
+  top: -86px;
+  left: 6px;
+  object-fit: cover;
+  height: 610.39px;
+  min-width: 361.17px;
+  width: 100%;
+}
+
+.ellipse {
+  position: absolute;
+  width: 580px;
+  height: 250px;
+  left: 0;
+  top: 200px;
+  background: #0B0B0C;
+  filter: blur(75px);
+}
+
+

@@ -1,0 +1,16 @@
+.container {
+  z-index: -5;
+  opacity: 0.3;
+}
+
+.right {
+  position: absolute;
+  top: -270px;
+  right: 0;
+  z-index: -10;
+  object-fit: cover;
+  height: 678px;
+  min-width: 300.62px;
+  width: 100%;
+}
+

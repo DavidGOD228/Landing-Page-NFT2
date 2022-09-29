@@ -18,6 +18,7 @@ import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import { offset } from 'utils/lazyload';
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export function FirstLiveSimulator() {
   const isDesktop = useWindowWidth(1024)
@@ -35,9 +36,7 @@ export function FirstLiveSimulator() {
       
       <GlobalContainer>
         <div className={classes.flsDesktopContainer}>
-          {
-            isDesktop && <DesktopSplashes/>
-          }
+          {isDesktop ? <DesktopSplashes/> : <MobileSplashes/>}
           <div className={classes.content}>
             <motion.div
               key="firstLiveTitle"

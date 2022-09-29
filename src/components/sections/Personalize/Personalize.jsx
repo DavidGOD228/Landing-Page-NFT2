@@ -13,12 +13,10 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth';
 import Paragraph from '../../common/Paragraph/Paragraph';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
-import DesktopSplashes from './DesktopSplashes/DesktopSplashes';
 
-import { useLazyBackgroundLoad } from 'hooks/useLazyBackgroundLoad';
-
-import descktopBackgroundImg from 'assets/images/marketplaceDesktop.png';
 import mobileBackgroundImg from 'assets/images/personalize.png';
+import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./MobileSplashes/MobileSplashes";
 
 const data = [
 	{
@@ -76,11 +74,11 @@ export const Personalize = () => {
 
 	return (
 		<>
-			{isDesktop && (
-				<div style={{ position: 'relative' }}>
-					<DesktopSplashes />
-				</div>
-			)}
+			{
+				isDesktop ? <div style={{position: 'relative'}}>
+					<DesktopSplashes/>
+				</div>: <MobileSplashes/>
+			}
 			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>

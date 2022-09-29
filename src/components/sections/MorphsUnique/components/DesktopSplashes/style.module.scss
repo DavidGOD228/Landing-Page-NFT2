@@ -1,0 +1,47 @@
+.container {
+  z-index: -10;
+  opacity: 0.3;
+}
+
+.leftCorner {
+  position: absolute;
+  left: 50px;
+  top: -300px;
+  height: 1302px;
+}
+
+.bottomRightCorner {
+  position: absolute;
+  right: 0;
+  top: 700px;
+  height: 833px;
+}
+
+.bottomLeftCorner {
+  position: absolute;
+  left: 0;
+  top: 600px;
+  height: 833px;
+}
+
+.ellipse {
+  position: absolute;
+  width: 427px;
+  height: 656px;
+  left: 50px;
+  top: 50px;
+  background: rgba(11, 11, 12, 0.9);
+  filter: blur(85px);
+  transform: rotate(90deg);
+}
+
+.bottomEllipse {
+  position: absolute;
+  width: 625px;
+  height: 960px;
+  right: 300px;
+  top: 800px;
+  background: rgba(11, 11, 12, 0.9);
+  filter: blur(85px);
+  transform: rotate(90deg);
+}

@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.topLeft {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  object-fit: cover;
+  height: 1302px;
+  min-width: 400px;
+  width: 100%;
+}
+
+.bottomLeft {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  object-fit: cover;
+  height: 1152.33px;
+  min-width: 400px;
+  width: 100%;
+}
+

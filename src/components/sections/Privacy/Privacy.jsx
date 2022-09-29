@@ -7,6 +7,7 @@ import BedVideo from 'assets/video/bed.video.mp4'
 import Smile from '../../icons/Smile'
 
 import classes from './style.module.scss'
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 import LazyLoad from 'react-lazy-load';
 import { offset } from 'utils/lazyload'
@@ -14,6 +15,7 @@ import { offset } from 'utils/lazyload'
 export const Privacy = () => {
   return (
     <div className={classes.container}>
+      <MobileSplashes/>
       <motion.h3
         key="respectPrivacy"
         className={classes.title}

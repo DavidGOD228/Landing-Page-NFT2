@@ -12,6 +12,7 @@
 
 .container {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 100px;
@@ -98,7 +99,7 @@
 .cityText {
   position: absolute;
   right: 21px;
-  top: 150px;
+  bottom: 0;
   font-size: 20px;
   line-height: 120%;
   text-align: right;
@@ -112,12 +113,11 @@
   padding-right: 22px;
 
   @media screen and (min-width: $desktop) {
-    display: none;
     font-family: 'Hanson', sans-serif;
     font-size: 24px;
     letter-spacing: 0.05em;
     width: 400px;
-    margin: auto 206px 201px auto;
+    margin: auto 150px 150px auto;
   }
 }
 

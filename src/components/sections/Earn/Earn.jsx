@@ -13,6 +13,7 @@ import LazyLoad from 'react-lazy-load';
 import { offset } from 'utils/lazyload';
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 const data = [
 	{
@@ -142,6 +143,9 @@ export const Earn = () => {
               </LazyLoad>
 						)}
 					</div>
+					{
+						!isDesktop && <MobileSplashes/>
+					}
 					<div style={{ marginTop: 40 }}>
 						{!isDesktop &&
 							data.map(({ title, subtitle }, i) => (
