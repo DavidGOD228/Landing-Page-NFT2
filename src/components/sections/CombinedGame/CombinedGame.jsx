@@ -12,13 +12,14 @@ import SuperCell from "../../icons/SuperCell";
 
 import classes from './style.module.scss'
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export const CombinedGame = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>
       {
-        isDesktop && <DesktopSplashes/>
+        isDesktop ? <DesktopSplashes/>: <MobileSplashes/>
       }
       <h4 className={classes.title}>Combined game expirience</h4>
       <div className={classes.companies}>
