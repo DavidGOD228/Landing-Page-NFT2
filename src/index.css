@@ -9,19 +9,17 @@
   padding: 0;
 }
 
-html, body {
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-  scroll-behavior: smooth;
-}
-
 body {
+  position: relative;
   background-color: #0b0b0c;
   font-family: "Big Pixel", sans-serif;
   color: #9BA1AA;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
   /*TODO FIX*/
   /*color: $gray;*/
   /*background-color: $background;*/
@@ -86,4 +84,15 @@ select {
 ::-webkit-scrollbar-thumb {
   background: #47484E;
   border-radius: 5px;
+}
+
+/* For 'react-lazy-load' */
+/* Example of how to fade our content in */
+.LazyLoad {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
 }

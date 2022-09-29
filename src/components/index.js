@@ -30,6 +30,7 @@ export * from './sections/TopBlock/TopBlock';
 export * from './sections/TypesCards/TypesCards';
 export * from './sections/Wizard/Wizard';
 export * from './sections/YourMorph/YourMorph';
+export * from './sections/Loader/Loader';
 
 // section "Choose Your Morph"(desktop)
 export * from './internal/YourMorph/desktopVersonYourMorph/Attr/Attr';

@@ -1,20 +1,24 @@
 import React from 'react'
+import LazyLoad from 'react-lazy-load';
 
-import FooterLogo from '../../../assets/images/footer-logo.svg'
-import GradientLogo from '../../../assets/images/gradientLogo.svg'
-import Twitter from '../../../assets/images/twitter.svg'
-import Discord from '../../../assets/images/discord.svg'
+import FooterLogo from 'assets/images/footer-logo.svg'
+import GradientLogo from 'assets/images/gradientLogo.svg'
+import Twitter from 'assets/images/twitter.svg'
+import Discord from 'assets/images/discord.svg'
 
-import { useWindowWidth } from '../../../hooks/useWindowWidth'
+import { useWindowWidth } from 'hooks/useWindowWidth'
 
 import classes from './style.module.scss'
+import { offset } from 'utils/lazyload';
 
 export const Footer = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <footer className={classes.footer}>
       <div className={classes.footerTopBlock}>
-        <img src={isDesktop ? GradientLogo : FooterLogo} alt=""/>
+        <LazyLoad offset={offset}>
+          <img src={isDesktop ? GradientLogo : FooterLogo} alt=""/>
+        </LazyLoad>
         <hr className={classes.footerLine}/>
       </div>
       <div className={classes.linksContainer}>
@@ -28,8 +32,12 @@ export const Footer = () => {
         </div>
       </div>
       <div className={classes.socials}>
-        <img src={Twitter} alt=""/>
-        <img src={Discord} alt=""/>
+        <LazyLoad offset={offset}>
+          <img src={Twitter} alt=""/>
+        </LazyLoad>
+        <LazyLoad offset={offset}>
+          <img src={Discord} alt=""/>
+        </LazyLoad>
       </div>
       <p className={classes.copyright}>
         Copyright © 2022 Metamorph Inc. All rights reserved.</p>

@@ -2,6 +2,8 @@ import {motion} from 'framer-motion';
 
 import {GlobalContainer, GreenText, Title, Paragraph} from 'components';
 
+import LazyLoad from 'react-lazy-load';
+
 import WhiteLine from 'assets/images/whiteLine.svg';
 import toiletVideo from 'assets/video/toilet.video.mp4';
 import bedVideo from 'assets/video/bed.video.mp4';
@@ -15,6 +17,7 @@ import classes from './style.module.scss';
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import {useWindowWidth} from "../../../hooks/useWindowWidth";
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export function FirstLiveSimulator() {
@@ -27,7 +30,10 @@ export function FirstLiveSimulator() {
 
   return (
     <div className={classes.wrapper}>
-      <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay muted playsInline />
+      <LazyLoad offset={offset}>
+        <video className={classes.morphVideo} src={isDesktop ? MorphDesktop : MorphMobile} autoPlay muted playsInline />
+      </LazyLoad>
+      
       <GlobalContainer>
         <div className={classes.flsDesktopContainer}>
           {isDesktop ? <DesktopSplashes/> : <MobileSplashes/>}
@@ -59,7 +65,9 @@ export function FirstLiveSimulator() {
               </Paragraph>
               <div className={classes.respect}>
                 <p className={classes.privacyText}>Respect his Privacy!</p>
-                <img className={classes.smile} src={SmileDesktop} alt=''/>
+                <LazyLoad offset={offset}>
+                  <img className={classes.smile} src={SmileDesktop} alt=''/>
+                </LazyLoad>
               </div>
             </motion.div>
             <div className={classes.mobileContainer}>
@@ -75,14 +83,16 @@ export function FirstLiveSimulator() {
                   }}
                   viewport={{once: true}}
                 >
-                  <video
-                    className={classes.privacyImage}
-                    src={toiletVideo}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
+                  <LazyLoad offset={offset}>
+                    <video
+                      className={classes.privacyImage}
+                      src={toiletVideo}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  </LazyLoad>
                 </motion.div>
                 <motion.div
                   key="firstLiveSecondImage"
@@ -95,12 +105,15 @@ export function FirstLiveSimulator() {
                   }}
                   viewport={{once: true}}
                 >
-                  <video src={bedVideo}
-                         className={classes.privacyImage}
-                         autoPlay
-                         loop
-                         playsInline
-                         muted/>
+                  <LazyLoad offset={offset}>
+                    <video src={bedVideo}
+                      className={classes.privacyImage}
+                      autoPlay
+                      loop
+                      playsInline
+                      muted
+                    />
+                  </LazyLoad>
                 </motion.div>
               </div>
             </div>

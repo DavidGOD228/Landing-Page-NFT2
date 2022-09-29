@@ -1,4 +1,5 @@
 import { Paragraph, Title } from 'components';
+import LazyLoad from 'react-lazy-load';
 import Skull from 'assets/images/skills/skill-5.png';
 import Slime from 'assets/images/skills/skill-6.png';
 import Bricks from 'assets/images/skills/skill-7.png';
@@ -14,6 +15,7 @@ import { motion, useInView } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
+import { offset } from 'utils/lazyload';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
@@ -72,135 +74,146 @@ export const MorphsUnique = () => {
 							{paragraphAnimation(text1)}
 						</Paragraph>
 						<div className={classes.icons}>
-							<motion.img
-								className={classes.skillImg}
-								src={Skull}
-								alt='skill'
-								initial={{
-									scale: 0.9,
-									opacity: 0
-								}}
-								whileInView={{
-									scale: 1,
-									opacity: 1
-								}}
-								transition={{
-									duration: 0.3,
-									ease: 'easeInOut'
-								}}
-								viewport={{ once: true }}
-							/>
-							<motion.img
-								className={classes.skillImg}
-								src={Slime}
-								alt='skill'
-								initial={{
-									scale: 0.9,
-									opacity: 0
-								}}
-								whileInView={{
-									scale: 1,
-									opacity: 1
-								}}
-								transition={{
-									duration: 0.3,
-									ease: 'easeInOut',
-									delay: 0.3
-								}}
-								viewport={{ once: true }}
-							/>
-							<motion.img
-								className={classes.skillImg}
-								src={Bricks}
-								alt='skill'
-								initial={{
-									scale: 0.9,
-									opacity: 0
-								}}
-								whileInView={{
-									scale: 1,
-									opacity: 1
-								}}
-								transition={{
-									duration: 0.3,
-									ease: 'easeInOut',
-									delay: 0.6
-								}}
-								viewport={{ once: true }}
-							/>
-
+              <LazyLoad offset={offset}>
+                <motion.img
+                  className={classes.skillImg}
+                  src={Skull}
+                  alt='skill'
+                  initial={{
+                    scale: 0.9,
+                    opacity: 0
+                  }}
+                  whileInView={{
+                    scale: 1,
+                    opacity: 1
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut'
+                  }}
+                  viewport={{ once: true }}
+                />
+              </LazyLoad>
+              <LazyLoad offset={offset}>
+                <motion.img
+                  className={classes.skillImg}
+                  src={Slime}
+                  alt='skill'
+                  initial={{
+                    scale: 0.9,
+                    opacity: 0
+                  }}
+                  whileInView={{
+                    scale: 1,
+                    opacity: 1
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                    delay: 0.3
+                  }}
+                  viewport={{ once: true }}
+                />
+              </LazyLoad>
+              <LazyLoad offset={offset}>
+                <motion.img
+                  className={classes.skillImg}
+                  src={Bricks}
+                  alt='skill'
+                  initial={{
+                    scale: 0.9,
+                    opacity: 0
+                  }}
+                  whileInView={{
+                    scale: 1,
+                    opacity: 1
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                    delay: 0.6
+                  }}
+                  viewport={{ once: true }}
+                />
+              </LazyLoad>
 							<div className={classes.wrapperSkill} ref={textRef}>
 								{/* image before */}
 								{isDesktop && (
-									<motion.img
-										className={`${classes.skillImg} ${classes.fish}`}
-										src={FishNotActive}
-										alt='skill'
-										initial='hidden'
-										variants={{
-											visible: {
-												scale: 1,
-												opacity: 1
-											},
-											hidden: { opacity: 0, scale: 0.9 }
-										}}
-										whileInView='visible'
-										transition={{
-											duration: 0.3,
-											ease: 'easeInOut',
-											delay: 0.9
-										}}
-										viewport={{ once: true }}
-									/>
+                  <LazyLoad offset={offset}>
+                    <motion.img
+                      className={`${classes.skillImg} ${classes.fish}`}
+                      src={FishNotActive}
+                      alt='skill'
+                      initial='hidden'
+                      variants={{
+                        visible: {
+                          scale: 1,
+                          opacity: 1
+                        },
+                        hidden: { opacity: 0, scale: 0.9 }
+                      }}
+                      whileInView='visible'
+                      transition={{
+                        duration: 0.3,
+                        ease: 'easeInOut',
+                        delay: 0.9
+                      }}
+                      viewport={{ once: true }}
+                    />
+                  </LazyLoad>
 								)}
 
 								{/* active img */}
 								{isDesktop && (
-									<motion.img
-										className={`${classes.skillImg} ${classes.fish} ${classes.active}`}
-										src={Fish}
-										alt='skill'
-										initial={{
-											scale: 0.9,
-											opacity: 0,
-											y: '-9%',
-											x: '-7%'
-										}}
-										whileInView={{
-											scale: 1,
-											opacity: 1
-										}}
-										transition={{
-											duration: 0.3,
-											ease: 'easeInOut',
-											delay: 2.1
-										}}
-										viewport={{ once: true }}
-									/>
+                  <LazyLoad offset={offset}>
+                    <motion.img
+                      className={`${classes.skillImg} ${classes.fish} ${classes.active}`}
+                      src={Fish}
+                      alt='skill'
+                      initial={{
+                        scale: 0.9,
+                        opacity: 0,
+                        y: '-9%',
+                        x: '-7%'
+                      }}
+                      whileInView={{
+                        scale: 1,
+                        opacity: 1
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: 'easeInOut',
+                        delay: 2.1
+                      }}
+                      viewport={{ once: true }}
+                    />
+                  </LazyLoad>
 								)}
 
 								{!isDesktop && (
-									<motion.img
-										className={`${classes.skillImg}  ${classes.active}`}
-										src={Fish}
-										alt='skill'
-										initial={{
-											scale: 0.9,
-											opacity: 0,
-											x: '-5%',
-											y: '-5%'
-										}}
-										whileInView={{
-											scale: 1,
-											opacity: 1
-										}}
-										transition={{
-											duration: 0.3,
-											ease: 'easeInOut',
-											delay: 0.9
-										}}
-										viewport={{ once: true }}
-									/>
+                  <LazyLoad offset={offset}>
+                    <motion.img
+                      className={`${classes.skillImg}  ${classes.active}`}
+                      src={Fish}
+                      alt='skill'
+                      initial={{
+                        scale: 0.9,
+                        opacity: 0,
+                        x: '-5%',
+                        y: '-12%%'
+                      }}
+                      whileInView={{
+                        scale: 1,
+                        opacity: 1
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: 'easeInOut',
+                        delay: 0.9
+                      }}
+                      viewport={{ once: true }}
+                    />
+                  </LazyLoad>
 								)}
 
 								<motion.div
@@ -226,25 +239,27 @@ export const MorphsUnique = () => {
 								</motion.div>
 							</div>
 
-							<motion.img
-								className={classes.skillImg}
-								src={Chain}
-								alt='skill'
-								initial={{
-									scale: 0.9,
-									opacity: 0
-								}}
-								whileInView={{
-									scale: 1,
-									opacity: 1
-								}}
-								transition={{
-									duration: 0.3,
-									ease: 'easeInOut',
-									delay: 1.2
-								}}
-								viewport={{ once: true }}
-							/>
+              <LazyLoad offset={offset}>
+                <motion.img
+                  className={classes.skillImg}
+                  src={Chain}
+                  alt='skill'
+                  initial={{
+                    scale: 0.9,
+                    opacity: 0
+                  }}
+                  whileInView={{
+                    scale: 1,
+                    opacity: 1
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                    delay: 1.2
+                  }}
+                  viewport={{ once: true }}
+                />
+              </LazyLoad>
 						</div>
 						{isDesktop && (
 							<>
@@ -272,25 +287,29 @@ export const MorphsUnique = () => {
 						)}
 					</div>
 				</div>
-				<video
-					className={classes.morphImage}
-					src={MorphDesktop}
-					autoPlay
-					loop
-					playsInline
-					muted
-				/>
+        <LazyLoad offset={offset}>
+          <video
+            className={classes.morphImage}
+            src={MorphDesktop}
+            autoPlay
+            loop
+            playsInline
+            muted
+          />
+        </LazyLoad>
 			</div>
 			{!isDesktop && (
 				<div className={classes.mobileMorph}>
-					<video
-						className={classes.mobileMorphVideo}
-						src={MorphMobile}
-						autoPlay
-						playsInline
-						loop
-						muted
-					/>
+          <LazyLoad offset={offset}>
+            <video
+              className={classes.mobileMorphVideo}
+              src={MorphMobile}
+              autoPlay
+              playsInline
+              loop
+              muted
+            />
+          </LazyLoad>
 				</div>
 			)}
 		</>

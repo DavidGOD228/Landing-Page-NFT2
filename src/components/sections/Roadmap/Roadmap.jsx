@@ -1,6 +1,8 @@
 import { Title, GreenText, Paragraph, RoadmapMobile } from 'components'
 import Column from './components/Column/Column'
 
+import LazyLoad from 'react-lazy-load';
+
 import {useWindowWidth} from 'hooks/useWindowWidth'
 import {roadmapTableData} from './data/running'
 
@@ -10,6 +12,7 @@ import GooglePlay from 'assets/images/googlePlay.png'
 import classes from './style.module.scss'
 
 import { motion } from 'framer-motion';
+import { offset } from 'utils/lazyload';
 
 export const Roadmap = () => {
   const iSDesktop = useWindowWidth(1024);
@@ -85,11 +88,15 @@ export const Roadmap = () => {
               <p className={classes.playGameOn}>Play game on:</p>
               <div className={classes.appBtnContainer}>
                 <div className={classes.appBtn}>
-                  <img src={AppStore} alt=""/>
+                  <LazyLoad offset={offset}>
+                    <img src={AppStore} alt=""/>
+                  </LazyLoad>
                   <span className={classes.appText}>App Store</span>
                 </div>
                 <div className={classes.appBtn}>
-                  <img src={GooglePlay} alt=""/>
+                  <LazyLoad offset={offset}>
+                    <img src={GooglePlay} alt=""/>
+                  </LazyLoad>
                   <span className={classes.appText}>Google Play</span>
                 </div>
               </div>

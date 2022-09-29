@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import LazyLoad from 'react-lazy-load';
 
 import {Title, Paragraph, GreenText} from 'components';
 
@@ -10,6 +11,7 @@ import classes from './style.module.scss';
 import {useWindowWidth} from 'hooks/useWindowWidth';
 import {morphIDText} from 'data/morphID/text';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
+import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 export const MorphId = () => {
@@ -86,14 +88,17 @@ export const MorphId = () => {
 
         <div className={classes.cardsImg}>
           {isDesktop && (
-            <motion.video
-              className={classes.comparingVideo}
-              {...animFromLeftImg}
-              src={ComparingCards}
-              autoPlay
-              loop
-              muted
-            />
+            <LazyLoad offset={offset}>
+              <motion.video
+                className={classes.comparingVideo}
+                {...animFromLeftImg}
+                src={ComparingCards}
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            </LazyLoad>
           )}
         </div>
 
@@ -142,10 +147,10 @@ export const MorphId = () => {
                   }
                 }}
               >
-                <motion.span {...animFromRight}>Morph{'\u00A0'}</motion.span>
+                <motion.span {...animFromDown}>Morph{'\u00A0'}</motion.span>
                 <br/>
-                <GreenText1 {...animFromRight}>id</GreenText1>
-                <motion.span {...animFromRight} className={classes.chineseText}>
+                <motion.span {...animFromDown}>id</motion.span>
+                <motion.span {...animFromDown} className={classes.chineseText}>
                   變形 相同的代碼
                 </motion.span>
               </Title>
@@ -183,7 +188,7 @@ export const MorphId = () => {
               2 ways to start
             </motion.div>
           ) : (
-            <motion.div {...animFromDown} className={classes.morhTitle}>
+            <motion.div key={Math.random()} {...animFromDown} className={classes.morhTitle}>
               2 ways to start
             </motion.div>
           )}

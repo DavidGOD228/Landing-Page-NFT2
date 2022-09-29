@@ -19,6 +19,7 @@ import { morphIDText } from 'data/morphID/text';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export function TypesCards() {
 	const isDesktop = useWindowWidth(1024);
@@ -97,11 +98,11 @@ export function TypesCards() {
 							/>
 						)}
 						{!isDesktop && (
-							<img
-								className={classes.mihoMainImage}
-								src={MihoMorphMobile}
-								alt='miho'
-							/>
+              <img
+                className={classes.mihoMainImage} 
+                src={MihoMorphMobile}
+                alt='miho'
+              />
 						)}
 
 						<div className={classes.contentBlock}>
@@ -109,11 +110,11 @@ export function TypesCards() {
 								{...animFromDown}
 								className={classes.classiqueParagraph}
 							>
-								<img
-									className={classes.classiqueBorder}
-									src={first}
-									alt='classique'
-								/>
+                <img
+                  className={classes.classiqueBorder}
+                  src={first}
+                  alt='classique'
+                />
 								<p className={classes.title}>CLASSIQUE</p>
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
@@ -123,25 +124,33 @@ export function TypesCards() {
 										: morphIDText.classiqueMobile
 								)}
 							</Paragraph>
-							<motion.video
-								{...animFromDown}
-								className={classes.idImage}
-								src={MihoID}
+              {isDesktop && <motion.video
+                {...animFromDown}
+                className={classes.idImage}
+                src={MihoID}
                 autoPlay
                 playsInline
                 loop
                 muted
-							/>
+              />}
+              {!isDesktop && <video
+                className={classes.idImage}
+                src={MihoID}
+                autoPlay
+                playsInline
+                loop
+                muted
+              />}
 						</div>
 					</div>
 
 					<div className={`${classes.morphBlock} ${classes.eternalBlock}`}>
 						<div className={classes.contentBlock}>
 							<motion.h4 {...animFromDown} className={classes.eternalParagraph}>
-								<img
-									className={classes.eternalBorder}
-									src={second}
-									alt='eternal border'
+                <img
+                  className={classes.eternalBorder}
+                  src={second}
+                  alt='eternal border'
 								/>
 								<p className={`${classes.title} ${classes.eternalTitle}`}>
 									ETERNAL
@@ -154,15 +163,23 @@ export function TypesCards() {
 										: morphIDText.eternalMobile
 								)}
 							</Paragraph>
-							<motion.video
-								{...animFromDown}
-								className={`${classes.idImage} ${classes.idImageHenri}`}
-								src={HenriID}
-								autoPlay
-								playsInline
-								loop
-								muted
-							/>
+              {isDesktop && <motion.video
+                className={`${classes.idImage} ${classes.idImageHenri}`}
+                {...animFromDown}
+                src={HenriID}
+                autoPlay
+                playsInline
+                loop
+                muted
+              />}
+              {!isDesktop && <video
+                className={`${classes.idImage} ${classes.idImageHenri}`}
+                src={HenriID}
+                autoPlay
+                playsInline
+                loop
+                muted
+              />}
 						</div>
 
 						{isDesktop && (
@@ -175,11 +192,11 @@ export function TypesCards() {
 							/>
 						)}
 						{!isDesktop && (
-							<img
-								className={classes.henriMainImage}
-								src={HenriMorphDesktop}
-								alt='henri morph'
-							/>
+              <img
+                className={classes.henriMainImage}
+                src={HenriMorphDesktop}
+                alt='henri morph'
+              />
 						)}
 					</div>
 				</div>

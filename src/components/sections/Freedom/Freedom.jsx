@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 
 import Title from '../../common/Title/Title';
@@ -16,13 +16,19 @@ import ThirdLine from './components/ThirdLine/ThirdLine';
 
 import { media } from 'utils/media';
 import { useWindowSize } from 'hooks/useWindowDimensions';
+import { useLazyBackgroundLoad } from 'hooks/useLazyBackgroundLoad';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import freedomBackgroundImg from 'assets/images/freedom-desktop.png';
 
 export const Freedom = () => {
 
 	const isDesktop = useWindowWidth(1024);
+
+  const refDivBackground = useRef();
+  const backgroundImg = isDesktop && freedomBackgroundImg;
+	const urlBackground = useLazyBackgroundLoad(backgroundImg, refDivBackground);
 
 	const list = [
 		{
@@ -93,7 +99,7 @@ export const Freedom = () => {
   const GreenText1 = motion(GreenText);
 
 	return (
-		<div className={classes.container}>
+		<div className={classes.container} ref={refDivBackground} style={{backgroundImage: `url(${urlBackground})`}}>
 			<div className={classes.topContent}>
 				{isDesktop ? <DesktopSplashes/> : <MobileSplashes/>}
 				<div className={classes.content}>

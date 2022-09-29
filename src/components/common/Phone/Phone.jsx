@@ -8,8 +8,8 @@ const imgs = [cleaningPhone, eatPphone, playPhone, restPhone];
 
 export const Phone = ({ idx, classname, ...props }) => {
 	return (
-		<img className={classes.phoneItem} {...props} src={imgs[idx - 1]} alt='slide' />
-	);
+    <img className={classes.phoneItem} {...props} src={imgs[idx - 1]} alt='slide' />
+  );
 };
 
 export default Phone;

@@ -58,9 +58,6 @@ export const LikeHuman = () => {
   const pargText =
     'Metamorph is an open-world exploration, NFT creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and Android in 2023. Play-to-earn in a graphically-rich sci-fi adventure and life builder that allows you to feel the life inside the game.';
 
-  const GreenText1 = motion(GreenText);
-  const GreenText2 = motion(GreenText);
-
   const animFromRight = {
     initial: {
       x: 200,
@@ -164,8 +161,8 @@ export const LikeHuman = () => {
             <motion.span {...animFromRight}>it&apos;s{'\u00A0'}</motion.span>
             <motion.span {...animFromRight}>just{'\u00A0'}</motion.span>
             <motion.span {...animFromRight}>like{'\u00A0'}</motion.span>
-            <GreenText1 {...animFromRight}>a{'\u00A0'}</GreenText1>
-            <GreenText2 {...animFromRight}>human</GreenText2>
+            <motion.span {...animFromRight} className={classes.greenText}>a{'\u00A0'}</motion.span>
+            <motion.span {...animFromRight} className={classes.greenText}>human</motion.span>
           </Title>
         </motion.div>}
 
@@ -183,8 +180,8 @@ export const LikeHuman = () => {
             <motion.span {...animFromDown}>it&apos;s{'\u00A0'}</motion.span>
             <motion.span {...animFromDown}>just{'\u00A0'}</motion.span>
             <motion.span {...animFromDown}>like{'\u00A0'}</motion.span>
-            <GreenText1 {...animFromDown}>a{'\u00A0'}</GreenText1>
-            <GreenText2 {...animFromDown}>human</GreenText2>
+            <motion.span {...animFromDown} className={classes.greenText}>a{'\u00A0'}</motion.span>
+            <motion.span {...animFromDown} className={classes.greenText}>human</motion.span>
           </Title>
         </motion.div>}
       </div>

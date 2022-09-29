@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import WhiteTitle from "../../common/WhiteTitle/WhiteTitle";
 import Member from "./components/Member/Member";
 
@@ -8,6 +9,12 @@ import JonasDesktop from 'assets/images/jonas-desktop.png';
 
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
+
+import teamBackgroundPng from "assets/images/team.png";
+import teamMainBackgroundPng from "assets/images/teamMain.png";
+
+import { useLazyBackgroundLoad } from 'hooks/useLazyBackgroundLoad';
+
 
 export const Wizard = () => {
 	const isDesktop = useWindowWidth(1024);
@@ -35,53 +42,77 @@ export const Wizard = () => {
       ),
     },
   ];
+
+  const refDivBackground = useRef();
+	const urlBackground = useLazyBackgroundLoad(teamBackgroundPng, refDivBackground);
+
+  const refDivTeamMainBackground = useRef();
+	const urlBackgroundTeamMain = useLazyBackgroundLoad(teamMainBackgroundPng, refDivBackground);
+
   return (
-    <>
-      <div className={classes.titleWrapper}>
-        <WhiteTitle classname={classes.title} title='wizard team'>
-          {!isDesktop &&
-            <p className={classes.mobileMembers}>24<span className={classes.mobileMembersText}>members</span></p>
-          }
-        </WhiteTitle>
-      </div>
-      {
-        isDesktop ? <div className={classes.table}>
-          <div className={classes.members}>
-            {members.map(({name, position, image, text, top}) => (
-              <Member
-                key={name}
-                style={top}
-                name={name}
-                position={position}
-                image={image}
-                text={text}
-              />
-            ))}
-          </div>
-          <div className={classes.secondBlock}>
-            <div className={classes.membersMobile}>
-              <h4 className={classes.membersAmount}>24 <span className={classes.membersText}>members</span></h4>
-              <p>The game offers 2 experience scenarios based on the starting Morph ID card a player chooses.</p>
-            </div>
-            <div className={classes.team}>
-              <div className={classes.photo}/>
-            </div>
-          </div>
-        </div> : <div className={classes.members}>
-          {members.map(({name, position, image, text, top}) => (
-            <Member
-              key={name}
-              style={top}
-              name={name}
-              position={position}
-              image={image}
-              text={text}
-            />
-          ))}
-        </div>
-      }
-    </>
-  );
+		<>
+			<div className={classes.titleWrapper}>
+				<WhiteTitle classname={classes.title} title='wizard team'>
+					{!isDesktop && (
+						<p className={classes.mobileMembers}>
+							24<span className={classes.mobileMembersText}>members</span>
+						</p>
+					)}
+				</WhiteTitle>
+			</div>
+			{isDesktop ? (
+				<div className={classes.table}>
+					<div className={classes.members}>
+						{members.map(({ name, position, image, text, top }) => (
+							<Member
+								key={name}
+								style={top}
+								name={name}
+								position={position}
+								image={image}
+								text={text}
+							/>
+						))}
+					</div>
+					<div className={classes.secondBlock}>
+						<div className={classes.membersMobile}>
+							<h4 className={classes.membersAmount}>
+								24 <span className={classes.membersText}>members</span>
+							</h4>
+							<p>
+								The game offers 2 experience scenarios based on the starting
+								Morph ID card a player chooses.
+							</p>
+						</div>
+						<div
+							className={classes.team}
+							ref={refDivBackground}
+							style={{ backgroundImage: `url(${urlBackground})` }}
+						>
+							<div
+								className={classes.photo}
+								ref={refDivTeamMainBackground}
+								style={{ backgroundImage: `url(${urlBackgroundTeamMain})` }}
+							/>
+						</div>
+					</div>
+				</div>
+			) : (
+				<div className={classes.members}>
+					{members.map(({ name, position, image, text, top }) => (
+						<Member
+							key={name}
+							style={top}
+							name={name}
+							position={position}
+							image={image}
+							text={text}
+						/>
+					))}
+				</div>
+			)}
+		</>
+	);
 };
 
 export default Wizard;

@@ -9,6 +9,8 @@ import ComparingCards from 'assets/video/comp.video.mp4';
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import Column from './components/Column/Column';
+import LazyLoad from 'react-lazy-load';
+import { offset } from 'utils/lazyload';
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
@@ -86,7 +88,16 @@ export const Earn = () => {
 		<>
 			<div className={classes.container}>
 				{!isDesktop && (
-					<video className={classes.coin} src={CoinVideo} autoPlay loop muted playsInline/>
+					<LazyLoad offset={offset}>
+						<video
+							className={classes.coin}
+							src={CoinVideo}
+							autoPlay
+							loop
+							muted
+							playsInline
+						/>
+					</LazyLoad>
 				)}
 				<div className={classes.wrapper}>
 					<div className={classes.contentWrapper}>
@@ -118,16 +129,18 @@ export const Earn = () => {
 							</Paragraph>
 						</div>
 						{isDesktop && (
-							<motion.div{...animFromRight}>
-								<video
-									className={classes.coin}
-									src={CoinVideo}
-									autoPlay
-									loop
-									playsInline
-									muted
-								/>
-							</motion.div>
+              <LazyLoad offset={offset}>
+                <motion.div {...animFromRight}>
+                  <video
+                    className={classes.coin}
+                    src={CoinVideo}
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
+                  />
+                </motion.div>
+              </LazyLoad>
 						)}
 					</div>
 					{
@@ -139,14 +152,18 @@ export const Earn = () => {
 								<Accordion key={i} title={title} subtitle={subtitle} />
 							))}
 					</div>
-					{!isDesktop && <video
-            className={classes.comparingVideo}
-            src={ComparingCards}
-            autoPlay
-            playsInline
-            loop
-            muted
-          />}
+					{!isDesktop && (
+						<LazyLoad offset={offset}>
+							<video
+								className={classes.comparingVideo}
+								src={ComparingCards}
+								autoPlay
+								playsInline
+								loop
+								muted
+							/>
+						</LazyLoad>
+					)}
 				</div>
 			</div>
 			{isDesktop && (
