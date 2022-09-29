@@ -16,8 +16,8 @@ const mapGraphic = (precent, isEternal) => {
 	let i = 0;
 	while (i < 25) {
 		i <= countActiveSticks
-			? arrSticks.push(<Stick key={i} isEternal={isEternal} />) // fill color stick
-			: arrSticks.push(<Stick key={i} isEmpty  />); // empty stick
+			? arrSticks.push(<Stick key={i} isEternal={isEternal} idx={i} />) // fill color stick
+			: arrSticks.push(<Stick key={i} isEmpty idx={i}  />); // empty stick
 		i++;
 	}
 

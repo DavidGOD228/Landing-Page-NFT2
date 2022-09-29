@@ -20,13 +20,15 @@ function getRandomChar(length, isNaN) {
 	return result;
 }
 
-export function ItemCodeForMorph({ char, idx }) {
+export function ItemCodeForMorph({ char, idx, isStart }) {
 	const [countGeneration, setCountGeneration] = useState(0);
 	const [newChar, setNewChar] = useState(char);
 
 	useEffect(() => {
 		let handle;
 		function start() {
+      if(!isStart) return;
+
       if(countGeneration === idx) {
         clearTimeout(handle);
         setNewChar(char);
@@ -43,7 +45,7 @@ export function ItemCodeForMorph({ char, idx }) {
 		start();
 
 		return () => clearTimeout(handle);
-	}, [newChar, char, countGeneration, idx]);
+	}, [newChar, char, countGeneration, idx, isStart]);
 
 	return <span>{newChar}</span>;
 }

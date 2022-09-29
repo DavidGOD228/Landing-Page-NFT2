@@ -14,7 +14,6 @@
 
 .counterContainer {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
   width: fit-content
 }
@@ -28,6 +27,7 @@
 
 $wStick: 3.5px;
 .graphic {
+  overflow: hidden;
   position: relative;
   display: flex;
   gap: $wStick;
@@ -197,6 +197,11 @@ $wStick: 3.5px;
   &.empty {
     background: #343A3D;
   }
+}
+
+.skillContainer {
+  width: 100%;
+  justify-self: flex-start;
 }
 
 @media screen and (max-width: $l-desktop) {

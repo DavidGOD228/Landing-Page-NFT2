@@ -7,9 +7,11 @@ export const Title = ({
 	style,
 	classname,
 	classnameWrapper,
-  animWrapperContainer
+  animWrapperContainer,
+  isShadowAnim = true,
 }) => {
 	const isAfterBrd = isAfterBorder ? classes.isAfter : classes.isBefore;
+  const animShadow = isShadowAnim && classes.animShadow;
 
 	return (
 		<div className={`${classes.content} ${classnameWrapper}`}>
@@ -34,7 +36,7 @@ export const Title = ({
 				}}
 				viewport={{ once: true }}
 			/>
-			<div className={`${classes.shadowUnderLine} ${isAfterBrd}`} />
+			<div className={`${classes.shadowUnderLine} ${isAfterBrd} ${animShadow}`} />
 			<h2 style={style} className={`${classes.title} ${classname}`}>
 				{children}
 			</h2>

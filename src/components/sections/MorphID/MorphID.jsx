@@ -96,12 +96,14 @@ export const MorphId = () => {
           )}
         </div>
 
-        <div className={classes.description}>
-          {isDesktop && (
-            <motion.div {...animFromRight} className={classes.chineseText}>
-              變形 相同的代碼
-            </motion.div>
-          )}
+				<div className={classes.titleWrapper}>
+          <div className={classes.description}>
+            {isDesktop && (
+              <motion.div {...animFromRight} className={classes.chineseText}>
+                變形 相同的代碼
+              </motion.div>
+            )}
+          </div>
 
           <div className={classes.titleWrapper}>
             {/* Desktop  version */}
