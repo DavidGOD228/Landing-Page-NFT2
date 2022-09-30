@@ -12,7 +12,7 @@ import MihoMorphMobile from 'assets/images/miho-morph.png';
 import MihoID from 'assets/video/white_card.video.mp4';
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
 import HenriFull from 'assets/images/morphs/henrik-hail/body-henrik-hail.png'
-import HenriMorphDesktop from 'assets/images/henri-morph.png';
+import HenriMorphMobile from 'assets/images/henri-morph.png';
 import HenriID from 'assets/video/green_card.video.mp4';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { morphIDText } from 'data/morphID/text';
@@ -193,7 +193,7 @@ export function TypesCards() {
 						{!isTablet && (
               <img
                 className={classes.henriMainImage}
-                src={HenriMorphDesktop}
+                src={HenriMorphMobile}
                 alt='henri morph'
               />
 						)}
