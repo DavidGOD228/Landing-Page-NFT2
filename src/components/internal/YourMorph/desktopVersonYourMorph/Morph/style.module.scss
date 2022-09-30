@@ -8,11 +8,17 @@
 	grid-template-columns: fit-content(26%) auto 1fr;
 	gap: 25px;
 
-	padding: 0 120px;
+	padding: 0 120px 0 0;
 }
 
 @media screen and (max-width: $desktop) {
 	.morphsContainer {
     display: none;
 	}
+}
+
+.morphCardsWrapper {
+	display: flex;
+	align-items: center;
+	margin-top: 4.1vw;
 }

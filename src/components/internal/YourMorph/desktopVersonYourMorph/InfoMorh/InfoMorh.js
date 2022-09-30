@@ -5,14 +5,15 @@ import {
   AttrsDetails,
 } from "components";
 import classes from "./style.module.scss";
-import { motion, AnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence, useAnimationControls} from 'framer-motion';
 import LazyLoad from "react-lazy-load";
 import { offset } from 'utils/lazyload';
+import {useEffect} from "react";
 
 export function InfoMorh({morph}) {
   const {id, bodyImg, type, name, attributes} = morph;
   const importBodyImg = require("assets/images/morphs/" + bodyImg);
-
+  const controls = useAnimationControls()
   const initial = {
     y: 25,
 
@@ -54,6 +55,9 @@ export function InfoMorh({morph}) {
     viewport: {...viewport}
   }
 
+  useEffect(() => {
+    controls.start(animate)
+  }, [])
 
   return (
     <>
@@ -69,10 +73,10 @@ export function InfoMorh({morph}) {
                 ...initial,
                 scale: 0.9,
               }}
-              animate={animate}
               exit={exit}
               transition={transition}
               viewport={viewport}
+              animate={animate}
             />
           </AnimatePresence>
         </LazyLoad>
