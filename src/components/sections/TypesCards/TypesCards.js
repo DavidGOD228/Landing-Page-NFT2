@@ -135,7 +135,10 @@ export function TypesCards() {
 									playsInline
 									loop
 									muted
-								/>
+								>
+                  <source src={MihoIDWebm} type='video/webm' />
+                  <source src={MihoIDMp4} type='video/mp4' />
+                </motion.video>
 							)}
 							{!isTablet && (
 								<motion.div {...animFromDown}>
