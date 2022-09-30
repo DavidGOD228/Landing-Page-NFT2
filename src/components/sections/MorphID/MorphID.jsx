@@ -147,7 +147,7 @@ export const MorphId = () => {
                 }}
                 animWrapperContainer={{
                   whileInView: {
-                    height: '80%'
+                    height: '100%'
                   }
                 }}
                 isShadowAnim={false}

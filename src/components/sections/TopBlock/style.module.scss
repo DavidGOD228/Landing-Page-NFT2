@@ -125,8 +125,12 @@
   align-items: center;
   z-index: 5;
   position: absolute;
-  bottom: 15px;
+  
   width: 100%;
+
+  @media screen and (max-width: $l-mobile) {
+    bottom: -20vw;
+  }
 
   @media screen and (min-width: $desktop) {
     position: relative;
