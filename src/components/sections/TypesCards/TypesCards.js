@@ -25,7 +25,7 @@ import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
 
 export function TypesCards() {
-	const isDesktop = useWindowWidth(1024);
+	const isTablet = useWindowWidth(768);
 
 	const { width } = useWindowSize();
 
@@ -91,7 +91,7 @@ export function TypesCards() {
 			<GlobalContainer>
 				<div className={classes.containerTypesCards}>
 					<div className={classes.morphBlock}>
-						{isDesktop && (
+						{isTablet && (
 							<motion.img
 								key='miho-d'
 								className={classes.mihoMainImage}
@@ -100,7 +100,7 @@ export function TypesCards() {
 								{...animFromLeft}
 							/>
 						)}
-						{!isDesktop && (
+						{!isTablet && (
 							<img
 								className={classes.mihoMainImage}
 								src={MihoMorphMobile}
@@ -122,12 +122,12 @@ export function TypesCards() {
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
 								{paragraphAnimation(
-									isDesktop
+									isTablet
 										? morphIDText.classiqueDesktop
 										: morphIDText.classiqueMobile
 								)}
 							</Paragraph>
-							{isDesktop && (
+							{isTablet && (
 								<motion.video
 									{...animFromDown}
 									className={classes.idImage}
@@ -137,7 +137,7 @@ export function TypesCards() {
 									muted
 								/>
 							)}
-							{!isDesktop && (
+							{!isTablet && (
 								<motion.div {...animFromDown}>
 									<video
 										className={classes.idImage}
@@ -168,12 +168,12 @@ export function TypesCards() {
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.henriText}`}>
 								{paragraphAnimation(
-									isDesktop
+									isTablet
 										? morphIDText.eternalDesktop
 										: morphIDText.eternalMobile
 								)}
 							</Paragraph>
-							{isDesktop && (
+							{isTablet && (
 								<motion.video
 									className={`${classes.idImage} ${classes.idImageHenri}`}
 									{...animFromDown}
@@ -186,7 +186,7 @@ export function TypesCards() {
 									<source src={HenriIDMp4} type='video/mp4' />
 								</motion.video>
 							)}
-							{!isDesktop && (
+							{!isTablet && (
 								<motion.div {...animFromDown}>
 									<video
 										className={`${classes.idImage} ${classes.idImageHenri}`}
@@ -203,7 +203,7 @@ export function TypesCards() {
 							)}
 						</div>
 
-						{isDesktop && (
+						{isTablet && (
 							<motion.img
 								key='henri-d'
 								className={classes.henriMainImage}
@@ -212,7 +212,7 @@ export function TypesCards() {
 								{...animFromRight}
 							/>
 						)}
-						{!isDesktop && (
+						{!isTablet && (
 							<img
 								className={classes.henriMainImage}
 								src={HenriMorphDesktop}

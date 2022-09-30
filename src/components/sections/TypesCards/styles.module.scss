@@ -3,7 +3,7 @@
 .wrapper {
   border-top: 1px solid #343A3D;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 768px) {
     border-bottom: 1px solid #343A3D;
   }
 }
@@ -11,7 +11,7 @@
 // common
 .containerTypesCards {
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -33,7 +33,7 @@
     padding: 75px 0 150px 0;
   }
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     align-items: center;
   }
 }
@@ -45,7 +45,7 @@
   color: #FFFFFF;
   margin-left: 16px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 768px) {
     font-size: 32px;
     line-height: 1;
     transform: translateY(10%);
@@ -64,7 +64,7 @@
   height: 352px;
   margin-top: 23px;
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     width: 100%;
     height: auto;
     max-width: 265px;
@@ -80,7 +80,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     display: grid;
     grid-template-rows: auto 25% auto;
     flex-direction: column;
@@ -90,12 +90,12 @@
 
 // Classique or Miho
 .classiqueParagraph,
-.eternalParagraph  {
+.eternalParagraph {
   display: flex;
   align-items: center;
 }
 
-.eternalParagraph  {
+.eternalParagraph {
   justify-content: flex-end;
 }
 
@@ -107,7 +107,7 @@
 .eternalBlock {
 
   margin-top: 64px;
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     margin-left: auto;
     margin-top: 0;
   }
@@ -139,7 +139,7 @@
 
 .mihoMainImage {
   order: 1;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 768px) {
     order: 0;
   }
 }
@@ -148,7 +148,7 @@
   width: 22px;
   height: 29px;
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     width: 32px;
     height: 42px;
   }
@@ -158,7 +158,7 @@
   width: 25.55px;
   height: 29px;
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     width: 37px;
     height: 42px;
   }
@@ -166,18 +166,18 @@
 
 .henriMainImage {
   order: -1;
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: 768px) {
     order: 0;
   }
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1300px) {
   .descr {
     width: 90%;
   }
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1300px) {
   .mihoMainImage,
   .henriMainImage {
     max-width: 20vw;
@@ -188,13 +188,47 @@
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .title {
     font-size: 2.6vw;
   }
 }
 
-@media screen and (max-width: $desktop){
+@media only screen and (min-width: 767px) and (max-width: 900px) {
+
+  .classiqueBorder {
+    width: 25px;
+    height: 35px;
+  }
+
+  .eternalBorder {
+    width: 30px;
+    height: 35px;
+  }
+
+  .contentBlock {
+    height: 550px;
+    grid-template-rows: auto 35% auto;
+  }
+
+  .descr {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .morphBlock:nth-child(1) {
+    padding: 50px 20px 50px 0;
+  }
+  .morphBlock:nth-child(2) {
+    padding: 50px 0 50px 20px;
+  }
+
+  .idImage {
+    max-width: 15vw
+  }
+}
+
+@media screen and (max-width: 767px) {
   .title {
     font-size: 20px;
   }
@@ -203,6 +237,11 @@
   .henriMainImage,
   .idImage {
     max-width: none;
+  }
+
+  .henriMainImage {
+    width: 214.65px;
+    height: 602px;
   }
 
   .eternalBlock {
@@ -214,14 +253,14 @@
     height: min-content;
     gap: 30px;
     justify-content: flex-start;
-  
-  
+
+
     &:nth-child(1) {
       border-right: 1px solid #343A3D;
       padding: 0 0 0 20px;
       margin-top: 40px;
     }
-  
+
     &:nth-child(2) {
       padding: 0 20px 0 0;
     }

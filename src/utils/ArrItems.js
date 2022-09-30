@@ -90,12 +90,10 @@ const arrImg = [
   '89.png',
   '90.png',
   '91.png',
-  '92.png',
   '93.png',
   '94.png',
   '95.png',
   '96.png',
-  '97.png',
   '98.png',
   '99.png',
   '100.png',
@@ -112,11 +110,19 @@ const arrImg = [
   '111.png',
   '112.png',
 ];
+export const getRandomElement = () => Math.round(Math.random() * (getItemLength() - 1))
 const getImg = () => Math.round(Math.random() * (arrImg.length - 1));
 
-export const getRandomImg = () => arrImg[getImg()];
+const getRandomImg = () => arrImg[getImg()];
 
-export const arrItems = () => {
+export const getUniqueImg = (arr) => {
+  while (true) {
+    let randomImage = getRandomImg()
+    if(!arr.includes(randomImage)) return randomImage
+  }
+}
+
+const getItemLength = () => {
   const width = window.screen.width;
   let itemsLength = 50
   if (width > 655 && width <= 1200) {
@@ -125,19 +131,20 @@ export const arrItems = () => {
     itemsLength = 30
   } else if (width > 422 && width <= 500) {
     itemsLength = 25
-  }
-  else if (width > 348 && width <= 422) {
+  } else if (width > 348 && width <= 422) {
     itemsLength = 18
-  }
-  else if (width <= 348) {
+  } else if (width <= 348) {
     itemsLength = 15
   }
+  return itemsLength
+}
 
-  const arr = [];
-  let idx = 0;
-  while (idx < itemsLength) {
-    arr.push(getRandomImg());
-    ++idx;
+export const arrItems = () => {
+  const itemsLength = getItemLength()
+
+  const arr = new Set()
+  while (arr.size !== itemsLength) {
+    arr.add(getRandomImg());
   }
-  return arr;
+  return [...arr];
 };
