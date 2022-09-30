@@ -163,6 +163,31 @@ export const MorphsUnique = () => {
                   </LazyLoad>
 								)}
 
+                {!isDesktop && (
+                  <LazyLoad offset={offset}>
+                    <motion.img
+                      className={`${classes.skillImg} ${classes.fish}`}
+                      src={FishNotActive}
+                      alt='skill'
+                      initial='hidden'
+                      variants={{
+                        visible: {
+                          scale: 1,
+                          opacity: 1
+                        },
+                        hidden: { opacity: 0, scale: 0.9 }
+                      }}
+                      whileInView='visible'
+                      transition={{
+                        duration: 0.3,
+                        ease: 'easeInOut',
+                        delay: 0.9
+                      }}
+                      viewport={{ once: true }}
+                    />
+                  </LazyLoad>
+								)}
+
 								{/* active img */}
 								{isDesktop && (
                   <LazyLoad offset={offset}>
@@ -199,24 +224,24 @@ export const MorphsUnique = () => {
                       initial={{
                         scale: 0.9,
                         opacity: 0,
-                        x: '-5%',
-                        y: '-12%%'
+                        y: '-6px',
+                        x: '-3.5px'
                       }}
                       whileInView={{
-                        scale: 1,
+                        scale: 1.05,
                         opacity: 1
                       }}
                       transition={{
                         duration: 0.3,
                         ease: 'easeInOut',
-                        delay: 0.9
+                        delay: 2.1
                       }}
                       viewport={{ once: true }}
                     />
                   </LazyLoad>
 								)}
 
-								<motion.div
+                {!isDesktop && (<motion.div
 									className={classes.skillTitleMobile}
 									initial={{
 										scale: 0.9,
@@ -231,12 +256,12 @@ export const MorphsUnique = () => {
 									transition={{
 										duration: 0.3,
 										ease: 'easeInOut',
-										delay: 1.2
+										delay: 2.4
 									}}
 									viewport={{ once: true }}
 								>
 									Agressive
-								</motion.div>
+								</motion.div>)}
 							</div>
 
               <LazyLoad offset={offset}>

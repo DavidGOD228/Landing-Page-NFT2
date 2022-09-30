@@ -14,7 +14,6 @@ import Paragraph from '../../common/Paragraph/Paragraph';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 
-import mobileBackgroundImg from 'assets/images/personalize.png';
 import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./MobileSplashes/MobileSplashes";
 
@@ -133,21 +132,21 @@ export const Personalize = () => {
 							justifyContent: 'flex-start'
 						}}
 					>
-						<motion.span key={Math.random()} {...animFromDown}>
+						<motion.span {...animFromDown}>
 							Personalize{'\u00A0'}
 						</motion.span>
-						<GreenText1 key={Math.random()} {...animFromDown}>
+						<motion.span className={classes.greenText} {...animFromDown}>
 							and{'\u00A0'}
-						</GreenText1>
-						<GreenText1 key={Math.random()} {...animFromDown}>
+						</motion.span>
+						<motion.span className={classes.greenText} {...animFromDown}>
 							make{'\u00A0'}
-						</GreenText1>
-						<GreenText1 key={Math.random()} {...animFromDown}>
+						</motion.span>
+						<motion.span className={classes.greenText} {...animFromDown}>
 							it{'\u00A0'}
-						</GreenText1>
-						<GreenText1 key={Math.random()} {...animFromDown}>
+						</motion.span>
+						<motion.span className={classes.greenText} {...animFromDown}>
 							unique
-						</GreenText1>
+						</motion.span>
 					</Title>
 					<p className={classes.personalizeParagraph}>
 						{paragraphAnimation(
