@@ -1,3 +1,5 @@
+@import '~assets/styles/media.scss';
+
 .loaderWrapper {
   position: absolute;
   z-index: 9999;
@@ -74,4 +76,34 @@ $gradient: 90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%;
 
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4); /* width and color */
   color: transparent;
+}
+
+@media screen and (max-width: $tablet) {
+  .loaderTitleBlock {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 23vw;
+  }
+
+  .loaderWrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .loaderTitleImg {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .counterLoader {
+    position: relative;
+    text-align: center;
+
+
+    font-size: 21vw;
+
+    right: 0;
+    bottom: 0;
+  }
 }
