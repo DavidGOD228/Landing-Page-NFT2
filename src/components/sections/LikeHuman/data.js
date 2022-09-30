@@ -68,49 +68,36 @@ export const tableData = [
     id: 1,
     icon: <Cutlery width={26} height={36} color='#fff'/>,
     title: 'HUNGER',
-    subtitle: <Paragraph className={classes.columnSubtitle}>Hunger indicates that Morph is full. To
-      feed
-      Morph, it must interact with refrigerators, food markets, bars, restaurants, or anything else
-      that can allow you to feed yourself in real life.</Paragraph>,
+    subtitle: 'Hunger indicates that Morph is full. To feed Morph, it must interact with refrigerators, food markets, bars, restaurants, or anything elsethat can allow you to feed yourself in real life.',
   },
   {
     id: 2,
     icon: <Communication width={36.43} height={34} color='#fff'/>,
     title: 'COMMUNICATION',
-    subtitle: <Paragraph className={classes.columnSubtitle}>Social relations and any interaction with
-      other Morphs increases the level of this indicator, while it will decrease in case of betrayal
-      or quarrels.</Paragraph>
+    subtitle: 'Social relations and any interaction with other Morphs increases the level of this indicator, while it will decrease in case of betrayal or quarrels.'
   },
   {
     id: 3,
     icon: <Energy width={18} height={36} color='#fff'/>,
     title: 'ENERGY',
-    subtitle: <Paragraph className={classes.columnSubtitle}>Indicates that Morph is tired, if it reaches
-      zero, Morph can sleep. To meet this need, Morph must rest on the sofa or
-      bed.</Paragraph>
+    subtitle: 'Indicates that Morph is tired, if it reaches zero, Morph can sleep. To meet this need, Morph must rest on the sofa or bed.'
   },
   {
     id: 4,
     icon: <Eco width={40} height={27} color='#fff'/>,
     title: 'HUNGER',
-    subtitle: <Paragraph className={classes.columnSubtitle}>Indicates anything related to the hygiene of a
-      Morph. A low value leads to difficulties in social relationships. To meet this need,
-      Morph must interact with the sink, tub or shower.</Paragraph>
+    subtitle: 'Indicates anything related to the hygiene of a Morph. A low value leads to difficulties in social relationships. To meet this need, Morph must interact with the sink, tub or shower.'
   },
   {
     id: 5,
     icon: <Mask width={32} height={36} color='#fff'/>,
     title: 'SPIRIT',
-    subtitle: <Paragraph className={classes.columnSubtitle}>Morph may like different activities, depending
-      on their nature: watching TV, playing a console, reading a book, listening to
-      music.</Paragraph>
+    subtitle: 'Morph may like different activities, depending on their nature: watching TV, playing a console, reading a book, listening to music.'
   },
   {
     id: 6,
     icon: <Shower width={31} height={38} color='#fff'/>,
     title: 'hygiene',
-    subtitle: <Paragraph className={classes.columnSubtitle}>A well-kept and clean home increases this
-      indicator, while accumulated waste, moldy foods, and faulty appliances reduce it. Some
-      furniture and items (usually more expensive) can increase this indicator.</Paragraph>
+    subtitle: 'A well-kept and clean home increases this indicator, while accumulated waste, moldy foods, and faulty appliances reduce it. Some furniture and items (usually more expensive) can increase this indicator.'
   },
 ]

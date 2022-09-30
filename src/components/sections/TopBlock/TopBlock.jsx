@@ -53,7 +53,7 @@ export const TopBlock = () => {
                 isDesktop ? <div className={classes.playBtn} onClick={() => setVideoOpen(true)}>
                   <Play width={isDesktop ? 20 : 15} height={isDesktop ? 25 : 23} color='#fff'/>
                   <p className={classes.playText}>Watch Teaser</p>
-                </div> : <LazyLoad offset={offset}><img src={MetaMorphMobile} alt=""/></LazyLoad>
+                </div> : <LazyLoad offset={offset}><img className={classes.metaMorphMobile} src={MetaMorphMobile} alt=""/></LazyLoad>
               }
               {
                 isDesktop && <div className={classes.builtOnContainer}>
