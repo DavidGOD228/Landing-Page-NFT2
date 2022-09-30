@@ -27,6 +27,8 @@ function App() {
 
   const [isLoading, setIsloading] = useState(true);
 
+  return <Loader setIsloading={setIsloading} />
+
   useEffect(() => {
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
