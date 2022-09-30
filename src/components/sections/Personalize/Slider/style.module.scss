@@ -5,49 +5,216 @@
 	position: relative;
 	display: flex;
 	overflow: hidden;
+  z-index: 5;
+
+  width: 28vw;
+
+  &::after {
+    display: block;
+    content: "";
+
+    position: absolute;
+    right: -1px;
+
+    height: 100%;
+    width: 50%;
+
+    z-index: 999;
+
+    // generator: https://cssgradient.io/
+    background: linear-gradient(
+      90deg,
+      rgba(14, 14, 15, 0) 0%,
+      rgba(14, 14, 15, 0.5) 50%,
+      rgba(14, 14, 15, 1) 100%
+	  );
+  }
 }
 
-.shadow {
-	position: absolute;
-	right: -1px;
-
-	height: 100%;
-	width: 25%;
-
-  z-index: 999;
-
-  // generator: https://cssgradient.io/
-	background: linear-gradient(
-		90deg,
-		rgba(14, 14, 15, 0) 0%,
-		rgba(14, 14, 15, 0.5) 50%,
-		rgba(14, 14, 15, 1) 100%
-	);
+@media screen and (max-width: $l-desktop) {
+  .slider {
+    width: 35vw;
+    transform: translateX(-2.5vw);
+  
+    &::after {
+      width: 50%;
+    }
+  }
 }
+
+@media screen and (max-width: 1340px) {
+  .slider {
+    width: 30vw;
+    transform: translateX(-1.5vw);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .slider {
+    width: 34vw;
+    transform: translateX(-8.5vw);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .slider {
+    width: 34vw;
+    transform: translateX(-8.5vw);
+  }
+}
+
 
 @media screen and (max-width: $m-desktop) {
   .slider  {
-    width: 50%;
+    width: 45%;
     left: 50%;
     transform: translateX(calc(-270px / 2));
+
+    &::after {
+      width: 150%;
+
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.25) 65%,
+        rgba(14, 14, 15, 0.75) 80%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .slider  {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .slider  {
+    width: 51%;
+    height: 100%;
+
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.15) 70%,
+        rgba(14, 14, 15, 0.6) 80%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
   }
 }
 
 @media screen and (max-width: $tablet) {
   .slider  {
-    width: 65%;
+    width: 67.5%;
+
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.1) 70%,
+        rgba(14, 14, 15, 0.65) 80%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .slider  {
+    width: 75%;
+
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.05) 67%,
+        rgba(14, 14, 15, 0.80) 70%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .slider  {
+    width: 75%;
+
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.1) 65%,
+        rgba(14, 14, 15, 0.8) 80%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
   }
 }
 
 @media screen and (max-width: $s-tablet) {
   .slider  {
-    width: 70%;
+    width: 77%;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .slider  {
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.1) 75%,
+        rgba(14, 14, 15, 0.7) 80%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .slider  {
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.1) 75%,
+        rgba(14, 14, 15, 0.7) 80%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .slider  {
+    &::after {
+      // generator: https://cssgradient.io/
+      background: linear-gradient(
+        90deg,
+        rgba(14, 14, 15, 0) 0%,
+        rgba(14, 14, 15, 0.1) 75%,
+        rgba(14, 14, 15, 0.75) 90%,
+        rgba(14, 14, 15, 1) 100%
+      );
+    }
   }
 }
 
 @media screen and (max-width: $m-mobile) {
   .slider  {
-    width: 80%;
+    width: 83%;
   }
 }
 

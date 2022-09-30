@@ -19,13 +19,15 @@ const Slider = ({ activeSlide, className }) => {
           opacity: 0, 
           scale: 0.85,
           width: 0,
-          marginRight: 0
+          marginRight: 0,
+          zIndex: idx
         }
 
         // if slide is current or next
         if(idx === activeSlide) return {
           opacity: 1, 
           scale: 1,
+          zIndex: 1000,
           transitionEnd: {
             display: 'hidden'
           }
@@ -35,6 +37,7 @@ const Slider = ({ activeSlide, className }) => {
         duration: 1,
         ease: 'easeInOut'
       }}
+      viewport={{ once: true }}
     >
       <Phone idx={idx} />
     </motion.div>;
@@ -42,13 +45,13 @@ const Slider = ({ activeSlide, className }) => {
 
   return (
     <div className={`${classes.slider} ${className}`}>
-      {activeSlide !== 4 ? <div className={classes.shadow} /> : null}
-        <AnimatePresence>
-          {renderSLide(1)}
-          {renderSLide(2)}
-          {renderSLide(3)}
-          {renderSLide(4)}
-        </AnimatePresence>
+      {/* {activeSlide !== 4 ? <div className={classes.shadow} /> : null} */}
+      <AnimatePresence>
+        {renderSLide(1)}
+        {renderSLide(2)}
+        {renderSLide(3)}
+        {renderSLide(4)}
+      </AnimatePresence>
     </div>
   )
 }
