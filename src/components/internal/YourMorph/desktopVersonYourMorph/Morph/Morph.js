@@ -1,8 +1,9 @@
 import {useState} from "react";
-import { CardItem, InfoMorh } from "components";
+import {CardItem, InfoMorh} from "components";
 
 import classes from "./style.module.scss";
 import {morphsData} from "data/morphs/data";
+import HiddenCards from "../HiddenCards/HiddenCards";
 
 export function Morph() {
   const [morph, setMorph] = useState(morphsData[0]);
@@ -23,8 +24,11 @@ export function Morph() {
 
   return (
     <div className={classes.morphsContainer}>
-      <div className={classes.morphsCards}>{mapCards}</div>
-      <InfoMorh morph={morph} />
+      <div className={classes.morphCardsWrapper}>
+        <HiddenCards/>
+        <div className={classes.morphsCards}>{mapCards}</div>
+      </div>
+      <InfoMorh morph={morph}/>
     </div>
   );
 }
