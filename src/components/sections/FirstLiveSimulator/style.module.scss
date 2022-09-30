@@ -237,10 +237,7 @@
     @include prtnlSclScrnSize(max-width, 130);
     right: 0;
   }
-}
-
-@media screen and (max-width: $s-tablet) {
-  .flsDesktopContainer {
-    //display: none;
+  .grayLine img {
+    top: 6%;
   }
 }
