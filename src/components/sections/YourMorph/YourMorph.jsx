@@ -34,8 +34,6 @@ export const YourMorph = () => {
 		viewport: { once: true }
 	};
 
-	const GreenText1 = motion(GreenText);
-
 	const textParg =
 		'Metamorph è un avventura dinamica giocabile in terza persona di genere life simulator ambientato nel mondo virtuale Fata Morgana. Il personaggio giocabile chiamatosi Surrogate è ampliamente personalizzabile con atributi';
 
@@ -50,7 +48,7 @@ export const YourMorph = () => {
 				>
 					<motion.span {...animFromLeft}>choose your</motion.span>
 					<br />
-					<GreenText1 {...animFromLeft}>Morph id</GreenText1>
+					<motion.span className={classes.greenText} {...animFromLeft}>Morph id</motion.span>
 				</Title>
 				<Paragraph className={classes.titleRightSide}>
 					{paragraphAnimationFromRight(textParg)}

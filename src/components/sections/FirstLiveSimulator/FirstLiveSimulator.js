@@ -9,9 +9,12 @@ import toiletVideo from 'assets/video/toilet.video.mp4';
 import bedVideo from 'assets/video/bed.video.mp4';
 
 import SmileDesktop from 'assets/images/smileDesktop.svg';
+
 import MorphDesktopMp4 from 'assets/video/morphDesktop.video.mp4';
 import MorphDesktopWebm from 'assets/video/morphDesktop.video.webm';
+
 import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
+import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
 
 import classes from './style.module.scss';
 
@@ -48,8 +51,11 @@ export function FirstLiveSimulator() {
           autoPlay
           muted
           playsInline
+          preload='auto'
+          poster='https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300'
         >
           <source src={MorphMobileMp4} type="video/mp4" />
+          <source src={MorphMobileWebm} type="video/webm" />
         </video>
       </LazyLoad>}
 			

@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 
 import { Title, GreenText, Paragraph, Accordion } from 'components';
 
-import CoinVideo from "assets/video/coin.video.mp4";
-import ComparingCards from 'assets/video/comp.video.mp4';
+import CoinVideoMp4 from "assets/video/coin.video.mp4";
+import CoinVideoWebm from "assets/video/coin.video.webm";
+
+import ComparingCardsMp4 from 'assets/video/comp.video.mp4';
+import ComparingCardsWebm from 'assets/video/comp.video.webm';
 
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
@@ -91,12 +94,14 @@ export const Earn = () => {
 					<LazyLoad offset={offset}>
 						<video
 							className={classes.coin}
-							src={CoinVideo}
 							autoPlay
 							loop
 							muted
 							playsInline
-						/>
+						>
+              <source src={CoinVideoMp4} type="video/mp4" />
+              <source src={CoinVideoWebm} type="video/webm" />
+            </video>
 					</LazyLoad>
 				)}
 				<div className={classes.wrapper}>
@@ -133,12 +138,14 @@ export const Earn = () => {
                 <motion.div {...animFromRight}>
                   <video
                     className={classes.coin}
-                    src={CoinVideo}
                     autoPlay
                     loop
                     playsInline
                     muted
-                  />
+                  >
+                    <source src={CoinVideoMp4} type="video/mp4" />
+                    <source src={CoinVideoWebm} type="video/webm" />
+                  </video>
                 </motion.div>
               </LazyLoad>
 						)}
@@ -156,12 +163,14 @@ export const Earn = () => {
 						<LazyLoad offset={offset}>
 							<video
 								className={classes.comparingVideo}
-								src={ComparingCards}
 								autoPlay
 								playsInline
 								loop
 								muted
-							/>
+							>
+                <source src={ComparingCardsMp4} type="video/mp4" />
+                <source src={ComparingCardsWebm} type="video/webm" />
+              </video>
 						</LazyLoad>
 					)}
 				</div>
