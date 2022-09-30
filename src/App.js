@@ -42,7 +42,7 @@ function App() {
     }
 
   }, [isLoading]);
-  return <Loader setIsloading={setIsloading} />
+
 	return (
 		<>
 			{isLoading && <Loader setIsloading={setIsloading} />}
