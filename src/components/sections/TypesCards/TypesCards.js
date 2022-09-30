@@ -19,10 +19,9 @@ import { morphIDText } from 'data/morphID/text';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export function TypesCards() {
-	const isDesktop = useWindowWidth(1024);
+	const isTablet = useWindowWidth(768);
 
 	const { width } = useWindowSize();
 
@@ -88,7 +87,7 @@ export function TypesCards() {
 			<GlobalContainer>
 				<div className={classes.containerTypesCards}>
 					<div className={classes.morphBlock}>
-						{isDesktop && (
+						{isTablet && (
 							<motion.img
 								key='miho-d'
 								className={classes.mihoMainImage}
@@ -97,7 +96,7 @@ export function TypesCards() {
 								{...animFromLeft}
 							/>
 						)}
-						{!isDesktop && (
+						{!isTablet && (
               <img
                 className={classes.mihoMainImage} 
                 src={MihoMorphMobile}
@@ -119,12 +118,12 @@ export function TypesCards() {
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
 								{paragraphAnimation(
-									isDesktop
+									isTablet
 										? morphIDText.classiqueDesktop
 										: morphIDText.classiqueMobile
 								)}
 							</Paragraph>
-              {isDesktop && <motion.video
+              {isTablet && <motion.video
                 {...animFromDown}
                 className={classes.idImage}
                 src={MihoID}
@@ -133,7 +132,7 @@ export function TypesCards() {
                 loop
                 muted
               />}
-              {!isDesktop && <video
+              {!isTablet && <video
                 className={classes.idImage}
                 src={MihoID}
                 autoPlay
@@ -158,12 +157,12 @@ export function TypesCards() {
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.henriText}`}>
 								{paragraphAnimation(
-									isDesktop
+									isTablet
 										? morphIDText.eternalDesktop
 										: morphIDText.eternalMobile
 								)}
 							</Paragraph>
-              {isDesktop && <motion.video
+              {isTablet && <motion.video
                 className={`${classes.idImage} ${classes.idImageHenri}`}
                 {...animFromDown}
                 src={HenriID}
@@ -172,7 +171,7 @@ export function TypesCards() {
                 loop
                 muted
               />}
-              {!isDesktop && <video
+              {!isTablet && <video
                 className={`${classes.idImage} ${classes.idImageHenri}`}
                 src={HenriID}
                 autoPlay
@@ -182,7 +181,7 @@ export function TypesCards() {
               />}
 						</div>
 
-						{isDesktop && (
+						{isTablet && (
 							<motion.img
 								key='henri-d'
 								className={classes.henriMainImage}
@@ -191,7 +190,7 @@ export function TypesCards() {
 								{...animFromRight}
 							/>
 						)}
-						{!isDesktop && (
+						{!isTablet && (
               <img
                 className={classes.henriMainImage}
                 src={HenriMorphDesktop}
