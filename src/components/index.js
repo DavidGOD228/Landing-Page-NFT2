@@ -47,5 +47,10 @@ export * from './internal/YourMorph/desktopVersonYourMorph/SkillImg/SkillImg';
 export * from './internal/YourMorph/mobileVersionYourMorph/MorphMobile/MorphMobile';
 export * from './internal/YourMorph/mobileVersionYourMorph/InfoMorphMobile/InfoMorphMobile';
 
+// section FataMorgana
+export * from './sections/FataMorgana/FataMorgana';
+export * from './sections/FataMorgana/FataMorganaDesktop';
+export * from './sections/FataMorgana/FataMorganaMobile';
+
 // Roadmap(mobile)
 export * from './internal/RoadmapMobile/RoadmapMobile';
