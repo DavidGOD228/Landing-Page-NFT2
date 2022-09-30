@@ -99,8 +99,8 @@ export const Earn = () => {
 							muted
 							playsInline
 						>
-              <source src={CoinVideoMp4} type="video/mp4" />
               <source src={CoinVideoWebm} type="video/webm" />
+              <source src={CoinVideoMp4} type="video/mp4" />
             </video>
 					</LazyLoad>
 				)}
@@ -143,8 +143,8 @@ export const Earn = () => {
                     playsInline
                     muted
                   >
-                    <source src={CoinVideoMp4} type="video/mp4" />
                     <source src={CoinVideoWebm} type="video/webm" />
+                    <source src={CoinVideoMp4} type="video/mp4" />
                   </video>
                 </motion.div>
               </LazyLoad>
