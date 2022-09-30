@@ -3,8 +3,8 @@ import LazyLoad from 'react-lazy-load';
 
 import {Title, Paragraph, GreenText} from 'components';
 
-import ComparingCardsWebm from 'assets/video/green_card.video.webm';
-import ComparingCardsMp4 from 'assets/video/green_card.video.mp4';
+import ComparingCardsWebm from 'assets/video/comp.video.webm';
+import ComparingCardsMp4 from 'assets/video/comp.video.mp4';
 
 import {paragraphAnimationFromRight} from 'farmerMotionsAnimations/paragraphAnimation';
 

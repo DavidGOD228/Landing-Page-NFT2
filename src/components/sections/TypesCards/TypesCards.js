@@ -9,11 +9,15 @@ import second from 'assets/images/second.svg';
 import MihoMorph from 'assets/images/morphs/miho-ikuta/miho-morph-presentation.png';
 import MihoFull from 'assets/images/morphs/miho-ikuta/body-miho-ikuta.png'
 import MihoMorphMobile from 'assets/images/miho-morph.png';
-import MihoID from 'assets/video/white_card.video.mp4';
+
+import MihoIDMp4 from 'assets/video/white_card.video.mp4';
+import MihoIDWebm from 'assets/video/white_card.video.webm';
+
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
 import HenriFull from 'assets/images/morphs/henrik-hail/body-henrik-hail.png'
-import HenriMorphMobile from 'assets/images/henri-morph.png';
-import HenriID from 'assets/video/green_card.video.mp4';
+import HenriMorphDesktop from 'assets/images/henri-morph.png';
+import HenriIDMp4 from 'assets/video/green_card.video.mp4';
+import HenriIDWebm  from 'assets/video/green_card.video.webm';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { morphIDText } from 'data/morphID/text';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
@@ -97,11 +101,11 @@ export function TypesCards() {
 							/>
 						)}
 						{!isTablet && (
-              <img
-                className={classes.mihoMainImage} 
-                src={MihoMorphMobile}
-                alt='miho'
-              />
+							<img
+								className={classes.mihoMainImage}
+								src={MihoMorphMobile}
+								alt='miho'
+							/>
 						)}
 
 						<div className={classes.contentBlock}>
@@ -109,11 +113,11 @@ export function TypesCards() {
 								{...animFromDown}
 								className={classes.classiqueParagraph}
 							>
-                <img
-                  className={classes.classiqueBorder}
-                  src={first}
-                  alt='classique'
-                />
+								<img
+									className={classes.classiqueBorder}
+									src={first}
+									alt='classique'
+								/>
 								<p className={classes.title}>CLASSIQUE</p>
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
@@ -123,33 +127,40 @@ export function TypesCards() {
 										: morphIDText.classiqueMobile
 								)}
 							</Paragraph>
-              {isTablet && <motion.video
-                {...animFromDown}
-                className={classes.idImage}
-                src={MihoID}
-                autoPlay
-                playsInline
-                loop
-                muted
-              />}
-              {!isTablet && <video
-                className={classes.idImage}
-                src={MihoID}
-                autoPlay
-                playsInline
-                loop
-                muted
-              />}
+							{isTablet && (
+								<motion.video
+									{...animFromDown}
+									className={classes.idImage}
+									autoPlay
+									playsInline
+									loop
+									muted
+								/>
+							)}
+							{!isTablet && (
+								<motion.div {...animFromDown}>
+									<video
+										className={classes.idImage}
+										autoPlay
+										playsInline
+										loop
+										muted
+									>
+										<source src={MihoIDWebm} type='video/webm' />
+										<source src={MihoIDMp4} type='video/mp4' />
+									</video>
+								</motion.div>
+							)}
 						</div>
 					</div>
 
 					<div className={`${classes.morphBlock} ${classes.eternalBlock}`}>
 						<div className={classes.contentBlock}>
 							<motion.h4 {...animFromDown} className={classes.eternalParagraph}>
-                <img
-                  className={classes.eternalBorder}
-                  src={second}
-                  alt='eternal border'
+								<img
+									className={classes.eternalBorder}
+									src={second}
+									alt='eternal border'
 								/>
 								<p className={`${classes.title} ${classes.eternalTitle}`}>
 									ETERNAL
@@ -162,40 +173,51 @@ export function TypesCards() {
 										: morphIDText.eternalMobile
 								)}
 							</Paragraph>
-              {isTablet && <motion.video
-                className={`${classes.idImage} ${classes.idImageHenri}`}
-                {...animFromDown}
-                src={HenriID}
-                autoPlay
-                playsInline
-                loop
-                muted
-              />}
-              {!isTablet && <video
-                className={`${classes.idImage} ${classes.idImageHenri}`}
-                src={HenriID}
-                autoPlay
-                playsInline
-                loop
-                muted
-              />}
+							{isTablet && (
+								<motion.video
+									className={`${classes.idImage} ${classes.idImageHenri}`}
+									{...animFromDown}
+									autoPlay
+									playsInline
+									loop
+									muted
+								>
+									<source src={HenriIDWebm} type='video/webm' />
+									<source src={HenriIDMp4} type='video/mp4' />
+								</motion.video>
+							)}
+							{!isTablet && (
+								<motion.div {...animFromDown}>
+									<video
+										className={`${classes.idImage} ${classes.idImageHenri}`}
+										autoPlay
+										playsInline
+										loop
+										muted
+										{...animFromDown}
+									>
+										<source src={HenriIDWebm} type='video/webm' />
+										<source src={HenriIDMp4} type='video/mp4' />
+									</video>
+								</motion.div>
+							)}
 						</div>
 
 						{isTablet && (
 							<motion.img
 								key='henri-d'
 								className={classes.henriMainImage}
-								src={width > media.lDesktop ? HenriFull: HenriMorph}
+								src={width > media.lDesktop ? HenriFull : HenriMorph}
 								alt='henri morph'
 								{...animFromRight}
 							/>
 						)}
 						{!isTablet && (
-              <img
-                className={classes.henriMainImage}
-                src={HenriMorphMobile}
-                alt='henri morph'
-              />
+							<img
+								className={classes.henriMainImage}
+								src={HenriMorphDesktop}
+								alt='henri morph'
+							/>
 						)}
 					</div>
 				</div>
