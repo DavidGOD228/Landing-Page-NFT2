@@ -20,8 +20,10 @@ export const Header = () => {
   useEffect(() => {
     if (isVisibleMenu) {
       document.body.style.overflowY = 'hidden'
+      document.body.style.height = '100vh';
     } else {
-      document.body.style.overflowY = 'unset'
+      document.body.style.overflowY = 'auto';
+      document.body.style.height = 'auto';
     }
   }, [isVisibleMenu])
 
@@ -40,8 +42,10 @@ export const Header = () => {
                 <div className={classes.logoContainer}>
                   <img className={classes.logo} src={Logo} alt=""/>
                 </div>
-                <NavItem key={title} onClick={() => setActiveLink(index)} isActive={activeLink === index} title={title} link={id}/>
-              </React.Fragment> : <NavItem key={title} onClick={() => setActiveLink(index)} isActive={activeLink === index} title={title} link={id}/>
+                <NavItem key={title} onClick={() => setActiveLink(index)}
+                         isActive={activeLink === index} title={title} link={id}/>
+              </React.Fragment> : <NavItem key={title} onClick={() => setActiveLink(index)}
+                                           isActive={activeLink === index} title={title} link={id}/>
             })
           }
         </nav> : <>
@@ -58,7 +62,8 @@ export const Header = () => {
               <div className={classes.menuItems}>
                 {
                   menuData.map((menuItem, idx) =>
-                    <a href={menuItem.id} onClick={() => handleMobileMenuClick(idx)} key={idx} className={classes.menuItem}>{menuItem.title}</a>)
+                    <a href={menuItem.id} onClick={() => handleMobileMenuClick(idx)} key={idx}
+                       className={classes.menuItem}>{menuItem.title}</a>)
                 }
               </div>
               <div className={classes.socials}>
