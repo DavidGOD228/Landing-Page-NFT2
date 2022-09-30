@@ -30,10 +30,13 @@
   justify-content: flex-end;
   text-align: right;
   margin-left: auto;
-  width: 65%;
   font-size: 16px;
   color: #C1C0C0;
   margin-right: 40px;
+
+  @media screen and (min-width: $desktop){
+    width: 65%;
+  }
 }
 
 .content {
@@ -57,11 +60,6 @@
   margin-left: 43px;
 }
 
-.columnSubtitle {
-  color: #C1C0C0;
-  font-size: 16px;
-  margin-top: 16px;
-}
 
 .tableWrapper {
   position: relative;

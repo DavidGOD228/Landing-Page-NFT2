@@ -21,12 +21,16 @@
   margin-top: 15px;
 }
 
-.morphVideo {
-  width: 100%;
-  z-index: 5;
+.videoWrapper {
+
   @media screen and (max-width: $desktop){
     order: 1;
   }
+}
+
+.morphVideo {
+  width: 100%;
+  z-index: 5;
 }
 
 .title {

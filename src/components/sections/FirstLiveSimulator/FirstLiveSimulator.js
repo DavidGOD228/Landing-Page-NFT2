@@ -42,7 +42,7 @@ export function FirstLiveSimulator() {
           <source src={MorphDesktopMp4} type="video/mp4" />
         </video>
       </LazyLoad>}
-      {!isDesktop && <LazyLoad offset={offset}>
+      {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
         <video
           className={classes.morphVideo}
           autoPlay
@@ -54,7 +54,7 @@ export function FirstLiveSimulator() {
       </LazyLoad>}
 			
 
-			<GlobalContainer>
+			<GlobalContainer style={{order: 0}}>
 				<div className={classes.flsDesktopContainer}>
 					{isDesktop ? <DesktopSplashes /> : <MobileSplashes />}
 					<div className={classes.content}>
