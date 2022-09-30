@@ -108,6 +108,10 @@
     margin-left: -4px;
     display: flex;
     flex-direction: column;
+    padding: 80px 50px 233px;
+  }
+
+  @media screen and (min-width: $m-desktop) {
     padding: 80px 191px 56px 233px;
   }
 }
