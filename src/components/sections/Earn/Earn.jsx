@@ -168,8 +168,8 @@ export const Earn = () => {
 								loop
 								muted
 							>
-                <source src={ComparingCardsMp4} type="video/mp4" />
                 <source src={ComparingCardsWebm} type="video/webm" />
+                <source src={ComparingCardsMp4} type="video/mp4" />
               </video>
 						</LazyLoad>
 					)}

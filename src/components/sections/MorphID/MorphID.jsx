@@ -154,7 +154,7 @@ export const MorphId = () => {
               >
                 <motion.span {...animFromDown}>Morph{'\u00A0'}</motion.span>
                 <br/>
-                <motion.span {...animFromDown}>id</motion.span>
+                <motion.span className={classes.greenText} {...animFromDown}>id</motion.span>
                 <motion.span {...animFromDown} className={classes.chineseText}>
                   變形 相同的代碼
                 </motion.span>
