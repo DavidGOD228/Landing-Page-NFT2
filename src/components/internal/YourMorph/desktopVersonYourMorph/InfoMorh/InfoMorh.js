@@ -7,8 +7,9 @@ import {
 import classes from "./style.module.scss";
 import {motion, AnimatePresence, useAnimationControls} from 'framer-motion';
 import LazyLoad from "react-lazy-load";
-import { offset } from 'utils/lazyload';
+import {offset} from 'utils/lazyload';
 import {useEffect} from "react";
+import VisibilitySensor from "react-visibility-sensor";
 
 export function InfoMorh({morph}) {
   const {id, bodyImg, type, name, attributes} = morph;
@@ -55,31 +56,33 @@ export function InfoMorh({morph}) {
     viewport: {...viewport}
   }
 
-  useEffect(() => {
-    controls.start(animate)
-  }, [])
-
   return (
     <>
       <div className={classes.morphWrapper}>
         <LazyLoad offset={offset}>
-          <AnimatePresence>
-            <motion.img
-              key={id}
-              className={classes.imgMorphChoose}
-              src={importBodyImg}
-              alt={name}
-              initial={{
-                ...initial,
-                scale: 0.9,
-              }}
-              exit={exit}
-              transition={transition}
-              viewport={viewport}
-              animate={animate}
-            />
-          </AnimatePresence>
+          <VisibilitySensor
+            onChange={controls.start(animate)}
+            delayedCall
+          >
+            <AnimatePresence>
+              <motion.img
+                key={id}
+                className={classes.imgMorphChoose}
+                src={importBodyImg}
+                alt={name}
+                initial={{
+                  ...initial,
+                  scale: 0.9,
+                }}
+                exit={exit}
+                transition={transition}
+                viewport={viewport}
+                animate={animate}
+              />
+            </AnimatePresence>
+          </VisibilitySensor>
         </LazyLoad>
+
       </div>
 
       <div className={classes.infoBlock}>
@@ -95,7 +98,7 @@ export function InfoMorh({morph}) {
             className={classes.identifierBlock}
             id={id}
             type={type}
-          />  
+          />
         </motion.div>
 
         <motion.div
@@ -107,9 +110,9 @@ export function InfoMorh({morph}) {
           }}
         >
           <BlockInfoTitle className={classes.infoTitle}>Bio</BlockInfoTitle>
-          <InfoDetails className={classes.infoDetails} morph={morph} />
+          <InfoDetails className={classes.infoDetails} morph={morph}/>
         </motion.div>
-      
+
         <motion.div
           key={id + 'attributes'}
           {...animBlockDetails}
@@ -121,7 +124,7 @@ export function InfoMorh({morph}) {
           <BlockInfoTitle className={classes.infoTitle}>
             Attributes
           </BlockInfoTitle>
-          <AttrsDetails attributes={attributes} type={type} />
+          <AttrsDetails attributes={attributes} type={type}/>
         </motion.div>
       </div>
     </>
