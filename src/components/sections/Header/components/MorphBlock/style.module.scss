@@ -11,6 +11,10 @@
     width: 375px;
   }
 
+  @media screen and (max-width: $l-mobile){
+    width: 100%;
+  }
+
   @media screen and (min-width: $desktop){
     &:after {
       content: '';
@@ -40,6 +44,10 @@
     height: 419px;
     top: 99px;
     right: 21px;
+  }
+
+  @media screen and (max-width: $l-mobile){
+    right: 20px;
   }
 }
 
