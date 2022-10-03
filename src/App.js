@@ -24,6 +24,7 @@ import { media } from 'utils/media';
 
 function App() {
 	const isDesktop = useWindowWidth(media.desktop);
+	const isTablet = useWindowWidth(media.tablet);
 
   const [isLoading, setIsloading] = useState(true);
 
@@ -60,7 +61,7 @@ function App() {
 			<MorphsUnique />
 			<Roadmap />
 			<Wizard />
-			{!isDesktop && <Foto />}
+			{!isTablet && <Foto />}
 			<CombinedGame />
 			<Footer />
 		</>

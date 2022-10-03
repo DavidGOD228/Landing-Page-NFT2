@@ -6,7 +6,7 @@ import classes from './style.module.scss'
 
 const Member = ({image, name, position, text, style}) => {
   return (
-    <div style={{marginTop: style}}>
+    <div className={classes.wrapper} style={{marginTop: style}}>
       <LazyLoad offset={offset}>
         <img src={image} alt=""/>
       </LazyLoad>

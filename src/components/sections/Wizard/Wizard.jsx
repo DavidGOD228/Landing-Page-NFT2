@@ -17,7 +17,7 @@ import { useLazyBackgroundLoad } from 'hooks/useLazyBackgroundLoad';
 
 
 export const Wizard = () => {
-	const isDesktop = useWindowWidth(1024);
+	const isDesktop = useWindowWidth(768);
 
   const members = [
     {
@@ -79,7 +79,7 @@ export const Wizard = () => {
 							<h4 className={classes.membersAmount}>
 								24 <span className={classes.membersText}>members</span>
 							</h4>
-							<p>
+							<p className={classes.memberParagraph}>
 								The game offers 2 experience scenarios based on the starting
 								Morph ID card a player chooses.
 							</p>
