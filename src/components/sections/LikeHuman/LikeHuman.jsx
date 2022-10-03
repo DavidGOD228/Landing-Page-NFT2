@@ -2,7 +2,6 @@ import React from 'react';
 import {motion} from 'framer-motion';
 
 import Title from '../../common/Title/Title';
-import GreenText from '../../common/GreenText/GreenText';
 import Paragraph from '../../common/Paragraph/Paragraph';
 import AccordionWithIcon from '../../common/AccordionWithIcon/AccordionWithIcon';
 import ColumnItem from './components/ColumnItem/ColumnItem';
