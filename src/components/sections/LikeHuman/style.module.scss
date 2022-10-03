@@ -10,7 +10,7 @@
   padding-top: 70px;
   position: relative;
   
-  @media screen and (max-width: $desktop){
+  @media screen and (max-width: $desktop) {
     margin: 50px 0 120px;
     padding-top: 0;
   }
@@ -44,9 +44,10 @@
   color: #C1C0C0;
   margin-right: 40px;
 
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $m-desktop) {
     width: 65%;
   }
+
 }
 
 .content {
@@ -60,7 +61,11 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 120px;
+
+  @media screen and (min-width: $m-desktop) {
+    padding: 0 120px;
+  }
+
 }
 
 .title {
@@ -89,21 +94,26 @@
     left: 0;
     height: 1px;
     opacity: 0.5;
-    background:linear-gradient(90deg, rgba(48, 41, 33, 1) 0%, rgba(30, 46, 39, 1) 20%, rgba(16, 47, 45, 1) 33%, rgba(33, 56, 38, 1) 50%, rgba(38, 46, 29, 1) 69%, rgba(47, 45, 27, 1) 84%, rgba(105, 145, 84, 1) 100%);
+    background: linear-gradient(90deg, rgba(48, 41, 33, 1) 0%, rgba(30, 46, 39, 1) 20%, rgba(16, 47, 45, 1) 33%, rgba(33, 56, 38, 1) 50%, rgba(38, 46, 29, 1) 69%, rgba(47, 45, 27, 1) 84%, rgba(105, 145, 84, 1) 100%);
   }
 }
 
 @media screen and (max-width: $desktop) {
   .titleWrapper {
     padding: 0 20px;
+    grid-template-columns: 1fr;
   }
 
   .title {
     @include prtnlSclScrnSize(font-size, 70);
+    @include prtnlSclScrnSize(margin-right, 40);
+    order: 1;
   }
 
   .paragraph {
     display: flex;
+    order: 2;
+    margin-top: 16px;
     flex-wrap: wrap;
     justify-content: flex-start;
     @include prtnlSclScrnSize(font-size, 23);
@@ -112,12 +122,8 @@
 }
 
 @media screen and (max-width: $tablet) {
-  .titleWrapper {
-    grid-template-columns: 1fr;
-  }
 
   .title {
-    order: 1;
     font-size: 32px;
     padding-right: 15px;
     width: 100%;
@@ -126,8 +132,8 @@
   }
 
   .paragraph {
-    order: 2;
     font-size: 14px;
+    margin-top: 0;
     text-align: left;
     @include prtnlSclScrnSize(margin-top, 90);
   }

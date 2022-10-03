@@ -6,6 +6,8 @@ import LazyLoad from 'react-lazy-load';
 
 import WhiteLine from 'assets/images/whiteLine.svg';
 import toiletVideo from 'assets/video/toilet.video.mp4';
+import ToiletPoster from 'assets/images/posters/toitet.png'
+import BedPoster from 'assets/images/posters/bed.png'
 import bedVideo from 'assets/video/bed.video.mp4';
 
 import SmileDesktop from 'assets/images/smileDesktop.svg';
@@ -15,6 +17,9 @@ import MorphDesktopWebm from 'assets/video/morphDesktop.video.webm';
 
 import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
 import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
+
+import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
+import MobilePoster from 'assets/images/posters/falling_Mobile.png'
 
 import classes from './style.module.scss';
 
@@ -55,7 +60,7 @@ export function FirstLiveSimulator() {
           muted
           playsInline
           preload='auto'
-          poster='https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300'
+          poster={isDesktop ? DesktopPoster : MobilePoster}
         >
           <source src={MorphMobileWebm} type="video/webm" />
           <source src={MorphMobileMp4} type="video/mp4" />
@@ -125,6 +130,7 @@ export function FirstLiveSimulator() {
 											autoPlay
 											loop
 											muted
+											poster={ToiletPoster}
 											playsInline
 										/>
 									</LazyLoad>
@@ -145,6 +151,7 @@ export function FirstLiveSimulator() {
 											src={bedVideo}
 											className={classes.privacyImage}
 											autoPlay
+											poster={BedPoster}
 											loop
 											playsInline
 											muted

@@ -7,11 +7,14 @@ import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 import LazyLoad from 'react-lazy-load';
 
 import Quotes from "assets/images/quotes.svg";
-import DesktopCity from 'assets/video/desktopCity.video.mp4'
 
-import CityDesktop from 'assets/video/city-desktop.video.webm';
-import CityZoom from 'assets/video/city-zoom.video.webm';
-
+import DesktopCityMP4 from 'assets/video/city-desktop.video.mp4'
+import CityDesktopWebm from 'assets/video/city-desktop.video.webm';
+import CityZoomWebm from 'assets/video/city-zoom.video.webm';
+import CityZoomMP4 from 'assets/video/city-zoom.video.mp4';
+import CityPoster from 'assets/images/posters/city.jpg'
+import ZoomPoster from 'assets/images/posters/zoom.png'
+import Ray from 'assets/video/Ray.webm'
 import classes from "./style.module.scss";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
@@ -44,6 +47,17 @@ export const FataMorganaDesktop = () => {
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
+						<LazyLoad offset={offset}>
+							<video
+								className={classes.zoomRay}
+								autoPlay
+								loop
+								muted
+								poster={ZoomPoster}
+								playsInline>
+								<source src={Ray} type="video/webm" />
+							</video>
+						</LazyLoad>
 						<div>
 							<Title classname={classes.title}>
 								<motion.p
@@ -86,7 +100,22 @@ export const FataMorganaDesktop = () => {
 							>
 								<GenerateCode>D2128NDJK376LAZXWM3NK7</GenerateCode>
 							</motion.span>
+							<motion.div
+								initial={{ y: 150 }}
+								whileInView={{ y: 0 }}
+								transition={{
+									duration: 1,
+									delay: 0.3,
+									ease: 'easeInOut'
+								}}
+								viewport={{ once: true }}
+							>
+								<Paragraph className={classes.paragraph}>
+									{paragraphAnimation(parg1)}
+								</Paragraph>
+							</motion.div>
 						</div>
+						<div className={classes.secondBlockFataMorgana}>
 							<motion.div
 								style={{ margin: '69px 56px 0px auto' }}
 								initial={{ y: 150 }}
@@ -100,50 +129,57 @@ export const FataMorganaDesktop = () => {
 							>
 								<Table style={{ width: 400, height: 114 }} data={data} />
 							</motion.div>
+								<LazyLoad offset={offset}>
+									<motion.video
+										className={classes.zoomVideo}
+										initial={{ y: 150 }}
+										whileInView={{ y: 0 }}
+										transition={{
+											duration: 1,
+											delay: 0.3,
+											ease: 'easeInOut'
+										}}
+										viewport={{ once: true }}
+										autoPlay
+										loop
+										muted
+										poster={ZoomPoster}
+										playsInline>
+										<source src={CityZoomWebm} type="video/webm" />
+										<source src={CityZoomMP4} type="video/mp4" />
+									</motion.video>
+								</LazyLoad>
+							<motion.p
+								className={classes.cityText}
+								initial={{ y: 150 }}
+								whileInView={{ y: 0 }}
+								transition={{
+									duration: 1,
+									delay: 0.3,
+									ease: 'easeInOut'
+								}}
+								viewport={{ once: true }}
+							>
+								<img className={classes.quotes} src={Quotes} alt='' />
+								an adventure that will take your breath away
+							</motion.p>
+						</div>
 					</div>
-          
-          <div className={classes.secondBlockFataMorgana}>
-            <motion.div
-              initial={{ y: 150 }}
-              whileInView={{ y: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.3,
-                ease: 'easeInOut'
-              }}
-              viewport={{ once: true }}
-            >
-              <Paragraph className={classes.paragraph}>
-                {paragraphAnimation(parg1)}
-              </Paragraph>
-            </motion.div>
-          </div>
+
 				</div>
 				<div className={classes.cityContainer}>
-					
-					<motion.p
-						className={classes.cityText}
-						initial={{ y: 150 }}
-						whileInView={{ y: 0 }}
-						transition={{
-							duration: 1,
-							delay: 0.3,
-							ease: 'easeInOut'
-						}}
-						viewport={{ once: true }}
-					>
-						<img className={classes.quotes} src={Quotes} alt='' />
-						an adventure that will take your breath away
-					</motion.p>
 					<div className={classes.videoWrapper}>
 						<LazyLoad offset={offset}>
 							<video
 								className={classes.desktopCity}
-								src={DesktopCity}
+								poster={CityPoster}
 								autoPlay
 								loop
-								mutedplaysInline
-							/>
+								muted
+								playsInline>
+								<source src={CityDesktopWebm} type="video/webm" />
+								<source src={DesktopCityMP4} type="video/mp4" />
+							</video>
 						</LazyLoad>
 					</div>
 				</div>

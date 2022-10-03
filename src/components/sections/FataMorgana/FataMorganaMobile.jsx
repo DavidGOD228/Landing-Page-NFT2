@@ -6,17 +6,19 @@ import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 
 import LazyLoad from 'react-lazy-load';
 
-import Quotes from "assets/images/quotes.svg";
-import MobileCity from 'assets/video/mobileCity.video.mp4'
-import DesktopCity from 'assets/video/desktopCity.video.mp4'
-
 import classes from "./style.module.scss";
-import {useWindowWidth} from "hooks/useWindowWidth";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
+import MobileCityWebm from "../../../assets/video/city-mobile.video.webm";
+import MobileCityMP4 from "../../../assets/video/city-mobile.video.mp4";
+import CityZoomWebm from "../../../assets/video/city-zoom.video.webm";
+import CityZoomMP4 from "../../../assets/video/city-zoom.video.mp4";
+import MobileCityPoster from 'assets/images/posters/city_Mobile.jpg'
+import MobileZoomPoster from 'assets/images/posters/zoom.png'
+import ZoomPoster from "../../../assets/images/posters/zoom.png";
+import Ray from "../../../assets/video/Ray.webm";
 
 const data = [
   {
@@ -37,19 +39,17 @@ const data = [
 ];
 
 export const FataMorganaMobile = () => {
-  const isDesktop = useWindowWidth(1024);
 
   const parg1 = 'Metamorph is built on putting the power of choice into the hands of players All in game actions are governed by you, with no artificial barriers. We empower you to create your unique story by participating in a world where we expect the unexpected. From moral actions to investments, crusades, businesses operations and gambling – you havethe choice play and earn in a style you enjoy.';
 
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
-				{!isDesktop && <MobileSplashes />}
+				<MobileSplashes />
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
 						<div>
 							<Title classname={classes.title}>
-								{!isDesktop && (
 									<motion.p
 										className={classes.chineseText}
 										initial={{ y: 25 }}
@@ -62,7 +62,6 @@ export const FataMorganaMobile = () => {
 									>
 										全部的 自由 行動的
 									</motion.p>
-								)}
 								<motion.p
 									className={classes.welcome}
 									initial={{ y: 150 }}
@@ -104,21 +103,6 @@ export const FataMorganaMobile = () => {
 								<GenerateCode>D2128NDJK376LAZXWM3NK7</GenerateCode>
 							</motion.span>
 						</div>
-						{isDesktop && (
-							<motion.div
-								style={{ margin: '69px 56px 0px auto' }}
-								initial={{ y: 150 }}
-								whileInView={{ y: 0 }}
-								transition={{
-									duration: 1,
-									delay: 0.3,
-									ease: 'easeInOut'
-								}}
-								viewport={{ once: true }}
-							>
-								<Table style={{ width: 400, height: 114 }} data={data} />
-							</motion.div>
-						)}
 					</div>
           
 					<motion.div
@@ -137,7 +121,6 @@ export const FataMorganaMobile = () => {
 					</motion.div>
 				</div>
 				<div className={classes.cityContainer}>
-					{!isDesktop && (
 						<div className={classes.mobileTableWrapper}>
 							<Table
 								style={{ margin: '36px auto 0', width: '100%', height: 89 }}
@@ -145,7 +128,6 @@ export const FataMorganaMobile = () => {
 								data={data}
 							/>
 						</div>
-					)}
 					<motion.p
 						className={classes.cityText}
 						initial={{ y: 150 }}
@@ -157,30 +139,51 @@ export const FataMorganaMobile = () => {
 						}}
 						viewport={{ once: true }}
 					>
-						{isDesktop && (
-							<img className={classes.quotes} src={Quotes} alt='' />
-						)}
 						an adventure that will take your breath away
 					</motion.p>
+					<LazyLoad offset={offset}>
+						<video
+							className={classes.zoomRay}
+							autoPlay
+							loop
+							muted
+							poster={ZoomPoster}
+							playsInline>
+							<source src={Ray} type="video/webm" />
+						</video>
+					</LazyLoad>
+					<LazyLoad offset={offset}>
+						<motion.video
+							className={classes.zoomVideo}
+							initial={{ y: 150 }}
+							whileInView={{ y: 0 }}
+							transition={{
+								duration: 1,
+								delay: 0.3,
+								ease: 'easeInOut'
+							}}
+							viewport={{ once: true }}
+							autoPlay
+							loop
+							muted
+							poster={MobileZoomPoster}
+							playsInline>
+							<source src={CityZoomWebm} type="video/webm" />
+							<source src={CityZoomMP4} type="video/mp4" />
+						</motion.video>
+					</LazyLoad>
 					<div className={classes.videoWrapper}>
-						<LazyLoad offset={offset}>
-							<video
-								className={classes.desktopCity}
-								src={DesktopCity}
-								autoPlay
-								loop
-								mutedplaysInline
-							/>
-						</LazyLoad>
             <LazyLoad offset={offset}>
               <video
                 className={classes.mobileCity}
-                src={MobileCity}
                 autoPlay
+								poster={MobileCityPoster}
                 loop
                 muted
-                playsInline
-              />
+                playsInline>
+								<source src={MobileCityWebm} type="video/webm" />
+								<source src={MobileCityMP4} type="video/mp4" />
+							</video>
             </LazyLoad>
 					</div>
 				</div>
