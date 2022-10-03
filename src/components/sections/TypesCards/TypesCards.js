@@ -12,12 +12,14 @@ import MihoMorphMobile from 'assets/images/miho-morph.png';
 
 import MihoIDMp4 from 'assets/video/white_card.video.mp4';
 import MihoIDWebm from 'assets/video/white_card.video.webm';
+import WhiteCardPoster from 'assets/images/posters/whiteCard.png'
 
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
 import HenriFull from 'assets/images/morphs/henrik-hail/body-henrik-hail.png'
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
 import HenriIDMp4 from 'assets/video/green_card.video.mp4';
 import HenriIDWebm  from 'assets/video/green_card.video.webm';
+import GreenCardPoster from 'assets/images/posters/greenCard.png'
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { morphIDText } from 'data/morphID/text';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
@@ -135,6 +137,7 @@ export function TypesCards() {
 									playsInline
 									loop
 									muted
+									poster={WhiteCardPoster}
 								>
                   <source src={MihoIDWebm} type='video/webm' />
                   <source src={MihoIDMp4} type='video/mp4' />
@@ -184,6 +187,7 @@ export function TypesCards() {
 									playsInline
 									loop
 									muted
+									poster={GreenCardPoster}
 								>
 									<source src={HenriIDWebm} type='video/webm' />
 									<source src={HenriIDMp4} type='video/mp4' />
