@@ -16,6 +16,9 @@ import MorphDesktopWebm from 'assets/video/morphDesktop.video.webm';
 import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
 import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
 
+import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
+import MobilePoster from 'assets/images/posters/falling_Mobile.png'
+
 import classes from './style.module.scss';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
@@ -52,7 +55,7 @@ export function FirstLiveSimulator() {
           muted
           playsInline
           preload='auto'
-          poster='https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300'
+          poster={isDesktop ? DesktopPoster : MobilePoster}
         >
           <source src={MorphMobileWebm} type="video/webm" />
           <source src={MorphMobileMp4} type="video/mp4" />
