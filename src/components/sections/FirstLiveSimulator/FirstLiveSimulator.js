@@ -24,6 +24,9 @@ import DesktopSplashes from './components/DesktopSplashes/DesktopSplashes';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from './components/MobileSplashes/MobileSplashes';
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 export function FirstLiveSimulator() {
 	const isDesktop = useWindowWidth(1024);
 	const textPar = `Metamorph is an open-world exploration, NFT creature collector
@@ -59,11 +62,17 @@ export function FirstLiveSimulator() {
         </video>
       </LazyLoad>}
 			
+      {isDesktop && <Parallax speed={-speedParallax / 1.5}>
+        <DesktopSplashes/>
+      </Parallax>}
+      {!isDesktop && <Parallax speed={-speedParallax / 3.5}>
+        <MobileSplashes/>
+      </Parallax>}
 
 			<GlobalContainer style={{order: 0}}>
 				<div className={classes.flsDesktopContainer}>
-					{isDesktop ? <DesktopSplashes /> : <MobileSplashes />}
-					<div className={classes.content}>
+
+					<Parallax speed={speedParallax} className={classes.content}>
 						<motion.div
 							key='firstLiveTitle'
 							className={classes.descr}
@@ -144,7 +153,7 @@ export function FirstLiveSimulator() {
 								</motion.div>
 							</div>
 						</div>
-					</div>
+					</Parallax>
 				</div>
 			</GlobalContainer>
 		</div>

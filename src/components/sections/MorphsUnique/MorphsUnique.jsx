@@ -19,6 +19,9 @@ import { offset } from 'utils/lazyload';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 export const MorphsUnique = () => {
 	const isDesktop = useWindowWidth(1024);
 
@@ -37,10 +40,14 @@ export const MorphsUnique = () => {
 
 	return (
 		<>
-			<div style={{position: 'relative'}}>
-				{isDesktop ? <DesktopSplashes/>: <MobileSplashes/>}
-			</div>
-			<div className={classes.container}>
+      {isDesktop && <Parallax speed={-speedParallax / 2}>
+        <DesktopSplashes/>
+      </Parallax>}
+      {!isDesktop && <Parallax speed={-speedParallax / 2}>
+        <MobileSplashes className={classes.topBlockMobileSplashes}/>
+      </Parallax>}
+
+			<Parallax speed={0} className={classes.container}>
 				<div className={classes.content}>
 					<Title classname={classes.title}>
 						{titleText.split(' ').map((word, idx) => {
@@ -322,9 +329,9 @@ export const MorphsUnique = () => {
             muted
           />
         </LazyLoad>
-			</div>
+			</Parallax>
 			{!isDesktop && (
-				<div className={classes.mobileMorph}>
+				<Parallax speed={speedParallax} className={classes.mobileMorph}>
           <LazyLoad offset={offset}>
             <video
               className={classes.mobileMorphVideo}
@@ -335,7 +342,7 @@ export const MorphsUnique = () => {
               muted
             />
           </LazyLoad>
-				</div>
+				</Parallax>
 			)}
 		</>
 	);

@@ -2,7 +2,6 @@ import React from 'react';
 import {motion} from 'framer-motion';
 
 import Title from '../../common/Title/Title';
-import GreenText from '../../common/GreenText/GreenText';
 import Paragraph from '../../common/Paragraph/Paragraph';
 import AccordionWithIcon from '../../common/AccordionWithIcon/AccordionWithIcon';
 import ColumnItem from './components/ColumnItem/ColumnItem';
@@ -18,6 +17,9 @@ import {media} from 'utils/media';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 export const LikeHuman = () => {
   const isDesktop = useWindowWidth(1024);
   const {width} = useWindowSize();
@@ -31,7 +33,6 @@ export const LikeHuman = () => {
 
   const table = (
     <div className={classes.tableWrapper}>
-      <DesktopSplashes/>
       <div className={classes.table}>
         {tableData.map(({id, icon, title, subtitle}, idx) => (
           <ColumnItem key={id} icon={icon} title={title} subtitle={subtitle}/>
@@ -92,7 +93,7 @@ export const LikeHuman = () => {
 
   return (
     <div id="features" className={classes.container}>
-      <div className={classes.titleWrapper}>
+      <Parallax speed={0} className={classes.titleWrapper}>
 
         {/* paragraph descktop */}
         {isDesktop && <Paragraph
@@ -184,8 +185,14 @@ export const LikeHuman = () => {
             <motion.span {...animFromDown} className={classes.greenText}>human</motion.span>
           </Title>
         </motion.div>}
-      </div>
-      {isDesktop ? table : accordion}
+      </Parallax>
+      <Parallax speed={0}>
+        {isDesktop ? table : accordion}
+      </Parallax>
+      <Parallax className={classes.parallaxLikeHuman} speed={-speedParallax / 1.5}>
+        <DesktopSplashes/>
+      </Parallax>
+
     </div>
   );
 };

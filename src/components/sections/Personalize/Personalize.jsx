@@ -17,6 +17,9 @@ import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./MobileSplashes/MobileSplashes";
 
+import { Parallax, useParallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 const data = [
 	{
 		end: 25,
@@ -73,12 +76,15 @@ export const Personalize = () => {
 
 	return (
 		<>
-			{
-				isDesktop ? <div style={{position: 'relative'}}>
-					<DesktopSplashes/>
-				</div>: <MobileSplashes/>
-			}
-			<div
+      {isDesktop && <Parallax speed={-speedParallax / 1.5}>
+        <DesktopSplashes/>
+      </Parallax>}
+      {!isDesktop && <Parallax speed={speedParallax / 2}>
+        <MobileSplashes className={classes.topBlockMobileSplashes}/>
+      </Parallax>}
+
+			<Parallax
+        speed={0}
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
 				<div className={classes.contentBlock}>
@@ -120,7 +126,7 @@ export const Personalize = () => {
 				</div>
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
-			</div>
+			</Parallax>
 
 			<div className={classes.mobileVersion}>
 				<div className={classes.contentBlock}>

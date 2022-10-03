@@ -9,7 +9,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    @include prtnlSclScrnSize(padding-top, 150);
     @include prtnlSclScrnSize(padding-right, 120);
     @include prtnlSclScrnSize(padding-left, 120);
   }

@@ -172,3 +172,12 @@
   }
 }
 
+@media screen and (max-width: $desktop) {
+  .topBlockMobileSplashes {
+    position: absolute;
+    height: 750px;
+    width: 100%;
+  }
+}
+
+

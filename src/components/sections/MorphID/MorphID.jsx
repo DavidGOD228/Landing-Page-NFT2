@@ -15,6 +15,9 @@ import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 export const MorphId = () => {
   const isDesktop = useWindowWidth(1024);
 
@@ -78,14 +81,14 @@ export const MorphId = () => {
 
   return (
     <>
-      {
-        <div style={{position: 'relative'}}>
-          {
-            isDesktop ? <DesktopSplashes/> : <MobileSplashes/>
-          }
-        </div>
-      }
-      <div id="morphID" className={classes.container}>
+      {isDesktop && <Parallax speed={-speedParallax / 2}>
+        <DesktopSplashes/>
+      </Parallax>}
+      {!isDesktop && <Parallax speed={-speedParallax / 2}>
+        <MobileSplashes />
+      </Parallax>}
+
+      <Parallax speed={isDesktop ? speedParallax : 0} id="morphID" className={classes.container}>
 
         <div className={classes.cardsImg}>
           {isDesktop && (
@@ -224,7 +227,7 @@ export const MorphId = () => {
             </Paragraph>
           )}
         </div>
-      </div>
+      </Parallax>
     </>
   )
 };

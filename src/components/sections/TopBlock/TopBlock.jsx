@@ -22,6 +22,8 @@ import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
 
 export const TopBlock = () => {
   const isDesktop = useWindowWidth(1024)
@@ -42,9 +44,14 @@ export const TopBlock = () => {
           </LazyLoad>
         </div> :
         <div className={classes.topBlock}>
-          {isDesktop ? <DesktopSplashes/> : <MobileSplashes/>}
           <Header/>
-          <div className={classes.container}>
+          {isDesktop && <Parallax speed={-speedParallax / 1.5}>
+             <DesktopSplashes/>
+          </Parallax>}
+          {!isDesktop && <Parallax speed={speedParallax * 4} translateY={0}>
+            <MobileSplashes className={classes.topBlockMobileSplashes}/>
+          </Parallax>}
+          <Parallax speed={speedParallax} className={classes.container}>
             <div className={classes.mainBlock}>
               {
                 isDesktop && <LazyLoad offset={offset}><img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/></LazyLoad>
@@ -82,7 +89,7 @@ export const TopBlock = () => {
             {
               isDesktop && <MorphBlock/>
             }
-          </div>
+          </Parallax>
         </div>
       }
 

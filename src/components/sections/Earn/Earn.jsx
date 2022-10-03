@@ -18,6 +18,9 @@ import { offset } from 'utils/lazyload';
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 const data = [
 	{
 		title: 'Complete the task',
@@ -49,6 +52,7 @@ const data = [
 		borderColor: 'rgba(63,76,53,0.3)'
 	}
 ];
+
 
 export const Earn = () => {
 	const isDesktop = useWindowWidth(1024);
@@ -151,7 +155,10 @@ export const Earn = () => {
 						)}
 					</div>
 					{
-						!isDesktop && <MobileSplashes/>
+						!isDesktop && 
+            <Parallax speed={10}>
+              <MobileSplashes/>
+            </Parallax>
 					}
 					<div style={{ marginTop: 40 }}>
 						{!isDesktop &&
