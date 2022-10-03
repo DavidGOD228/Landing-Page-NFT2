@@ -6,6 +6,8 @@ import LazyLoad from 'react-lazy-load';
 
 import WhiteLine from 'assets/images/whiteLine.svg';
 import toiletVideo from 'assets/video/toilet.video.mp4';
+import ToiletPoster from 'assets/images/posters/toitet.png'
+import BedPoster from 'assets/images/posters/bed.png'
 import bedVideo from 'assets/video/bed.video.mp4';
 
 import SmileDesktop from 'assets/images/smileDesktop.svg';
@@ -119,6 +121,7 @@ export function FirstLiveSimulator() {
 											autoPlay
 											loop
 											muted
+											poster={ToiletPoster}
 											playsInline
 										/>
 									</LazyLoad>
@@ -139,6 +142,7 @@ export function FirstLiveSimulator() {
 											src={bedVideo}
 											className={classes.privacyImage}
 											autoPlay
+											poster={BedPoster}
 											loop
 											playsInline
 											muted
