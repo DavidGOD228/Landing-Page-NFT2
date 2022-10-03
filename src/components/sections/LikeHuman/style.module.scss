@@ -8,10 +8,20 @@
 .container {
   margin: 200px 0 70px;
   padding-top: 70px;
+  position: relative;
+  
   @media screen and (max-width: $desktop) {
     margin: 50px 0 120px;
     padding-top: 0;
   }
+}
+
+.parallaxLikeHuman {
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
 }
 
 .greenText {

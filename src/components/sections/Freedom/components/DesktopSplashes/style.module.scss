@@ -18,5 +18,5 @@
   top: -100px;
   background: #0B0B0C;
   filter: blur(75px);
-  transform: rotate(90deg);
+  transform: rotateZ(90deg) translate3d(0, 0, 0);
 }

@@ -27,8 +27,9 @@ function App() {
 	const isTablet = useWindowWidth(media.tablet);
 
   const [isLoading, setIsloading] = useState(true);
+  
 
-  useEffect(() => {
+  /* useEffect(() => {
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }
@@ -42,20 +43,20 @@ function App() {
       document.body.style.height = 'auto';
     }
 
-  }, [isLoading]);
+  }, [isLoading]); */
 
 	return (
 		<>
-			{isLoading && <Loader setIsloading={setIsloading} />}
-			<TopBlock />
-			<FirstLiveSimulator />
+			{/* {isLoading && <Loader setIsloading={setIsloading} />} */}
+      <TopBlock />
+      <FirstLiveSimulator />
 			<LikeHuman />
 			{!isDesktop && <Privacy />}
 			<FataMorgana />
 			<Freedom />
 			<Personalize />
 			<Earn />
-			<MorphId />
+      <MorphId />
 			<TypesCards />
 			<YourMorph />
 			<MorphsUnique />

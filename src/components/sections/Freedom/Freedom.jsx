@@ -19,6 +19,9 @@ import { useWindowSize } from 'hooks/useWindowDimensions';
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
+import { Parallax } from 'react-scroll-parallax';
+const speedParallax = 20;
+
 export const Freedom = () => {
 
 	const isDesktop = useWindowWidth(1024);
@@ -92,116 +95,124 @@ export const Freedom = () => {
   const GreenText1 = motion(GreenText);
 
 	return (
-		<div className={classes.container}>
-			<div className={classes.topContent}>
-				{isDesktop ? <DesktopSplashes/> : <MobileSplashes/>}
-				<div className={classes.content}>
-					{/* desktop */}
-					{isDesktop && (
-						<Paragraph className={classes.paragraph}>
-							{parghText1.split(' ').map((word, idx) => {
-								return (
-									<motion.span
-										key={word + idx}
-										initial={{ x: getStartInitVal(), opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											duration: 1,
-											ease: 'easeInOut'
-										}}
-										viewport={{ once: true }}
-									>
-										{word}
-										{idx + 1 !== parghText1.split(' ').length && '\u00A0'}
-									</motion.span>
-								);
-							})}
-						</Paragraph>
-					)}
+    <>
+      {isDesktop && <Parallax speed={speedParallax / 1.5}>
+        <DesktopSplashes/>
+      </Parallax>}
+      {!isDesktop && <Parallax speed={speedParallax / 3.5}>
+        <MobileSplashes />
+      </Parallax>}
 
-					{isDesktop && (
-            <Title 
-              classname={classes.title}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-start'
-              }}
-            >
-              <motion.p {...animFromRight} className={classes.chineseText}>全部的 自由 行動的</motion.p>
-              <motion.span {...animFromRight} className={classes.total}>
-                TOTAL
-              </motion.span>
+      <Parallax className={classes.container} speed={isDesktop ? 0 : speedParallax}>
+        <div className={classes.topContent}>
+          <div className={classes.content}>
+            {/* desktop */}
+            {isDesktop && (
+              <Paragraph className={classes.paragraph}>
+                {parghText1.split(' ').map((word, idx) => {
+                  return (
+                    <motion.span
+                      key={word + idx}
+                      initial={{ x: getStartInitVal(), opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        ease: 'easeInOut'
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      {word}
+                      {idx + 1 !== parghText1.split(' ').length && '\u00A0'}
+                    </motion.span>
+                  );
+                })}
+              </Paragraph>
+            )}
 
-              <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'flex-start',
-              }}>
-                <GreenText1 {...animFromRight} classname={classes.greenText}>
-                  FREEDOM{'\u00A0'}
-                </GreenText1>
-                <GreenText1 {...animFromRight} classname={classes.greenText}>
-                  OF{'\u00A0'}
-                </GreenText1>
-                <GreenText1 {...animFromRight} classname={classes.greenText}>
-                  ACTION
-                </GreenText1>
-              </div>
-            </Title>
-					)}
+            {isDesktop && (
+              <Title 
+                classname={classes.title}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-start'
+                }}
+              >
+                <motion.p {...animFromRight} className={classes.chineseText}>全部的 自由 行動的</motion.p>
+                <motion.span {...animFromRight} className={classes.total}>
+                  TOTAL
+                </motion.span>
 
-					{/* mobile */}
-					{!isDesktop && (
-						<motion.div
-							initial={{ y: 150, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={{
-								duration: 1,
-								ease: 'easeInOut'
-							}}
-							viewport={{ once: true }}
-						>
-							<Title classname={classes.title}>
-								<p className={classes.chineseText}>全部的 自由 行動的</p>
-								<p className={classes.total}>
-									TOTAL{' '}
-									<GreenText classname={classes.greenText}>
-										FREEDOM of ACTION{' '}
-									</GreenText>
-								</p>
-							</Title>
-						</motion.div>
-					)}
-				</div>
-				{!isDesktop && (
-					<Paragraph className={classes.paragraph}>
-						{parghText1.split(' ').map((word, idx) => {
-							return (
-								<motion.span
-									key={word + idx}
-									initial={{ y: 75, opacity: 0 }}
-									whileInView={{ y: 0, opacity: 1 }}
-									transition={{
-										duration: 1,
-										ease: 'easeInOut'
-									}}
-									viewport={{ once: true }}
-								>
-									{word}
-									{idx + 1 !== parghText1.split(' ').length && '\u00A0'}
-								</motion.span>
-							);
-						})}
-					</Paragraph>
-				)}
-			</div>
-			<div className={classes.listContainer}>
-				{list.map(({ id, line, text, delay }) => (
-					<ListItem delay={delay} key={id} line={line} text={text} />
-				))}
-			</div>
-		</div>
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  justifyContent: 'flex-start',
+                }}>
+                  <GreenText1 {...animFromRight} classname={classes.greenText}>
+                    FREEDOM{'\u00A0'}
+                  </GreenText1>
+                  <GreenText1 {...animFromRight} classname={classes.greenText}>
+                    OF{'\u00A0'}
+                  </GreenText1>
+                  <GreenText1 {...animFromRight} classname={classes.greenText}>
+                    ACTION
+                  </GreenText1>
+                </div>
+              </Title>
+            )}
+
+            {/* mobile */}
+            {!isDesktop && (
+              <motion.div
+                initial={{ y: 150, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeInOut'
+                }}
+                viewport={{ once: true }}
+              >
+                <Title classname={classes.title}>
+                  <p className={classes.chineseText}>全部的 自由 行動的</p>
+                  <p className={classes.total}>
+                    TOTAL{' '}
+                    <GreenText classname={classes.greenText}>
+                      FREEDOM of ACTION{' '}
+                    </GreenText>
+                  </p>
+                </Title>
+              </motion.div>
+            )}
+          </div>
+          {!isDesktop && (
+            <Paragraph className={classes.paragraph}>
+              {parghText1.split(' ').map((word, idx) => {
+                return (
+                  <motion.span
+                    key={word + idx}
+                    initial={{ y: 75, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      ease: 'easeInOut'
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    {word}
+                    {idx + 1 !== parghText1.split(' ').length && '\u00A0'}
+                  </motion.span>
+                );
+              })}
+            </Paragraph>
+          )}
+        </div>
+        <div className={classes.listContainer}>
+          {list.map(({ id, line, text, delay }) => (
+            <ListItem delay={delay} key={id} line={line} text={text} />
+          ))}
+        </div>
+		  </Parallax>
+    </>
 	);
 };
 

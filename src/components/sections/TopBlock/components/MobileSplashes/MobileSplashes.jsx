@@ -6,9 +6,9 @@ import BottomCorner from 'assets/images/splashes/topBlock/5.png'
 
 import classes from './style.module.scss'
 
-const MobileSplashes = () => {
+const MobileSplashes = ({ className, ...props }) => {
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container} ${className}`} {...props}>
       <img className={classes.topLeftCorner} src={TopLeftCorner} alt=""/>
       <img className={classes.topRightCorner} src={TopRightCorner} alt=""/>
       <img className={classes.bottomCorner} src={BottomCorner} alt=""/>
