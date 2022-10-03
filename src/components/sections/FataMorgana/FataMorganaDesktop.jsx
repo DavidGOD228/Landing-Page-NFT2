@@ -14,6 +14,7 @@ import CityZoomWebm from 'assets/video/city-zoom.video.webm';
 import CityZoomMP4 from 'assets/video/city-zoom.video.mp4';
 import CityPoster from 'assets/images/posters/city.jpg'
 import ZoomPoster from 'assets/images/posters/zoom.png'
+import Ray from 'assets/video/Ray.webm'
 import classes from "./style.module.scss";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
@@ -46,6 +47,17 @@ export const FataMorganaDesktop = () => {
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
+						<LazyLoad offset={offset}>
+							<video
+								className={classes.zoomRay}
+								autoPlay
+								loop
+								muted
+								poster={ZoomPoster}
+								playsInline>
+								<source src={Ray} type="video/webm" />
+							</video>
+						</LazyLoad>
 						<div>
 							<Title classname={classes.title}>
 								<motion.p
@@ -117,26 +129,26 @@ export const FataMorganaDesktop = () => {
 							>
 								<Table style={{ width: 400, height: 114 }} data={data} />
 							</motion.div>
-							<LazyLoad offset={offset}>
-								<motion.video
-									className={classes.zoomVideo}
-									initial={{ y: 150 }}
-									whileInView={{ y: 0 }}
-									transition={{
-										duration: 1,
-										delay: 0.3,
-										ease: 'easeInOut'
-									}}
-									viewport={{ once: true }}
-									autoPlay
-									loop
-									muted
-									poster={ZoomPoster}
-									playsInline>
-									<source src={CityZoomWebm} type="video/webm" />
-									<source src={CityZoomMP4} type="video/mp4" />
-								</motion.video>
-							</LazyLoad>
+								<LazyLoad offset={offset}>
+									<motion.video
+										className={classes.zoomVideo}
+										initial={{ y: 150 }}
+										whileInView={{ y: 0 }}
+										transition={{
+											duration: 1,
+											delay: 0.3,
+											ease: 'easeInOut'
+										}}
+										viewport={{ once: true }}
+										autoPlay
+										loop
+										muted
+										poster={ZoomPoster}
+										playsInline>
+										<source src={CityZoomWebm} type="video/webm" />
+										<source src={CityZoomMP4} type="video/mp4" />
+									</motion.video>
+								</LazyLoad>
 							<motion.p
 								className={classes.cityText}
 								initial={{ y: 150 }}

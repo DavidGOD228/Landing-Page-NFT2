@@ -7,7 +7,6 @@ import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 import LazyLoad from 'react-lazy-load';
 
 import classes from "./style.module.scss";
-import {useWindowWidth} from "hooks/useWindowWidth";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
@@ -18,6 +17,8 @@ import CityZoomWebm from "../../../assets/video/city-zoom.video.webm";
 import CityZoomMP4 from "../../../assets/video/city-zoom.video.mp4";
 import MobileCityPoster from 'assets/images/posters/city_Mobile.jpg'
 import MobileZoomPoster from 'assets/images/posters/zoom.png'
+import ZoomPoster from "../../../assets/images/posters/zoom.png";
+import Ray from "../../../assets/video/Ray.webm";
 
 const data = [
   {
@@ -38,14 +39,13 @@ const data = [
 ];
 
 export const FataMorganaMobile = () => {
-  const isDesktop = useWindowWidth(1024);
 
   const parg1 = 'Metamorph is built on putting the power of choice into the hands of players All in game actions are governed by you, with no artificial barriers. We empower you to create your unique story by participating in a world where we expect the unexpected. From moral actions to investments, crusades, businesses operations and gambling – you havethe choice play and earn in a style you enjoy.';
 
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
-				{!isDesktop && <MobileSplashes />}
+				<MobileSplashes />
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
 						<div>
@@ -141,6 +141,17 @@ export const FataMorganaMobile = () => {
 					>
 						an adventure that will take your breath away
 					</motion.p>
+					<LazyLoad offset={offset}>
+						<video
+							className={classes.zoomRay}
+							autoPlay
+							loop
+							muted
+							poster={ZoomPoster}
+							playsInline>
+							<source src={Ray} type="video/webm" />
+						</video>
+					</LazyLoad>
 					<LazyLoad offset={offset}>
 						<motion.video
 							className={classes.zoomVideo}
