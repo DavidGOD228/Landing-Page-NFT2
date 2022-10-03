@@ -223,13 +223,17 @@
   height: 467.73px;
   margin-top: 65px;
 
-  @media screen and (max-width: $desktop){
+  @media screen and (max-width: 1023px){
     position: absolute;
     display: block;
     right: 0;
     left: 0;
     margin: 0 auto;
     bottom: -120px;
+  }
+
+  @media screen and (max-width: $m-desktop){
+    width: 40vw;
   }
 
   @media screen and (max-width: $s-tablet){

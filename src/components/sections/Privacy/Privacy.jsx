@@ -2,7 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import ToiletVideo from 'assets/video/toilet.video.mp4'
+import ToiletPoster from 'assets/images/posters/toitet.png'
 import BedVideo from 'assets/video/bed.video.mp4'
+import BedPoster from 'assets/images/posters/bed.png'
 
 import Smile from '../../icons/Smile'
 
@@ -34,6 +36,7 @@ export const Privacy = () => {
             className={classes.privacyVideo}
             src={ToiletVideo}
             autoPlay
+            poster={ToiletPoster}
             loop
             playsInline
             muted
@@ -76,6 +79,7 @@ export const Privacy = () => {
               src={BedVideo}
               autoPlay
               loop
+              poster={BedPoster}
               playsInline
               muted
             />
