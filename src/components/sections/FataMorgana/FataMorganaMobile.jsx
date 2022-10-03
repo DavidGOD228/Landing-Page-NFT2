@@ -16,7 +16,8 @@ import MobileCityWebm from "../../../assets/video/city-mobile.video.webm";
 import MobileCityMP4 from "../../../assets/video/city-mobile.video.mp4";
 import CityZoomWebm from "../../../assets/video/city-zoom.video.webm";
 import CityZoomMP4 from "../../../assets/video/city-zoom.video.mp4";
-
+import MobileCityPoster from 'assets/images/posters/city_Mobile.jpg'
+import MobileZoomPoster from 'assets/images/posters/zoom.png'
 
 const data = [
   {
@@ -154,6 +155,7 @@ export const FataMorganaMobile = () => {
 							autoPlay
 							loop
 							muted
+							poster={MobileZoomPoster}
 							playsInline>
 							<source src={CityZoomWebm} type="video/webm" />
 							<source src={CityZoomMP4} type="video/mp4" />
@@ -164,6 +166,7 @@ export const FataMorganaMobile = () => {
               <video
                 className={classes.mobileCity}
                 autoPlay
+								poster={MobileCityPoster}
                 loop
                 muted
                 playsInline>

@@ -12,7 +12,8 @@ import DesktopCityMP4 from 'assets/video/city-desktop.video.mp4'
 import CityDesktopWebm from 'assets/video/city-desktop.video.webm';
 import CityZoomWebm from 'assets/video/city-zoom.video.webm';
 import CityZoomMP4 from 'assets/video/city-zoom.video.mp4';
-
+import CityPoster from 'assets/images/posters/city.jpg'
+import ZoomPoster from 'assets/images/posters/zoom.png'
 import classes from "./style.module.scss";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
@@ -130,6 +131,7 @@ export const FataMorganaDesktop = () => {
 									autoPlay
 									loop
 									muted
+									poster={ZoomPoster}
 									playsInline>
 									<source src={CityZoomWebm} type="video/webm" />
 									<source src={CityZoomMP4} type="video/mp4" />
@@ -158,6 +160,7 @@ export const FataMorganaDesktop = () => {
 						<LazyLoad offset={offset}>
 							<video
 								className={classes.desktopCity}
+								poster={CityPoster}
 								autoPlay
 								loop
 								muted
