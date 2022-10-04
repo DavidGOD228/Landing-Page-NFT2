@@ -169,18 +169,17 @@ export const FataMorganaDesktop = () => {
 				</div>
 				<div className={classes.cityContainer}>
 					<div className={classes.videoWrapper}>
-						<LazyLoad offset={offset}>
-							<video
-								className={classes.desktopCity}
-								poster={CityPoster}
-								autoPlay
-								loop
-								muted
-								playsInline>
-								<source src={CityDesktopWebm} type="video/webm" />
-								<source src={DesktopCityMP4} type="video/mp4" />
-							</video>
-						</LazyLoad>
+            <video
+              className={classes.desktopCity}
+              poster={CityPoster}
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={CityDesktopWebm} type="video/webm" />
+              <source src={DesktopCityMP4} type="video/mp4" />
+            </video>
 					</div>
 				</div>
 			</div>
