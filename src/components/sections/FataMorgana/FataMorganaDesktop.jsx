@@ -47,17 +47,15 @@ export const FataMorganaDesktop = () => {
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
-						<LazyLoad offset={offset}>
-							<video
-								className={classes.zoomRay}
-								autoPlay
-								loop
-								muted
-								poster={ZoomPoster}
-								playsInline>
-								<source src={Ray} type="video/webm" />
-							</video>
-						</LazyLoad>
+            <video
+              className={classes.zoomRay}
+              autoPlay
+              loop
+              muted
+              poster={ZoomPoster}
+              playsInline>
+              <source src={Ray} type="video/webm" />
+            </video>
 						<div>
 							<Title classname={classes.title}>
 								<motion.p
@@ -129,26 +127,24 @@ export const FataMorganaDesktop = () => {
 							>
 								<Table style={{ width: 400, height: 114 }} data={data} />
 							</motion.div>
-								<LazyLoad offset={offset}>
-									<motion.video
-										className={classes.zoomVideo}
-										initial={{ y: 150 }}
-										whileInView={{ y: 0 }}
-										transition={{
-											duration: 1,
-											delay: 0.3,
-											ease: 'easeInOut'
-										}}
-										viewport={{ once: true }}
-										autoPlay
-										loop
-										muted
-										poster={ZoomPoster}
-										playsInline>
-										<source src={CityZoomWebm} type="video/webm" />
-										<source src={CityZoomMP4} type="video/mp4" />
-									</motion.video>
-								</LazyLoad>
+              <motion.video
+                className={classes.zoomVideo}
+                initial={{ y: 150 }}
+                whileInView={{ y: 0 }}
+                transition={{
+                  duration: 1,
+                  delay: 0.3,
+                  ease: 'easeInOut'
+                }}
+                viewport={{ once: true }}
+                autoPlay
+                loop
+                muted
+                poster={ZoomPoster}
+                playsInline>
+                <source src={CityZoomWebm} type="video/webm" />
+                <source src={CityZoomMP4} type="video/mp4" />
+              </motion.video>
 							<motion.p
 								className={classes.cityText}
 								initial={{ y: 150 }}

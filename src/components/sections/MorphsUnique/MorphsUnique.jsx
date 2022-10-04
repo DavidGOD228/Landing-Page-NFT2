@@ -329,7 +329,7 @@ export const MorphsUnique = () => {
         />
 			</Parallax>
 			{!isDesktop && (
-				<Parallax speed={speedParallax} className={classes.mobileMorph}>
+				// <Parallax speed={speedParallax} className={classes.mobileMorph}>
           <video
             className={classes.mobileMorphVideo}
             src={MorphMobile}
@@ -338,7 +338,7 @@ export const MorphsUnique = () => {
             loop
             muted
           />
-				</Parallax>
+				// </Parallax>
 			)}
 		</>
 	);

@@ -26,10 +26,11 @@
 }
 
 .members {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 20px;
   border-right: 1px solid #343A3D;
-  gap: 20px;
+  gap: 7%;
 
   @media screen and (max-width: $tablet) {
     padding: 27px 22px 0;

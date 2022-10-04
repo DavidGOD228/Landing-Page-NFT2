@@ -11,14 +11,14 @@ import classes from "./style.module.scss";
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-import MobileCityWebm from "../../../assets/video/city-mobile.video.webm";
-import MobileCityMP4 from "../../../assets/video/city-mobile.video.mp4";
-import CityZoomWebm from "../../../assets/video/city-zoom.video.webm";
-import CityZoomMP4 from "../../../assets/video/city-zoom.video.mp4";
+import MobileCityWebm from "assets/video/city-mobile.video.webm";
+import MobileCityMP4 from "assets/video/city-mobile.video.mp4";
+import CityZoomWebm from "assets/video/city-zoom.video.webm";
+import CityZoomMP4 from "assets/video/city-zoom.video.mp4";
 import MobileCityPoster from 'assets/images/posters/city_Mobile.jpg'
 import MobileZoomPoster from 'assets/images/posters/zoom.png'
-import ZoomPoster from "../../../assets/images/posters/zoom.png";
-import Ray from "../../../assets/video/Ray.webm";
+import ZoomPoster from "assets/images/posters/zoom.png";
+import Ray from "assets/video/Ray.webm";
 
 const data = [
   {
@@ -141,50 +141,44 @@ export const FataMorganaMobile = () => {
 					>
 						an adventure that will take your breath away
 					</motion.p>
-					<LazyLoad offset={offset}>
-						<video
-							className={classes.zoomRay}
-							autoPlay
-							loop
-							muted
-							poster={ZoomPoster}
-							playsInline>
-							<source src={Ray} type="video/webm" />
-						</video>
-					</LazyLoad>
-					<LazyLoad offset={offset}>
-						<motion.video
-							className={classes.zoomVideo}
-							initial={{ y: 150 }}
-							whileInView={{ y: 0 }}
-							transition={{
-								duration: 1,
-								delay: 0.3,
-								ease: 'easeInOut'
-							}}
-							viewport={{ once: true }}
-							autoPlay
-							loop
-							muted
-							poster={MobileZoomPoster}
-							playsInline>
-							<source src={CityZoomWebm} type="video/webm" />
-							<source src={CityZoomMP4} type="video/mp4" />
-						</motion.video>
-					</LazyLoad>
+					<video
+            className={classes.zoomRay}
+            autoPlay
+            loop
+            muted
+            poster={ZoomPoster}
+            playsInline>
+            <source src={Ray} type="video/webm" />
+          </video>
+					<motion.video
+            className={classes.zoomVideo}
+            initial={{ y: 150 }}
+            whileInView={{ y: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: 'easeInOut'
+            }}
+            viewport={{ once: true }}
+            autoPlay
+            loop
+            muted
+            poster={MobileZoomPoster}
+            playsInline>
+            <source src={CityZoomWebm} type="video/webm" />
+            <source src={CityZoomMP4} type="video/mp4" />
+          </motion.video>
 					<div className={classes.videoWrapper}>
-            <LazyLoad offset={offset}>
-              <video
-                className={classes.mobileCity}
-                autoPlay
-								poster={MobileCityPoster}
-                loop
-                muted
-                playsInline>
-								<source src={MobileCityWebm} type="video/webm" />
-								<source src={MobileCityMP4} type="video/mp4" />
-							</video>
-            </LazyLoad>
+            <video
+              className={classes.mobileCity}
+              autoPlay
+              poster={MobileCityPoster}
+              loop
+              muted
+              playsInline>
+              <source src={MobileCityWebm} type="video/webm" />
+              <source src={MobileCityMP4} type="video/mp4" />
+            </video>
 					</div>
 				</div>
 			</div>
