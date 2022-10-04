@@ -48,7 +48,7 @@ export function FirstLiveSimulator() {
         muted
         playsInline
       >
-        <source src={MorphDesktopWebm} type="video/webm" />
+        {/* <source src={MorphDesktopWebm} type="video/webm" /> */}
         <source src={MorphDesktopMp4} type="video/mp4" />
       </video>}
       {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
@@ -60,7 +60,7 @@ export function FirstLiveSimulator() {
           preload='auto'
           poster={isDesktop ? DesktopPoster : MobilePoster}
         >
-          <source src={MorphMobileWebm} type="video/webm" />
+          {/* <source src={MorphMobileWebm} type="video/webm" /> */}
           <source src={MorphMobileMp4} type="video/mp4" />
         </video>
       </LazyLoad>}
