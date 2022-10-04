@@ -42,17 +42,15 @@ export function FirstLiveSimulator() {
 
 	return (
 		<div className={classes.wrapper}>
-			{isDesktop && <LazyLoad offset={offset}>
-        <video
-          className={classes.morphVideo}
-          autoPlay
-          muted
-          playsInline
-        >
-          <source src={MorphDesktopWebm} type="video/webm" />
-          <source src={MorphDesktopMp4} type="video/mp4" />
-        </video>
-      </LazyLoad>}
+			{isDesktop && <video
+        className={classes.morphVideo}
+        autoPlay
+        muted
+        playsInline
+      >
+        <source src={MorphDesktopWebm} type="video/webm" />
+        <source src={MorphDesktopMp4} type="video/mp4" />
+      </video>}
       {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
         <video
           className={classes.morphVideo}

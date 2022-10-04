@@ -319,29 +319,25 @@ export const MorphsUnique = () => {
 						)}
 					</div>
 				</div>
-        <LazyLoad offset={offset}>
-          <video
-            className={classes.morphImage}
-            src={MorphDesktop}
-            autoPlay
-            loop
-            playsInline
-            muted
-          />
-        </LazyLoad>
+        <video
+          className={classes.morphImage}
+          src={MorphDesktop}
+          autoPlay
+          loop
+          playsInline
+          muted
+        />
 			</Parallax>
 			{!isDesktop && (
 				<Parallax speed={speedParallax} className={classes.mobileMorph}>
-          <LazyLoad offset={offset}>
-            <video
-              className={classes.mobileMorphVideo}
-              src={MorphMobile}
-              autoPlay
-              playsInline
-              loop
-              muted
-            />
-          </LazyLoad>
+          <video
+            className={classes.mobileMorphVideo}
+            src={MorphMobile}
+            autoPlay
+            playsInline
+            loop
+            muted
+          />
 				</Parallax>
 			)}
 		</>
