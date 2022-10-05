@@ -50,7 +50,6 @@ const Slider = ({ activeSlide, className }) => {
         {renderSLide(1)}
         {renderSLide(2)}
         {renderSLide(3)}
-        {renderSLide(4)}
       </AnimatePresence>
     </div>
   )

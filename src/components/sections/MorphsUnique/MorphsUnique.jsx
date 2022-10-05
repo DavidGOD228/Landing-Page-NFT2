@@ -1,13 +1,27 @@
 import { Paragraph, Title } from 'components';
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 import LazyLoad from 'react-lazy-load';
-import Skull from 'assets/images/skills/skill-5.png';
-import Slime from 'assets/images/skills/skill-6.png';
-import Bricks from 'assets/images/skills/skill-7.png';
-import Fish from 'assets/images/skills/agressive-active.png';
-import FishNotActive from 'assets/images/skills/agressive-not-active.png';
-import Chain from 'assets/images/skills/skill-8.png';
-import MorphDesktop from 'assets/video/agressive_desktop.video.mp4';
-import MorphMobile from 'assets/video/agressive_desktop.video.mp4';
+
+import SkullPng from 'assets/images/skills/skill-5.png';
+import SkullWebp from 'assets/images/skills/skill-5.webp';
+
+import SlimePng from 'assets/images/skills/skill-6.png';
+import SlimeWebp from 'assets/images/skills/skill-6.webp';
+
+import BricksPng from 'assets/images/skills/skill-7.png';
+import BricksWebp from 'assets/images/skills/skill-7.webp';
+
+import FishPng from 'assets/images/skills/agressive-active.png';
+import FishWebp from 'assets/images/skills/agressive-active.png';
+
+import FishNotActivePng from 'assets/images/skills/agressive-not-active.png';
+import FishNotActiveWebp from 'assets/images/skills/agressive-not-active.png';
+
+import ChainPng from 'assets/images/skills/skill-8.png';
+import ChainWebp from 'assets/images/skills/skill-8.webp';
+
+import agressiveMorph from 'assets/video/agressive_desktop.video.mp4';
+
 import { useRef } from 'react';
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
@@ -24,6 +38,13 @@ const speedParallax = 20;
 
 export const MorphsUnique = () => {
 	const isDesktop = useWindowWidth(1024);
+
+  const isWebpFish = isWebpSupported() ? FishWebp : FishPng;
+  const isWebpFishNotActive = isWebpSupported() ? FishNotActiveWebp : FishNotActivePng;
+  const isWebpSkull = isWebpSupported() ? SkullWebp : SkullPng;
+  const isWebpSlime = isWebpSupported() ? SlimeWebp : SlimePng;
+  const isWebpBricks = isWebpSupported() ? BricksWebp : BricksPng;
+  const isWebpChain = isWebpSupported() ? ChainWebp : ChainPng;
 
 	const textRef = useRef();
 	const isInViewtextRef = useInView(textRef, {
@@ -84,7 +105,7 @@ export const MorphsUnique = () => {
               <LazyLoad offset={offset}>
                 <motion.img
                   className={classes.skillImg}
-                  src={Skull}
+                  src={isWebpSkull}
                   alt='skill'
                   initial={{
                     scale: 0.9,
@@ -104,7 +125,7 @@ export const MorphsUnique = () => {
               <LazyLoad offset={offset}>
                 <motion.img
                   className={classes.skillImg}
-                  src={Slime}
+                  src={isWebpSlime}
                   alt='skill'
                   initial={{
                     scale: 0.9,
@@ -125,7 +146,7 @@ export const MorphsUnique = () => {
               <LazyLoad offset={offset}>
                 <motion.img
                   className={classes.skillImg}
-                  src={Bricks}
+                  src={isWebpBricks}
                   alt='skill'
                   initial={{
                     scale: 0.9,
@@ -149,7 +170,7 @@ export const MorphsUnique = () => {
                   <LazyLoad offset={offset}>
                     <motion.img
                       className={`${classes.skillImg} ${classes.fish}`}
-                      src={FishNotActive}
+                      src={isWebpFishNotActive}
                       alt='skill'
                       initial='hidden'
                       variants={{
@@ -174,7 +195,7 @@ export const MorphsUnique = () => {
                   <LazyLoad offset={offset}>
                     <motion.img
                       className={`${classes.skillImg} ${classes.fish}`}
-                      src={FishNotActive}
+                      src={isWebpFishNotActive}
                       alt='skill'
                       initial='hidden'
                       variants={{
@@ -200,7 +221,7 @@ export const MorphsUnique = () => {
                   <LazyLoad offset={offset}>
                     <motion.img
                       className={`${classes.skillImg} ${classes.fish} ${classes.active}`}
-                      src={Fish}
+                      src={isWebpFish}
                       alt='skill'
                       initial={{
                         scale: 0.9,
@@ -226,7 +247,7 @@ export const MorphsUnique = () => {
                   <LazyLoad offset={offset}>
                     <motion.img
                       className={`${classes.skillImg}  ${classes.active}`}
-                      src={Fish}
+                      src={isWebpFish}
                       alt='skill'
                       initial={{
                         scale: 0.9,
@@ -274,7 +295,7 @@ export const MorphsUnique = () => {
               <LazyLoad offset={offset}>
                 <motion.img
                   className={classes.skillImg}
-                  src={Chain}
+                  src={isWebpChain}
                   alt='skill'
                   initial={{
                     scale: 0.9,
@@ -321,7 +342,7 @@ export const MorphsUnique = () => {
 				</div>
         <video
           className={classes.morphImage}
-          src={MorphDesktop}
+          src={agressiveMorph}
           autoPlay
           loop
           playsInline
@@ -329,16 +350,16 @@ export const MorphsUnique = () => {
         />
 			</Parallax>
 			{!isDesktop && (
-				<Parallax speed={speedParallax} className={classes.mobileMorph}>
+				<div className={classes.mobileMorph}>
           <video
             className={classes.mobileMorphVideo}
-            src={MorphMobile}
+            src={agressiveMorph}
             autoPlay
             playsInline
             loop
             muted
           />
-				</Parallax>
+				</div>
 			)}
 		</>
 	);

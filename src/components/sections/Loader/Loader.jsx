@@ -24,7 +24,7 @@ export function Loader({ setIsloading }) {
 					const addNumLoadCount = randomIntFromInterval(1, maxCount / duration);
 					return s + addNumLoadCount;
 				});
-			}, Math.random() * 3000);
+			}, Math.random() * 12000);
 		}
 	}, [count, setIsloading]);
 

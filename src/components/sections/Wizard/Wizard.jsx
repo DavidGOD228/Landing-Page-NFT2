@@ -10,8 +10,8 @@ import JonasDesktop from 'assets/images/jonas-desktop.png';
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
 
-import teamBackgroundPng from "assets/images/team.png";
-import teamMainBackgroundPng from "assets/images/teamMain.png";
+import teamBackgroundPng from "assets/images/team.webp";
+import teamMainBackgroundPng from "assets/images/teamMain.webp";
 
 import { useLazyBackgroundLoad } from 'hooks/useLazyBackgroundLoad';
 

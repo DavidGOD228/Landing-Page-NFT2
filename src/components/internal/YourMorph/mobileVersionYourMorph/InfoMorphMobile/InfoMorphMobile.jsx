@@ -1,4 +1,3 @@
-import LazyLoad from 'react-lazy-load';
 import {
 	InfoDetails,
 	IdentifierBlock,
@@ -6,11 +5,14 @@ import {
 	AttrsDetails
 } from 'components';
 import classes from './style.module.scss';
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 
 export function InfoMorphMobile({ className, morph, ...props }) {
 	const { id, type, name, attributes, bodyMobileImg } = morph;
 
-	const importBodyImg = require('assets/images/morphs/' + bodyMobileImg);
+  const isWbpImgBody = isWebpSupported() ? bodyMobileImg.replace(".png", '.webp') : bodyMobileImg;
+
+	const importBodyImg = require('assets/images/morphs/' + isWbpImgBody);
 
 	return (
 		<div className={classes.infoMorphMobile} {...props}>

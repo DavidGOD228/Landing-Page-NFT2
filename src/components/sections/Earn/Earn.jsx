@@ -5,7 +5,7 @@ import { Title, GreenText, Paragraph, Accordion } from 'components';
 
 import CoinVideoMp4 from "assets/video/coin.video.mp4";
 import CoinVideoWebm from "assets/video/coin.video.webm";
-import CoinPoster from "assets/images/posters/coin.png";
+import CoinPoster from "assets/images/posters/coin.webp";
 
 import ComparingCardsMp4 from 'assets/video/comp.video.mp4';
 import ComparingCardsWebm from 'assets/video/comp.video.webm';

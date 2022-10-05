@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react'
 
-import Logo from '../../../assets/images/logo.png'
-import Hamburger from '../../../assets/images/hamburger.svg'
-import Close from '../../../assets/images/close.svg'
-import Twitter from '../../../assets/images/twitter.svg'
-import Discord from '../../../assets/images/discord.svg'
+import Logo from 'assets/images/logo.webp'
+import Hamburger from 'assets/images/hamburger.svg'
+import Close from 'assets/images/close.svg'
+import Twitter from 'assets/images/twitter.svg'
+import Discord from 'assets/images/discord.svg'
 
-import {useWindowWidth} from '../../../hooks/useWindowWidth'
+import {useWindowWidth} from 'hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 import {menuData} from "./data/menu";
