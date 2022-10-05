@@ -239,6 +239,9 @@
 
   @media screen and (max-width: $s-tablet){
     width: 80vw;
+    height: 80vw;
+    margin-top: 0;
+    bottom: -75px;
   }
 }
 

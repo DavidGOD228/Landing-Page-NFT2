@@ -34,7 +34,7 @@ export const Freedom = () => {
 				<AnimatedTextCharacter
 					delay={1.5}
 					className={classes.listParagraph}
-					text='Enter the world of the future'
+					text='Explore a completely innovative world'
 				/>
 			),
 			line: <FirstLine />
@@ -46,7 +46,7 @@ export const Freedom = () => {
 				<AnimatedTextCharacter
 					delay={isDesktop ? 4 : 2.5}
 					className={classes.listParagraph}
-					text='Build your dream life'
+					text='Build an emotional bond with your Morph'
 				/>
 			),
 			line: <SecondLine />

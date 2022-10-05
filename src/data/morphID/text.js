@@ -1,6 +1,6 @@
 export const morphIDText = {
   titleMobile: 'Buy and sell your assets and services on the METAMORPH Marketplace, both in and outside the game.',
-  titleDesktop: 'Morph - ID is an identification card with a single genetic code essential to access the game that represents the identity of yourMorph that stands out in each user',
+  titleDesktop: 'You have a lot of opportunities to build something better than others. Be the best one and sell your assets.',
   waysToStartMobile: 'Metamorph è un avventura dinamica giocabile in terza persona di genere life simulator ambientato nel mondo virtuale Fata Morgana. Il personaggio giocabile chiamatosi Surrogate è ampliamente personalizzabile con atributi',
   waysToStartDesktop: 'The game offers 2 experience scenarios based on the starting Morph ID card a player chooses. Each scenario satisfies different game modes. Classique card is more suitable for explorers and the Eternal one for true competition lovers.',
   classiqueMobile: 'Metamorph è un avventura dinamica giocabile in terza persona di genere life simulator ambientato nel mondo virtuale Fata Morgana.',

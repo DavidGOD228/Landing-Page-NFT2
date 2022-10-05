@@ -35,7 +35,7 @@ export const YourMorph = () => {
 	};
 
 	const textParg =
-		'Metamorph è un avventura dinamica giocabile in terza persona di genere life simulator ambientato nel mondo virtuale Fata Morgana. Il personaggio giocabile chiamatosi Surrogate è ampliamente personalizzabile con atributi';
+		'Each ID is unique and randomly generated, the system activates it when you start the game. The ID determines all parameters related to your character, such as appearance, character and list of skills and traits.';
 
 	return (
 		<div className={classes.container}>

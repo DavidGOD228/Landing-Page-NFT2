@@ -92,19 +92,17 @@ export const MorphId = () => {
 
         <div className={classes.cardsImg}>
           {isDesktop && (
-            <LazyLoad offset={offset}>
-              <motion.video
-                className={classes.comparingVideo}
-                {...animFromLeftImg}
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src={ComparingCardsWebm} type="video/webm" />
-                <source src={ComparingCardsMp4} type="video/mp4" />
-              </motion.video>
-            </LazyLoad>
+            <motion.video
+              className={classes.comparingVideo}
+              {...animFromLeftImg}
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
+              <source src={ComparingCardsWebm} type="video/webm" />
+              <source src={ComparingCardsMp4} type="video/mp4" />
+            </motion.video>
           )}
         </div>
 

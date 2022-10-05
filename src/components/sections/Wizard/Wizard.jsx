@@ -26,18 +26,18 @@ export const Wizard = () => {
       image: isDesktop ? NazarioDesktop: Nazario,
       text: (
         <p className={classes.text}>
-          Nazario 8+ years of experience in the gaming industry. Worked on Sims, SimCity. Early crypto adopter and investor.
+          8+ years experience of gaming and game marketing experience in industry leaders such as EA Mobile and Lockwood Publishing Ltd. Worked on top mobile charts titles such as The Sims Mobile, Avakin Life, and BitLife. Early crypto adopter and angel investor.
         </p>
       ),
       top: 7,
     },
     {
       name: "Jonas \n Weitzel",
-      position: "Co-Founder & CTO",
+      position: "CTO",
       image: isDesktop ? JonasDesktop: Jonas,
       text: (
         <p className={classes.text}>
-          Johnas 15+ years of game development experience. Managed to work on Clash of Clans, Brawl Stars.
+          8+ years experience of gaming and game marketing experience in industry leaders such as EA Mobile and Lockwood Publishing Ltd. Worked on top mobile charts titles such as The Sims Mobile, Avakin Life, and BitLife. Early crypto adopter and angel investor. 
         </p>
       ),
     },
@@ -80,8 +80,7 @@ export const Wizard = () => {
 								24 <span className={classes.membersText}>members</span>
 							</h4>
 							<p className={classes.memberParagraph}>
-								The game offers 2 experience scenarios based on the starting
-								Morph ID card a player chooses.
+                Matches are won by talent and championships are won by teamwork and passion.
 							</p>
 						</div>
 						<div

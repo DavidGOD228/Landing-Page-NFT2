@@ -113,7 +113,7 @@ export const Personalize = () => {
 					</Title>
 					<p className={classes.personalizeParagraph}>
 						{paragraphAnimation(
-							'Costruisci comunità per vivere le tue idee più sfrenate con soldi veri sul tavolo.'
+							'Make strategic decisions about how to spend your Morph\'s time to optimize his mood. Make decisions about what he eats, what he learns, what career he chooses, how he entertains, and whom he socializes with.'
 						)}
 					</p>
 
