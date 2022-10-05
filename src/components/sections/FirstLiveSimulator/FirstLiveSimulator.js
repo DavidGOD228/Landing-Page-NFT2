@@ -6,8 +6,8 @@ import LazyLoad from 'react-lazy-load';
 
 import WhiteLine from 'assets/images/whiteLine.svg';
 import toiletVideo from 'assets/video/toilet.video.mp4';
-import ToiletPoster from 'assets/images/posters/toitet.png'
-import BedPoster from 'assets/images/posters/bed.png'
+import ToiletPoster from 'assets/images/posters/toitet.webp'
+import BedPoster from 'assets/images/posters/bed.webp'
 import bedVideo from 'assets/video/bed.video.mp4';
 
 import SmileDesktop from 'assets/images/smileDesktop.svg';
@@ -19,7 +19,7 @@ import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
 import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
 
 import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
-import MobilePoster from 'assets/images/posters/falling_Mobile.png'
+import MobilePoster from 'assets/images/posters/falling_Mobile.webp'
 
 import classes from './style.module.scss';
 

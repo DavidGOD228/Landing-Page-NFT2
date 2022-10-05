@@ -2,6 +2,14 @@
 @import "~assets/styles/media.scss";
 
 .phoneItem {
+  position: relative;
   height: auto;
-  max-width: 270px;
+  max-width: 275px;
+
+  border-radius: 36px;
+
+  padding: 5px;
+  background: black;
+
+  border: 5px solid #8a8299;
 }

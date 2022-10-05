@@ -12,7 +12,7 @@
   padding-bottom: 44px;
 
   @media screen and (min-width: $desktop) {
-    background-image: url("../../../assets/images/bottom-background-desktop.png");
+    background-image: url("~assets/images/bottom-background-desktop.webp");
     background-size: cover;
     padding-top: 213px;
   }
@@ -27,7 +27,7 @@
 
   @media screen and (max-width: $desktop){
     position: relative;
-    background-image: url("../../../assets/images/bottom-background.png");
+    background-image: url("~assets/images/bottom-background.webp");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 79px 20px 0;

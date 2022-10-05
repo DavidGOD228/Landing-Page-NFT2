@@ -1,59 +1,16 @@
-import { motion } from 'framer-motion';
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 
-import CircleOn from 'assets/images/roadmap/circle-on.png';
-import CircleOff from 'assets/images/roadmap/circle-off.png';
+import CircleOnWebp from 'assets/images/roadmap/circle-on.webp';
+import CircleOnPng from 'assets/images/roadmap/circle-on.png';
+
+import CircleOffWebp from 'assets/images/roadmap/circle-off.webp';
+import CircleOffPng from 'assets/images/roadmap/circle-off.png';
+
 import classes from './style.module.scss';
 
 export function RoadmapMobile({ className, ...props }) {
-	const farmerMotionOptions = {
-		initial: {
-			y: 150
-		},
-		whileInView: {
-			y: 0
-		},
-		transition: {
-			ease: 'easeOut',
-			duration: 1
-		},
-		viewport: { once: true }
-	};
-
-	const textAnim = {
-		initial: {
-			y: 25,
-			opacity: 0,
-			scale: 0
-		},
-		whileInView: {
-			y: 0,
-			opacity: 1,
-			scale: 1
-		},
-		transition: {
-			ease: 'easeOut',
-			duration: 1
-		},
-		viewport: { once: true }
-	};
-
-	const circleAnim = {
-		initial: {
-			y: 0,
-			opacity: 0,
-			scale: 0
-		},
-		whileInView: {
-			y: 0,
-			opacity: 1,
-			scale: 1
-		},
-		transition: {
-			ease: 'easeOut',
-			duration: 1
-		},
-		viewport: { once: true }
-	};
+  const isWebpCircleOn = isWebpSupported() ? CircleOnWebp : CircleOnPng;
+  const isWebpCircleOff = isWebpSupported() ? CircleOffWebp : CircleOffPng;
 
 	return (
 		<div className={`${classes.roadmapMobile} ${className}`} {...props}>
@@ -61,11 +18,11 @@ export function RoadmapMobile({ className, ...props }) {
 				<div className={classes.roadDot} />
 				<div className={classes.pointsUp}>
 					<div className={classes.textInfo}>
-						<img className={classes.circle} src={CircleOn} alt='' />
+						<img className={classes.circle} src={isWebpCircleOn} alt='' />
 						<div>Define Concept</div>
 					</div>
 					<div className={classes.textInfo}>
-						<img className={classes.circle} src={CircleOn} alt='' />
+						<img className={classes.circle} src={isWebpCircleOn} alt='' />
 						<div>Market Research</div>
 					</div>
 				</div>
@@ -74,8 +31,8 @@ export function RoadmapMobile({ className, ...props }) {
 				<span className={`${classes.roadLine} ${classes.downRoadLine}`} />
 
 				<div className={classes.pointsDown}>
-					<img className={classes.circle} src={CircleOn} alt='' />
-					<img className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={isWebpCircleOn} alt='' />
+					<img className={classes.circle} src={isWebpCircleOn} alt='' />
 				</div>
 
 				<span className={`${classes.roadLine} ${classes.leftDownRoadLine}`} />
@@ -90,8 +47,8 @@ export function RoadmapMobile({ className, ...props }) {
 				<span className={`${classes.roadLine} ${classes.downRoadLine}`} />
 
 				<div className={classes.pointsDown}>
-					<img className={classes.circle} src={CircleOn} alt='' />
-					<img className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={isWebpCircleOn} alt='' />
+					<img className={classes.circle} src={isWebpCircleOn} alt='' />
 				</div>
 
 				<span
@@ -116,8 +73,8 @@ export function RoadmapMobile({ className, ...props }) {
 				/>
 
 				<div className={classes.pointsDown}>
-					<img className={classes.circle} src={CircleOn} alt='' />
-					<img className={classes.circle} src={CircleOn} alt='' />
+					<img className={classes.circle} src={isWebpCircleOn} alt='' />
+					<img className={classes.circle} src={isWebpCircleOn} alt='' />
 				</div>
 
 				<span
@@ -145,12 +102,12 @@ export function RoadmapMobile({ className, ...props }) {
 				<div className={classes.pointsDown}>
 					<img
 						className={`${classes.circle} ${classes.isNotActive}`}
-						src={CircleOff}
+						src={isWebpCircleOff}
 						alt=''
 					/>
 					<img
 						className={`${classes.circle} ${classes.isNotActive}`}
-						src={CircleOff}
+						src={isWebpCircleOff}
 						alt=''
 					/>
 				</div>
@@ -177,12 +134,12 @@ export function RoadmapMobile({ className, ...props }) {
 				<div className={classes.pointsDown}>
 					<img
 						className={`${classes.circle} ${classes.isNotActive}`}
-						src={CircleOff}
+						src={isWebpCircleOff}
 						alt=''
 					/>
 					<img
 						className={`${classes.circle} ${classes.isNotActive}`}
-						src={CircleOff}
+						src={isWebpCircleOff}
 						alt=''
 					/>
 				</div>
@@ -213,7 +170,7 @@ export function RoadmapMobile({ className, ...props }) {
 					<div className={classes.textInfo}>
 						<img
 							className={`${classes.circle} ${classes.isNotActive}`}
-							src={CircleOff}
+							src={isWebpCircleOff}
 							alt=''
 						/>
 						<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
@@ -223,7 +180,7 @@ export function RoadmapMobile({ className, ...props }) {
 					<div className={classes.textInfo}>
 						<img
 							className={`${classes.circle} ${classes.isNotActive}`}
-							src={CircleOff}
+							src={isWebpCircleOff}
 							alt=''
 						/>
 						<div className={`${classes.textInfo} ${classes.opacityRoad}`}>

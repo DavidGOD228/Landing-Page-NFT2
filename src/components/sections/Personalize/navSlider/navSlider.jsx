@@ -33,7 +33,7 @@ const NavSlider = ({
 			</div>
 
 			<p className={classes.sliderCount}>
-				<span className={classes.activeSlide}>{activeSlide}</span>of 4
+				<span className={classes.activeSlide}>{activeSlide}</span>of 3
 			</p>
 
 			<div

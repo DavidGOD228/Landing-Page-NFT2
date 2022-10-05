@@ -42,7 +42,6 @@ function App() {
       document.body.style.overflowY = 'auto';
       document.body.style.height = 'auto';
     }
-
   }, [isLoading]);
 
 	return (

@@ -12,14 +12,13 @@ import DesktopCityMP4 from 'assets/video/city-desktop.video.mp4'
 import CityDesktopWebm from 'assets/video/city-desktop.video.webm';
 import CityZoomWebm from 'assets/video/city-zoom.video.webm';
 import CityZoomMP4 from 'assets/video/city-zoom.video.mp4';
-import CityPoster from 'assets/images/posters/city.jpg'
-import ZoomPoster from 'assets/images/posters/zoom.png'
+import CityPoster from 'assets/images/posters/city.webp'
+import ZoomPoster from 'assets/images/posters/zoom.webp'
 import Ray from 'assets/video/Ray.webm'
 import classes from "./style.module.scss";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
-
 
 const data = [
   {
@@ -47,15 +46,17 @@ export const FataMorganaDesktop = () => {
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
-            <video
-              className={classes.zoomRay}
-              autoPlay
-              loop
-              muted
-              poster={ZoomPoster}
-              playsInline>
-              <source src={Ray} type="video/webm" />
-            </video>
+            <LazyLoad offset={offset}>
+              <video
+                className={classes.zoomRay}
+                autoPlay
+                loop
+                muted
+                poster={ZoomPoster}
+                playsInline>
+                <source src={Ray} type="video/webm" />
+              </video>
+            </LazyLoad>
 						<div>
 							<Title classname={classes.title}>
 								<motion.p
@@ -164,7 +165,7 @@ export const FataMorganaDesktop = () => {
 
 				</div>
 				<div className={classes.cityContainer}>
-					<div className={classes.videoWrapper}>
+					<LazyLoad offset={offset} className={classes.videoWrapper}>
             <video
               className={classes.desktopCity}
               poster={CityPoster}
@@ -176,7 +177,7 @@ export const FataMorganaDesktop = () => {
               <source src={CityDesktopWebm} type="video/webm" />
               <source src={DesktopCityMP4} type="video/mp4" />
             </video>
-					</div>
+					</LazyLoad>
 				</div>
 			</div>
 		</>

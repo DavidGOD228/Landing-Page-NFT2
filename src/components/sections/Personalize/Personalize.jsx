@@ -47,7 +47,7 @@ export const Personalize = () => {
 	const [activeSlide, setActiveSlide] = useState(1);
 
 	const handleNextSlide = () => {
-		if (activeSlide === 4) return;
+		if (activeSlide === 3) return;
 		setActiveSlide(prevSlide => prevSlide + 1);
 	};
 

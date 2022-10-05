@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import {DefaultPlayer as Video} from 'react-html5video';
 
 import Header from '../Header/Header'
-import MetaMorphMobile from '../../../assets/images/metaMorphMobile.png'
-import MetaMorphMain from 'assets/images/metaMorphMain.png'
+import MetaMorphMobile from 'assets/images/metaMorphMobile.webp'
+import MetaMorphMain from 'assets/images/metaMorphMain.webp'
 import TeaserVideo from 'assets/video/teaser.video.mp4';
 import Close from 'assets/images/close.svg'
 import MorphBlock from "../Header/components/MorphBlock/MorphBlock";
