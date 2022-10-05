@@ -1,3 +1,5 @@
+import classes from './style.module.scss';
+
 export const roadmapTableData = [
   {
     headerText: 'Q1',
@@ -5,7 +7,7 @@ export const roadmapTableData = [
     title: 'Define Concept & Market Research',
     headerBackgroundColor: 'linear-gradient(90deg, rgba(253, 204, 143, 1) 0%, rgba(31, 249, 236, 1) 100%)',
     borderColor: '#fccb8f',
-    subtitle: <p>
+    subtitle: <p className={classes.mb}>
       Market Research.<br/>
       Creating graphic language<br/>
       Art concept<br/>
@@ -21,7 +23,7 @@ export const roadmapTableData = [
     title: 'Team onboarding & Start of game development',
     headerBackgroundColor: 'linear-gradient(90deg, rgba(36, 249, 232, 1) 0%, rgba(199, 247, 121, 1) 100%)',
     borderColor: '#23f8ea',
-    subtitle: <p>
+    subtitle: <p className={classes.mb}>
       Founders funding round. Preparing development roadmap.<br/>
       Team recruitment to implement AAA-level game.<br/>
       Start of game development.<br/>
@@ -34,7 +36,7 @@ export const roadmapTableData = [
     title: 'Team scale & Internal basic mechanic tests',
     headerBackgroundColor: 'linear-gradient(90deg, rgba(201, 247, 120, 1) 0%, rgba(254, 217, 138, 1) 100%)',
     borderColor: '#c9f778',
-    subtitle: <p>
+    subtitle: <p className={classes.mb}>
       Project Team Scale.<br/>
       Game development on-going.<br/>
       Morphs assets.<br/>
@@ -48,7 +50,7 @@ export const roadmapTableData = [
     year: 2022,
     title: 'Official Announcements & Seed Round',
     borderColor: '#fdda89',
-    subtitle: <p>
+    subtitle: <p className={classes.mb}>
       In-game economy part implemented<br/>
       Game Graphics<br/>
       NFT Teaser Realize<br/>
@@ -79,9 +81,15 @@ export const roadmapTableData = [
     title: 'Public Sale & TGE',
     borderColor: '#5A5A6B',
     subtitle: <p>
-      Smart Contract Audit Public Sale DEX/CEX listing Game Public Beta Realize
-      (Testnet) Token Staking Bug fixing
-      Game Official Realize v1 NFT Marketplace Realize
+      Smart Contract Audit<br/>
+      Public Sale<br/>
+      DEX/CEX Listing<br/>
+      Game Public Beta Realize<br/>
+      (Testnet)<br/>
+      Token Staking<br/>
+      Bug fixing<br/>
+      Game Official Realize v1<br/>
+      NFT Marketplace Realize
     </p>
   },
   {

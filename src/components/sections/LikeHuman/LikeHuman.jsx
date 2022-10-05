@@ -189,9 +189,7 @@ export const LikeHuman = () => {
       <Parallax speed={0}>
         {isDesktop ? table : accordion}
       </Parallax>
-      <Parallax className={classes.parallaxLikeHuman} speed={-speedParallax / 1.5}>
-        <DesktopSplashes/>
-      </Parallax>
+      <DesktopSplashes/>
 
     </div>
   );

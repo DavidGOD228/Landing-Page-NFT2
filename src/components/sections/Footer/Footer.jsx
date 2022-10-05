@@ -27,16 +27,20 @@ export const Footer = () => {
           <span>Privacy</span>
         </div>
         <div className={`${classes.linksBlock} ${classes.linksBlockRightAlign}`}>
-          <span>Whitepaper</span>
-          <span>Litepaper</span>
+          <a href="https://metamorphbio.gitbook.io/metamorph/" target="_blank" rel="noreferrer">Whitepaper</a>
+          <a href="https://docsend.com/view/vnrndawmaqbdamzh/" target="_blank" rel="noreferrer">Litepaper</a>
         </div>
       </div>
       <div className={classes.socials}>
         <LazyLoad offset={offset}>
-          <img src={Twitter} alt=""/>
+          <a href="https://twitter.com/metamorphbio" target="_blank" rel="noreferrer">
+            <img src={Twitter} alt=""/>
+          </a>
         </LazyLoad>
         <LazyLoad offset={offset}>
-          <img src={Discord} alt=""/>
+          <a href="https://discord.gg/F8zDKSFrDJ" target="_blank" rel="noreferrer">
+            <img src={Discord} alt=""/>
+          </a>
         </LazyLoad>
       </div>
       <p className={classes.copyright}>

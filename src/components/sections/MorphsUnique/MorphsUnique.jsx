@@ -33,10 +33,10 @@ export const MorphsUnique = () => {
 	const titleText = 'ALL MORPHS ARE UNIQUE';
 
 	const text1 =
-		'MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it, dress up your Morph, find them a job and make them earn. Invest in its growth or make a fortune. Everything is alright.';
+		'Like us humans, morphs also possess a combination of genetic characteristics that give them unique and unexpected behavior. While you\'re deciding his moves, don\'t forget that Morphs can react to external conditions on their own.';
 
 	const descrSkill =
-		'MM takes you back to what makes a truly exciting MMORPG. You make the rules. Buy yourself a house, furnish it.';
+		'Some characters may have impulsive personality traits that can be problematic to deal with, but in the hands of an experienced player, every difficulty turns into an opportunity. Everything will be up to you!';
 
 	return (
 		<>
@@ -312,7 +312,7 @@ export const MorphsUnique = () => {
 									}}
 									viewport={{ once: true }}
 								>
-									Agressive
+									Piranha Soul
 								</motion.div>
 								{isInViewtextRef && <TypeAnimation cursor={true} sequence={[3000, descrSkill]} />}
 							</>
@@ -329,7 +329,7 @@ export const MorphsUnique = () => {
         />
 			</Parallax>
 			{!isDesktop && (
-				// <Parallax speed={speedParallax} className={classes.mobileMorph}>
+				<Parallax speed={speedParallax} className={classes.mobileMorph}>
           <video
             className={classes.mobileMorphVideo}
             src={MorphMobile}
@@ -338,7 +338,7 @@ export const MorphsUnique = () => {
             loop
             muted
           />
-				// </Parallax>
+				</Parallax>
 			)}
 		</>
 	);

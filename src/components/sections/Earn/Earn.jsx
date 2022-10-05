@@ -27,8 +27,7 @@ const data = [
 		title: 'Complete the task',
 		subtitle: (
 			<p className={classes.subtitle}>
-				By completing in-game tasks you are getting rewarded with our native
-				token
+				By completing a few in-game tasks, you get our native token.
 			</p>
 		)
 	},
@@ -36,8 +35,7 @@ const data = [
 		title: 'Win the challenge',
 		subtitle: (
 			<p className={classes.subtitle}>
-				We have a lot of funny challenges between our players. winners will be
-				rewarded
+				We have many challenges between our players. The most resourceful will be rewarded.
 			</p>
 		),
 		borderColor: 'rgba(53,115,107,0.3)'
@@ -46,8 +44,7 @@ const data = [
 		title: 'Sell your staff',
 		subtitle: (
 			<p className={classes.subtitle}>
-				You have a lot of opportunities of building something better than
-				others. Be the best one and sell your assets
+				You have a lot of opportunities to build something better than others. Be the best one and sell your assets.
 			</p>
 		),
 		borderColor: 'rgba(63,76,53,0.3)'
@@ -135,7 +132,7 @@ export const Earn = () => {
 							</Title>
 							<Paragraph className={classes.paragraph}>
 								{paragraphAnimation(
-									'Earn crypto in MM tokens as in-game rewards through playing, completing quests, performing special achievements, and win prizes in tournaments and events.'
+									'Earn cryptocurrencies in MM tokens as in-game rewards by playing, completing missions, and reaching career goals. Winning rewards can be in the form of NFT’s or native token.'
 								)}
 							</Paragraph>
 						</div>
