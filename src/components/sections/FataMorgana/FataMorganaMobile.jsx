@@ -23,18 +23,18 @@ import Ray from "assets/video/Ray.webm";
 const data = [
   {
     end: 15,
-    text: "HOUSES",
+    text: "Building",
     suffix: "k",
   },
   {
-    end: 200,
-    text: "APARTMENTS",
-    suffix: "k",
+    end: 950,
+    text: "Active building",
+    suffix: "",
   },
   {
-    end: 15,
-    text: "HOUSES",
-    suffix: "k",
+    end: 8,
+    text: "Citizens",
+    suffix: "m",
   },
 ];
 
@@ -141,7 +141,7 @@ export const FataMorganaMobile = () => {
 					>
 						an adventure that will take your breath away
 					</motion.p>
-					<video
+				{/* 	<video
             className={classes.zoomRay}
             autoPlay
             loop
@@ -149,7 +149,7 @@ export const FataMorganaMobile = () => {
             poster={ZoomPoster}
             playsInline>
             <source src={Ray} type="video/webm" />
-          </video>
+          </video> */}
 					<motion.video
             className={classes.zoomVideo}
             initial={{ y: 150 }}

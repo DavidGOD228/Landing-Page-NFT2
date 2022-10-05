@@ -24,18 +24,18 @@ import { offset } from 'utils/lazyload';
 const data = [
   {
     end: 15,
-    text: "HOUSES",
+    text: "Building",
     suffix: "k",
   },
   {
-    end: 200,
-    text: "APARTMENTS",
-    suffix: "k",
+    end: 950,
+    text: "Active building",
+    suffix: "",
   },
   {
-    end: 15,
-    text: "HOUSES",
-    suffix: "k",
+    end: 8,
+    text: "Citizens",
+    suffix: "m",
   },
 ];
 
@@ -115,7 +115,7 @@ export const FataMorganaDesktop = () => {
 						</div>
 						<div className={classes.secondBlockFataMorgana}>
 							<motion.div
-								style={{ margin: '69px 56px 0px auto' }}
+								style={{ margin: '69px auto 0px auto' }}
 								initial={{ y: 150 }}
 								whileInView={{ y: 0 }}
 								transition={{
