@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import Title from '../../common/Title/Title';
@@ -17,7 +17,7 @@ import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./MobileSplashes/MobileSplashes";
 
-import { Parallax, useParallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 const speedParallax = 20;
 
 const data = [
