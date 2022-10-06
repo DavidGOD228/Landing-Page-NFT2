@@ -155,9 +155,9 @@ export const Earn = () => {
 					</div>
 					{
 						!isDesktop && 
-            <Parallax speed={10}>
+            // <Parallax speed={10}>
               <MobileSplashes/>
-            </Parallax>
+            // </Parallax>
 					}
 					<div style={{ marginTop: 40 }}>
 						{!isDesktop &&

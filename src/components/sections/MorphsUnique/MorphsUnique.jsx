@@ -61,14 +61,19 @@ export const MorphsUnique = () => {
 
 	return (
 		<>
-      {isDesktop && <Parallax speed={-speedParallax / 2}>
+      {isDesktop && 
+      // <Parallax speed={-speedParallax / 2}>
         <DesktopSplashes/>
-      </Parallax>}
-      {!isDesktop && <Parallax speed={-speedParallax / 2}>
+      // </Parallax>
+      }
+      {!isDesktop && 
+      // <Parallax speed={-speedParallax / 2}>
         <MobileSplashes className={classes.topBlockMobileSplashes}/>
-      </Parallax>}
+      // </Parallax>
+      }
 
-			<Parallax speed={0} className={classes.container}>
+			{/* <Parallax speed={0} className={classes.container}> */}
+			<div className={classes.container}>
 				<div className={classes.content}>
 					<Title classname={classes.title}>
 						{titleText.split(' ').map((word, idx) => {
@@ -348,7 +353,8 @@ export const MorphsUnique = () => {
           playsInline
           muted
         />
-			</Parallax>
+			</div>
+			{/* </Parallax> */}
 			{!isDesktop && (
 				<div className={classes.mobileMorph}>
           <video

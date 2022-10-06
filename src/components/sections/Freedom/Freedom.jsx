@@ -96,14 +96,19 @@ export const Freedom = () => {
 
 	return (
     <>
-      {isDesktop && <Parallax speed={speedParallax / 1.5}>
+      {isDesktop && 
+      // <Parallax speed={speedParallax / 1.5}>
         <DesktopSplashes/>
-      </Parallax>}
-      {!isDesktop && <Parallax speed={speedParallax / 3.5}>
+      // </Parallax>
+      }
+      {!isDesktop && 
+      // <Parallax speed={speedParallax / 3.5}>
         <MobileSplashes />
-      </Parallax>}
+      // </Parallax>
+      }
 
-      <Parallax className={classes.container} speed={isDesktop ? 0 : speedParallax}>
+      {/* <Parallax className={classes.container} speed={isDesktop ? 0 : speedParallax}> */}
+      <div className={classes.container}>
         <div className={classes.topContent}>
           <div className={classes.content}>
             {/* desktop */}
@@ -211,7 +216,8 @@ export const Freedom = () => {
             <ListItem delay={delay} key={id} line={line} text={text} />
           ))}
         </div>
-		  </Parallax>
+		  </div>
+		  {/* </Parallax> */}
     </>
 	);
 };

@@ -81,14 +81,19 @@ export const MorphId = () => {
 
   return (
     <>
-      {isDesktop && <Parallax speed={-speedParallax / 2}>
+      {isDesktop && 
+      // <Parallax speed={-speedParallax / 2}>
         <DesktopSplashes/>
-      </Parallax>}
-      {!isDesktop && <Parallax speed={-speedParallax / 2}>
+      // </Parallax>
+      }
+      {!isDesktop && 
+      // <Parallax speed={-speedParallax / 2}>
         <MobileSplashes />
-      </Parallax>}
+      // </Parallax>
+      }
 
-      <Parallax speed={isDesktop ? speedParallax : 0} id="morphID" className={classes.container}>
+      {/* <Parallax speed={isDesktop ? speedParallax : 0} id="morphID" className={classes.container}> */}
+      <div id="morphID" className={classes.container}>
 
         <div className={classes.cardsImg}>
           {isDesktop && (
@@ -225,7 +230,8 @@ export const MorphId = () => {
             </Paragraph>
           )}
         </div>
-      </Parallax>
+      </div>
+      {/* </Parallax> */}
     </>
   )
 };
