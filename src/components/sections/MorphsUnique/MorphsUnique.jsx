@@ -20,7 +20,7 @@ import FishNotActiveWebp from 'assets/images/skills/agressive-not-active.png';
 import ChainPng from 'assets/images/skills/skill-8.png';
 import ChainWebp from 'assets/images/skills/skill-8.webp';
 
-import agressiveMorph from 'assets/video/agressive_desktop.video.mp4';
+import agressiveMorph from 'assets/video/agressive_mobile.video.mp4';
 
 import { useRef } from 'react';
 import classes from './style.module.scss';

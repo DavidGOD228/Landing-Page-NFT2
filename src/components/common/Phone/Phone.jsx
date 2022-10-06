@@ -34,7 +34,7 @@ const videos = [
 export const Phone = ({ idx, classname, ...props }) => {
 	return (
     // <img className={classes.phoneItem} {...props} src={imgs[idx - 1]} alt='slide' />
-    <video
+    /* <video
       className={classes.phoneItem}
       {...props}
       autoPlay
@@ -44,7 +44,16 @@ export const Phone = ({ idx, classname, ...props }) => {
     >
       <source src={videos[idx - 1].webm} type="video/webm" />
       <source src={videos[idx - 1].mp4} type="video/mp4" />
-    </video>
+    </video> */
+    <video
+      className={classes.phoneItem}
+      {...props}
+      src={videos[idx - 1].webm}
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
   );
 };
 

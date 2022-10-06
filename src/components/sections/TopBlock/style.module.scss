@@ -14,6 +14,11 @@
 
 .videoBlock {
   position: relative;
+  z-index: 100;
+}
+
+.videoBlock {
+  width: 100%;
 }
 
 .metaMorphMobile {
