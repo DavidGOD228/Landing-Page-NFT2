@@ -93,7 +93,8 @@ export const LikeHuman = () => {
 
   return (
     <div id="features" className={classes.container}>
-      <Parallax speed={0} className={classes.titleWrapper}>
+      {/* <Parallax speed={0} className={classes.titleWrapper}> */}
+      <div className={classes.titleWrapper}>
 
         {/* paragraph descktop */}
         {isDesktop && <Paragraph
@@ -185,10 +186,11 @@ export const LikeHuman = () => {
             <motion.span {...animFromDown} className={classes.greenText}>human</motion.span>
           </Title>
         </motion.div>}
-      </Parallax>
-      <Parallax speed={0}>
+      {/* </Parallax> */}
+      </div>
+      {/* <Parallax speed={0}> */}
         {isDesktop ? table : accordion}
-      </Parallax>
+      {/* </Parallax> */}
       <DesktopSplashes/>
 
     </div>

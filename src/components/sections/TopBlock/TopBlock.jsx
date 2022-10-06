@@ -45,13 +45,18 @@ export const TopBlock = () => {
         </div> :
         <div className={classes.topBlock}>
           <Header/>
-          {isDesktop && <Parallax speed={-speedParallax / 1.5}>
+          {isDesktop &&
+          // <Parallax speed={-speedParallax / 1.5}>
              <DesktopSplashes/>
-          </Parallax>}
-          {!isDesktop && <Parallax speed={speedParallax * 4} translateY={0}>
+          // </Parallax>
+          }
+          {!isDesktop &&
+          // <Parallax speed={speedParallax * 4} translateY={0}>
             <MobileSplashes className={classes.topBlockMobileSplashes}/>
-          </Parallax>}
-          <Parallax speed={speedParallax} className={classes.container}>
+          // </Parallax>
+          }
+          {/* <Parallax speed={speedParallax} className={classes.container}> */}
+          <div className={classes.container}>
             <div className={classes.mainBlock}>
               {
                 isDesktop && <LazyLoad offset={offset}><img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/></LazyLoad>
@@ -89,7 +94,8 @@ export const TopBlock = () => {
             {
               isDesktop && <MorphBlock/>
             }
-          </Parallax>
+          {/* </Parallax> */}
+          </div>
         </div>
       }
 

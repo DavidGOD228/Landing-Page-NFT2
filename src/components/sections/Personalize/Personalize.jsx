@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import Title from '../../common/Title/Title';
@@ -17,7 +17,7 @@ import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./MobileSplashes/MobileSplashes";
 
-import { Parallax, useParallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 const speedParallax = 20;
 
 const data = [
@@ -76,15 +76,22 @@ export const Personalize = () => {
 
 	return (
 		<>
-      {isDesktop && <Parallax speed={-speedParallax / 1.5}>
+      {isDesktop && 
+      // <Parallax speed={-speedParallax / 1.5}>
         <DesktopSplashes/>
-      </Parallax>}
-      {!isDesktop && <Parallax speed={speedParallax / 2}>
+      // </Parallax>
+      }
+      {!isDesktop &&
+      // <Parallax speed={speedParallax / 2}>
         <MobileSplashes className={classes.topBlockMobileSplashes}/>
-      </Parallax>}
+      // </Parallax>
+      }
 
-			<Parallax
+			{/* <Parallax
         speed={0}
+				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
+			> */}
+			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
 				<div className={classes.contentBlock}>
@@ -126,7 +133,8 @@ export const Personalize = () => {
 				</div>
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
-			</Parallax>
+			</div>
+			{/* </Parallax> */}
 
 			<div className={classes.mobileVersion}>
 				<div className={classes.contentBlock}>
