@@ -13,14 +13,15 @@ import Polygon from '../../icons/Polygon'
 import Play from '../../icons/Play'
 
 import {useWindowWidth} from 'hooks/useWindowWidth'
-
-import LazyLoad from 'react-lazy-load';
-
-import classes from './style.module.scss'
-import 'react-html5video/dist/styles.css'
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
+
+import LazyLoad from 'react-lazy-load';
+
+import 'react-html5video/dist/styles.css'
+import classes from './style.module.scss'
+
 
 import { Parallax } from 'react-scroll-parallax';
 const speedParallax = 20;
@@ -37,11 +38,12 @@ export const TopBlock = () => {
               <img src={Close} alt=""/>
             </LazyLoad>
           </button>
-          <LazyLoad offset={offset}>
-            <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
-              <source src={TeaserVideo}/>
-            </Video>
-          </LazyLoad>
+          <video className={classes.videoBlock} autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
+            <source src={TeaserVideo}/>
+          </video>
+          {/* <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
+            <source src={TeaserVideo}/>
+          </Video> */}
         </div> :
         <div className={classes.topBlock}>
           <Header/>
