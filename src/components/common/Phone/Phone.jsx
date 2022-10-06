@@ -18,17 +18,17 @@ import classes from './style.module.scss';
 // const imgs = [cleaningPhone, eatPphone, playPhone, restPhone];
 const videos = [
   {
-    mp4: jobVideoMp4,
-    webm: jobVideoWebm,
-  },
-  {
     mp4: clothesVideoMp4,
     webm: clothesVideoWebm,
   },
   {
     mp4: furnitureVideoMp4,
     webm: furnitureVideoWebm,
-  }
+  },
+  {
+    mp4: jobVideoMp4,
+    webm: jobVideoWebm,
+  },
 ];
 
 export const Phone = ({ idx, classname, ...props }) => {
