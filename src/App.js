@@ -23,47 +23,47 @@ import { useWindowWidth } from 'hooks/useWindowWidth';
 import { media } from 'utils/media';
 
 function App() {
-	const isDesktop = useWindowWidth(media.desktop);
-	const isTablet = useWindowWidth(media.tablet);
-
-  const [isLoading, setIsloading] = useState(true);
-  
-
-  useEffect(() => {
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    }
-    document.body.style.overflowY = 'hidden';
-    document.body.style.height = '100vh';
-    document.body.style.pointerEvents = 'none';
-
-    if(!isLoading) {
-      document.body.style.pointerEvents = 'auto';
-      document.body.style.overflowY = 'auto';
-      document.body.style.height = 'auto';
-    }
-  }, [isLoading]);
+	// const isDesktop = useWindowWidth(media.desktop);
+	// const isTablet = useWindowWidth(media.tablet);
+	//
+  // const [isLoading, setIsloading] = useState(true);
+  //
+	//
+  // useEffect(() => {
+  //   window.onbeforeunload = function () {
+  //     window.scrollTo(0, 0);
+  //   }
+  //   document.body.style.overflowY = 'hidden';
+  //   document.body.style.height = '100vh';
+  //   document.body.style.pointerEvents = 'none';
+	//
+  //   if(!isLoading) {
+  //     document.body.style.pointerEvents = 'auto';
+  //     document.body.style.overflowY = 'auto';
+  //     document.body.style.height = 'auto';
+  //   }
+  // }, [isLoading]);
 
 	return (
 		<>
-			{isLoading && <Loader setIsloading={setIsloading} />}
-      <TopBlock />
+			{/*{isLoading && <Loader setIsloading={setIsloading} />}*/}
+      {/*<TopBlock />*/}
       <FirstLiveSimulator />
-			<LikeHuman />
-			{!isDesktop && <Privacy />}
-			<FataMorgana />
-			<Freedom />
-			<Personalize />
-			<Earn />
-      <MorphId />
-			<TypesCards />
-			<YourMorph />
-			<MorphsUnique />
-			<Roadmap />
-			<Wizard />
-			{!isTablet && <Foto />}
-			<CombinedGame />
-			<Footer />
+			{/*<LikeHuman />*/}
+			{/*{!isDesktop && <Privacy />}*/}
+			{/*<FataMorgana />*/}
+			{/*<Freedom />*/}
+			{/*<Personalize />*/}
+			{/*<Earn />*/}
+      {/*<MorphId />*/}
+			{/*<TypesCards />*/}
+			{/*<YourMorph />*/}
+			{/*<MorphsUnique />*/}
+			{/*<Roadmap />*/}
+			{/*<Wizard />*/}
+			{/*{!isTablet && <Foto />}*/}
+			{/*<CombinedGame />*/}
+			{/*<Footer />*/}
 		</>
 	);
 }
