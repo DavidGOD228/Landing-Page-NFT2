@@ -55,7 +55,7 @@ export function FirstLiveSimulator() {
       {/*</video>}*/}
       {/*{!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>*/}
         <video
-          src={MorphMobileWebm}
+          src={MorphMobileMp4}
           className={classes.morphVideo}
           autoPlay
           muted
