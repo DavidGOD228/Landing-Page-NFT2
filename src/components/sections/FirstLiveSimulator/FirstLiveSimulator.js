@@ -54,7 +54,7 @@ export function FirstLiveSimulator() {
       {/*</video>}*/}
       {/*{!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>*/}
         <video
-          // className={classes.morphVideo}
+          className={classes.morphVideo}
           autoPlay
           muted
           playsInline
@@ -65,8 +65,6 @@ export function FirstLiveSimulator() {
         </video>
       {/*</LazyLoad>*/}
 
-			}
-			
       {/*{isDesktop && */}
       {/*// <Parallax speed={-speedParallax / 1.5}>*/}
       {/*  <DesktopSplashes/>*/}
