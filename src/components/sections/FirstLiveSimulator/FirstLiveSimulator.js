@@ -15,6 +15,7 @@ import SmileDesktop from 'assets/images/smileDesktop.svg';
 import MorphDesktopMp4 from 'assets/video/morphDesktop.video.mp4';
 import MorphDesktopWebm from 'assets/video/morphDesktop.video.webm';
 
+import MorphMobileWebp from 'assets/images/posters/problems-videos/falling-morp-spot/falling-morph-spot.webp';
 import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
 import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
 
@@ -52,7 +53,12 @@ export function FirstLiveSimulator() {
         <source src={MorphDesktopMp4} type="video/mp4" />
       </video>}
       {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
-        <video
+        <img
+          className={classes.morphVideo}
+          src={MorphMobileWebp}
+          alt=""
+        />
+        {/* <video
           className={classes.morphVideo}
           autoPlay
           muted
@@ -62,7 +68,7 @@ export function FirstLiveSimulator() {
         >
           <source src={MorphMobileWebm} type="video/webm" />
           <source src={MorphMobileMp4} type="video/mp4" />
-        </video>
+        </video> */}
       </LazyLoad>}
 			
       {isDesktop && 

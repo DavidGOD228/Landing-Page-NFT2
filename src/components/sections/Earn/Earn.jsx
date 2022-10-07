@@ -24,7 +24,7 @@ const speedParallax = 20;
 
 const data = [
 	{
-		title: 'Complete the task',
+		title: 'Complete a task',
 		subtitle: (
 			<p className={classes.subtitle}>
 				By completing a few in-game tasks, you get our native token.
@@ -32,7 +32,7 @@ const data = [
 		)
 	},
 	{
-		title: 'Win the challenge',
+		title: 'Win challenge',
 		subtitle: (
 			<p className={classes.subtitle}>
 				We have many challenges between our players. The most resourceful will be rewarded.

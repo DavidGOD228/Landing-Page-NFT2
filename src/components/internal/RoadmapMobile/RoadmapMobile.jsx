@@ -119,7 +119,7 @@ export function RoadmapMobile({ className, ...props }) {
 						TGE
 					</div>
 					<div className={`${classes.textInfo} ${classes.opacityRoad}`}>
-						Game Realize
+            Game release
 					</div>
 				</div>
 

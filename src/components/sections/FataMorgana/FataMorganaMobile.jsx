@@ -11,13 +11,20 @@ import classes from "./style.module.scss";
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
+
+import MobileCityImg from 'assets/images/posters/problems-videos/city/City.webp';
+
 import MobileCityWebm from "assets/video/city-mobile.video.webm";
 import MobileCityMP4 from "assets/video/city-mobile.video.mp4";
+
 import CityZoomWebm from "assets/video/city-zoom.video.webm";
 import CityZoomMP4 from "assets/video/city-zoom.video.mp4";
+
 import MobileCityPoster from 'assets/images/posters/city_Mobile.webp'
 import MobileZoomPoster from 'assets/images/posters/zoom.png'
+
 import ZoomPoster from "assets/images/posters/zoom.png";
+
 import Ray from "assets/video/Ray.webm";
 
 const data = [
@@ -40,7 +47,7 @@ const data = [
 
 export const FataMorganaMobile = () => {
 
-  const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants. At the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic place where all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
+  const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants.\nAt the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic placewhere all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
 
   return (
 		<>
@@ -150,7 +157,7 @@ export const FataMorganaMobile = () => {
             playsInline>
             <source src={Ray} type="video/webm" />
           </video> */}
-          <LazyLoad offset={offset}>
+          {/* <LazyLoad offset={offset}>
             <motion.video
               className={classes.zoomVideo}
               initial={{ y: 150 }}
@@ -169,9 +176,14 @@ export const FataMorganaMobile = () => {
               <source src={CityZoomWebm} type="video/webm" />
               <source src={CityZoomMP4} type="video/mp4" />
             </motion.video>
-          </LazyLoad>
+          </LazyLoad> */}
 					<LazyLoad offset={offset} className={classes.videoWrapper}>
-            <video
+            <img
+              className={classes.mobileCity}
+              src={MobileCityImg}
+              alt=""
+            />
+            {/* <video
               className={classes.mobileCity}
               autoPlay
               poster={MobileCityPoster}
@@ -180,7 +192,7 @@ export const FataMorganaMobile = () => {
               playsInline>
               <source src={MobileCityWebm} type="video/webm" />
               <source src={MobileCityMP4} type="video/mp4" />
-            </video>
+            </video> */}
 					</LazyLoad>
 				</div>
 			</div>
