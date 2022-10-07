@@ -17,6 +17,7 @@ import MorphDesktopWebm from 'assets/video/morphDesktop.video.webm';
 
 import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
 import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
+import MorphVideo from 'assets/video/14.mp4';
 
 import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
 import MobilePoster from 'assets/images/posters/falling_Mobile.webp'
@@ -54,15 +55,13 @@ export function FirstLiveSimulator() {
       {/*</video>}*/}
       {/*{!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>*/}
         <video
+          src={MorphVideo}
           className={classes.morphVideo}
           autoPlay
           muted
           playsInline
           poster={isDesktop ? DesktopPoster : MobilePoster}
-        >
-          <source src={MorphMobileWebm} type="video/webm" />
-          <source src={MorphMobileMp4} type="video/mp4" />
-        </video>
+  />
       {/*</LazyLoad>*/}
 
       {/*{isDesktop && */}
