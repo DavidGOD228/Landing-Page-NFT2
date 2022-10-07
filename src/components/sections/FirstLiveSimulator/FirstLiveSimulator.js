@@ -55,13 +55,13 @@ export function FirstLiveSimulator() {
       {/*</video>}*/}
       {/*{!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>*/}
         <video
-          src={MorphVideo}
+          src={MorphMobileWebm}
           className={classes.morphVideo}
           autoPlay
           muted
           playsInline
           // poster={isDesktop ? DesktopPoster : MobilePoster}
-  />
+        />
       {/*</LazyLoad>*/}
 
       {/*{isDesktop && */}
