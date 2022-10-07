@@ -28,7 +28,8 @@ export const Privacy = () => {
           ease: 'easeInOut'
         }}
         viewport={{once: true}}>
-        RESPECT His PRIVACY!
+        RESPECT<br />
+        His PRIVACY!
       </motion.h3>
       <div className={`${classes.videoWrapper} ${classes.privacyContainer}`}>
         <LazyLoad offset={offset}>

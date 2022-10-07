@@ -20,6 +20,7 @@ import FishNotActiveWebp from 'assets/images/skills/agressive-not-active.png';
 import ChainPng from 'assets/images/skills/skill-8.png';
 import ChainWebp from 'assets/images/skills/skill-8.webp';
 
+import agressiveMorphImg from 'assets/images/posters/problems-videos/agressive/Agressive.webp';
 import agressiveMorph from 'assets/video/agressive_mobile.video.mp4';
 
 import { useRef } from 'react';
@@ -30,6 +31,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
+
 import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
@@ -357,13 +359,18 @@ export const MorphsUnique = () => {
 			{/* </Parallax> */}
 			{!isDesktop && (
 				<div className={classes.mobileMorph}>
-          <video
+          {/* <video
             className={classes.mobileMorphVideo}
             src={agressiveMorph}
             autoPlay
             playsInline
             loop
             muted
+          /> */}
+          <img
+            className={classes.mobileMorphVideo}
+            src={agressiveMorphImg}
+            alt=""
           />
 				</div>
 			)}
