@@ -60,7 +60,7 @@ export function FirstLiveSimulator() {
           autoPlay
           muted
           playsInline
-          poster={isDesktop ? DesktopPoster : MobilePoster}
+          // poster={isDesktop ? DesktopPoster : MobilePoster}
   />
       {/*</LazyLoad>*/}
 
