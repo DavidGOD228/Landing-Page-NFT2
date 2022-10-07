@@ -41,132 +41,135 @@ export function FirstLiveSimulator() {
   you to feel the life inside the game.`;
 
 	return (
-		<div className={classes.wrapper}>
-			{isDesktop && <video
-        className={classes.morphVideo}
-        autoPlay
-        muted
-        playsInline
-      >
-        <source src={MorphDesktopWebm} type="video/webm" />
-        <source src={MorphDesktopMp4} type="video/mp4" />
-      </video>}
-      {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
+		<>
+		 {/*<div className={classes.wrapper}>*/}
+			{/*{isDesktop && <video*/}
+      {/*  className={classes.morphVideo}*/}
+      {/*  autoPlay*/}
+      {/*  muted*/}
+      {/*  playsInline*/}
+      {/*>*/}
+      {/*  <source src={MorphDesktopWebm} type="video/webm" />*/}
+      {/*  <source src={MorphDesktopMp4} type="video/mp4" />*/}
+      {/*</video>}*/}
+      {/*{!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>*/}
         <video
-          className={classes.morphVideo}
+          // className={classes.morphVideo}
           autoPlay
           muted
           playsInline
-          preload='auto'
           poster={isDesktop ? DesktopPoster : MobilePoster}
         >
           <source src={MorphMobileWebm} type="video/webm" />
           <source src={MorphMobileMp4} type="video/mp4" />
         </video>
-      </LazyLoad>}
+      {/*</LazyLoad>*/}
+
+			}
 			
-      {isDesktop && 
-      // <Parallax speed={-speedParallax / 1.5}>
-        <DesktopSplashes/>
-      // </Parallax>
-      }
-      {!isDesktop &&
-      // <Parallax speed={-speedParallax / 3.5}>
-        <MobileSplashes/>
-      // </Parallax>
-      }
+      {/*{isDesktop && */}
+      {/*// <Parallax speed={-speedParallax / 1.5}>*/}
+      {/*  <DesktopSplashes/>*/}
+      {/*// </Parallax>*/}
+      {/*}*/}
+      {/*{!isDesktop &&*/}
+      {/*// <Parallax speed={-speedParallax / 3.5}>*/}
+      {/*  <MobileSplashes/>*/}
+      {/*// </Parallax>*/}
+      {/*}*/}
 
-			<GlobalContainer style={{order: 0}}>
-				<div className={classes.flsDesktopContainer}>
+			{/*<GlobalContainer style={{order: 0}}>*/}
+			{/*	<div className={classes.flsDesktopContainer}>*/}
 
-					{/* <Parallax speed={speedParallax} className={classes.content}> */}
-					<div className={classes.content}>
-						<motion.div
-							key='firstLiveTitle'
-							className={classes.descr}
-							initial={{ y: 150 }}
-							whileInView={{ y: 0 }}
-							transition={{
-								delay: 0.5,
-								duration: 1,
-								ease: 'easeInOut'
-							}}
-							viewport={{ once: true }}
-						>
-							<Title classname={classes.title}>
-								First{' '}
-								<GreenText>
-									live{' '}
-									<span className={classes.grayLine}>
-										simulator <img src={WhiteLine} alt='' />
-									</span>{' '}
-								</GreenText>
-								on web 3
-							</Title>
-							<Paragraph className={classes.paragraph}>
-								{paragraphAnimation(textPar)}
-							</Paragraph>
-							<div className={classes.respect}>
-								<p className={classes.privacyText}>Respect his Privacy!</p>
-								<LazyLoad offset={offset}>
-									<img className={classes.smile} src={SmileDesktop} alt='' />
-								</LazyLoad>
-							</div>
-						</motion.div>
-						<div className={classes.mobileContainer}>
-							<div className={classes.imagesBlock}>
-								<motion.div
-									key='firstLiveFirstImage'
-									className={classes.mobileContainer}
-									initial={{ y: 150 }}
-									whileInView={{ y: 0 }}
-									transition={{
-										duration: 1.5,
-										ease: 'easeInOut'
-									}}
-									viewport={{ once: true }}
-								>
-									<LazyLoad offset={offset}>
-										<video
-											className={classes.privacyImage}
-											src={toiletVideo}
-											autoPlay
-											loop
-											muted
-											poster={ToiletPoster}
-											playsInline
-										/>
-									</LazyLoad>
-								</motion.div>
-								<motion.div
-									key='firstLiveSecondImage'
-									className={classes.secondImage}
-									initial={{ y: 150 }}
-									whileInView={{ y: 0 }}
-									transition={{
-										duration: 1,
-										ease: 'easeInOut'
-									}}
-									viewport={{ once: true }}
-								>
-									<LazyLoad offset={offset}>
-										<video
-											src={bedVideo}
-											className={classes.privacyImage}
-											autoPlay
-											poster={BedPoster}
-											loop
-											playsInline
-											muted
-										/>
-									</LazyLoad>
-								</motion.div>
-							</div>
-						</div>
-					{/* </Parallax> */}
-					</div>
-				</div>
-			</GlobalContainer>
-		</div>
-	);
+			{/*		/!* <Parallax speed={speedParallax} className={classes.content}> *!/*/}
+			{/*		<div className={classes.content}>*/}
+			{/*			<motion.div*/}
+			{/*				key='firstLiveTitle'*/}
+			{/*				className={classes.descr}*/}
+			{/*				initial={{ y: 150 }}*/}
+			{/*				whileInView={{ y: 0 }}*/}
+			{/*				transition={{*/}
+			{/*					delay: 0.5,*/}
+			{/*					duration: 1,*/}
+			{/*					ease: 'easeInOut'*/}
+			{/*				}}*/}
+			{/*				viewport={{ once: true }}*/}
+			{/*			>*/}
+			{/*				<Title classname={classes.title}>*/}
+			{/*					First{' '}*/}
+			{/*					<GreenText>*/}
+			{/*						live{' '}*/}
+			{/*						<span className={classes.grayLine}>*/}
+			{/*							simulator <img src={WhiteLine} alt='' />*/}
+			{/*						</span>{' '}*/}
+			{/*					</GreenText>*/}
+			{/*					on web 3*/}
+			{/*				</Title>*/}
+			{/*				<Paragraph className={classes.paragraph}>*/}
+			{/*					{paragraphAnimation(textPar)}*/}
+			{/*				</Paragraph>*/}
+			{/*				<div className={classes.respect}>*/}
+			{/*					<p className={classes.privacyText}>Respect his Privacy!</p>*/}
+			{/*					<LazyLoad offset={offset}>*/}
+			{/*						<img className={classes.smile} src={SmileDesktop} alt='' />*/}
+			{/*					</LazyLoad>*/}
+			{/*				</div>*/}
+			{/*			</motion.div>*/}
+			{/*			<div className={classes.mobileContainer}>*/}
+			{/*				<div className={classes.imagesBlock}>*/}
+			{/*					<motion.div*/}
+			{/*						key='firstLiveFirstImage'*/}
+			{/*						className={classes.mobileContainer}*/}
+			{/*						initial={{ y: 150 }}*/}
+			{/*						whileInView={{ y: 0 }}*/}
+			{/*						transition={{*/}
+			{/*							duration: 1.5,*/}
+			{/*							ease: 'easeInOut'*/}
+			{/*						}}*/}
+			{/*						viewport={{ once: true }}*/}
+			{/*					>*/}
+			{/*						<LazyLoad offset={offset}>*/}
+			{/*							<video*/}
+			{/*								className={classes.privacyImage}*/}
+			{/*								src={toiletVideo}*/}
+			{/*								autoPlay*/}
+			{/*								loop*/}
+			{/*								muted*/}
+			{/*								poster={ToiletPoster}*/}
+			{/*								playsInline*/}
+			{/*							/>*/}
+			{/*						</LazyLoad>*/}
+			{/*					</motion.div>*/}
+			{/*					<motion.div*/}
+			{/*						key='firstLiveSecondImage'*/}
+			{/*						className={classes.secondImage}*/}
+			{/*						initial={{ y: 150 }}*/}
+			{/*						whileInView={{ y: 0 }}*/}
+			{/*						transition={{*/}
+			{/*							duration: 1,*/}
+			{/*							ease: 'easeInOut'*/}
+			{/*						}}*/}
+			{/*						viewport={{ once: true }}*/}
+			{/*					>*/}
+			{/*						<LazyLoad offset={offset}>*/}
+			{/*							<video*/}
+			{/*								src={bedVideo}*/}
+			{/*								className={classes.privacyImage}*/}
+			{/*								autoPlay*/}
+			{/*								poster={BedPoster}*/}
+			{/*								loop*/}
+			{/*								playsInline*/}
+			{/*								muted*/}
+			{/*							/>*/}
+			{/*						</LazyLoad>*/}
+			{/*					</motion.div>*/}
+			{/*				</div>*/}
+			{/*			</div>*/}
+			{/*		/!* </Parallax> *!/*/}
+			{/*		</div>*/}
+			{/*	</div>*/}
+			{/*</GlobalContainer>*/}
+		{/*</div>*/}
+		</>
+);
 }
