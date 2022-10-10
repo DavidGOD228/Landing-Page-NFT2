@@ -32,7 +32,7 @@ const data = [
 		)
 	},
 	{
-		title: 'Win challenge',
+		title: 'Win challenges',
 		subtitle: (
 			<p className={classes.subtitle}>
 				We have many challenges between our players. The most resourceful will be rewarded.

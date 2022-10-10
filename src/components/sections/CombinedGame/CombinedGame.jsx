@@ -32,7 +32,7 @@ export const CombinedGame = () => {
       // </Parallax>
       }
       {/* <Parallax speed={isDesktop ? 1 : -1}> */}
-        <h4 className={classes.title}>Combined game expirience</h4>
+        <h4 className={classes.title}>Combined game experience</h4>
         <div className={classes.companies}>
           <EA width={isDesktop ? 143: 80} height={isDesktop ? 70 : 40}/>
           <CDProjectRed width={isDesktop ? 88: 49} height={isDesktop ? 140 : 78}/>

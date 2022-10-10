@@ -1,3 +1,21 @@
-.mb {
-  margin-bottom: 25px;
+.roadmapList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  color: #fff;
+  margin-bottom: 28px;
+  height: 100%;
+}
+
+.grayText {
+  color: #707682;
+}
+
+.comingSoon {
+  margin-top: 21px;
+}
+
+.followText {
+  margin-top: auto;
 }

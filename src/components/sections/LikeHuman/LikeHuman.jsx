@@ -56,10 +56,7 @@ export const LikeHuman = () => {
     </div>
   );
 
-  const pargText =
-    'Metamorph is an open-world exploration, NFT creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and Android in 2023. Play-to-earn in a graphically-rich sci-fi adventure and life builder that allows you to feel the life inside the game.';
-  const pargTextMobile =
-    'Virtual characters, complete with very different physical and character traits, are born, live and reproduce. A series of 8 bars, showing your character\'s basic needs. Check your Morph, ensure adequate social life, keep them healthy, advance them in their professional activities and help them realize their dreams.';
+  const pargText = 'Virtual characters, complete with very different physical and character traits, are born, live and reproduce. A series of 8 bars, showing your character\'s basic needs. Check your Morph, ensure adequate social life, keep them healthy, advance them in their professional activities and help them realize their dreams.';
 
   const animFromRight = {
     initial: {
@@ -125,7 +122,7 @@ export const LikeHuman = () => {
         {!isDesktop && <Paragraph
           className={classes.paragraph}
         >
-          {pargTextMobile.split(' ').map((word, idx) => {
+          {pargText.split(' ').map((word, idx) => {
             return (
               <motion.span
                 key={word + idx}
@@ -138,7 +135,7 @@ export const LikeHuman = () => {
                 viewport={{once: true}}
               >
                 {word}
-                {idx + 1 !== pargTextMobile.split(' ').length && '\u00A0'}
+                {idx + 1 !== pargText.split(' ').length && '\u00A0'}
               </motion.span>
             );
           })}
@@ -184,7 +181,7 @@ export const LikeHuman = () => {
             <motion.span {...animFromDown}>it&apos;s{'\u00A0'}</motion.span>
             <motion.span {...animFromDown}>just{'\u00A0'}</motion.span>
             <motion.span {...animFromDown}>like{'\u00A0'}</motion.span>
-            <motion.span {...animFromDown} className={classes.greenText}>a{'\u00A0'}</motion.span>
+            <motion.span {...animFromDown}>a{'\u00A0'}</motion.span>
             <motion.span {...animFromDown} className={classes.greenText}>human</motion.span>
           </Title>
         </motion.div>}

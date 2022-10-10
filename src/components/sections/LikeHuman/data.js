@@ -39,7 +39,7 @@ export const accordionData = [
   },
   {
     id: 4,
-    icon: <Eco width={34} height={23} color='#fff'/>,
+    icon: <Shower width={23} height={28} color='#fff'/>,
     title: 'HYGIENE',
     subtitle: <Paragraph>Indicates anything related to the hygiene of a
       Morph. A low value leads to difficulties in social relationships. To meet this need,
@@ -55,7 +55,7 @@ export const accordionData = [
   },
   {
     id: 6,
-    icon: <Shower width={23} height={28} color='#fff'/>,
+    icon: <Eco width={34} height={23} color='#fff'/>,
     title: 'ENVIRONMENT',
     subtitle: <Paragraph>A well-kept and clean home increases this
       indicator, while accumulated waste, moldy foods, and faulty appliances reduce it. Some
@@ -84,8 +84,8 @@ export const tableData = [
   },
   {
     id: 4,
-    icon: <Eco width={40} height={27} color='#fff'/>,
-    title: 'HUNGER',
+    icon: <Shower width={31} height={38} color='#fff'/>,
+    title: 'hygiene',
     subtitle: 'Indicates anything related to the hygiene of a Morph. A low value leads to difficulties in social relationships. To meet this need, Morph must interact with the sink, tub or shower.'
   },
   {
@@ -96,8 +96,8 @@ export const tableData = [
   },
   {
     id: 6,
-    icon: <Shower width={31} height={38} color='#fff'/>,
-    title: 'hygiene',
+    icon: <Eco width={40} height={27} color='#fff'/>,
+    title: 'ENVIRONMENT',
     subtitle: 'A well-kept and clean home increases this indicator, while accumulated waste, moldy foods, and faulty appliances reduce it. Some furniture and items (usually more expensive) can increase this indicator.'
   },
 ]

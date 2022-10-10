@@ -37,7 +37,7 @@ export const Wizard = () => {
       image: isDesktop ? JonasDesktop: Jonas,
       text: (
         <p className={classes.text}>
-          8+ years experience of gaming and game marketing experience in industry leaders such as EA Mobile and Lockwood Publishing Ltd. Worked on top mobile charts titles such as The Sims Mobile, Avakin Life, and BitLife. Early crypto adopter and angel investor. 
+          15+ years in leading multidisciplinary R&D and engineering teams. Have collected experience such companies as AWS, Jelly Buttons, Playtika, and Ubisoft. Successfully advised blockchain projects.
         </p>
       ),
     },
