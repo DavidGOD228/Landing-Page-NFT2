@@ -123,11 +123,7 @@ export function TypesCards() {
 								<p className={classes.title}>CLASSIQUE</p>
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
-								{paragraphAnimation(
-									isTablet
-										? morphIDText.classiqueDesktop
-										: morphIDText.classiqueMobile
-								)}
+								{paragraphAnimation(morphIDText.classiqueText)}
 							</Paragraph>
 							{isTablet && (
 								<motion.video
@@ -173,11 +169,7 @@ export function TypesCards() {
 								</p>
 							</motion.h4>
 							<Paragraph className={`${classes.descr} ${classes.henriText}`}>
-								{paragraphAnimation(
-									isTablet
-										? morphIDText.eternalDesktop
-										: morphIDText.eternalMobile
-								)}
+								{paragraphAnimation(morphIDText.eternalText)}
 							</Paragraph>
 							{isTablet && (
 								<motion.video

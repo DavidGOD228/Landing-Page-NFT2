@@ -176,9 +176,7 @@ export const MorphId = () => {
               justifyContent: 'flex-start'
             }}
           >
-            {isDesktop
-              ? paragraphAnimationFromRight(morphIDText.titleDesktop)
-              : paragraphAnimationFromRight(morphIDText.titleMobile)}
+            {paragraphAnimationFromRight(morphIDText.title)}
           </Paragraph>
 
           {isDesktop ? (
@@ -203,8 +201,6 @@ export const MorphId = () => {
               2 ways to start
             </motion.div>
           )}
-
-          {isDesktop && (
             <Paragraph
               className={`${classes.morhDescr} ${classes.waysToStartParagraph}`}
               style={{
@@ -213,23 +209,9 @@ export const MorphId = () => {
                 justifyContent: 'flex-start'
               }}
             >
-              {paragraphAnimationFromRight(morphIDText.waysToStartDesktop)}
+              {paragraphAnimationFromRight(morphIDText.waysToStart)}
             </Paragraph>
-          )}
-
-          {!isDesktop && (
-            <Paragraph
-              className={`${classes.morhDescr} ${classes.waysToStartParagraph}`}
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'flex-start'
-              }}
-            >
-              {paragraphAnimationFromRight(morphIDText.waysToStartMobile)}
-            </Paragraph>
-          )}
-        </div>
+                  </div>
       </div>
       {/* </Parallax> */}
     </>
