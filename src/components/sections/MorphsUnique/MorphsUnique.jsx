@@ -65,7 +65,9 @@ export const MorphsUnique = () => {
 		<>
       {isDesktop && 
       // <Parallax speed={-speedParallax / 2}>
-        <DesktopSplashes/>
+        <div style={{position: 'relative'}}>
+          <DesktopSplashes/>
+        </div>
       // </Parallax>
       }
       {!isDesktop && 
@@ -77,7 +79,7 @@ export const MorphsUnique = () => {
 			{/* <Parallax speed={0} className={classes.container}> */}
 			<div className={classes.container}>
 				<div className={classes.content}>
-					<Title classname={classes.title}>
+					<Title isWhiteLine={!isDesktop} classname={classes.title}>
 						{titleText.split(' ').map((word, idx) => {
 							return (
 								<motion.span

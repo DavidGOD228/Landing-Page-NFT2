@@ -35,6 +35,15 @@
 	width: 3px;
 }
 
+.whiteLine {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 95%;
+  background: white;
+  width: 3px;
+}
+
 .line.isAfter {
 	left: auto;
 	right: 0;
