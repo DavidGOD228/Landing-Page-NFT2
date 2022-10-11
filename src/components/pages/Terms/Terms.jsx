@@ -13,7 +13,7 @@ export const Terms = () => {
     <>
       <Header/>
       <div className={classes.container}>
-        <TopBlockInfo title="Policy and conditions" date="May 16th, 2021"/>
+        <TopBlockInfo title="Terms and conditions" date="May 16th, 2021"/>
         <InfoBlock className={classes.secondBlock} title="1. Welcome and Introduction">
           <InfoParagraph style={{fontWeight: 600}}>
             Welcome to the Metamorph Autobattler Private Beta 1 (Beta 1). This website and Beta 1 is
