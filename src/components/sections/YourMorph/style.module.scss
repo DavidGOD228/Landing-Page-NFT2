@@ -10,7 +10,7 @@
   text-transform: uppercase;
   position: relative;
 
-  background: linear-gradient(90deg, #FBBF9A -4.09%, #FFE876 9.96%, #12F9F8 28.24%, #9CFD82 55.1%, #FCF16E 78.52%, #FED292 105.6%), #B7F201;
+  background:linear-gradient(90deg, rgba(55, 250, 217, 1) 0%, rgba(124, 253, 158, 1) 15%, rgba(167, 252, 128, 1) 31%, rgba(202, 247, 121, 1) 46%, rgba(234, 242, 113, 1) 61%, rgba(252, 228, 123, 1) 80%, rgba(253, 218, 136, 1) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -52,6 +52,7 @@
   font-size: 16px;
 	margin-left: 28px;
 	line-height: 26px;
+  max-width: 500px;
 }
 
 @media screen and (max-width: $m-desktop) {
