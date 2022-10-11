@@ -1,12 +1,13 @@
 .container {
   z-index: -10;
   opacity: 0.1;
+  position: relative;
 }
 
 .rightCorner {
   position: absolute;
   right: 0;
-  top: -400px;
+  top: -700px;
   height: 1302px;
 }
 

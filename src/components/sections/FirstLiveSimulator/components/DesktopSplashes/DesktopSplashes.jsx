@@ -2,7 +2,6 @@ import React from 'react'
 
 import Right from 'assets/images/splashes/firstLiveSimulator/1.png'
 import Left from 'assets/images/splashes/firstLiveSimulator/2.png'
-import Bottom from 'assets/images/splashes/firstLiveSimulator/3.png'
 
 import classes from './style.module.scss'
 import LazyLoad from 'react-lazy-load'
@@ -16,9 +15,6 @@ const DesktopSplashes = () => {
       </LazyLoad>
       <LazyLoad offset={offset}>
         <img className={classes.left} src={Left} alt=""/>
-      </LazyLoad>
-      <LazyLoad offset={offset}>
-        <img className={classes.bottom} src={Bottom} alt=""/>
       </LazyLoad>
       <div className={classes.leftEllipse}/>
       <div className={classes.rightEllipse}/>
