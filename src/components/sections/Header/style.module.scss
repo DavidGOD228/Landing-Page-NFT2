@@ -46,6 +46,18 @@
   position: relative;
 }
 
+.activeLogo {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: #B7F201;
+  }
+}
+
 .hamburger {
   position: absolute;
   right: 20px;
