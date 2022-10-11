@@ -14,7 +14,7 @@ const henrikHall = {
 	birth: '20.05.1998',
 	location: 'Los Angeles | United States',
 	parametrs: '1.79 cm, 76 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['candle.png', 'parrot.png', 'jump.png', 'mask.png', 'silence.png'],
 	attributes: [
 		{
 			id: 1,

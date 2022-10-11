@@ -14,7 +14,7 @@ const svenAronsson = {
 	birth: '28.02.1999',
 	location: 'Copenhagen | Denmark',
 	parametrs: '1.83 cm, 78 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['crouching.png', 'marionette.png', 'twoLines.png', 'eye.png'],
 	attributes: [
 		{
 			id: 1,

@@ -14,7 +14,7 @@ const omarTrejo = {
 	birth: '23.12.1990',
 	location: 'León | Mexico',
 	parametrs: '1.83 cm, 79 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['cap.png', 'drops.png', 'legs.png', 'handcuffs.png'],
 	attributes: [
 		{
 			id: 1,

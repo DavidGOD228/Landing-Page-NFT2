@@ -14,7 +14,7 @@ const frankMurphy = {
 	birth: '23.04.1995',
 	location: 'Atlanta | United States',
 	parametrs: '1.86 cm, 85 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['strength.png', 'dragons.png', 'skull.png', 'human.png'],
 	attributes: [
 		{
 			id: 1,

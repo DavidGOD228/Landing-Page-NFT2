@@ -14,7 +14,7 @@ const mihoIkuta = {
 	birth: '12.04.2003',
 	location: 'Osaka | Japan',
 	parametrs: '1.66 cm, 45 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['salt.png', 'fish.png', 'stone.png', 'lollipop.png'],
 	attributes: [
 		{
 			id: 1,
