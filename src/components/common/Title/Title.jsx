@@ -9,6 +9,7 @@ export const Title = ({
 	classnameWrapper,
   animWrapperContainer,
   isShadowAnim = true,
+	isWhiteLine
 }) => {
 	const isAfterBrd = isAfterBorder ? classes.isAfter : classes.isBefore;
   const animShadow = isShadowAnim && classes.animShadow;
@@ -16,7 +17,7 @@ export const Title = ({
 	return (
 		<div className={`${classes.content} ${classnameWrapper}`}>
 			<motion.div
-				className={`${classes.line} ${isAfterBrd}`}
+				className={`${isWhiteLine ? classes.whiteLine : classes.line} ${isAfterBrd}`}
 				initial={{
 					height: 0,
 					width: 0,

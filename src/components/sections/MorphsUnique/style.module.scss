@@ -20,15 +20,16 @@
   line-height: 120%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-left: 30px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 18px;
 
   @media screen and (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     font-size: 64px;
+    margin-left: 30px;
   }
 }
 
@@ -68,11 +69,13 @@
 .icons {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 40px;
   gap: 9px;
 
   @media screen and (min-width: $desktop){
     gap: 18px;
+    justify-content: flex-start;
   }
 }
 
