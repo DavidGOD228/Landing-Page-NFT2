@@ -2,7 +2,7 @@ import React from 'react'
 import LazyLoad from 'react-lazy-load';
 
 import FooterLogo from 'assets/images/footer-logo.svg'
-import GradientLogo from 'assets/images/gradientLogo.svg'
+import FooterLogoDesktop from 'assets/images/footer-logo-desktop.svg'
 import Twitter from 'assets/images/twitter.svg'
 import Discord from 'assets/images/discord.svg'
 
@@ -10,6 +10,7 @@ import { useWindowWidth } from 'hooks/useWindowWidth'
 
 import classes from './style.module.scss'
 import { offset } from 'utils/lazyload';
+import {Link} from "react-router-dom";
 
 export const Footer = () => {
   const isDesktop = useWindowWidth(1024)
@@ -17,14 +18,14 @@ export const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.footerTopBlock}>
         <LazyLoad offset={offset}>
-          <img src={isDesktop ? GradientLogo : FooterLogo} alt=""/>
+          <img src={isDesktop ? FooterLogoDesktop : FooterLogo} alt=""/>
         </LazyLoad>
         <hr className={classes.footerLine}/>
       </div>
       <div className={classes.linksContainer}>
         <div className={`${classes.linksBlock} ${classes.linksBlockLeftAlign}`}>
-          <span>Terms</span>
-          <span>Privacy</span>
+          <Link to='/terms'>Terms</Link>
+          <Link to='/policy'>Privacy</Link>
         </div>
         <div className={`${classes.linksBlock} ${classes.linksBlockRightAlign}`}>
           <a href="https://metamorphbio.gitbook.io/metamorph/" target="_blank" rel="noreferrer">Whitepaper</a>

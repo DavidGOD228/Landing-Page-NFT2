@@ -70,6 +70,11 @@
   line-height: 34px;
   letter-spacing: 0.05em;
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
@@ -87,10 +92,6 @@
   @media screen and (min-width: $desktop) {
     width: 250px;
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
   }
 }
 

@@ -3,6 +3,7 @@ export * from './common/Arrows/Arrows';
 export * from './common/Accordion/Accordion';
 export * from './common/AccordionWithIcon/AccordionWithIcon';
 export * from './common/GlobalContainer/GlobalContainer';
+export * from './common/InfoContainer/InfoContainer';
 export * from './common/GreenText/GreenText';
 export * from './common/Paragraph/Paragraph';
 export * from './common/Phone/Phone';
@@ -31,6 +32,7 @@ export * from './sections/TypesCards/TypesCards';
 export * from './sections/Wizard/Wizard';
 export * from './sections/YourMorph/YourMorph';
 export * from './sections/Loader/Loader';
+export * from './common/TopBlockInfo/TopBlockInfo';
 
 // section "Choose Your Morph"(desktop)
 export * from './internal/YourMorph/desktopVersonYourMorph/Attr/Attr';
@@ -54,3 +56,9 @@ export * from './sections/FataMorgana/FataMorganaMobile';
 
 // Roadmap(mobile)
 export * from './internal/RoadmapMobile/RoadmapMobile';
+
+//Pages
+
+export * from './pages/Terms/Terms';
+export * from './pages/Policy/Policy';
+export * from './pages/HomePage/HomePage';

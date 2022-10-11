@@ -1,0 +1,17 @@
+@import "~assets/styles/media";
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #FFFFFF;
+
+  @media screen and (max-width: $tablet){
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.container {
+  padding-top: 64px;
+}
