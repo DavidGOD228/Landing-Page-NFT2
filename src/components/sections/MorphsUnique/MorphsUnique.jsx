@@ -65,7 +65,9 @@ export const MorphsUnique = () => {
 		<>
       {isDesktop && 
       // <Parallax speed={-speedParallax / 2}>
-        <DesktopSplashes/>
+        <div style={{position: 'relative'}}>
+          <DesktopSplashes/>
+        </div>
       // </Parallax>
       }
       {!isDesktop && 
