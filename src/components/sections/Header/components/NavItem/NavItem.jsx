@@ -1,10 +1,17 @@
 import React from 'react'
+import {Link, useLocation} from "react-router-dom";
 
 import classes from "./style.module.scss"
 
-const NavItem = ({onClick, isActive, link, title}) => {
+const NavItem = ({link, title}) => {
+  const { hash } = useLocation();
+
   return (
-    <a onClick={onClick} href={link} className={`${classes.navItem} ${isActive && classes.active}`}>{title} </a>
+    <Link to={{pathname: '/', hash: `${link}`}}
+             preventScrollReset
+             className={`${classes.navItem} ${hash === link && classes.active}`}>
+      {title}
+    </Link>
   )
 }
 

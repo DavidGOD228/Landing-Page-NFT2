@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {DefaultPlayer as Video} from 'react-html5video';
 
-import Header from '../Header/Header'
+import {Header} from '../Header/Header'
 import MetaMorphMobile from 'assets/images/metaMorphMobile.webp'
 import MetaMorphMain from 'assets/images/metaMorphMain.webp'
 import TeaserVideo from 'assets/video/teaser.video.mp4';

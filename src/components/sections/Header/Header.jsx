@@ -11,11 +11,12 @@ import {useWindowWidth} from 'hooks/useWindowWidth'
 import classes from './style.module.scss'
 import {menuData} from "./data/menu";
 import NavItem from "./components/NavItem/NavItem";
+import {useLocation} from "react-router-dom";
 
 export const Header = () => {
   const [isVisibleMenu, setVisibleMenu] = useState(false)
-  const [activeLink, setActiveLink] = useState(0)
   const isDesktop = useWindowWidth(1024)
+  const { hash } = useLocation();
 
   useEffect(() => {
     if (isVisibleMenu) {
@@ -27,9 +28,8 @@ export const Header = () => {
     }
   }, [isVisibleMenu])
 
-  const handleMobileMenuClick = (activeLink) => {
+  const handleMobileMenuClick = () => {
     setVisibleMenu(false)
-    setActiveLink(activeLink)
   }
 
   return (
@@ -39,13 +39,11 @@ export const Header = () => {
           {
             menuData.map(({id, title}, index) => {
               return index === 3 ? <React.Fragment key={title}>
-                <div className={classes.logoContainer}>
+                <div className={`${classes.logoContainer} ${!hash && classes.activeLogo}`}>
                   <img className={classes.logo} src={Logo} alt=""/>
                 </div>
-                <NavItem key={title} onClick={() => setActiveLink(index)}
-                         isActive={activeLink === index} title={title} link={id}/>
-              </React.Fragment> : <NavItem key={title} onClick={() => setActiveLink(index)}
-                                           isActive={activeLink === index} title={title} link={id}/>
+                <NavItem key={title} title={title} link={id}/>
+              </React.Fragment> : <NavItem key={title} title={title} link={id}/>
             })
           }
         </nav> : <>
@@ -62,7 +60,7 @@ export const Header = () => {
               <div className={classes.menuItems}>
                 {
                   menuData.map((menuItem, idx) =>
-                    <a href={menuItem.id} onClick={() => handleMobileMenuClick(idx)} key={idx}
+                    <a href={menuItem.id} onClick={handleMobileMenuClick} key={idx}
                        className={classes.menuItem}>{menuItem.title}</a>)
                 }
               </div>
@@ -78,4 +76,3 @@ export const Header = () => {
   )
 }
 
-export default Header
