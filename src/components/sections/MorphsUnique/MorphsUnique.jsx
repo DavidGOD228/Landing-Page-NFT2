@@ -239,7 +239,7 @@ export const MorphsUnique = () => {
                         x: '-7%'
                       }}
                       whileInView={{
-                        scale: 1,
+                        scale: 1.05,
                         opacity: 1
                       }}
                       transition={{
