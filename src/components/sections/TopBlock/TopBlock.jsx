@@ -38,7 +38,7 @@ export const TopBlock = () => {
               <img src={Close} alt=""/>
             </LazyLoad>
           </button>
-          <video className={classes.videoBlock} autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
+          <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
             <source src={TeaserVideo}/>
           </video>
           {/* <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
