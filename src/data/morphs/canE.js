@@ -14,7 +14,7 @@ const canE = {
 	birth: '10.07.1994',
 	location: 'Los Angeles | United States',
 	parametrs: '1.74 cm, 69 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['shurikens.png', 'ruler.png', 'eye-2.png', 'puzzle.png'],
 	attributes: [
 		{
 			id: 1,

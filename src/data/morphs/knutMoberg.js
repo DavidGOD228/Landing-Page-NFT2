@@ -14,7 +14,7 @@ const knutMoberg = {
 	birth: '02.09.1979',
 	location: 'Dublin | Ireland',
 	parametrs: '1.81 cm, 86 kg',
-	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
+	skills: ['comet.png', 'shark.png', 'shield.png', 'anarchism.png'],
 	attributes: [
 		{
 			id: 1,
