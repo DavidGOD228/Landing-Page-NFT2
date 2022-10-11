@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GlobalContainer, Paragraph } from 'components';
+import { Paragraph } from 'components';
 
 import classes from './styles.module.scss';
 
@@ -7,7 +7,6 @@ import first from 'assets/images/first.svg';
 import second from 'assets/images/second.svg';
 
 import MihoMorph from 'assets/images/morphs/miho-ikuta/miho-morph-presentation.png';
-import MihoFull from 'assets/images/morphs/miho-ikuta/body-miho-ikuta.png'
 import MihoMorphMobile from 'assets/images/miho-morph.png';
 
 import MihoIDMp4 from 'assets/video/white_card.video.mp4';
@@ -15,7 +14,6 @@ import MihoIDWebm from 'assets/video/white_card.video.webm';
 import WhiteCardPoster from 'assets/images/posters/whiteCard.webp'
 
 import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
-import HenriFull from 'assets/images/morphs/henrik-hail/body-henrik-hail.png'
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
 import HenriIDMp4 from 'assets/video/green_card.video.mp4';
 import HenriIDWebm  from 'assets/video/green_card.video.webm';
@@ -90,14 +88,13 @@ export function TypesCards() {
 
 	return (
 		<div className={classes.wrapper}>
-			<GlobalContainer>
 				<div className={classes.containerTypesCards}>
 					<div className={classes.morphBlock}>
 						{isTablet && (
 							<motion.img
 								key='miho-d'
 								className={classes.mihoMainImage}
-								src={width > media.lDesktop ? MihoFull : MihoMorph}
+								src={MihoMorph}
 								alt='miho'
 								{...animFromLeft}
 							/>
@@ -206,7 +203,7 @@ export function TypesCards() {
 							<motion.img
 								key='henri-d'
 								className={classes.henriMainImage}
-								src={width > media.lDesktop ? HenriFull : HenriMorph}
+								src={HenriMorph}
 								alt='henri morph'
 								{...animFromRight}
 							/>
@@ -220,7 +217,6 @@ export function TypesCards() {
 						)}
 					</div>
 				</div>
-			</GlobalContainer>
 		</div>
 	);
 }
