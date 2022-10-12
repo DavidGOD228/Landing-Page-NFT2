@@ -40,7 +40,7 @@ const Slider = ({ activeSlide, className }) => {
 
   return (
     <div className={`${classes.slider} ${className}`}>
-      {/* {activeSlide !== 4 ? <div className={classes.shadow} /> : null} */}
+       {activeSlide !== 4 ? <div className={classes.shadow} /> : null}
       <AnimatePresence>
         {renderSLide(1)}
         {renderSLide(2)}
