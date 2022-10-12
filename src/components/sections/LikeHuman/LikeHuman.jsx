@@ -158,6 +158,7 @@ export const LikeHuman = () => {
               flexWrap: 'wrap',
               justifyContent: 'flex-start'
             }}
+            borderHeight="100%"
           >
             <motion.span {...animFromRight}>it&apos;s{'\u00A0'}</motion.span>
             <motion.span {...animFromRight}>just{'\u00A0'}</motion.span>
@@ -177,6 +178,7 @@ export const LikeHuman = () => {
               flexWrap: 'wrap',
               justifyContent: 'flex-start'
             }}
+            borderHeight="85%"
           >
             <motion.span {...animFromDown}>it&apos;s{'\u00A0'}</motion.span>
             <motion.span {...animFromDown}>just{'\u00A0'}</motion.span>

@@ -98,6 +98,7 @@ export const Personalize = () => {
 					<Title
 						classname={classes.personalizeTitle}
 						classnameWrapper={classes.personalizeline}
+						borderHeight="89%"
 						style={{
 							display: 'flex',
 							flexWrap: 'wrap',
@@ -140,6 +141,7 @@ export const Personalize = () => {
 				<div className={classes.contentBlock}>
 					<Title
 						classname={classes.personalizeTitle}
+						borderHeight="89%"
 						style={{
 							display: 'flex',
 							flexWrap: 'wrap',
@@ -185,6 +187,7 @@ export const Personalize = () => {
 			>
 				<Title
 					classname={classes.marketplaceTitle}
+					borderHeight="89%"
 					style={{
 						display: 'flex',
 						flexDirection: 'column',

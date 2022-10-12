@@ -142,6 +142,7 @@ export const Freedom = () => {
                   flexDirection: 'column',
                   justifyContent: 'flex-start'
                 }}
+								borderHeight="100%"
               >
                 <motion.p {...animFromRight} className={classes.chineseText}>全部的 自由 行動的</motion.p>
                 <motion.span {...animFromRight} className={classes.total}>
@@ -177,7 +178,11 @@ export const Freedom = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <Title classname={classes.title}>
+                <Title
+									classname={classes.title}
+									borderHeight="95%"
+									contentStyle={{justifyContent: 'flex-start'}}
+								>
                   <p className={classes.chineseText}>全部的 自由 行動的</p>
                   <p className={classes.total}>
                     TOTAL{' '}

@@ -44,7 +44,7 @@ export const YourMorph = () => {
 					isAfterBorder={isAfterBorder} // if false - after, true - before
 					classname={classes.titleLeftSide}
 					classnameWrapper={classes.wrapperContentTitleLeftSide}
-					animWrapperContainer={{ whileInView: { height: '100%' } }}
+					borderHeight="91%"
 				>
 					<motion.span {...animFromLeft}>choose your</motion.span>
 					<br />

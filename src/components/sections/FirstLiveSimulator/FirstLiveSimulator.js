@@ -99,7 +99,7 @@ export function FirstLiveSimulator() {
 							}}
 							viewport={{ once: true }}
 						>
-							<Title classname={classes.title}>
+							<Title classname={classes.title} borderHeight="89%">
 								First{' '}
 								<GreenText>
 									live{' '}

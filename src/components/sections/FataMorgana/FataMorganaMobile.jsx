@@ -56,7 +56,11 @@ export const FataMorganaMobile = () => {
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
 						<div>
-							<Title classname={classes.title}>
+							<Title
+								contentStyle={{justifyContent: 'flex-start'}}
+								classname={classes.title}
+								borderHeight="95%"
+							>
 									<motion.p
 										className={classes.chineseText}
 										initial={{ y: 25 }}

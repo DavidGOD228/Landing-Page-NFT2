@@ -58,7 +58,11 @@ export const FataMorganaDesktop = () => {
               </video>
             </LazyLoad>
 						<div>
-							<Title classname={classes.title}>
+							<Title
+								classname={classes.title}
+								borderHeight="94%"
+								contentStyle={{justifyContent: 'flex-start'}}
+							>
 								<motion.p
 									className={classes.welcome}
 									initial={{ y: 150 }}

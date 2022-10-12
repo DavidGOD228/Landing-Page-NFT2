@@ -110,7 +110,10 @@ export const Earn = () => {
 				<div className={classes.wrapper}>
 					<div className={classes.contentWrapper}>
 						<div>
-							<Title classname={classes.title}>
+							<Title
+								classname={classes.title}
+								borderHeight="85%"
+							>
 								<div
 									style={{
 										display: 'flex',
