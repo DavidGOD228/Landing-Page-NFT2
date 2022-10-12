@@ -7,9 +7,7 @@ const NavItem = ({link, title}) => {
   const { hash } = useLocation();
 
   return (
-    <Link to={{pathname: '/', hash: `${link}`}}
-             preventScrollReset
-             className={`${classes.navItem} ${hash === link && classes.active}`}>
+    <Link to={{pathname: '/', hash: `${link}`}} className={`${classes.navItem} ${hash === link && classes.active}`}>
       {title}
     </Link>
   )
