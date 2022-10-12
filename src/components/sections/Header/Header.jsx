@@ -11,7 +11,7 @@ import {useWindowWidth} from 'hooks/useWindowWidth'
 import classes from './style.module.scss'
 import {menuData} from "./data/menu";
 import NavItem from "./components/NavItem/NavItem";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export const Header = () => {
   const [isVisibleMenu, setVisibleMenu] = useState(false)
@@ -60,8 +60,14 @@ export const Header = () => {
               <div className={classes.menuItems}>
                 {
                   menuData.map((menuItem, idx) =>
-                    <a href={menuItem.id} onClick={handleMobileMenuClick} key={idx}
-                       className={classes.menuItem}>{menuItem.title}</a>)
+                    <Link to={{pathname: '/', hash: `${menuItem.id}`}}
+                          className={classes.menuItem}
+                          onClick={handleMobileMenuClick}
+                          key={idx}
+                    >
+                      {menuItem.title}
+                    </Link>
+                  )
                 }
               </div>
               <div className={classes.socials}>
