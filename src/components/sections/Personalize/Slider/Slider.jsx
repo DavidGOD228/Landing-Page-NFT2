@@ -8,38 +8,33 @@ const Slider = ({ activeSlide, className }) => {
     return <motion.div
       key={idx}
       initial={{
-        opacity: 1, 
-        scale: 1, 
+        scale: 1,
         marginRight: 20,
-        zIndex: idx
+        opacity: 1,
       }}
       animate={() => {
         // if slide is leaving
         if(idx < activeSlide) return {
-          opacity: 0, 
-          scale: 0.85,
+          transform: 'matrix(0.9, 0, 0, 0.9, 0, 0)',
           width: 0,
+          opacity: 0,
           marginRight: 0,
-          zIndex: idx
         }
 
         // if slide is current or next
         if(idx === activeSlide) return {
-          opacity: 1, 
-          scale: 1,
+          transform: 'matrix(1, 0, 0, 1, 0, 0)',
           zIndex: 1000,
-          transitionEnd: {
-            display: 'hidden'
-          }
+          opacity: 1,
         }
       }}
       transition={{
-        duration: 1,
+        duration: .7,
         ease: 'easeInOut'
       }}
       viewport={{ once: true }}
     >
-      <Phone idx={idx} />
+      <Phone isActive={activeSlide === idx} idx={idx} />
     </motion.div>;
   }
 

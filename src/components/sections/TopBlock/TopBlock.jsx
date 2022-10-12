@@ -4,7 +4,8 @@ import {DefaultPlayer as Video} from 'react-html5video';
 import {Header} from '../Header/Header'
 import MetaMorphMobile from 'assets/images/metaMorphMobile.webp'
 import MetaMorphMain from 'assets/images/metaMorphMain.webp'
-import TeaserVideo from 'assets/video/teaser.video.mp4';
+import TeaserVideoMp4 from 'assets/video/teaser.video.mp4';
+import TeaserVideoWebm from 'assets/video/teaser.video.webm';
 import Close from 'assets/images/close.svg'
 import MorphBlock from "../Header/components/MorphBlock/MorphBlock";
 
@@ -39,7 +40,8 @@ export const TopBlock = () => {
             </LazyLoad>
           </button>
           <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
-            <source src={TeaserVideo}/>
+            <source src={TeaserVideoWebm} type="video/webm" />
+            <source src={TeaserVideoMp4} type="video/mp4" />
           </video>
           {/* <Video autoPlay loop muted controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
             <source src={TeaserVideo}/>

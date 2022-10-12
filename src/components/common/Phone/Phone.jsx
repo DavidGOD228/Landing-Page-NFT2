@@ -2,6 +2,7 @@ import cleaningPhone from 'assets/images/mobile-slider/cleaning-phone.png';
 import eatPphone from 'assets/images/mobile-slider/eat-phone.png';
 import playPhone from 'assets/images/mobile-slider/play-phone.png';
 import restPhone from 'assets/images/mobile-slider/rest-phone.png';
+import {useEffect, useRef} from "react";
 
 import jobVideoMp4 from 'assets/video/job-clothes-furniture/Job.mp4';
 import jobVideoWebm from 'assets/video/job-clothes-furniture/Job.webm';
@@ -31,7 +32,17 @@ const videos = [
   },
 ];
 
-export const Phone = ({ idx, classname, ...props }) => {
+export const Phone = ({ idx, classname, isActive, ...props }) => {
+
+  const videoRef = useRef()
+  useEffect(() => {
+    if(isActive) {
+      videoRef.current.play()
+    }
+    else videoRef.current.pause()
+
+  }, [isActive])
+
 	return (
     // <img className={classes.phoneItem} {...props} src={imgs[idx - 1]} alt='slide' />
     /* <video
@@ -46,10 +57,10 @@ export const Phone = ({ idx, classname, ...props }) => {
       <source src={videos[idx - 1].mp4} type="video/mp4" />
     </video> */
     <video
+      ref={videoRef}
       className={classes.phoneItem}
       {...props}
       src={videos[idx - 1].webm}
-      autoPlay
       loop
       muted
       playsInline
