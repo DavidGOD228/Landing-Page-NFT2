@@ -43,7 +43,8 @@ export const Roadmap = () => {
         <Title 
           classname={classes.title}
           isAfterBorder={iSDesktop}
-          classnameWrapper={classes.wrapperContentTitleLeftSide}
+          classnameWrapper={iSDesktop && classes.wrapperContentTitleLeftSide}
+          borderHeight="89%"
         >
           <GreenText1 classname={classes.greenText} {...animFromDown}>We are</GreenText1>
           <motion.span {...animFromDown}>running!</motion.span>

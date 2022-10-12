@@ -79,7 +79,11 @@ export const MorphsUnique = () => {
 			{/* <Parallax speed={0} className={classes.container}> */}
 			<div className={classes.container}>
 				<div className={classes.content}>
-					<Title isWhiteLine={!isDesktop} classname={classes.title}>
+					<Title
+            isWhiteLine={!isDesktop}
+            classname={classes.title}
+            borderHeight="89%"
+          >
 						{titleText.split(' ').map((word, idx) => {
 							return (
 								<motion.span
