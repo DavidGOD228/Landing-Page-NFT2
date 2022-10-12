@@ -1,8 +1,8 @@
-import { Phone } from 'components';
+import {Phone} from 'components';
 import classes from './style.module.scss';
-import { AnimatePresence, motion } from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 
-const Slider = ({ activeSlide, className }) => {
+const Slider = ({activeSlide, className}) => {
 
   const renderSLide = (idx) => {
     return <motion.div
@@ -14,7 +14,7 @@ const Slider = ({ activeSlide, className }) => {
       }}
       animate={() => {
         // if slide is leaving
-        if(idx < activeSlide) return {
+        if (idx < activeSlide) return {
           transform: 'matrix(0.9, 0, 0, 0.9, 0, 0)',
           width: 0,
           opacity: 0,
@@ -22,7 +22,7 @@ const Slider = ({ activeSlide, className }) => {
         }
 
         // if slide is current or next
-        if(idx === activeSlide) return {
+        if (idx === activeSlide) return {
           transform: 'matrix(1, 0, 0, 1, 0, 0)',
           zIndex: 1000,
           opacity: 1,
@@ -32,15 +32,15 @@ const Slider = ({ activeSlide, className }) => {
         duration: .7,
         ease: 'easeInOut'
       }}
-      viewport={{ once: true }}
+      viewport={{once: true}}
     >
-      <Phone isActive={activeSlide === idx} idx={idx} />
+      <Phone isActive={activeSlide === idx} idx={idx}/>
     </motion.div>;
   }
 
   return (
     <div className={`${classes.slider} ${className}`}>
-      {/* {activeSlide !== 4 ? <div className={classes.shadow} /> : null} */}
+      <div className={classes.shadow}/>
       <AnimatePresence>
         {renderSLide(1)}
         {renderSLide(2)}
