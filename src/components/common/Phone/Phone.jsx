@@ -36,7 +36,6 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   const videoRef = useRef()
   useEffect(() => {
-    console.log('isActive', isActive)
     if(isActive) {
       videoRef.current.play()
     }
