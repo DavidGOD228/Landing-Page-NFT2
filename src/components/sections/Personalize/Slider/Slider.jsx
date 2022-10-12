@@ -34,7 +34,7 @@ const Slider = ({ activeSlide, className }) => {
       }}
       viewport={{ once: true }}
     >
-      <Phone idx={idx} />
+      <Phone isActive={activeSlide === idx} idx={idx} />
     </motion.div>;
   }
 
