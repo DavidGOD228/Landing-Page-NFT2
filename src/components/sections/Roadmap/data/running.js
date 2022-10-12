@@ -7,6 +7,7 @@ export const roadmapTableData = [
     title: 'Define Concept & Market Research',
     headerBackgroundColor: 'linear-gradient(90deg, rgba(253, 204, 143, 1) 0%, rgba(31, 249, 236, 1) 100%)',
     borderColor: '#fccb8f',
+    headerColor: '#0B0B0C',
     subtitle: <ul className={classes.roadmapList}>
       <li> Market Research</li>
       <li>Creating graphic language, art concept, and 3D content</li>
@@ -21,6 +22,7 @@ export const roadmapTableData = [
     title: 'Team onboarding & Start of game development',
     headerBackgroundColor: 'linear-gradient(90deg, rgba(36, 249, 232, 1) 0%, rgba(199, 247, 121, 1) 100%)',
     borderColor: '#23f8ea',
+    headerColor: '#0B0B0C',
     subtitle: <ul className={classes.roadmapList}>
       <li> Founders funding round</li>
       <li>Preparing development roadmap</li>
@@ -35,6 +37,7 @@ export const roadmapTableData = [
     title: 'Team scale & Internal basic mechanic tests',
     headerBackgroundColor: 'linear-gradient(90deg, rgba(201, 247, 120, 1) 0%, rgba(254, 217, 138, 1) 100%)',
     borderColor: '#c9f778',
+    headerColor: '#0B0B0C',
     subtitle: <ul className={classes.roadmapList}>
       <li>Project Team Scale</li>
       <li>Game development on-going</li>
@@ -49,6 +52,7 @@ export const roadmapTableData = [
     year: 2022,
     title: 'Official Announcements & Seed Round',
     borderColor: '#fdda89',
+    headerBackgroundColor: 'linear-gradient(90deg, rgba(254, 218, 138, 1) 0%, rgba(100, 91, 61, 1) 32%, rgba(36, 36, 39, 1) 71%, rgba(36, 36, 39, 1) 100%)',
     subtitle: <ul className={classes.roadmapList}>
       <li>In-game economy part implemented</li>
       <li>Game Graphics</li>
