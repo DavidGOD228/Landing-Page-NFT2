@@ -365,18 +365,14 @@ export const MorphsUnique = () => {
 			{/* </Parallax> */}
 			{!isDesktop && (
 				<div className={classes.mobileMorph}>
-          {/* <video
+           <video
             className={classes.mobileMorphVideo}
+            poster={agressiveMorphImg}
             src={agressiveMorph}
             autoPlay
             playsInline
             loop
             muted
-          /> */}
-          <img
-            className={classes.mobileMorphVideo}
-            src={agressiveMorphImg}
-            alt=""
           />
 				</div>
 			)}
