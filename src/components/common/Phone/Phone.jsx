@@ -60,11 +60,12 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
       ref={videoRef}
       className={classes.phoneItem}
       {...props}
-      src={videos[idx - 1].webm}
       loop
       muted
-      playsInline
-    />
+      playsInline>
+      <source src={videos[idx - 1].webm} type="video/webm" />
+      <source src={videos[idx - 1].mp4} type="video/mp4" />
+    </video>
   );
 };
 
