@@ -152,16 +152,19 @@ export const FataMorganaMobile = () => {
 					>
 						an adventure that will take your breath away
 					</motion.p>
+
+          {/* dust */}
 					<video
             className={classes.zoomRay}
             autoPlay
             loop
             muted
-            poster={ZoomPoster}
             playsInline>
             <source src={Ray} type="video/webm" />
           </video>
-           <LazyLoad offset={offset}>
+
+          {/* zoom city */}
+          <LazyLoad offset={offset}>
             <motion.video
               className={classes.zoomVideo}
               initial={{ y: 150 }}
@@ -181,6 +184,8 @@ export const FataMorganaMobile = () => {
               <source src={CityZoomMP4} type="video/mp4" />
             </motion.video>
           </LazyLoad>
+
+          {/* city without zoom */}
 					<LazyLoad offset={offset} className={classes.videoWrapper}>
             <video
               className={classes.mobileCity}
