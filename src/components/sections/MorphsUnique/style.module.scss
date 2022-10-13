@@ -77,6 +77,10 @@
     gap: 18px;
     justify-content: flex-start;
   }
+  @media screen and (max-width: $s-tablet){
+    gap: 18px;
+    justify-content: space-evenly;
+  }
 }
 
 .skillImg {
