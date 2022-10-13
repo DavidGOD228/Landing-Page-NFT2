@@ -19,7 +19,6 @@ export const Header = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
-    console.log('isVisibleMenu', isVisibleMenu)
     if (isVisibleMenu) {
       document.body.style.touchAction = 'none'
     } else {
