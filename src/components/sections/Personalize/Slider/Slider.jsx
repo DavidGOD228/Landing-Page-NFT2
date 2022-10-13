@@ -11,25 +11,30 @@ const Slider = ({activeSlide, className}) => {
         scale: 1,
         marginRight: 20,
         opacity: 1,
+        zIndex: idx
       }}
       animate={() => {
         // if slide is leaving
         if (idx < activeSlide) return {
-          transform: 'matrix(0.9, 0, 0, 0.9, 0, 0)',
           width: 0,
+          scale: 0.85,
           opacity: 0,
           marginRight: 0,
+          zIndex: idx
         }
 
         // if slide is current or next
         if (idx === activeSlide) return {
-          transform: 'matrix(1, 0, 0, 1, 0, 0)',
           zIndex: 1000,
           opacity: 1,
+          scale: 1,
+          transitionEnd: {
+            display: 'hidden'
+          }
         }
       }}
       transition={{
-        duration: .7,
+        duration: 1,
         ease: 'easeInOut'
       }}
       viewport={{once: true}}
