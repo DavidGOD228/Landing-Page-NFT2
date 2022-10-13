@@ -19,12 +19,11 @@ export const Header = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
+    console.log('isVisibleMenu', isVisibleMenu)
     if (isVisibleMenu) {
-      document.body.style.overflowY = 'hidden'
-      document.body.style.height = '100vh';
+      document.body.style.touchAction = 'none'
     } else {
-      document.body.style.overflowY = 'auto';
-      document.body.style.height = 'auto';
+      document.body.style.touchAction = 'auto'
     }
   }, [isVisibleMenu])
 
