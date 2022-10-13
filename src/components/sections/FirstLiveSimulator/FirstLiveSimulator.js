@@ -53,12 +53,7 @@ export function FirstLiveSimulator() {
         <source src={MorphDesktopMp4} type="video/mp4" />
       </video>}
       {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
-        <img
-          className={classes.morphVideo}
-          src={MorphMobileWebp}
-          alt=""
-        />
-        {/* <video
+        <video
           className={classes.morphVideo}
           autoPlay
           muted
@@ -68,7 +63,7 @@ export function FirstLiveSimulator() {
         >
           <source src={MorphMobileWebm} type="video/webm" />
           <source src={MorphMobileMp4} type="video/mp4" />
-        </video> */}
+        </video>
       </LazyLoad>}
 			
       {isDesktop && 
