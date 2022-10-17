@@ -2,11 +2,10 @@
 @import "~assets/styles/mixins.scss";
 
 $slider-item: 300px;
-$gallery-width: 28vw;
-$mobile-width: 35vw;
+$slider-mobile-item: 270px;
 $gallery-items-count: 3;
 $gallery-item-width: calc(#{$slider-item} * #{$gallery-items-count} + 20px);
-$mobile-shadow-width: calc(#{$mobile-width} * #{$gallery-items-count} + 20px);
+$mobile-shadow-width: calc(#{$slider-mobile-item} * #{$gallery-items-count} + 20px);
 
 .slider {
 	position: relative;
@@ -69,6 +68,7 @@ $mobile-shadow-width: calc(#{$mobile-width} * #{$gallery-items-count} + 20px);
 
   .shadow {
     width: $mobile-shadow-width;
+    background: linear-gradient(90deg,transparent calc(#{$slider-item}*0.7),rgba(0,0,0,0.15) calc(#{$slider-item}* 0.9),rgba(0,0,0,0.7) calc(#{$slider-item}*1.2),rgba(0,0,0,0.82) calc(#{$slider-item}*1.47),rgba(0,0,0,0.92) calc(#{$slider-item}*1.56),rgba(0,0,0,0.954) calc(#{$slider-item}*1.6),black calc(#{$slider-item}*1.7));
   }
 }
 
