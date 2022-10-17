@@ -64,20 +64,19 @@ export const MorphsUnique = () => {
 	return (
 		<>
       {isDesktop && 
-      // <Parallax speed={-speedParallax / 2}>
+      <Parallax speed={-speedParallax / 2}>
         <div style={{position: 'relative'}}>
           <DesktopSplashes/>
         </div>
-      // </Parallax>
+      </Parallax>
       }
       {!isDesktop && 
-      // <Parallax speed={-speedParallax / 2}>
+      <Parallax speed={-speedParallax / 2}>
         <MobileSplashes className={classes.topBlockMobileSplashes}/>
-      // </Parallax>
+      </Parallax>
       }
 
-			{/* <Parallax speed={0} className={classes.container}> */}
-			<div className={classes.container}>
+			 <Parallax speed={0} className={classes.container}>
 				<div className={classes.content}>
 					<Title
             isWhiteLine={!isDesktop}
@@ -361,8 +360,7 @@ export const MorphsUnique = () => {
           playsInline
           muted
         />
-			</div>
-			{/* </Parallax> */}
+			 </Parallax>
 			{!isDesktop && (
 				<div className={classes.mobileMorph}>
            <video

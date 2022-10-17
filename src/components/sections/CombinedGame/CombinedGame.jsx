@@ -22,16 +22,16 @@ export const CombinedGame = () => {
   return (
     <div className={classes.container}>
       {isDesktop && 
-      // <Parallax speed={-speedParallax / 2}>
+      <Parallax speed={-speedParallax / 2}>
         <DesktopSplashes/>
-      // </Parallax>
+      </Parallax>
       }
       {!isDesktop && 
-      // <Parallax speed={50} translateY={10}>
+      <Parallax speed={50} translateY={10}>
         <MobileSplashes />
-      // </Parallax>
+      </Parallax>
       }
-      {/* <Parallax speed={isDesktop ? 1 : -1}> */}
+       <Parallax speed={isDesktop ? 1 : -1}>
         <h4 className={classes.title}>Combined game experience</h4>
         <div className={classes.companies}>
           <EA width={isDesktop ? 143: 80} height={isDesktop ? 70 : 40}/>
@@ -42,7 +42,7 @@ export const CombinedGame = () => {
           <Valve width={isDesktop ? 197: 110} height={isDesktop ? 55 : 31}/>
           <SuperCell width={isDesktop ? 86: 49} height={isDesktop ? 77 : 44}/>
         </div>
-      {/* </Parallax> */}
+       </Parallax>
     </div>
   )
 }

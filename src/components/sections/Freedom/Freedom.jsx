@@ -97,17 +97,17 @@ export const Freedom = () => {
 	return (
     <>
       {isDesktop && 
-      // <Parallax speed={speedParallax / 1.5}>
+      <Parallax speed={speedParallax / 1.5}>
         <DesktopSplashes/>
-      // </Parallax>
+      </Parallax>
       }
       {!isDesktop && 
-      // <Parallax speed={speedParallax / 3.5}>
+      <Parallax speed={speedParallax / 3.5}>
         <MobileSplashes />
-      // </Parallax>
+      </Parallax>
       }
 
-      {/* <Parallax className={classes.container} speed={isDesktop ? 0 : speedParallax}> */}
+       <Parallax className={classes.container} speed={isDesktop ? 0 : speedParallax}>
       <div className={classes.container}>
         <div className={classes.topContent}>
           <div className={classes.content}>
@@ -222,7 +222,7 @@ export const Freedom = () => {
           ))}
         </div>
 		  </div>
-		  {/* </Parallax> */}
+		   </Parallax>
     </>
 	);
 };

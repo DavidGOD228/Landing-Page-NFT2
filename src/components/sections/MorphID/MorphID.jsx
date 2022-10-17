@@ -82,19 +82,17 @@ export const MorphId = () => {
   return (
     <>
       {isDesktop && 
-      // <Parallax speed={-speedParallax / 2}>
+      <Parallax speed={-speedParallax / 2}>
         <DesktopSplashes/>
-      // </Parallax>
+      </Parallax>
       }
       {!isDesktop && 
-      // <Parallax speed={-speedParallax / 2}>
+      <Parallax speed={-speedParallax / 2}>
         <MobileSplashes />
-      // </Parallax>
+      </Parallax>
       }
 
-      {/* <Parallax speed={isDesktop ? speedParallax : 0} id="morphID" className={classes.container}> */}
-      <div id="morphID" className={classes.container}>
-
+       <Parallax speed={isDesktop ? speedParallax : 0} id="morphID" className={classes.container}>
         <div className={classes.cardsImg}>
           {isDesktop && (
             <motion.video
@@ -212,8 +210,7 @@ export const MorphId = () => {
               {paragraphAnimationFromRight(morphIDText.waysToStart)}
             </Paragraph>
                   </div>
-      </div>
-      {/* </Parallax> */}
+       </Parallax>
     </>
   )
 };
