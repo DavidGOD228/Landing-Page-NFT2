@@ -168,21 +168,21 @@ export const Earn = () => {
 								<Accordion key={i} title={title} subtitle={subtitle} />
 							))}
 					</div>
-					{!isDesktop && (
-						<LazyLoad offset={offset}>
-							<video
-								className={classes.comparingVideo}
-								autoPlay
-								playsInline
-								loop
-								muted
-							>
-                <source src={ComparingCardsWebm} type="video/webm" />
-                <source src={ComparingCardsMp4} type="video/mp4" />
-              </video>
-						</LazyLoad>
-					)}
 				</div>
+				{!isDesktop && (
+					<LazyLoad className={classes.comparingVideoWrapper} offset={offset}>
+						<video
+							className={classes.comparingVideo}
+							autoPlay
+							playsInline
+							loop
+							muted
+						>
+							<source src={ComparingCardsWebm} type="video/webm" />
+							<source src={ComparingCardsMp4} type="video/mp4" />
+						</video>
+					</LazyLoad>
+				)}
 			</div>
 			{isDesktop && (
 				<div className={classes.tableWrapper}>
