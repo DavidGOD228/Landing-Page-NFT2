@@ -67,21 +67,20 @@ export function FirstLiveSimulator() {
       </LazyLoad>}
 			
       {isDesktop && 
-      // <Parallax speed={-speedParallax / 1.5}>
+      <Parallax speed={-speedParallax / 1.5}>
         <DesktopSplashes/>
-      // </Parallax>
+      </Parallax>
       }
       {!isDesktop &&
-      // <Parallax speed={-speedParallax / 3.5}>
+      <Parallax speed={-speedParallax / 3.5}>
         <MobileSplashes/>
-      // </Parallax>
+      </Parallax>
       }
 
 			<GlobalContainer style={{order: 0}}>
 				<div className={classes.flsDesktopContainer}>
 
-					{/* <Parallax speed={speedParallax} className={classes.content}> */}
-					<div className={classes.content}>
+					 <Parallax speed={speedParallax} className={classes.content}>
 						<motion.div
 							key='firstLiveTitle'
 							className={classes.descr}
@@ -165,9 +164,8 @@ export function FirstLiveSimulator() {
 									</LazyLoad>
 								</motion.div>
 							</div>
-						</div>
-					{/* </Parallax> */}
 					</div>
+					 </Parallax>
 				</div>
 			</GlobalContainer>
 		</div>

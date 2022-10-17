@@ -77,21 +77,18 @@ export const Personalize = () => {
 	return (
 		<>
       {isDesktop && 
-      // <Parallax speed={-speedParallax / 1.5}>
+      <Parallax speed={-speedParallax / 1.5}>
         <DesktopSplashes/>
-      // </Parallax>
+      </Parallax>
       }
       {!isDesktop &&
-      // <Parallax speed={speedParallax / 2}>
+      <Parallax speed={speedParallax / 2}>
         <MobileSplashes className={classes.topBlockMobileSplashes}/>
-      // </Parallax>
+      </Parallax>
       }
 
-			{/* <Parallax
+			<Parallax
         speed={0}
-				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
-			> */}
-			<div
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
 				<div className={classes.contentBlock}>
@@ -134,9 +131,7 @@ export const Personalize = () => {
 				</div>
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
-			</div>
-			{/* </Parallax> */}
-
+			 </Parallax>
 			<div className={classes.mobileVersion}>
 				<div className={classes.contentBlock}>
 					<Title
