@@ -99,8 +99,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  top: -25px;
+
   @media screen and (min-width: $desktop){
     margin-top: -450px;
+    top: 0;
   }
 }
 
@@ -118,7 +121,7 @@
   border-right: 3px solid #fff;
   padding-right: 22px;
   right: 21px;
-  top: 150px;
+  top: 170px;
 
   @media screen and (min-width: $desktop) {
     position: initial;
@@ -241,7 +244,7 @@
     width: 80vw;
     height: 80vw;
     margin-top: 0;
-    bottom: -75px;
+    bottom: -50px;
   }
 }
 
