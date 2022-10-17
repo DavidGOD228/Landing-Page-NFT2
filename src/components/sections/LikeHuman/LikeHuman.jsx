@@ -178,7 +178,7 @@ export const LikeHuman = () => {
               flexWrap: 'wrap',
               justifyContent: 'flex-start'
             }}
-            borderHeight="85%"
+            borderHeight="80%"
           >
             <motion.span {...animFromDown}>it&apos;s{'\u00A0'}</motion.span>
             <motion.span {...animFromDown}>just{'\u00A0'}</motion.span>

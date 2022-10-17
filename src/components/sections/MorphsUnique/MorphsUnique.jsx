@@ -82,7 +82,7 @@ export const MorphsUnique = () => {
 					<Title
             isWhiteLine={!isDesktop}
             classname={classes.title}
-            borderHeight="89%"
+            borderHeight="80%"
           >
 						{titleText.split(' ').map((word, idx) => {
 							return (

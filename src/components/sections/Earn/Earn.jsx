@@ -112,7 +112,7 @@ export const Earn = () => {
 						<div>
 							<Title
 								classname={classes.title}
-								borderHeight="85%"
+								borderHeight={isDesktop ? '85%': '80%'}
 							>
 								<div
 									style={{
