@@ -41,7 +41,11 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
       whileInView="visible"
       viewport={{once: true}}
     >
-      {text}
+      {letters.map((letter, index) => (
+        <motion.span variants={child} key={index}>
+          {letter === " " ? "\u00A0" : letter}
+        </motion.span>
+      ))}
     </motion.div>
   );
 };
