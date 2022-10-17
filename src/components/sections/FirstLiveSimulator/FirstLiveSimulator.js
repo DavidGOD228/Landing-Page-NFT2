@@ -94,7 +94,9 @@ export function FirstLiveSimulator() {
 							}}
 							viewport={{ once: true }}
 						>
-							<Title classname={classes.title} borderHeight="89%">
+							<Title classname={classes.title}
+										 borderHeight={isDesktop ? "89%": "80%"}
+							>
 								First{' '}
 								<GreenText>
 									live{' '}

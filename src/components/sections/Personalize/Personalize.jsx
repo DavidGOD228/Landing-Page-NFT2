@@ -141,7 +141,7 @@ export const Personalize = () => {
 				<div className={classes.contentBlock}>
 					<Title
 						classname={classes.personalizeTitle}
-						borderHeight="89%"
+						borderHeight={isDesktop ? "89%": "80%"}
 						style={{
 							display: 'flex',
 							flexWrap: 'wrap',
@@ -187,7 +187,7 @@ export const Personalize = () => {
 			>
 				<Title
 					classname={classes.marketplaceTitle}
-					borderHeight="89%"
+					borderHeight={isDesktop ? "89%": "80%"}
 					style={{
 						display: 'flex',
 						flexDirection: 'column',
