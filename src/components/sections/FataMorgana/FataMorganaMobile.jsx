@@ -12,20 +12,7 @@ import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
-import MobileCityImg from 'assets/images/posters/problems-videos/city/City.webp';
-
-import MobileCityWebm from "assets/video/city-mobile.video.webm";
-import MobileCityMP4 from "assets/video/city-mobile.video.mp4";
-
-import CityZoomWebm from "assets/video/city-zoom.video.webm";
-import CityZoomMP4 from "assets/video/city-zoom.video.mp4";
-
 import MobileCityPoster from 'assets/images/posters/city_Mobile.webp'
-import MobileZoomPoster from 'assets/images/posters/zoom.png'
-
-import ZoomPoster from "assets/images/posters/zoom.png";
-
-import Ray from "assets/video/Ray.webm";
 
 const data = [
   {
@@ -157,9 +144,8 @@ export const FataMorganaMobile = () => {
             autoPlay
             loop
             muted
-            poster={ZoomPoster}
             playsInline>
-            <source src={Ray} type="video/webm" />
+            <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082165/videos/Ray_exu8al.webm" type="video/webm" />
           </video>
            <LazyLoad offset={offset}>
             <motion.video
@@ -175,10 +161,10 @@ export const FataMorganaMobile = () => {
               autoPlay
               loop
               muted
-              poster={MobileZoomPoster}
+              poster="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666086665/posters/zoom_mgajem.png"
               playsInline>
-              <source src={CityZoomWebm} type="video/webm" />
-              <source src={CityZoomMP4} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm" type="video/webm" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4" type="video/mp4" />
             </motion.video>
           </LazyLoad>
 					<LazyLoad offset={offset} className={classes.videoWrapper}>
@@ -189,8 +175,8 @@ export const FataMorganaMobile = () => {
               loop
               muted
               playsInline>
-              <source src={MobileCityWebm} type="video/webm" />
-              <source src={MobileCityMP4} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082141/videos/city-mobile.video_kcomob.webm" type="video/webm" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082167/videos/city-mobile.video_vcuitj.mp4" type="video/mp4" />
             </video>
 					</LazyLoad>
 				</div>

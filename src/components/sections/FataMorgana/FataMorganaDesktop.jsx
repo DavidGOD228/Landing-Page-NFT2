@@ -8,13 +8,8 @@ import LazyLoad from 'react-lazy-load';
 
 import Quotes from "assets/images/quotes.svg";
 
-import DesktopCityMP4 from 'assets/video/city-desktop.video.mp4'
-import CityDesktopWebm from 'assets/video/city-desktop.video.webm';
-import CityZoomWebm from 'assets/video/city-zoom.video.webm';
-import CityZoomMP4 from 'assets/video/city-zoom.video.mp4';
 import CityPoster from 'assets/images/posters/city.webp'
 import ZoomPoster from 'assets/images/posters/zoom.webp'
-import Ray from 'assets/video/Ray.webm'
 import classes from "./style.module.scss";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
@@ -54,7 +49,7 @@ export const FataMorganaDesktop = () => {
                 muted
                 poster={ZoomPoster}
                 playsInline>
-                <source src={Ray} type="video/webm" />
+                <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082165/videos/Ray_exu8al.webm" type="video/webm" />
               </video>
             </LazyLoad>
 						<div>
@@ -147,8 +142,8 @@ export const FataMorganaDesktop = () => {
                 muted
                 poster={ZoomPoster}
                 playsInline>
-                <source src={CityZoomWebm} type="video/webm" />
-                <source src={CityZoomMP4} type="video/mp4" />
+                <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm" type="video/webm" />
+                <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4" type="video/mp4" />
               </motion.video>
 							<motion.p
 								className={classes.cityText}
@@ -178,8 +173,8 @@ export const FataMorganaDesktop = () => {
               muted
               playsInline
             >
-              <source src={CityDesktopWebm} type="video/webm" />
-              <source src={DesktopCityMP4} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082077/videos/city-desktop.video_kcsvgh.webm" type="video/webm" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666081885/videos/city-desktop.video_yd4hy9.mp4" type="video/mp4" />
             </video>
 					</LazyLoad>
 				</div>

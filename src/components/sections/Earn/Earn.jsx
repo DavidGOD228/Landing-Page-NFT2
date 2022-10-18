@@ -3,12 +3,7 @@ import { motion } from 'framer-motion';
 
 import { Title, GreenText, Paragraph, Accordion } from 'components';
 
-import CoinVideoMp4 from "assets/video/coin.video.mp4";
-import CoinVideoWebm from "assets/video/coin.video.webm";
 import CoinPoster from "assets/images/posters/coin.webp";
-
-import ComparingCardsMp4 from 'assets/video/comp.video.mp4';
-import ComparingCardsWebm from 'assets/video/comp.video.webm';
 
 import classes from './style.module.scss';
 import { useWindowWidth } from 'hooks/useWindowWidth';
@@ -102,8 +97,8 @@ export const Earn = () => {
 							playsInline
 							poster={CoinPoster}
 						>
-              <source src={CoinVideoWebm} type="video/webm" />
-              <source src={CoinVideoMp4} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm" type="video/webm" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4" type="video/mp4" />
             </video>
 					</LazyLoad>
 				)}
@@ -149,8 +144,8 @@ export const Earn = () => {
                     playsInline
                     muted
                   >
-                    <source src={CoinVideoWebm} type="video/webm" />
-                    <source src={CoinVideoMp4} type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm" type="video/webm" />
+                    <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4" type="video/mp4" />
                   </video>
                 </motion.div>
               </LazyLoad>
@@ -178,8 +173,8 @@ export const Earn = () => {
 							loop
 							muted
 						>
-							<source src={ComparingCardsWebm} type="video/webm" />
-							<source src={ComparingCardsMp4} type="video/mp4" />
+							<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082156/videos/comp.video_tymrsj.webm" type="video/webm" />
+							<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4" type="video/mp4" />
 						</video>
 					</LazyLoad>
 				)}

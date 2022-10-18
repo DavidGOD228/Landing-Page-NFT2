@@ -21,7 +21,6 @@ import ChainPng from 'assets/images/skills/skill-8.png';
 import ChainWebp from 'assets/images/skills/skill-8.webp';
 
 import agressiveMorphImg from 'assets/images/posters/problems-videos/agressive/Agressive.webp';
-import agressiveMorph from 'assets/video/agressive_mobile.video.mp4';
 
 import { useRef } from 'react';
 import classes from './style.module.scss';
@@ -354,7 +353,7 @@ export const MorphsUnique = () => {
 				</div>
         <video
           className={classes.morphImage}
-          src={agressiveMorph}
+          src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082145/videos/agressive_mobile.video_of6qiz.mp4"
           autoPlay
           loop
           playsInline
@@ -366,7 +365,7 @@ export const MorphsUnique = () => {
            <video
             className={classes.mobileMorphVideo}
             poster={agressiveMorphImg}
-            src={agressiveMorph}
+            src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082145/videos/agressive_mobile.video_of6qiz.mp4"
             autoPlay
             playsInline
             loop

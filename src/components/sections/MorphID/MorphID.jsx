@@ -3,9 +3,6 @@ import LazyLoad from 'react-lazy-load';
 
 import {Title, Paragraph, GreenText} from 'components';
 
-import ComparingCardsWebm from 'assets/video/comp.video.webm';
-import ComparingCardsMp4 from 'assets/video/comp.video.mp4';
-
 import {paragraphAnimationFromRight} from 'farmerMotionsAnimations/paragraphAnimation';
 
 import classes from './style.module.scss';
@@ -103,8 +100,8 @@ export const MorphId = () => {
               muted
               playsInline
             >
-              <source src={ComparingCardsWebm} type="video/webm" />
-              <source src={ComparingCardsMp4} type="video/mp4" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082156/videos/comp.video_tymrsj.webm" type="video/webm" />
+              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4" type="video/mp4" />
             </motion.video>
           )}
         </div>
