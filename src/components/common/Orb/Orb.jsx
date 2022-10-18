@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 
 import classes from './style.module.scss';
 
-export const Orb = () => {
+export const Orb = ({top, left}) => {
 
   const orbRef = useRef()
 
@@ -13,8 +13,8 @@ export const Orb = () => {
       yMax = rectBox.height + rectBox.y - rect.height,
       maxSpeed = 1;
 
-    let x = rect.x,
-      y = rect.y,
+    let x = left ?? rect.x,
+      y = top ?? rect.y,
       xDelta,
       yDelta;
 
