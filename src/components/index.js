@@ -11,6 +11,7 @@ export * from './common/Table/Table';
 export * from './common/Title/Title';
 export * from './common/GenerateCode/GenerateCode';
 export * from './common/GenerateCodeForMorph/GenerateCodeForMorph';
+export * from './common/Orb/Orb';
 
 // all sections
 export * from './sections/CombinedGame/CombinedGame';
