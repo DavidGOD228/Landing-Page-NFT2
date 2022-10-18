@@ -13,7 +13,6 @@ import VisibilitySensor from "react-visibility-sensor";
 
 export function InfoMorh({morph}) {
   const {id, bodyImg, type, name, attributes} = morph;
-  const importBodyImg = require("assets/images/morphs/" + bodyImg);
   const controls = useAnimationControls()
   const initial = {
     y: 25,
@@ -68,7 +67,7 @@ export function InfoMorh({morph}) {
               <motion.img
                 key={id}
                 className={classes.imgMorphChoose}
-                src={importBodyImg}
+                src={bodyImg}
                 alt={name}
                 initial={{
                   ...initial,

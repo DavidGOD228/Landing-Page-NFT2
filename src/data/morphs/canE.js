@@ -5,7 +5,7 @@ const nameFolder = 'can-e';
 const canE = {
 	id: 902,
 	cardImg: `${nameFolder}/card-can-e.png`,
-	bodyImg: `${nameFolder}/body-can-e.png`,
+	bodyImg: "https://res.cloudinary.com/dbbqyqt75/image/upload/v1666085732/morphs/body-can-e_vuza9q.png",
 	bodyMobileImg: `${nameFolder}/mobile-can-e.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-can-e.svg`,
 	name: 'Can E',

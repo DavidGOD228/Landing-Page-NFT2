@@ -5,19 +5,10 @@ import { GlobalContainer, GreenText, Title, Paragraph } from 'components';
 import LazyLoad from 'react-lazy-load';
 
 import WhiteLine from 'assets/images/whiteLine.svg';
-import toiletVideo from 'assets/video/toilet.video.mp4';
 import ToiletPoster from 'assets/images/posters/toitet.webp'
 import BedPoster from 'assets/images/posters/bed.webp'
-import bedVideo from 'assets/video/bed.video.mp4';
 
 import SmileDesktop from 'assets/images/smileDesktop.svg';
-
-import MorphDesktopMp4 from 'assets/video/morphDesktop.video.mp4';
-import MorphDesktopWebm from 'assets/video/morphDesktop.video.webm';
-
-import MorphMobileWebp from 'assets/images/posters/problems-videos/falling-morp-spot/falling-morph-spot.webp';
-import MorphMobileMp4 from 'assets/video/morphMobile.video.mp4';
-import MorphMobileWebm from 'assets/video/morphMobile.video.webm';
 
 import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
 import MobilePoster from 'assets/images/posters/falling_Mobile.webp'
@@ -49,8 +40,8 @@ export function FirstLiveSimulator() {
         muted
         playsInline
       >
-        <source src={MorphDesktopWebm} type="video/webm" />
-        <source src={MorphDesktopMp4} type="video/mp4" />
+        <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm" type="video/webm" />
+        <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4" type="video/mp4" />
       </video>}
       {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
         <video
@@ -61,8 +52,8 @@ export function FirstLiveSimulator() {
           preload='auto'
           poster={isDesktop ? DesktopPoster : MobilePoster}
         >
-          <source src={MorphMobileWebm} type="video/webm" />
-          <source src={MorphMobileMp4} type="video/mp4" />
+          <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm" type="video/webm" />
+          <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4" type="video/mp4" />
         </video>
       </LazyLoad>}
 			
@@ -131,7 +122,7 @@ export function FirstLiveSimulator() {
 									<LazyLoad offset={offset}>
 										<video
 											className={classes.privacyImage}
-											src={toiletVideo}
+											src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082186/videos/toilet.video_gh1gng.mp4"
 											autoPlay
 											loop
 											muted
@@ -153,7 +144,7 @@ export function FirstLiveSimulator() {
 								>
 									<LazyLoad offset={offset}>
 										<video
-											src={bedVideo}
+											src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082157/videos/bed.video_vfxjeb.mp4"
 											className={classes.privacyImage}
 											autoPlay
 											poster={BedPoster}

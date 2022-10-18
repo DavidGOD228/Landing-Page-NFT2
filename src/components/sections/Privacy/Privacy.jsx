@@ -1,10 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import ToiletVideo from 'assets/video/toilet.video.mp4'
-import ToiletPoster from 'assets/images/posters/toitet.png'
-import BedVideo from 'assets/video/bed.video.mp4'
-import BedPoster from 'assets/images/posters/bed.png'
+import ToiletPoster from 'assets/images/posters/toitet.webp'
+import BedPoster from 'assets/images/posters/bed.webp'
 
 import Smile from '../../icons/Smile'
 
@@ -35,7 +33,7 @@ export const Privacy = () => {
         <LazyLoad offset={offset}>
           <video
             className={classes.privacyVideo}
-            src={ToiletVideo}
+            src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082186/videos/toilet.video_gh1gng.mp4"
             autoPlay
             poster={ToiletPoster}
             loop
@@ -77,7 +75,7 @@ export const Privacy = () => {
           <LazyLoad offset={offset}>
             <video
               className={classes.privacyVideo}
-              src={BedVideo}
+              src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082157/videos/bed.video_vfxjeb.mp4"
               autoPlay
               loop
               poster={BedPoster}

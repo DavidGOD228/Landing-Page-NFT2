@@ -6,17 +6,10 @@ import classes from './styles.module.scss';
 import first from 'assets/images/first.svg';
 import second from 'assets/images/second.svg';
 
-import MihoMorph from 'assets/images/morphs/miho-ikuta/miho-morph-presentation.png';
 import MihoMorphMobile from 'assets/images/miho-morph.png';
-
-import MihoIDMp4 from 'assets/video/white_card.video.mp4';
-import MihoIDWebm from 'assets/video/white_card.video.webm';
 import WhiteCardPoster from 'assets/images/posters/whiteCard.webp'
 
-import HenriMorph from 'assets/images/morphs/henrik-hail/henrik-hail-presentation.png';
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
-import HenriIDMp4 from 'assets/video/green_card.video.mp4';
-import HenriIDWebm  from 'assets/video/green_card.video.webm';
 import GreenCardPoster from 'assets/images/posters/greenCard.webp'
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { morphIDText } from 'data/morphID/text';
@@ -94,7 +87,7 @@ export function TypesCards() {
 							<motion.img
 								key='miho-d'
 								className={classes.mihoMainImage}
-								src={MihoMorph}
+								src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666086282/morphs/miho-morph-presentation_mcahoo.png"
 								alt='miho'
 								{...animFromLeft}
 							/>
@@ -132,8 +125,8 @@ export function TypesCards() {
 									muted
 									poster={WhiteCardPoster}
 								>
-                  <source src={MihoIDWebm} type='video/webm' />
-                  <source src={MihoIDMp4} type='video/mp4' />
+                  <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm" type='video/webm' />
+                  <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4" type='video/mp4' />
                 </motion.video>
 							)}
 							{!isTablet && (
@@ -145,8 +138,8 @@ export function TypesCards() {
 										loop
 										muted
 									>
-										<source src={MihoIDWebm} type='video/webm' />
-										<source src={MihoIDMp4} type='video/mp4' />
+										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm" type='video/webm' />
+										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4" type='video/mp4' />
 									</video>
 								</motion.div>
 							)}
@@ -178,8 +171,8 @@ export function TypesCards() {
 									muted
 									poster={GreenCardPoster}
 								>
-									<source src={HenriIDWebm} type='video/webm' />
-									<source src={HenriIDMp4} type='video/mp4' />
+									<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_iwkiqf.webm" type='video/webm' />
+									<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4" type='video/mp4' />
 								</motion.video>
 							)}
 							{!isTablet && (
@@ -192,8 +185,8 @@ export function TypesCards() {
 										muted
 										{...animFromDown}
 									>
-										<source src={HenriIDWebm} type='video/webm' />
-										<source src={HenriIDMp4} type='video/mp4' />
+										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_iwkiqf.webm" type='video/webm' />
+										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4" type='video/mp4' />
 									</video>
 								</motion.div>
 							)}
@@ -203,7 +196,7 @@ export function TypesCards() {
 							<motion.img
 								key='henri-d'
 								className={classes.henriMainImage}
-								src={HenriMorph}
+								src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666086164/morphs/henrik-hail-presentation_yyyqad.png"
 								alt='henri morph'
 								{...animFromRight}
 							/>

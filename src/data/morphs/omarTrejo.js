@@ -5,7 +5,7 @@ const nameFolder = 'omar-trejo';
 const omarTrejo = {
 	id: 4102,
 	cardImg: `${nameFolder}/card-omar-trejo.png`,
-	bodyImg: `${nameFolder}/body-omar-trejo.png`,
+	bodyImg: "https://res.cloudinary.com/dbbqyqt75/image/upload/v1666085901/morphs/body-omar-trejo_ddfsgb.png",
 	bodyMobileImg: `${nameFolder}/mobile-omar-trejo.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-omar-trejo.svg`,
 	name: 'Omar Trejo',

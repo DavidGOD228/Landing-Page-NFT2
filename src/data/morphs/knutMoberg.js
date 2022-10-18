@@ -5,7 +5,7 @@ const nameFolder = 'knut-moberg';
 const knutMoberg = {
 	id: 3665,
 	cardImg: `${nameFolder}/card-knut-moberg.png`,
-	bodyImg: `${nameFolder}/body-knut-moberg.png`,
+	bodyImg: "https://res.cloudinary.com/dbbqyqt75/image/upload/v1666085833/morphs/body-knut-moberg_rzqudm.png",
 	bodyMobileImg: `${nameFolder}/mobile-knut-moberg.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-knut-moberg.svg`,
 	name: 'Knut Moberg',

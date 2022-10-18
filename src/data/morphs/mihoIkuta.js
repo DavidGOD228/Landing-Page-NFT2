@@ -5,7 +5,7 @@ const nameFolder = 'miho-ikuta';
 const mihoIkuta = {
 	id: 740,
 	cardImg: `${nameFolder}/card-miho-ikuta.png`,
-	bodyImg: `${nameFolder}/body-miho-ikuta.png`,
+	bodyImg: "https://res.cloudinary.com/dbbqyqt75/image/upload/v1666085877/morphs/body-miho-ikuta_eymh86.png",
 	bodyMobileImg: `${nameFolder}/mobile-miho-ikuta.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-miho-ikuta.svg`,
 	name: 'Miho Ikuta',
