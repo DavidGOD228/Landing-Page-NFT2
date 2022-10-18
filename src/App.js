@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      {isLoading ? <Loader setIsloading={setIsloading}/> :
+      {isLoading && <Loader setIsloading={setIsloading}/> }
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/terms" element={<Terms/>}/>
