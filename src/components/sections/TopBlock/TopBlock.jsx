@@ -44,6 +44,8 @@ export const TopBlock = () => {
         <div className={classes.topBlock}>
           <Header/>
           <Orb/>
+          <Orb top={0} left={1400}/>
+          <Orb top={900} left={500}/>
           {isDesktop &&
           <Parallax speed={-speedParallax / 1.5}>
              <DesktopSplashes/>
