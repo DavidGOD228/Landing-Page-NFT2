@@ -5,6 +5,7 @@ import MetaMorphMobile from 'assets/images/metaMorphMobile.webp'
 import MetaMorphMain from 'assets/images/metaMorphMain.webp'
 import Close from 'assets/images/close.svg'
 import MorphBlock from "../Header/components/MorphBlock/MorphBlock";
+import {Orb} from "components";
 
 import UnrealEngine from '../../icons/UnrealEngine'
 import Polygon from '../../icons/Polygon'
@@ -42,6 +43,7 @@ export const TopBlock = () => {
         </div> :
         <div className={classes.topBlock}>
           <Header/>
+          <Orb/>
           {isDesktop &&
           <Parallax speed={-speedParallax / 1.5}>
              <DesktopSplashes/>
