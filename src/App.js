@@ -46,7 +46,6 @@ function App() {
           <Route path="/terms" element={<Terms/>}/>
           <Route path="/policy" element={<Policy/>}/>
         </Routes>
-      }
     </>
   );
 }
