@@ -151,12 +151,12 @@ export const Earn = () => {
               </LazyLoad>
 						)}
 					</div>
-					{
-						!isDesktop && 
-            <Parallax speed={10}>
-              <MobileSplashes/>
-            </Parallax>
-					}
+			{/*		{*/}
+			{/*			!isDesktop && */}
+            {/*<Parallax speed={10}>*/}
+            {/*  <MobileSplashes/>*/}
+            {/*</Parallax>*/}
+			{/*		}*/}
 					<div style={{ marginTop: 40 }}>
 						{!isDesktop &&
 							data.map(({ title, subtitle }, i) => (

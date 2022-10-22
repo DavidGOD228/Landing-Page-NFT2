@@ -41,17 +41,16 @@ export const FataMorganaDesktop = () => {
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
-            <LazyLoad offset={offset}>
+            {/*<LazyLoad offset={offset}>*/}
               <video
                 className={classes.zoomRay}
                 autoPlay
                 loop
                 muted
-                poster={ZoomPoster}
                 playsInline>
                 <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082165/videos/Ray_exu8al.webm" type="video/webm" />
               </video>
-            </LazyLoad>
+            {/*</LazyLoad>*/}
 						<div>
 							<Title
 								classname={classes.title}
@@ -81,7 +80,11 @@ export const FataMorganaDesktop = () => {
 									viewport={{ once: true }}
 								>
 									<GreenText classname={classes.greenText}>
-										FATA <br /> MORGANA
+										FATA
+									</GreenText>
+									<br />
+									<GreenText classname={classes.greenText}>
+										MORGANA
 									</GreenText>
 								</motion.div>
 							</Title>

@@ -89,7 +89,7 @@
   max-width: 65px;
 
   @media screen and (min-width: $desktop){
-    width: 4.8vw;
+    width: 76px;
     max-width: 76px;
   }
 
@@ -165,7 +165,7 @@
   align-self: center;
   display: flex;
 
-  width: 4.8vw;
+  width: 76px;
   height: 4.8vw;
 }
 
@@ -201,5 +201,5 @@
       max-width: $sizeActive;
     }
   }
-  
+
 }

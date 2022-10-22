@@ -12,11 +12,12 @@ import TopMorphMobile from 'assets/images/topBlockMobile.png'
 import classes from './style.module.scss'
 import {useWindowWidth} from "../../../../../hooks/useWindowWidth";
 
+const isSafari = window.safari !== undefined;
+
 const MorphBlock = () => {
   const isDesktop = useWindowWidth(1024)
-
-  const isWebpCard = isWebpSupported() ? TopCardWebp : TopCardJpg;
-  const isWebpMorp = isWebpSupported() ? TopMorpDesktopWebp : TopMorpDesktopJpg;
+  const isWebpCard = (isWebpSupported() || isSafari) ? TopCardWebp : TopCardJpg;
+  const isWebpMorp = (isWebpSupported() || isSafari) ? TopMorpDesktopWebp : TopMorpDesktopJpg;
 
   return (
     <div className={classes.topBlockImages}>

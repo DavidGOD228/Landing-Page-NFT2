@@ -15,31 +15,31 @@
     width: 100%;
   }
 
-  @media screen and (min-width: $desktop){
-    &:after {
-      content: '';
-      position: absolute;
-      width: 618px;
-      height: 266px;
-      left: -76px;
-      bottom: -79px;
-      z-index: 5;
-      background: #0B0B0C;
-      filter: blur(75px);
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      height: 312px;
-      width: 300px;
-      right: -100px;
-      top: 0;
-      background: #0B0B0C;
-      filter: blur(75px);
-      transform: rotate(90deg);
-    }
-  }
+  //@media screen and (min-width: $desktop){
+  //  &:after {
+  //    content: '';
+  //    position: absolute;
+  //    width: 618px;
+  //    height: 266px;
+  //    left: -76px;
+  //    bottom: -79px;
+  //    z-index: 5;
+  //    background: #0B0B0C;
+  //    filter: blur(75px);
+  //  }
+  //
+  //  &:before {
+  //    content: '';
+  //    position: absolute;
+  //    height: 312px;
+  //    width: 300px;
+  //    right: -100px;
+  //    top: 0;
+  //    background: #0B0B0C;
+  //    filter: blur(75px);
+  //    transform: rotate(90deg);
+  //  }
+  //}
 }
 
 .morphCard {

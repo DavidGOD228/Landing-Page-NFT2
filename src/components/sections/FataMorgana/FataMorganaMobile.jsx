@@ -39,7 +39,7 @@ export const FataMorganaMobile = () => {
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
-				<MobileSplashes />
+				{/*<MobileSplashes />*/}
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
 						<div>
@@ -102,7 +102,7 @@ export const FataMorganaMobile = () => {
 							</motion.span>
 						</div>
 					</div>
-          
+
 					<motion.div
 						initial={{ y: 150 }}
 						whileInView={{ y: 0 }}

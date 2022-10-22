@@ -18,7 +18,7 @@ export const Roadmap = () => {
   const iSDesktop = useWindowWidth(1024);
 
   const titleText = 'A dreamer is one who can find his way in the moonlight and see the sunrise before the rest of the world.';
-  
+
   const GreenText1 = motion(GreenText);
 
   const animFromDown = {
@@ -40,7 +40,7 @@ export const Roadmap = () => {
   return (
     <div id="roadmap" className={classes.container}>
       <div className={classes.wrapper}>
-        <Title 
+        <Title
           classname={classes.title}
           isAfterBorder={iSDesktop}
           classnameWrapper={iSDesktop && classes.wrapperContentTitleLeftSide}
@@ -55,13 +55,13 @@ export const Roadmap = () => {
               return (
                 <motion.span
                   key={word + idx}
-                  initial={{ 
+                  initial={{
                     y: 50,
-                    opacity: 0 
+                    opacity: 0
                   }}
-                  whileInView={{ 
-                    y: 0, 
-                    opacity: 1 
+                  whileInView={{
+                    y: 0,
+                    opacity: 1
                   }}
                   transition={{
                     duration: 1,
