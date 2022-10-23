@@ -13,6 +13,9 @@ import { offset } from 'utils/lazyload';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
 import MobileCityPoster from 'assets/images/posters/city_Mobile.webp'
+import {isWebpSupported} from "react-image-webp/dist/utils";
+import TopCardWebp from "../../../assets/images/topCardDesktop.webp";
+import TopCardJpg from "../../../assets/images/topCardDesktop.jpg";
 
 const data = [
   {
@@ -35,6 +38,7 @@ const data = [
 export const FataMorganaMobile = () => {
 
   const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants.\nAt the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic placewhere all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
+  const isWebp = isWebpSupported();
 
   return (
 		<>
@@ -141,6 +145,7 @@ export const FataMorganaMobile = () => {
 					</motion.p>
 
           {/* dust */}
+					{isWebp &&
 					<video
             className={classes.zoomRay}
             autoPlay
@@ -149,7 +154,7 @@ export const FataMorganaMobile = () => {
             playsInline>
             <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082165/videos/Ray_exu8al.webm" type="video/webm" />
           </video>
-
+					}
           {/* zoom city */}
           <LazyLoad offset={offset}>
             <motion.video
