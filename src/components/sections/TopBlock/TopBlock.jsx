@@ -47,10 +47,10 @@ export const TopBlock = () => {
           <Orb top={0} left={1400}/>
           <Orb top={900} left={500}/>
           {isDesktop &&
-          <Parallax speed={-speedParallax / 1.5}>
-             <DesktopSplashes/>
-          </Parallax>
-          }
+            <Parallax speed={-speedParallax / 1.5}>
+              {/* <DesktopSplashes/> */}
+              <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" />
+            </Parallax>}
           {!isDesktop &&
           <Parallax speed={speedParallax * 4} translateY={0}>
             <MobileSplashes className={classes.topBlockMobileSplashes}/>

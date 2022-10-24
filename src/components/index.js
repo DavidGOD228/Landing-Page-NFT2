@@ -54,12 +54,12 @@ export * from './internal/YourMorph/mobileVersionYourMorph/InfoMorphMobile/InfoM
 export * from './sections/FataMorgana/FataMorgana';
 export * from './sections/FataMorgana/FataMorganaDesktop';
 export * from './sections/FataMorgana/FataMorganaMobile';
+export * from './sections/FirstLiveSimulator/FirstLiveSimulatorDesktop';
 
 // Roadmap(mobile)
 export * from './internal/RoadmapMobile/RoadmapMobile';
 
 //Pages
-
 export * from './pages/Terms/Terms';
 export * from './pages/Policy/Policy';
 export * from './pages/HomePage/HomePage';
