@@ -28,6 +28,7 @@ export function FirstLiveSimulatorDesktop() {
       className={classes.phoneItem}
       loop
       muted
+      autoPlay
       playsInline>
       <source src={video.webm} type="video/webm" />
       <source src={video.mp4} type="video/mp4" />
