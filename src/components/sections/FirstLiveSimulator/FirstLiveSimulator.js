@@ -56,21 +56,21 @@ export function FirstLiveSimulator() {
           <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4" type="video/mp4" />
         </video>
       </LazyLoad>}
-			
-    {/*   {isDesktop && 
-      <Parallax speed={-speedParallax / 1.5}>
-        <DesktopSplashes/>
-      </Parallax>
-      } */}
-      {!isDesktop &&
-      <Parallax speed={-speedParallax / 3.5}>
-        <MobileSplashes/>
-      </Parallax>
-      }
+      {/*{isDesktop && */}
+      {/*<Parallax speed={-speedParallax / 1.5}>*/}
+      {/*  <DesktopSplashes/>*/}
+      {/*</Parallax>*/}
+      {/*}*/}
+      {/*{!isDesktop &&*/}
+      {/*<Parallax speed={-speedParallax / 3.5}>*/}
+      {/*  <MobileSplashes/>*/}
+      {/*</Parallax>*/}
+      {/*}*/}
 
 			<GlobalContainer style={{order: 0}}>
-				<div className={classes.flsContainer}>
-					 <Parallax speed={speedParallax} className={classes.content}>
+				<div className={classes.flsDesktopContainer}>
+
+					 <div speed={speedParallax} className={classes.content}>
 						<motion.div
 							key='firstLiveTitle'
 							className={classes.descr}
@@ -155,7 +155,7 @@ export function FirstLiveSimulator() {
 								</motion.div>
 							</div>
 					</div>
-					 </Parallax>
+					 </div>
 				</div>
 			</GlobalContainer>
 		</div>

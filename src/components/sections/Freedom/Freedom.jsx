@@ -77,11 +77,11 @@ export const Freedom = () => {
 	};
 
   const animFromRight = {
-    initial: { 
+    initial: {
       x: 100,
       opacity: 0,
     },
-    whileInView: { 
+    whileInView: {
       x: 0,
       opacity: 1,
     },
@@ -96,18 +96,17 @@ export const Freedom = () => {
 
 	return (
     <>
-      {isDesktop && 
-      <Parallax speed={speedParallax / 1.5}>
-        <DesktopSplashes/>
-      </Parallax>
-      }
-      {!isDesktop && 
-      <Parallax speed={speedParallax / 3.5}>
-        <MobileSplashes />
-      </Parallax>
-      }
+      {/*{isDesktop && */}
+      {/*<Parallax speed={speedParallax / 1.5}>*/}
+      {/*  <DesktopSplashes/>*/}
+      {/*</Parallax>*/}
+      {/*}*/}
+      {/*{!isDesktop && */}
+      {/*<Parallax speed={speedParallax / 3.5}>*/}
+      {/*  <MobileSplashes />*/}
+      {/*</Parallax>*/}
+      {/*}*/}
 
-       <Parallax className={classes.container} speed={isDesktop ? 0 : speedParallax}>
       <div className={classes.container}>
         <div className={classes.topContent}>
           <div className={classes.content}>
@@ -135,7 +134,7 @@ export const Freedom = () => {
             )}
 
             {isDesktop && (
-              <Title 
+              <Title
                 classname={classes.title}
                 style={{
                   display: 'flex',
@@ -222,7 +221,6 @@ export const Freedom = () => {
           ))}
         </div>
 		  </div>
-		   </Parallax>
     </>
 	);
 };

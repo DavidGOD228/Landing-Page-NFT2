@@ -15,7 +15,7 @@ import { offset } from 'utils/lazyload'
 export const Privacy = () => {
   return (
     <div className={classes.container}>
-      <MobileSplashes/>
+      {/*<MobileSplashes/>*/}
       <motion.h3
         key="respectPrivacy"
         className={classes.title}

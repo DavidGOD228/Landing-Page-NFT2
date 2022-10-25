@@ -43,20 +43,10 @@ export const TopBlock = () => {
         </div> :
         <div className={classes.topBlock}>
           <Header/>
-          <Orb/>
-          <Orb top={0} left={1400}/>
-          <Orb top={900} left={500}/>
-          {isDesktop &&
-            <Parallax speed={-speedParallax / 1.5}>
-              {/* <DesktopSplashes/> */}
-              <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" />
-            </Parallax>}
-          {!isDesktop &&
-          <Parallax speed={speedParallax * 4} translateY={0}>
-            <MobileSplashes className={classes.topBlockMobileSplashes}/>
-          </Parallax>
-          }
-           <Parallax speed={speedParallax} className={classes.container}>
+          {/*<Orb/>*/}
+          {/*<Orb top={0} left={1400}/>*/}
+          {/*<Orb top={900} left={500}/>*/}
+           <div className={classes.container}>
             <div className={classes.mainBlock}>
               {
                 isDesktop && <LazyLoad offset={offset}><img className={classes.metaMorphMain} src={MetaMorphMain} alt=""/></LazyLoad>
@@ -94,7 +84,7 @@ export const TopBlock = () => {
             {
               isDesktop && <MorphBlock/>
             }
-           </Parallax>
+           </div>
         </div>
       }
 
