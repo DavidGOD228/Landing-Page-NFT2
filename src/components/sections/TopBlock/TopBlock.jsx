@@ -46,6 +46,10 @@ export const TopBlock = () => {
           {/*<Orb/>*/}
           {/*<Orb top={0} left={1400}/>*/}
           {/*<Orb top={900} left={500}/>*/}
+          {isDesktop &&
+            <Parallax speed={-speedParallax / 1.5}>
+              <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" />
+            </Parallax>}
            <div className={classes.container}>
             <div className={classes.mainBlock}>
               {

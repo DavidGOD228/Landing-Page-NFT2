@@ -68,7 +68,7 @@ export function FirstLiveSimulator() {
       {/*}*/}
 
 			<GlobalContainer style={{order: 0}}>
-				<div className={classes.flsDesktopContainer}>
+				<div className={classes.flsContainer}>
 
 					 <div speed={speedParallax} className={classes.content}>
 						<motion.div

@@ -12,7 +12,7 @@ import {
 
 
 function App() {
-  const [isLoading, setIsloading] = useState(false);
+  const [isLoading, setIsloading] = useState(true);
 
   const { hash } = useLocation();
 

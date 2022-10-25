@@ -14,7 +14,7 @@
   width: fit-content;
   background: #111213;
   border-radius: 16px;
-  padding: 100px 150px;
+  padding: 100px 130px;
   margin-top: 200px;
 }
 
@@ -79,6 +79,10 @@
 }
 
 @media screen and (max-width: 1300px){
+  .flsDesktop {
+    padding: 70px 120px;
+  }
+
   .phoneItem {
     max-width: 20vw;
   }

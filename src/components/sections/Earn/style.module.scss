@@ -59,10 +59,9 @@
   line-height: 160%;
   color: #9BA1AA;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1300px) {
     margin-top: 21px;
     color: #C1C0C0;
-    width: 341px;
   }
 }
 
