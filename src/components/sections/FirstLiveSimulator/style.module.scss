@@ -11,7 +11,7 @@
   }
 }
 
-.flsDesktopContainer {
+.flsContainer {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -20,6 +20,9 @@
 
   @media screen and (min-width: 1313px){
     padding: 0 125px 0 130px;
+  }
+  @media screen and (min-width: $desktop){
+    display: none;
   }
 
   margin-top: 15px;

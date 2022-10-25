@@ -56,7 +56,6 @@ export function FirstLiveSimulator() {
           <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4" type="video/mp4" />
         </video>
       </LazyLoad>}
-
       {/*{isDesktop && */}
       {/*<Parallax speed={-speedParallax / 1.5}>*/}
       {/*  <DesktopSplashes/>*/}

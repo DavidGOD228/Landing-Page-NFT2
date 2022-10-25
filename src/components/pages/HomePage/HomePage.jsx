@@ -16,6 +16,7 @@ import {
   Roadmap,
   TypesCards,
   Privacy,
+  FirstLiveSimulatorDesktop
 } from 'components';
 
 import { useWindowWidth } from 'hooks/useWindowWidth';
@@ -29,6 +30,7 @@ export const HomePage = () => {
     <>
       <TopBlock />
       <FirstLiveSimulator />
+      {isDesktop && <FirstLiveSimulatorDesktop />}
       <LikeHuman />
       {!isDesktop && <Privacy />}
       <FataMorgana />
