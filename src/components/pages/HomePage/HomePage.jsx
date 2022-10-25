@@ -35,9 +35,9 @@ export const HomePage = () => {
       {!isDesktop && <Privacy />}
       <FataMorgana />
       <Freedom />
-      {/*<Personalize />*/}
+      <Personalize />
       <Earn />
-      <MorphId />
+      <MorphId/>
       <TypesCards />
       <YourMorph />
       <MorphsUnique />

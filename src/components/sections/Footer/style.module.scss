@@ -1,6 +1,16 @@
 @import "~assets/styles/variables";
 @import "~assets/styles/media";
 
+.footerWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.footerBg {
+  position: absolute;
+  width: 100%;
+}
+
 .footer {
   padding-top: 78px;
   display: flex;

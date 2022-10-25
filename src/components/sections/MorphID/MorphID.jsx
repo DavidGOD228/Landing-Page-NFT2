@@ -77,7 +77,7 @@ export const MorphId = () => {
   const GreenText1 = motion(GreenText);
 
   return (
-    <>
+    <div id="morphID">
       {/*{isDesktop && */}
       {/*<Parallax speed={-speedParallax / 2}>*/}
       {/*  <DesktopSplashes/>*/}
@@ -208,7 +208,7 @@ export const MorphId = () => {
             </Paragraph>
                   </div>
        </div>
-    </>
+    </div>
   )
 };
 
