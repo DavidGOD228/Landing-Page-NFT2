@@ -77,7 +77,7 @@ export const MorphId = () => {
   const GreenText1 = motion(GreenText);
 
   return (
-    <>
+    <div >
       {/*{isDesktop && */}
       {/*<Parallax speed={-speedParallax / 2}>*/}
       {/*  <DesktopSplashes/>*/}
@@ -89,7 +89,7 @@ export const MorphId = () => {
       {/*</Parallax>*/}
       {/*}*/}
 
-       <div className={classes.container}>
+       <div id="morphID" className={classes.container}>
         <div className={classes.cardsImg}>
           {isDesktop && (
             <motion.video
@@ -208,7 +208,7 @@ export const MorphId = () => {
             </Paragraph>
                   </div>
        </div>
-    </>
+    </div>
   )
 };
 

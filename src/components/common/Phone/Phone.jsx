@@ -16,7 +16,7 @@ const videos = [
     webm: "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084832/slider/Job_lkw0ak.webm",
   },
 ];
-
+const isSafari = window.safari !== undefined;
 export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   const videoRef = useRef()
@@ -28,6 +28,10 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   }, [isActive])
 
+  const srcVideo = isSafari
+    ? videos[idx - 1].mp4
+    : videos[idx - 1].webm
+
 	return (
     <video
       ref={videoRef}
@@ -35,10 +39,9 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
       {...props}
       loop
       muted
-      playsInline>
-      <source src={videos[idx - 1].webm} type="video/webm" />
-      <source src={videos[idx - 1].mp4} type="video/mp4" />
-    </video>
+      playsInline
+      src={srcVideo}
+    />
   );
 };
 

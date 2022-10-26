@@ -32,11 +32,11 @@ function App() {
     setTimeout(() => {
       const id = hash.replace('#', '');
       const element = document.getElementById(id);
-      if (element) {
+      if (element && !isLoading) {
         element.scrollIntoView();
       }
     }, 0);
-  }, [hash]);
+  }, [hash, isLoading]);
 
   return (
     <>

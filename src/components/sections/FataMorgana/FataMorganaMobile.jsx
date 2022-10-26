@@ -40,6 +40,16 @@ export const FataMorganaMobile = () => {
   const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants.\nAt the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic placewhere all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
   const isWebp = isWebpSupported();
 
+  const isSafari = window.safari !== undefined;
+  const zoomVideo = isSafari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
+    
+  const mobileCity = isSafari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082167/videos/city-mobile.video_vcuitj.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
+
+
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
@@ -171,10 +181,9 @@ export const FataMorganaMobile = () => {
               loop
               muted
               poster="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666086665/posters/zoom_mgajem.png"
-              playsInline>
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm" type="video/webm" />
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4" type="video/mp4" />
-            </motion.video>
+              playsInline
+              src={zoomVideo}
+            />
           </LazyLoad>
 
           {/* city without zoom */}
@@ -185,10 +194,9 @@ export const FataMorganaMobile = () => {
               poster={MobileCityPoster}
               loop
               muted
-              playsInline>
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082141/videos/city-mobile.video_kcomob.webm" type="video/webm" />
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082167/videos/city-mobile.video_vcuitj.mp4" type="video/mp4" />
-            </video>
+              playsInline
+              src={mobileCity}
+            />
 					</LazyLoad>
 				</div>
 			</div>

@@ -17,6 +17,8 @@ import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
 
+
+
 export function TypesCards() {
 	const isTablet = useWindowWidth(768);
 
@@ -79,6 +81,14 @@ export function TypesCards() {
 		viewport: { once: true }
 	};
 
+  const isSafari = window.safari !== undefined;
+  const whiteCard = isSafari 
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm"
+  const greenCard = isSafari 
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_iwkiqf.webm"
+
 	return (
 		<div className={classes.wrapper}>
 				<div className={classes.containerTypesCards}>
@@ -115,34 +125,15 @@ export function TypesCards() {
 							<Paragraph className={`${classes.descr} ${classes.mihoText}`}>
 								{paragraphAnimation(morphIDText.classiqueText)}
 							</Paragraph>
-							{isTablet && (
-								<motion.video
-									{...animFromDown}
-									className={classes.idImage}
-									autoPlay
-									playsInline
-									loop
-									muted
-									poster={WhiteCardPoster}
-								>
-                  <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm" type='video/webm' />
-                  <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4" type='video/mp4' />
-                </motion.video>
-							)}
-							{!isTablet && (
-								<motion.div {...animFromDown}>
-									<video
-										className={classes.idImage}
-										autoPlay
-										playsInline
-										loop
-										muted
-									>
-										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm" type='video/webm' />
-										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4" type='video/mp4' />
-									</video>
-								</motion.div>
-							)}
+							<motion.video
+                {...animFromDown}
+                className={classes.idImage}
+                autoPlay
+                playsInline
+                loop
+                muted
+                src={whiteCard}
+              />
 						</div>
 					</div>
 
@@ -161,35 +152,15 @@ export function TypesCards() {
 							<Paragraph className={`${classes.descr} ${classes.henriText}`}>
 								{paragraphAnimation(morphIDText.eternalText)}
 							</Paragraph>
-							{isTablet && (
-								<motion.video
-									className={`${classes.idImage} ${classes.idImageHenri}`}
-									{...animFromDown}
-									autoPlay
-									playsInline
-									loop
-									muted
-									poster={GreenCardPoster}
-								>
-									<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_iwkiqf.webm" type='video/webm' />
-									<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4" type='video/mp4' />
-								</motion.video>
-							)}
-							{!isTablet && (
-								<motion.div {...animFromDown}>
-									<video
-										className={`${classes.idImage} ${classes.idImageHenri}`}
-										autoPlay
-										playsInline
-										loop
-										muted
-										{...animFromDown}
-									>
-										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_iwkiqf.webm" type='video/webm' />
-										<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4" type='video/mp4' />
-									</video>
-								</motion.div>
-							)}
+							<motion.video
+                className={`${classes.idImage} ${classes.idImageHenri}`}
+                {...animFromDown}
+                autoPlay
+                playsInline
+                loop
+                muted
+                src={greenCard}
+              />
 						</div>
 
 						{isTablet && (

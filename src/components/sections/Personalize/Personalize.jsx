@@ -87,7 +87,7 @@ export const Personalize = () => {
       {/*</Parallax>*/}
       {/*}*/}
 
-			<div
+			{/* <div
         speed={0}
 				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
 			>
@@ -131,7 +131,7 @@ export const Personalize = () => {
 				</div>
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
-			 </div>
+      </div> */}
 			<div className={classes.mobileVersion}>
 				<div className={classes.contentBlock}>
 					<Title

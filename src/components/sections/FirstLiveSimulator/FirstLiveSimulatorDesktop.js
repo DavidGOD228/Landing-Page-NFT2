@@ -21,6 +21,8 @@ export const videos = [
 const textPar =
   'Metamorph is an open-world exploration, NFT creature collector and life simulator game built on the Polygon Blockchain, releasing on IOS and Android in 2023. Play-to-earn in a graphically-rich sci-fi adventure and life builder that allows you to feel the life inside the game.';
 
+  const isSafari = window.safari !== undefined;
+
 export function FirstLiveSimulatorDesktop() {
 
   const mappingVideos = videos.map(video => (
@@ -29,10 +31,9 @@ export function FirstLiveSimulatorDesktop() {
       loop
       muted
       autoPlay
-      playsInline>
-      <source src={video.webm} type="video/webm" />
-      <source src={video.mp4} type="video/mp4" />
-    </video>
+      playsInline
+      src={isSafari ? video.mp4 : video.webm}
+    />
   ))
 
 	return (

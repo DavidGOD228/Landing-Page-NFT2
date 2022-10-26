@@ -84,6 +84,14 @@ export const Earn = () => {
 
 	const GreenText1 = motion(GreenText);
 
+  const isSafari = window.safari !== undefined;
+  const coinVideo = isSafari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
+  const comparingVideo = isSafari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082156/videos/comp.video_tymrsj.webm"
+
 	return (
 		<>
 			<div className={classes.container}>
@@ -96,10 +104,8 @@ export const Earn = () => {
 							muted
 							playsInline
 							poster={CoinPoster}
-						>
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm" type="video/webm" />
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4" type="video/mp4" />
-            </video>
+              src={coinVideo}
+						/>
 					</LazyLoad>
 				)}
 				<div className={classes.wrapper}>
@@ -143,10 +149,8 @@ export const Earn = () => {
                     loop
                     playsInline
                     muted
-                  >
-                    <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm" type="video/webm" />
-                    <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4" type="video/mp4" />
-                  </video>
+                    src={coinVideo}
+                  />
                 </motion.div>
               </LazyLoad>
 						)}
@@ -172,10 +176,8 @@ export const Earn = () => {
 							playsInline
 							loop
 							muted
-						>
-							<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082156/videos/comp.video_tymrsj.webm" type="video/webm" />
-							<source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4" type="video/mp4" />
-						</video>
+              src={comparingVideo}
+						/>
 					</LazyLoad>
 				)}
 			</div>

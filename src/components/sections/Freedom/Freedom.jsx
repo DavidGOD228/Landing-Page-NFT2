@@ -152,15 +152,10 @@ export const Freedom = () => {
                   display: 'flex',
                   flexWrap: 'wrap',
                   justifyContent: 'flex-start',
+                  columnGap: '25px'
                 }}>
                   <GreenText1 {...animFromRight} classname={classes.greenText}>
-                    FREEDOM{'\u00A0'}
-                  </GreenText1>
-                  <GreenText1 {...animFromRight} classname={classes.greenText}>
-                    OF{'\u00A0'}
-                  </GreenText1>
-                  <GreenText1 {...animFromRight} classname={classes.greenText}>
-                    ACTION
+                    FREEDOM OF ACTION
                   </GreenText1>
                 </div>
               </Title>
