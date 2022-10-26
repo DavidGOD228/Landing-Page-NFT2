@@ -1,52 +1,133 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import loaderTitle from 'assets/images/loader-title.png';
 import classes from './style.module.scss';
 import {motion} from 'framer-motion'
 
-const maxCount = 100;
-const duration = 5; // sec
 
-function randomIntFromInterval(min, max) { // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
+const LoaderText = ({activeSlide, activeBottomIdx}) => {
+  const topText = ['Watch your thoughts', 'Watch your words', 'Watch your actions', 'Watch your habits', 'Watch your character']
+  const bottomText = ['they become words.', 'they become actions.', 'they become habits.', 'they become character.', 'it becomes your destiny.']
 
-export function Loader({ setIsloading }) {
-  const [count, setCount] = useState(0);
+  const [isVisible, setVisible] = useState(false)
+  const [isVisibleBottomText, setVisibleBottomText] = useState(false)
 
   useEffect(() => {
-    if (count >= 100) setIsloading(false);
+    const interval = setInterval(() => {
+      setVisible(true);
+    }, 600);
 
-    if (count < 100) {
-      setTimeout(() => {
-        if (maxCount - count <= maxCount / duration) return setCount(100);
+    return () => clearInterval(interval);
+  }, [activeSlide]);
 
-        setCount(s => {
-          const addNumLoadCount = randomIntFromInterval(1, maxCount / duration);
-          return s + addNumLoadCount;
-        });
-      }, 1000);
-    }
-  }, [count, setIsloading]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleBottomText(true)
+    }, 1000);
 
-  return (
-    <motion.div
-      className={classes.loaderWrapper}
+    return () => clearInterval(interval);
+  }, [activeSlide]);
+
+
+  const renderTopText = () => {
+    return <motion.p
+      className={classes.loaderText}
+      key={topText[activeSlide]}
       initial={{
+        opacity: 0,
+      }}
+      whileInView={{
         opacity: 1
       }}
       exit={{
-        opacity: 0
+        opacity: 0,
+      }}
+      transition={{
+        duration: 2,
+        ease: 'easeInOut'
       }}
     >
-      <div className={classes.loaderTitleBlock}>
-        <div className={classes.shadow} />
-        <img className={classes.loaderTitleImg} src={loaderTitle} alt="" />
+      {topText[activeSlide]}
+    </motion.p>
+  }
+
+  const renderBottomText = () => {
+    return <motion.p
+      className={`${classes.loaderText} ${classes.grayText}`}
+      key={bottomText[activeSlide]}
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1
+      }}
+      exit={{
+        opacity: 0,
+      }}
+      transition={{
+        duration: 4,
+        ease: 'easeInOut',
+        delay: 1,
+      }}
+    >
+      {bottomText[activeSlide]}
+    </motion.p>
+  }
+
+  return (
+    <> {
+      <div style={{visibility: isVisible ? 'visible' : 'hidden'}}>
+        {renderTopText()}
+        {isVisibleBottomText ? renderBottomText() : null}
       </div>
-      <div
-        className={classes.counterLoader}
-      >
-        {count}%
+    }
+    </>
+  )
+}
+
+export function Loader({setIsloading}) {
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setActiveSlide(activeSlide + 1);
+    }, 2000);
+
+
+    if (activeSlide === 4) {
+      clearInterval(slideInterval)
+      return;
+    }
+
+    return () =>
+      clearInterval(slideInterval);
+  }, [activeSlide]);
+
+  const renderLine = (idx) => {
+    return <motion.span
+      className={classes.bottomLine}
+      key={idx}
+      initial={{
+        backgroundColor: "#2F3339"
+      }}
+      animate={() => {
+        if (idx <= activeSlide) return {
+          backgroundColor: "#fff",
+        }
+      }}
+      transition={{
+        duration: 1,
+        ease: 'easeInOut'
+      }}
+    />
+  }
+
+  return (
+    <div className={classes.loaderWrapper}>
+      <LoaderText activeSlide={activeSlide}/>
+      <div className={classes.bottomContainer}>
+        {Array.from({length: 5}).map((line, index) =>
+          renderLine(index))}
       </div>
-    </motion.div>
+    </div>
   )
 }
