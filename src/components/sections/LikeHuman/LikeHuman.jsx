@@ -165,10 +165,7 @@ export const LikeHuman = () => {
               <motion.span {...animFromRight}>just{'\u00A0'}</motion.span>
               <motion.span {...animFromRight}>like{'\u00A0'}</motion.span>
               <motion.span {...animFromRight} className={classes.greenText}>
-                a{'\u00A0'}
-              </motion.span>
-              <motion.span {...animFromRight} className={classes.greenText}>
-                human
+                a human
               </motion.span>
             </Title>
           </motion.div>

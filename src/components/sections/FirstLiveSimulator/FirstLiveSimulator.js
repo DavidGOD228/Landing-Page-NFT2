@@ -32,6 +32,14 @@ export function FirstLiveSimulator() {
   graphically-rich sci-fi adventure and life builder that allows
   you to feel the life inside the game.`;
 
+  const isSafari = window.safari !== undefined;
+  const morphVideoDesktop = isSafari 
+   ?  "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
+   : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
+  const morphVideoMobile = isSafari 
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm"
+
 	return (
 		<div className={classes.wrapper}>
 			{isDesktop && <video
@@ -39,10 +47,8 @@ export function FirstLiveSimulator() {
         autoPlay
         muted
         playsInline
-      >
-        <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm" type="video/webm" />
-        <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4" type="video/mp4" />
-      </video>}
+        src={morphVideoDesktop}
+      />}
       {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
         <video
           className={classes.morphVideo}
@@ -51,10 +57,8 @@ export function FirstLiveSimulator() {
           playsInline
           preload='auto'
           poster={isDesktop ? DesktopPoster : MobilePoster}
-        >
-          <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm" type="video/webm" />
-          <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4" type="video/mp4" />
-        </video>
+          src={morphVideoMobile}
+        />
       </LazyLoad>}
       {/*{isDesktop && */}
       {/*<Parallax speed={-speedParallax / 1.5}>*/}

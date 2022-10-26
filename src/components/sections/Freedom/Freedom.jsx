@@ -155,13 +155,7 @@ export const Freedom = () => {
                   columnGap: '25px'
                 }}>
                   <GreenText1 {...animFromRight} classname={classes.greenText}>
-                    FREEDOM
-                  </GreenText1>
-                  <GreenText1 {...animFromRight} classname={classes.greenText}>
-                    OF
-                  </GreenText1>
-                  <GreenText1 {...animFromRight} classname={classes.greenText}>
-                    ACTION
+                    FREEDOM OF ACTION
                   </GreenText1>
                 </div>
               </Title>

@@ -24,6 +24,10 @@ const speedParallax = 20;
 export const TopBlock = () => {
   const isDesktop = useWindowWidth(1024)
   const [isVideoOpen, setVideoOpen] = useState(false);
+  const isSafari = window.safari !== undefined;
+  const videoBlock = isSafari
+    ? 'https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082242/videos/teaser.video_dcb2ez.mp4'
+    : 'https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082220/videos/teaser.video_wrhmez.webm';
 
   return (
     <div id="game">
@@ -33,10 +37,7 @@ export const TopBlock = () => {
               <img src={Close} alt=""/>
             </LazyLoad>
           </button>
-          <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']}>
-            <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082220/videos/teaser.video_wrhmez.webm" type="video/webm" />
-            <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082242/videos/teaser.video_dcb2ez.mp4" type="video/mp4" />
-          </video>
+          <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']} src={videoBlock} />
         </div> :
         <div className={classes.topBlock}>
           <Header />
@@ -44,9 +45,7 @@ export const TopBlock = () => {
           {/*<Orb top={0} left={1400}/>*/}
           {/*<Orb top={900} left={500}/>*/}
           {isDesktop &&
-            <Parallax speed={-speedParallax / 1.5}>
-              <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" />
-            </Parallax>}
+            <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" />}
            <div className={classes.container}>
             <div className={classes.mainBlock}>
               {

@@ -40,6 +40,14 @@ export const FataMorganaDesktop = () => {
   const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants. At the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic place where all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
   const isWebp = isWebpSupported();
 
+  const isSafari = window.safari !== undefined
+  const zoomVideo = isSafari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
+  const desktopCity = isSafari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666081885/videos/city-desktop.video_yd4hy9.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082077/videos/city-desktop.video_kcsvgh.webm"
+
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
@@ -152,10 +160,9 @@ export const FataMorganaDesktop = () => {
                 loop
                 muted
                 poster={ZoomPoster}
-                playsInline>
-                <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm" type="video/webm" />
-                <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4" type="video/mp4" />
-              </motion.video>
+                playsInline
+                src={zoomVideo}
+              />
 							<motion.p
 								className={classes.cityText}
 								initial={{ y: 150 }}
@@ -183,10 +190,8 @@ export const FataMorganaDesktop = () => {
               loop
               muted
               playsInline
-            >
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082077/videos/city-desktop.video_kcsvgh.webm" type="video/webm" />
-              <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666081885/videos/city-desktop.video_yd4hy9.mp4" type="video/mp4" />
-            </video>
+              src={desktopCity}
+            />
 					</LazyLoad>
 				</div>
 			</div>
