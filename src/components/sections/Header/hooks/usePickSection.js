@@ -1,6 +1,7 @@
 import useGetCurrentScroll from 'hooks/useGetCurrentScroll';
 import { useEffect, useState } from 'react'
 import getPositionsSections from './../helper/getPositionsSections';
+import getActiveSection from './../helper/getActiveSection';
 
 export default function usePickSection() {
   const { scrollPosition } = useGetCurrentScroll();
@@ -35,14 +36,8 @@ export default function usePickSection() {
    */
   useEffect(() => {
     const checkSection = () => {
-      // console.log(scrollPosition)
-      for(const section in positionSections) {
-        const start = positionSections[section].start;
-        const finish = positionSections[section].finish;
-        if(scrollPosition > start && scrollPosition < finish) {
-          setActiveSection(positionSections[section].id)
-        }
-      }
+      const activeSectionId = getActiveSection(scrollPosition, positionSections);
+      setActiveSection(activeSectionId);
     }
 
     document.addEventListener('scroll', checkSection);

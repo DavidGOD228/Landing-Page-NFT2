@@ -31,14 +31,30 @@ export const Header = () => {
     setVisibleMenu(false)
   }
 
-  const mappingMenu = menuData.map(({id, title}, index) => {
-    return index === 3 ? <React.Fragment key={title}>
-      <div className={`${classes.logoContainer} ${!activeSection && classes.activeLogo}`}>
-        <img className={classes.logo} src={Logo} alt=""/>
-      </div>
-      <NavItem key={title} title={title} link={id} />
-    </React.Fragment> : <NavItem key={title} title={title} link={id} activeSection={activeSection} />
-  })
+  const mappingMenu = menuData.map(({ id, title }, index) => {
+		const item = (
+			<NavItem
+				key={title}
+				title={title}
+				link={id}
+				activeSection={activeSection}
+			/>
+		);
+		return index === 3 ? (
+			<React.Fragment key={title}>
+				<div
+					className={`${classes.logoContainer} ${
+						!activeSection && classes.activeLogo
+					}`}
+				>
+					<img className={classes.logo} src={Logo} alt='' />
+				</div>
+				{item}
+			</React.Fragment>
+		) : (
+			item
+		);
+	});
 
   return (
     <header className={classes.header}>
