@@ -4,7 +4,7 @@ import classes from './style.module.scss';
 import {motion} from 'framer-motion'
 
 
-const LoaderText = ({activeSlide, activeBottomIdx}) => {
+const LoaderText = ({activeSlide}) => {
   const topText = ['Watch your thoughts', 'Watch your words', 'Watch your actions', 'Watch your habits', 'Watch your character']
   const bottomText = ['they become words.', 'they become actions.', 'they become habits.', 'they become character.', 'it becomes your destiny.']
 
