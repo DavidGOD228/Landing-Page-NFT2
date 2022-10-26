@@ -1,109 +1,42 @@
 @import '~assets/styles/media.scss';
 
 .loaderWrapper {
-  position: absolute;
-  z-index: 9999;
-
-  top: 0;
-  background: black;
-  width: 100%;
-
-  width: 100%;
-  height: 100vh;
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  color: white;
+  height: 100vh;
+  width: 1110px;
+  margin: 0 auto;
 }
 
-.loaderTitleImg {
-  width: 100%;
-  height: auto;
 
-  max-width: 64vw;
-}
 
-.loaderTitleBlock {
-  position: relative;
-}
-
-$gradient: 90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%;
-.shadow {
-  position: absolute;
-  z-index: 1;
-  width: 200%;
-  height: 100%;
-
-  display: block;
-  content: "";
-  background: linear-gradient($gradient);
-  background: -moz-linear-gradient($gradient); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-  
-
-  animation-duration: 5s;
-  animation-name: shadowLineAnim;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-
-  transform: translateX(-25%);
-}
-
-@keyframes shadowLineAnim {
-  0% {
-    left: 50%;
-  }
-
-  50% {
-    left: -50%;
-  }
-
-  100% {
-    left: 50%;
-  }
-}
-
-.counterLoader {
-  position: absolute;
+.loaderText {
   font-family: 'Hanson', sans-serif;
-  font-size: 12vw;
-
-  right: 50px;
-  bottom: 50px;
-
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4); /* width and color */
-  color: transparent;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
-@media screen and (max-width: $tablet) {
-  .loaderTitleBlock {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    padding-bottom: 23vw;
-  }
+.grayText {
+  color: #585E68;
+}
 
-  .loaderWrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
+.bottomContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  //margin-top: auto;
+}
 
-  .loaderTitleImg {
-    max-width: 100%;
-    padding: 0 30px;
-  }
-
-  .counterLoader {
-    position: relative;
-    text-align: center;
-
-
-    font-size: 21vw;
-
-    right: 0;
-    bottom: 0;
-  }
+.bottomLine {
+  height: 2px;
+  width: 200px;
+  margin-top: 100px;
 }
