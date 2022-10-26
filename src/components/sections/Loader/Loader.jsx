@@ -3,104 +3,127 @@ import loaderTitle from 'assets/images/loader-title.png';
 import classes from './style.module.scss';
 import {motion} from 'framer-motion'
 
+const outAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  whileInView: {
+    opacity: 1
+  },
+}
 
-const LoaderText = ({activeSlide}) => {
-  const topText = ['Watch your thoughts', 'Watch your words', 'Watch your actions', 'Watch your habits', 'Watch your character']
-  const bottomText = ['they become words.', 'they become actions.', 'they become habits.', 'they become character.', 'it becomes your destiny.']
+const inAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  whileInView: {
+    opacity: 1
+  },
+}
 
-  const [isVisible, setVisible] = useState(false)
-  const [isVisibleBottomText, setVisibleBottomText] = useState(false)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(true);
-    }, 600);
-
-    return () => clearInterval(interval);
-  }, [activeSlide]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleBottomText(true)
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [activeSlide]);
-
+const LoaderText = ({
+                      isBottomStatic,
+                      isTopStatic,
+                      isNewTopText,
+                      isNewBottomText,
+                      topText,
+                      bottomText,
+                      isTopOut,
+                      isBottomOut
+                    }) => {
 
   const renderTopText = () => {
-    return <motion.p
-      className={classes.loaderText}
-      key={topText[activeSlide]}
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1
-      }}
-      exit={{
-        opacity: 0,
-      }}
-      transition={{
-        duration: 2,
-        ease: 'easeInOut'
-      }}
-    >
-      {topText[activeSlide]}
-    </motion.p>
+    if (isNewTopText) {
+      return <motion.p
+        className={classes.loaderText}
+        key={topText}
+        {...inAnimation}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        {topText}
+      </motion.p>
+    } else if (isTopStatic) {
+      return <p className={classes.loaderText}>
+        {topText}
+      </p>
+    } else if (isTopOut) {
+      return <motion.p
+        className={classes.loaderText}
+        key={topText}
+        {...outAnimation}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut'
+        }}
+      >
+        {topText}
+      </motion.p>
+    }
   }
 
   const renderBottomText = () => {
-    return <motion.p
-      className={`${classes.loaderText} ${classes.grayText}`}
-      key={bottomText[activeSlide]}
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1
-      }}
-      exit={{
-        opacity: 0,
-      }}
-      transition={{
-        duration: 4,
-        ease: 'easeInOut',
-        delay: 1,
-      }}
-    >
-      {bottomText[activeSlide]}
-    </motion.p>
+    if (isNewBottomText) {
+      return <motion.p
+        className={`${classes.loaderText} ${classes.grayText}`}
+        key={bottomText}
+        {...inAnimation}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+          delay: 1,
+        }}
+      >
+        {bottomText}
+      </motion.p>
+    } else if (isBottomStatic) {
+      return <p className={`${classes.loaderText} ${classes.grayText}`}>
+        {bottomText}
+      </p>
+    } else if(isBottomOut) {
+      return <motion.p
+        className={`${classes.loaderText} ${classes.grayText}`}
+        key={bottomText}
+        {...outAnimation}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut'
+        }}
+      >
+        {bottomText}
+      </motion.p>
+    }
   }
 
-  return (
-    <> {
-      <div style={{visibility: isVisible ? 'visible' : 'hidden'}}>
-        {renderTopText()}
-        {isVisibleBottomText ? renderBottomText() : null}
-      </div>
-    }
+  return (<>
+      {renderTopText()}
+      {renderBottomText()}
     </>
   )
 }
 
+
 export function Loader({setIsloading}) {
   const [activeSlide, setActiveSlide] = useState(0)
+
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setActiveSlide(activeSlide + 1);
     }, 2000);
 
-
-    if (activeSlide === 4) {
+    if (activeSlide === 10) {
       clearInterval(slideInterval)
-      return;
+      setIsloading(false)
     }
 
-    return () =>
-      clearInterval(slideInterval);
+    return () => {
+      clearInterval(slideInterval)
+    };
   }, [activeSlide]);
+
 
   const renderLine = (idx) => {
     return <motion.span
@@ -110,24 +133,47 @@ export function Loader({setIsloading}) {
         backgroundColor: "#2F3339"
       }}
       animate={() => {
-        if (idx <= activeSlide) return {
+        if (idx * 2 <= activeSlide) return {
           backgroundColor: "#fff",
         }
       }}
       transition={{
-        duration: 1,
-        ease: 'easeInOut'
+        duration: 1, ease: 'easeInOut'
       }}
     />
   }
 
-  return (
-    <div className={classes.loaderWrapper}>
-      <LoaderText activeSlide={activeSlide}/>
+  const renderWrapper = (idx, children) => {
+    return <motion.div
+      initial={{
+        display: "none"
+      }}
+      animate={() => {
+        if (idx === activeSlide) return {
+          display: "block"
+        }
+      }}
+    >
+      {children}
+    </motion.div>
+  }
+
+  return (<div className={classes.loaderWrapper}>
+    <div className={classes.loaderContainer}>
+      {renderWrapper(0, <LoaderText isNewTopText isNewBottomText topText="Watch your thoughts" bottomText="they become words."/>)}
+      {renderWrapper(1, <LoaderText isTopStatic isBottomStatic topText="Watch your thoughts" bottomText="they become words."/>)}
+      {renderWrapper(2, <LoaderText isTopOut isBottomStatic topText="Watch your words" bottomText="they become words."/>)}
+      {renderWrapper(3, <LoaderText isTopStatic isBottomOut topText="Watch your words" bottomText="they become actions."/>)}
+      {renderWrapper(4, <LoaderText isTopOut isBottomStatic topText="Watch your actions" bottomText="they become actions."/>)}
+      {renderWrapper(5, <LoaderText isTopStatic isBottomOut topText="Watch your actions" bottomText="they become habits."/>)}
+      {renderWrapper(6, <LoaderText isTopOut isBottomStatic topText="Watch your habits" bottomText="they become habits."/>)}
+      {renderWrapper(7, <LoaderText isTopStatic isBottomOut topText="Watch your habits" bottomText="they become character."/>)}
+      {renderWrapper(8, <LoaderText isTopOut isBottomStatic topText="Watch your character" bottomText="they become character."/>)}
+      {renderWrapper(9, <LoaderText isTopStatic isBottomOut topText="Watch your character" bottomText="it becomes your destiny."/>)}
+      {renderWrapper(10, <LoaderText isTopStatic isBottomStatic topText="Watch your character" bottomText="it becomes your destiny."/>)}
       <div className={classes.bottomContainer}>
-        {Array.from({length: 5}).map((line, index) =>
-          renderLine(index))}
+        {Array.from({length: 5}).map((line, index) => renderLine(index))}
       </div>
     </div>
-  )
+  </div>)
 }

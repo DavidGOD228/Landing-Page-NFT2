@@ -6,6 +6,15 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #0b0b0c;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.loaderContainer {
   max-width: 1110px;
   margin: 0 auto;
 
