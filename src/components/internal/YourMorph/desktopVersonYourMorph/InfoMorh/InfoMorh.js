@@ -117,7 +117,7 @@ export function InfoMorh({morph}) {
           {...animBlockDetails}
           transition={{
             ...transition,
-            delay: 1.2
+            delay: 1.2,
           }}
         >
           <BlockInfoTitle className={classes.infoTitle}>

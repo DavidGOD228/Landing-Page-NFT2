@@ -143,10 +143,8 @@ export const Earn = () => {
                     loop
                     playsInline
                     muted
-                  >
-                    <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm" type="video/webm" />
-                    <source src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4" type="video/mp4" />
-                  </video>
+                    src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666790600/videos/Coin_dnpllz.mp4"
+                  />
                 </motion.div>
               </LazyLoad>
 						)}

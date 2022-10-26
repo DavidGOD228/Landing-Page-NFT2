@@ -40,7 +40,7 @@ export const HomePage = () => {
       <MorphId/>
       <TypesCards />
       <YourMorph />
-      <MorphsUnique />
+      {/* <MorphsUnique /> */}
       <Roadmap />
       <Wizard />
       {!isTablet && <Foto />}

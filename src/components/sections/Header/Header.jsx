@@ -7,16 +7,17 @@ import Twitter from 'assets/images/twitter.svg'
 import Discord from 'assets/images/discord.svg'
 
 import {useWindowWidth} from 'hooks/useWindowWidth'
-
+import usePickSection from "./hooks/usePickSection"
 import classes from './style.module.scss'
 import {menuData} from "./data/menu";
 import NavItem from "./components/NavItem/NavItem";
-import {Link, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export const Header = () => {
   const [isVisibleMenu, setVisibleMenu] = useState(false)
   const isDesktop = useWindowWidth(1024)
-  const { hash } = useLocation();
+
+  const { activeSection } = usePickSection();
 
   useEffect(() => {
     if (isVisibleMenu) {
@@ -30,20 +31,20 @@ export const Header = () => {
     setVisibleMenu(false)
   }
 
+  const mappingMenu = menuData.map(({id, title}, index) => {
+    return index === 3 ? <React.Fragment key={title}>
+      <div className={`${classes.logoContainer} ${!activeSection && classes.activeLogo}`}>
+        <img className={classes.logo} src={Logo} alt=""/>
+      </div>
+      <NavItem key={title} title={title} link={id} />
+    </React.Fragment> : <NavItem key={title} title={title} link={id} activeSection={activeSection} />
+  })
+
   return (
     <header className={classes.header}>
       {
         isDesktop ? <nav className={classes.nav}>
-          {
-            menuData.map(({id, title}, index) => {
-              return index === 3 ? <React.Fragment key={title}>
-                <div className={`${classes.logoContainer} ${!hash && classes.activeLogo}`}>
-                  <img className={classes.logo} src={Logo} alt=""/>
-                </div>
-                <NavItem key={title} title={title} link={id}/>
-              </React.Fragment> : <NavItem key={title} title={title} link={id}/>
-            })
-          }
+          {mappingMenu}
         </nav> : <>
           <img className={classes.logo} src={Logo} alt=""/>
           <img className={classes.hamburger} src={Hamburger} onClick={() => setVisibleMenu(true)}

@@ -12,10 +12,7 @@ import Polygon from '../../icons/Polygon'
 import Play from '../../icons/Play'
 
 import {useWindowWidth} from 'hooks/useWindowWidth'
-import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
 import { offset } from 'utils/lazyload';
-import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
 import LazyLoad from 'react-lazy-load';
 
 import classes from './style.module.scss'
@@ -26,7 +23,7 @@ const speedParallax = 20;
 
 export const TopBlock = () => {
   const isDesktop = useWindowWidth(1024)
-  const [isVideoOpen, setVideoOpen] = useState(false)
+  const [isVideoOpen, setVideoOpen] = useState(false);
 
   return (
     <div id="game">
@@ -42,7 +39,7 @@ export const TopBlock = () => {
           </video>
         </div> :
         <div className={classes.topBlock}>
-          <Header/>
+          <Header />
           {/*<Orb/>*/}
           {/*<Orb top={0} left={1400}/>*/}
           {/*<Orb top={900} left={500}/>*/}

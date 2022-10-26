@@ -1,16 +1,16 @@
-import React from 'react'
-import {Link, useLocation} from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import classes from "./style.module.scss"
+import classes from './style.module.scss';
 
-const NavItem = ({link, title}) => {
-  const { hash } = useLocation();
+const NavItem = ({ link, title, activeSection }) => {
+	return (
+		<Link
+			to={{ pathname: '/', hash: `${link}` }}
+			className={`${classes.navItem} ${`#${activeSection}` === link && classes.active}`}
+		>
+			{title}
+		</Link>
+	);
+};
 
-  return (
-    <Link to={{pathname: '/', hash: `${link}`}} className={`${classes.navItem} ${hash === link && classes.active}`}>
-      {title}
-    </Link>
-  )
-}
-
-export default NavItem
+export default NavItem;
