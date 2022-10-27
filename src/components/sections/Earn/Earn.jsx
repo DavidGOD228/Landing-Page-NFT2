@@ -161,7 +161,7 @@ export const Earn = () => {
             {/*  <MobileSplashes/>*/}
             {/*</Parallax>*/}
 			{/*		}*/}
-					<div style={{ marginTop: 40 }}>
+					<div style={{ marginTop: 100 }}>
 						{!isDesktop &&
 							data.map(({ title, subtitle }, i) => (
 								<Accordion key={i} title={title} subtitle={subtitle} />
