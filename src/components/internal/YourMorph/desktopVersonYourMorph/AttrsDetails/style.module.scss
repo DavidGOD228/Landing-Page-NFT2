@@ -2,9 +2,9 @@
 
 .attrs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   row-gap: 1.6vw;
-  column-gap: 3vw;
+  grid-template-columns: 6fr 1fr;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: $desktop) {

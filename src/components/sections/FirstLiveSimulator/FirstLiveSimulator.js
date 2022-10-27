@@ -22,6 +22,9 @@ import { offset } from 'utils/lazyload';
 import MobileSplashes from './components/MobileSplashes/MobileSplashes';
 
 import { Parallax } from 'react-scroll-parallax';
+import Slider from "../Personalize/Slider/Slider";
+import NavSlider from "../Personalize/navSlider/navSlider";
+import React, {useState} from "react";
 const speedParallax = 20;
 
 export function FirstLiveSimulator() {
@@ -31,6 +34,18 @@ export function FirstLiveSimulator() {
   releasing on IOS and Android in 2023. Play-to-earn in a
   graphically-rich sci-fi adventure and life builder that allows
   you to feel the life inside the game.`;
+
+	const [activeSlide, setActiveSlide] = useState(1);
+
+	const handleNextSlide = () => {
+		if (activeSlide === 3) return;
+		setActiveSlide(prevSlide => prevSlide + 1);
+	};
+
+	const handlePrevSlide = () => {
+		if (activeSlide === 1) return;
+		setActiveSlide(prevSlide => prevSlide - 1);
+	};
 
   const isSafari = window.safari !== undefined;
   const morphVideoDesktop = isSafari 
@@ -109,56 +124,16 @@ export function FirstLiveSimulator() {
 								</LazyLoad>
 							</div>
 						</motion.div>
-						<div className={classes.mobileContainer}>
-							<div className={classes.imagesBlock}>
-								<motion.div
-									key='firstLiveFirstImage'
-									className={classes.mobileContainer}
-									initial={{ y: 150 }}
-									whileInView={{ y: 0 }}
-									transition={{
-										duration: 1.5,
-										ease: 'easeInOut'
-									}}
-									viewport={{ once: true }}
-								>
-									<LazyLoad offset={offset}>
-										<video
-											className={classes.privacyImage}
-											src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082186/videos/toilet.video_gh1gng.mp4"
-											autoPlay
-											loop
-											muted
-											poster={ToiletPoster}
-											playsInline
-										/>
-									</LazyLoad>
-								</motion.div>
-								<motion.div
-									key='firstLiveSecondImage'
-									className={classes.secondImage}
-									initial={{ y: 150 }}
-									whileInView={{ y: 0 }}
-									transition={{
-										duration: 1,
-										ease: 'easeInOut'
-									}}
-									viewport={{ once: true }}
-								>
-									<LazyLoad offset={offset}>
-										<video
-											src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082157/videos/bed.video_vfxjeb.mp4"
-											className={classes.privacyImage}
-											autoPlay
-											poster={BedPoster}
-											loop
-											playsInline
-											muted
-										/>
-									</LazyLoad>
-								</motion.div>
-							</div>
-					</div>
+						 {
+							 !isDesktop ? <>
+								 <Slider className={classes.slider} activeSlide={activeSlide} />
+								 <NavSlider
+									 activeSlide={activeSlide}
+									 handleNextSlide={handleNextSlide}
+									 handlePrevSlide={handlePrevSlide}
+								 />
+							 </>: null
+						 }
 					 </div>
 				</div>
 			</GlobalContainer>

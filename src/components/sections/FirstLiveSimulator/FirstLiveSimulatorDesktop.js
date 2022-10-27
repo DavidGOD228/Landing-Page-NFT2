@@ -42,7 +42,7 @@ export function FirstLiveSimulatorDesktop() {
 				<h2 className={classes.title}>
 					First{' '}
 					<br />
-					live simulatoron web 3
+					live simulator on web 3
 				</h2>
 				<Paragraph className={classes.paragraph}>
 					{paragraphAnimation(textPar)}

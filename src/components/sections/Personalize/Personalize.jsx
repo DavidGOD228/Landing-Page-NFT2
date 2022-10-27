@@ -44,17 +44,6 @@ const data = [
 export const Personalize = () => {
 	const isDesktop = useWindowWidth(1024);
 
-	const [activeSlide, setActiveSlide] = useState(1);
-
-	const handleNextSlide = () => {
-		if (activeSlide === 3) return;
-		setActiveSlide(prevSlide => prevSlide + 1);
-	};
-
-	const handlePrevSlide = () => {
-		if (activeSlide === 1) return;
-		setActiveSlide(prevSlide => prevSlide - 1);
-	};
 
 	const animFromDown = {
 		initial: {
@@ -132,49 +121,11 @@ export const Personalize = () => {
 
 				<Slider className={classes.slider} activeSlide={activeSlide} />
       </div> */}
-			<div className={classes.mobileVersion}>
-				<div className={classes.contentBlock}>
-					<Title
-						classname={classes.personalizeTitle}
-						borderHeight={isDesktop ? "89%": "80%"}
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-							justifyContent: 'flex-start'
-						}}
-					>
-						<motion.span {...animFromDown}>
-							Personalize{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							and{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							make{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							it{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							unique
-						</motion.span>
-					</Title>
-					<p className={classes.personalizeParagraph}>
-						{paragraphAnimation(
-							'Costruisci comunità per vivere le tue idee più sfrenate con soldiveri sul tavolo.'
-						)}
-					</p>
-				</div>
+			{/*<div className={classes.mobileVersion}>*/}
+			{/*	<div className={classes.contentBlock}>*/}
 
-				<Slider className={classes.slider} activeSlide={activeSlide} />
-
-				<NavSlider
-					className={classes.mobileNavSlider}
-					activeSlide={activeSlide}
-					handleNextSlide={handleNextSlide}
-					handlePrevSlide={handlePrevSlide}
-				/>
-			</div>
+			{/*	</div>*/}
+			{/*</div>*/}
 
 			<div
 				id='marketplace'

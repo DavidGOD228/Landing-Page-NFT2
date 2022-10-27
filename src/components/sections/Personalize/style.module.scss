@@ -21,20 +21,6 @@
   color: transparent;
 }
 
-.personalizeTitle {
-  font-size: 64px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-left: 43px !important;
-}
-
-.personalizeParagraph {
-  font-size: 18px;
-  line-height: 160%;
-  color: #C1C0C0;
-  margin-left: 43px !important;
-}
-
 .marketplaceTitle {
   font-size: 30px;
   line-height: 1;
@@ -146,10 +132,6 @@
     padding: 150px 0 50px;
   }
 
-  .personalizeParagraph {
-    display: none;
-  }
-
   .contentBlock {
     grid-template-rows: 1fr;
     padding: 0 120px;
@@ -179,9 +161,6 @@
 }
 
 @media screen and (max-width: $desktop) {
-  .personalizeTitle {
-    @include prtnlSclScrnSize(font-size, 70);
-  }
 
   .contentBlock {
     grid-template-rows: 1fr;
@@ -189,26 +168,4 @@
   }
 }
 
-@media screen and (max-width: $s-tablet) {
-  .personalizeTitle,
-  .personalizeParagraph {
-    margin-left: 28px !important;
-  }
 
-  .personalizeTitle {
-    font-size: 36px;
-  }
-}
-
-@media screen and (max-width: $m-mobile) {
-  .personalizeTitle {
-    font-size: 32px;
-  }
-}
-
-@media screen and (max-width: $s-mobile) {
-  .personalizeTitle {
-    $fontSizePx: 100vw * 30 / 360;
-    font-size: $fontSizePx;
-  }
-}

@@ -33,7 +33,7 @@ const data = [
 				We have many challenges between our players. The most resourceful will be rewarded.
 			</p>
 		),
-		borderColor: 'rgba(53,115,107,0.3)'
+		borderColor: '#343A3D'
 	},
 	{
 		title: 'Sell your staff',
@@ -42,7 +42,7 @@ const data = [
 				You have a lot of opportunities to build something better than others. Be the best one and sell your assets.
 			</p>
 		),
-		borderColor: 'rgba(63,76,53,0.3)'
+		borderColor: '#343A3D'
 	}
 ];
 
@@ -161,7 +161,7 @@ export const Earn = () => {
             {/*  <MobileSplashes/>*/}
             {/*</Parallax>*/}
 			{/*		}*/}
-					<div style={{ marginTop: 40 }}>
+					<div style={{ marginTop: isDesktop ? 100: 50 }}>
 						{!isDesktop &&
 							data.map(({ title, subtitle }, i) => (
 								<Accordion key={i} title={title} subtitle={subtitle} />
