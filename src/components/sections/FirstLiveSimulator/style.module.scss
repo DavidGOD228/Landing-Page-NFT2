@@ -38,6 +38,11 @@
 .morphVideo {
   width: 100%;
   z-index: 5;
+  margin-top: 140px;
+
+  @media screen and (max-width: $desktop){
+    margin: 0;
+  }
 }
 
 .title {

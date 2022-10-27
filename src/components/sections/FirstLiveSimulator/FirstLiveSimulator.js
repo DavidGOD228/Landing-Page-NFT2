@@ -11,7 +11,8 @@ import BedPoster from 'assets/images/posters/bed.webp'
 import SmileDesktop from 'assets/images/smileDesktop.svg';
 
 import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
-import MobilePoster from 'assets/images/posters/falling_Mobile.webp'
+import MobilePosterWebp from 'assets/images/posters/falling_Mobile.webp'
+import MobilePosterPng from 'assets/images/posters/falling_Mobile.png'
 
 import classes from './style.module.scss';
 
@@ -71,7 +72,7 @@ export function FirstLiveSimulator() {
           muted
           playsInline
           preload='auto'
-          poster={isDesktop ? DesktopPoster : MobilePoster}
+          poster={isSafari ? MobilePosterPng : MobilePosterWebp}
           src={morphVideoMobile}
         />
       </LazyLoad>}

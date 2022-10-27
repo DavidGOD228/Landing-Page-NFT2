@@ -27,7 +27,7 @@ export const Title = ({
 				}}
 				whileInView={{
 					height: borderHeight,
-					width: 3,
+					width: 1,
           ...animWrapperContainer?.whileInView
 				}}
 				transition={{
