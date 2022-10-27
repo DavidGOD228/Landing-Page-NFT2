@@ -1,5 +1,5 @@
 import {useEffect, useRef} from "react";
-
+import {isWebpSupported} from 'react-image-webp/dist/utils';
 import classes from './style.module.scss';
 
 const videos = [
@@ -16,7 +16,7 @@ const videos = [
     webm: "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084832/slider/Job_lkw0ak.webm",
   },
 ];
-const isSafari = window.safari !== undefined;
+
 export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   const videoRef = useRef()
@@ -28,9 +28,9 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   }, [isActive])
 
-  const srcVideo = isSafari
-    ? videos[idx - 1].mp4
-    : videos[idx - 1].webm
+  const srcVideo = isWebpSupported
+    ? videos[idx - 1].webm
+    : videos[idx - 1].mp4
 
 	return (
     <video
