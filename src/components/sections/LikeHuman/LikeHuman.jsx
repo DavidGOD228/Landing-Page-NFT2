@@ -196,7 +196,7 @@ export const LikeHuman = () => {
 				)}
 			</div>
 			{/*<Parallax speed={0}>*/}
-			{table}
+			{isDesktop ? table : accordion}
 			{/*</Parallax>*/}
 			{/*{*/}
 			{/*    isDesktop ? <DesktopSplashes/> : null*/}

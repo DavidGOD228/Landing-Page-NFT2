@@ -4,11 +4,12 @@
   color: #FFFFFF;
   text-decoration: none;
   position: relative;
-  opacity: 0.45;
+  color: #979BA9;
 }
 
 .navItem.active {
-  opacity: 1;
+  color: white;
+  text-shadow: white 0 0 10px;
 
   &:before {
     content: '';
