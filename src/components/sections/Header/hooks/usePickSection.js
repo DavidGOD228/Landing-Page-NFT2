@@ -37,7 +37,7 @@ export default function usePickSection() {
   useEffect(() => {
     const checkSection = () => {
       const activeSectionId = getActiveSection(scrollPosition, positionSections);
-      setActiveSection(activeSectionId);
+      if(activeSectionId) setActiveSection(activeSectionId);
     }
 
     document.addEventListener('scroll', checkSection);
