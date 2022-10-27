@@ -16,7 +16,7 @@
   position: relative;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 75px;
+  padding: 0 20px;
 
   @media screen and (min-width: 1313px){
     padding: 0 125px 0 130px;
@@ -68,6 +68,7 @@
 
   @media screen and (max-width: $desktop) {
     display: flex;
+    flex-direction: column;
     margin-top: 0;
   }
 }
@@ -88,35 +89,6 @@
   position: absolute;
   left: 10px;
   top: 15%;
-}
-
-.mobileContainer {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  flex-direction: column;
-  filter: drop-shadow(30px 35px 20px rgba(0, 0, 0, 0.45));
-
-  @media screen and (max-width: $desktop) {
-    display: none;
-  }
-}
-
-.privacyImage {
-  border-radius: 12px;
-  width: 260px;
-}
-
-.imagesBlock {
-  position: relative;
-  margin-left: 40px;
-}
-
-.secondImage {
-  position: absolute;
-  z-index: -5;
-  top: 56px;
-  right: 46px;
 }
 
 // smile with text
@@ -149,34 +121,8 @@
   right: 18%;
 }
 
-@media screen and (max-width: $l-desktop) {
-  .privacyImage {
-    width: 18vw;
-  }
-
-  .imagesBlock {
-    margin-left: 4vw;
-  }
-
-  .secondImage {
-    top: 3.9vw;
-    right: 3.1vw;
-  }
-}
 
 @media screen and (max-width: $m-desktop) {
-  .privacyImage {
-    width: 18vw;
-  }
-
-  .imagesBlock {
-    margin-left: 12vw;
-  }
-
-  .secondImage {
-    right: -1.1vw;
-  }
-
   .grayLine img {
     width: 40vw;
   }
@@ -205,10 +151,6 @@
   .grayLine img {
     left: 0;
     width: 100%;
-  }
-
-  .secondImage {
-    right: 8vw;
   }
 
   .paragraph {
@@ -248,4 +190,9 @@
   .grayLine img {
     top: 7%;
   }
+}
+
+.slider {
+  margin-top: 60px;
+  margin-bottom: 25px;
 }
