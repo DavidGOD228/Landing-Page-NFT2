@@ -15,6 +15,7 @@ const getPositionsSections = ids => {
 
 		positions[id] = { id, start: sectionStart, finish: sectionFinish };
 	});
+ 
 	return positions;
 };
 

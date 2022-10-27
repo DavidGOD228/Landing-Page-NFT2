@@ -13,21 +13,21 @@ export default function usePickSection() {
    * init positions of sections
    */
 	useEffect(() => {
-    window.onload = function() {
+    if(document.readyState === 'complete') {
       /**
        * @info
        * take them from header
        * it is anchors
        */
-      const ids = ['game', 'features', 'fataMorgana', 'marketplace', 'morphID', 'roadmap'];
-      const positionsData = getPositionsSections(ids);
-
-      setPositionSections(s => ({
-        ...s,
-        ...positionsData
-      }));
+       const ids = ['game', 'features', 'fataMorgana', 'marketplace', 'morphID', 'roadmap'];
+       const positionsData = getPositionsSections(ids);
+ 
+       setPositionSections(s => ({
+         ...s,
+         ...positionsData
+       }));
     }
-	}, []);
+	}, [document.readyState]);
 
   /**
    * @info
