@@ -25,6 +25,11 @@
   letter-spacing: 0.03em;
   text-align: right;
   margin-right: 28px;
+
+  @media screen and (max-width: $desktop) {
+    flex-direction: column;
+    text-align: left;
+  }
 }
 
 .wrapperContentTitleLeftSide {
