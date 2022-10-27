@@ -7,6 +7,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 150px 127px 0;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -222,7 +224,7 @@
 }
 
 .zoomVideo {
-  position: absolute;
+  position: relative;
   border-radius: 50%;
   width: 467.73px;
   height: 467.73px;
@@ -230,6 +232,7 @@
   z-index: 1000;
 
   @media screen and (max-width: 1023px){
+    position: absolute;
     right: 0;
     left: 0;
     margin: 0 auto;
