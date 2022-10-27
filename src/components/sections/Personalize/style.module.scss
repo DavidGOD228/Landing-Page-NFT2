@@ -59,14 +59,14 @@
 }
 
 .personalizeContainer {
-  background-image: url("~assets/images/personalize.webp");
+  /* background-image: url("~assets/images/personalize.webp");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   position: relative;
   height: 843px;
   padding: 150px 20px 0;
 
-  &:after {
+  /* &:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -85,11 +85,10 @@
     left: 0;
     height: 215px;
     background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
-    //transform: rotate(-180deg);
-  }
+  } */
 
   @media screen and (min-width: $desktop) {
-    background-image: url("~assets/images/marketplaceDesktop.webp");
+    // background-image: url("~assets/images/marketplaceDesktop.webp");
     margin-left: -4px;
     display: flex;
     flex-direction: column;
