@@ -8,14 +8,13 @@
     top: 0;
     right: 0;
     left: 0;
-    background:linear-gradient(90deg, rgba(47, 83, 53, 1) 0%, rgba(74, 65, 45, 1) 100%);
-    opacity: 0.5;
+    background: #343A3D;
     height: 1px;
   }
 
   &:nth-child(odd) {
     background: rgba(17, 17, 19, 0.4);
-    border-right: 1px solid rgba(47, 83, 54, 0.3);
+    border-right: 1px solid #343A3D;;
     padding-left: 130px;
   }
 
@@ -25,8 +24,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background: linear-gradient(90deg, rgba(83, 69, 51, 1) 0%, rgba(24, 81, 76, 1) 60%, rgba(46, 83, 53, 1) 100%);
-    opacity: 0.5;
+    background: #343A3D;
     height: 1px;
   }
 }
