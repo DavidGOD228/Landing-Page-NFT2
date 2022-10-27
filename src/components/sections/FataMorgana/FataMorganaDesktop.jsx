@@ -17,6 +17,8 @@ import { offset } from 'utils/lazyload';
 import {isWebpSupported} from "react-image-webp/dist/utils";
 import TopCardWebp from "../../../assets/images/topCardDesktop.webp";
 import TopCardJpg from "../../../assets/images/topCardDesktop.jpg";
+import {useWindowWidth} from "hooks/useWindowWidth";
+import { isMobileSafari } from 'utils/isMobileSafari'
 
 const data = [
   {
@@ -40,31 +42,31 @@ export const FataMorganaDesktop = () => {
   const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants. At the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic place where all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
   const isWebp = isWebpSupported();
 
-  const isSafari = window.safari !== undefined
-  const zoomVideo = isSafari
+  const zoomVideoDesktop = window.safari
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
-  const desktopCity = isSafari
+
+  const desktopCity = window.safari
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666081885/videos/city-desktop.video_yd4hy9.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082077/videos/city-desktop.video_kcsvgh.webm"
-
-  return (
+  
+    return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
             {/*<LazyLoad offset={offset}>*/}
 						{isWebp &&
-						<video
-							className={classes.zoomRay}
-							autoPlay
-							loop
-							muted
-							playsInline>
-							<source
-								src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082165/videos/Ray_exu8al.webm"
-								type="video/webm"/>
-						</video>
+              <video
+                className={classes.zoomRay}
+                autoPlay
+                loop
+                muted
+                playsInline>
+                <source
+                  src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082165/videos/Ray_exu8al.webm"
+                  type="video/webm"/>
+              </video>
 						}
             {/*</LazyLoad>*/}
 						<div>
@@ -161,7 +163,7 @@ export const FataMorganaDesktop = () => {
                 muted
                 poster={ZoomPoster}
                 playsInline
-                src={zoomVideo}
+                src={zoomVideoDesktop}
               />
 							<motion.p
 								className={classes.cityText}

@@ -24,10 +24,7 @@ const speedParallax = 20;
 export const TopBlock = () => {
   const isDesktop = useWindowWidth(1024)
   const [isVideoOpen, setVideoOpen] = useState(false);
-  const isSafari = window.safari !== undefined;
-  const videoBlock = isSafari
-    ? 'https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082242/videos/teaser.video_dcb2ez.mp4'
-    : 'https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082220/videos/teaser.video_wrhmez.webm';
+
 
   return (
     <div id="game">
@@ -37,7 +34,8 @@ export const TopBlock = () => {
               <img src={Close} alt=""/>
             </LazyLoad>
           </button>
-          <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']} src={videoBlock} />
+          <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']}
+          src={'https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082242/videos/teaser.video_dcb2ez.mp4'} />
         </div> :
         <div className={classes.topBlock}>
           <Header />

@@ -22,15 +22,11 @@ import DesktopSplashes from './components/DesktopSplashes/DesktopSplashes';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from './components/MobileSplashes/MobileSplashes';
 
-import { Parallax } from 'react-scroll-parallax';
+import { isMobileSafari } from 'utils/isMobileSafari.js'
 import Slider from "../Personalize/Slider/Slider";
 import NavSlider from "../Personalize/navSlider/navSlider";
 import React, {useEffect, useState} from "react";
 const speedParallax = 20;
-
-function isMobileSafari() {
-  return navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
-}
 
 export function FirstLiveSimulator() {
 	const isDesktop = useWindowWidth(1024);

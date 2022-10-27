@@ -11,6 +11,8 @@ import Column from './components/Column/Column';
 import LazyLoad from 'react-lazy-load';
 import { offset } from 'utils/lazyload';
 
+import { isMobileSafari } from 'utils/isMobileSafari';
+
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 
@@ -84,11 +86,15 @@ export const Earn = () => {
 
 	const GreenText1 = motion(GreenText);
 
-  const isSafari = window.safari !== undefined;
-  const coinVideo = isSafari
+
+  const coinVideoMobile = isMobileSafari()
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
-  const comparingVideo = isSafari
+  const coinVidoeDesktop = window.safari
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
+
+  const comparingVideoDesktop =  window.safari
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082156/videos/comp.video_tymrsj.webm"
 
@@ -104,7 +110,7 @@ export const Earn = () => {
 							muted
 							playsInline
 							poster={CoinPoster}
-              src={coinVideo}
+              src={coinVideoMobile}
 						/>
 					</LazyLoad>
 				)}
@@ -149,7 +155,7 @@ export const Earn = () => {
                     loop
                     playsInline
                     muted
-                    src={coinVideo}
+                    src={coinVidoeDesktop}
                   />
                 </motion.div>
               </LazyLoad>
@@ -176,7 +182,7 @@ export const Earn = () => {
 							playsInline
 							loop
 							muted
-              src={comparingVideo}
+              src={comparingVideoDesktop}
 						/>
 					</LazyLoad>
 				)}
