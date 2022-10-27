@@ -25,8 +25,12 @@ import MobileSplashes from './components/MobileSplashes/MobileSplashes';
 import { Parallax } from 'react-scroll-parallax';
 import Slider from "../Personalize/Slider/Slider";
 import NavSlider from "../Personalize/navSlider/navSlider";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 const speedParallax = 20;
+
+function isMobileSafari() {
+  return navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
+}
 
 export function FirstLiveSimulator() {
 	const isDesktop = useWindowWidth(1024);
@@ -48,11 +52,11 @@ export function FirstLiveSimulator() {
 		setActiveSlide(prevSlide => prevSlide - 1);
 	};
 
-  const isSafari = window.safari !== undefined;
+  const isSafari = isMobileSafari()
   const morphVideoDesktop = isSafari 
-   ?  "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
+   ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
-  const morphVideoMobile = isSafari 
+  const morphVideoMobile = isSafari
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm"
 
@@ -65,17 +69,16 @@ export function FirstLiveSimulator() {
         playsInline
         src={morphVideoDesktop}
       />}
-      {!isDesktop && <LazyLoad offset={offset} className={classes.videoWrapper}>
+      {!isDesktop && <div offset={offset} className={classes.videoWrapper}>
         <video
           className={classes.morphVideo}
           autoPlay
           muted
           playsInline
-          preload='auto'
           poster={isSafari ? MobilePosterPng : MobilePosterWebp}
           src={morphVideoMobile}
         />
-      </LazyLoad>}
+      </div>}
       {/*{isDesktop && */}
       {/*<Parallax speed={-speedParallax / 1.5}>*/}
       {/*  <DesktopSplashes/>*/}
