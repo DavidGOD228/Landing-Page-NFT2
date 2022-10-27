@@ -53,7 +53,7 @@ export function FirstLiveSimulator() {
 	};
 
   const isSafari = isMobileSafari()
-  const morphVideoDesktop = isSafari 
+  const morphVideoDesktop = window.safari 
    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
   const morphVideoMobile = isSafari
