@@ -4,3 +4,5 @@ export function isMobileSafari() {
 		navigator.userAgent.match(/AppleWebKit/)
 	);
 }
+
+export const isSafariNavigator = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);

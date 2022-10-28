@@ -9,6 +9,10 @@
   @media screen and (max-width: $desktop){
     margin-top: 200px;
   }
+
+  @media screen and (max-width: $tablet){
+    margin-top: 120px;
+  }
 }
 
 .flsContainer {

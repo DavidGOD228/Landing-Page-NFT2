@@ -63,8 +63,7 @@
   background-repeat: no-repeat;
   background-size: cover; */
   position: relative;
-  height: 843px;
-  padding: 150px 20px 0;
+  padding: 130px 20px 0;
 
   /* &:after {
     content: '';
@@ -92,11 +91,11 @@
     margin-left: -4px;
     display: flex;
     flex-direction: column;
-    padding: 80px 50px 233px;
+    padding: 30px 50px 233px;
   }
 
   @media screen and (min-width: $m-desktop) {
-    padding: 80px 191px 56px 233px;
+    padding: 30px 191px 0 233px;
   }
 }
 

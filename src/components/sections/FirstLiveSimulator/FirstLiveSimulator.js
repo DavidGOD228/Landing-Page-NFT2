@@ -22,7 +22,7 @@ import DesktopSplashes from './components/DesktopSplashes/DesktopSplashes';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from './components/MobileSplashes/MobileSplashes';
 
-import { isMobileSafari } from 'utils/isMobileSafari.js'
+import { isMobileSafari, isSafariNavigator } from 'utils/isMobileSafari.js'
 import Slider from "../Personalize/Slider/Slider";
 import NavSlider from "../Personalize/navSlider/navSlider";
 import React, {useEffect, useState} from "react";
@@ -48,14 +48,20 @@ export function FirstLiveSimulator() {
 		setActiveSlide(prevSlide => prevSlide - 1);
 	};
 
-  const isSafari = isMobileSafari()
+  /* const isSafari = isMobileSafari()
   const morphVideoDesktop = window.safari 
    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
   const morphVideoMobile = isSafari
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm"
-
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm" */
+  const morphVideoDesktop = isSafariNavigator
+  ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
+  : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
+  const morphVideoMobile = isSafariNavigator
+  ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
+  : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm"
+  console.log("user navigator", isSafariNavigator);
 	return (
 		<div className={classes.wrapper}>
 			{isDesktop && <video
@@ -71,7 +77,7 @@ export function FirstLiveSimulator() {
           autoPlay
           muted
           playsInline
-          poster={isSafari ? MobilePosterPng : MobilePosterWebp}
+          poster={isSafariNavigator ? MobilePosterPng : MobilePosterWebp}
           src={morphVideoMobile}
         />
       </div>}

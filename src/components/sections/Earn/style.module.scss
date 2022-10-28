@@ -4,6 +4,10 @@
 .container {
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: $tablet) {
+    margin-top: 60px;
+  }
 }
 
 .wrapper {
@@ -12,6 +16,7 @@
 
   @media screen and (min-width: $desktop) {
     //margin-top: 121px;
+    margin-top: 100px;
     padding: 0 130px;
   }
 }
@@ -36,7 +41,7 @@
 
 .contentWrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
 }
 
