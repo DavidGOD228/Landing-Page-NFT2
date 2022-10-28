@@ -12,16 +12,12 @@
   font-size: 36px;
   line-height: 120%;
   margin-left: 25px;
-
-  @media screen and (min-width: $tablet) and (max-width: $l-desktop) {
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
 
     @media screen and (min-width: $l-desktop){
     font-size: 64px;
     margin-left: 38px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
   }
 }
 
