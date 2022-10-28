@@ -16,6 +16,7 @@ import MobileCityPoster from 'assets/images/posters/city_Mobile.webp'
 import {isWebpSupported} from "react-image-webp/dist/utils";
 import TopCardWebp from "../../../assets/images/topCardDesktop.webp";
 import TopCardJpg from "../../../assets/images/topCardDesktop.jpg";
+import { isMobileSafari } from 'utils/isMobileSafari'
 
 const data = [
   {
@@ -40,14 +41,13 @@ export const FataMorganaMobile = () => {
   const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants.\nAt the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic placewhere all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
   const isWebp = isWebpSupported();
 
-  const isSafari = window.safari !== undefined;
-  const zoomVideo = isSafari
+  const zoomVideo = isMobileSafari()
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
     
-  const mobileCity = isSafari
+  const mobileCity = isMobileSafari()
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082167/videos/city-mobile.video_vcuitj.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082141/videos/city-mobile.video_kcomob.webm"
 
 
   return (
@@ -133,13 +133,13 @@ export const FataMorganaMobile = () => {
 					</motion.div>
 				</div>
 				<div className={classes.cityContainer}>
-						<div className={classes.mobileTableWrapper}>
-							<Table
-								style={{ margin: '50px auto 0', width: '100%', height: 89 }}
-								isGrayTable
-								data={data}
-							/>
-						</div>
+          <div className={classes.mobileTableWrapper}>
+            <Table
+              style={{ margin: '50px auto 0', width: '100%', height: 89 }}
+              isGrayTable
+              data={data}
+            />
+          </div>
 					<motion.p
 						className={classes.cityText}
 						initial={{ y: 150 }}
@@ -166,9 +166,9 @@ export const FataMorganaMobile = () => {
           </video>
 					}
           {/* zoom city */}
-          <LazyLoad offset={offset}>
-            <motion.video
+            <video
               className={classes.zoomVideo}
+              src={"https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"}
               initial={{ y: 150 }}
               whileInView={{ y: 0 }}
               transition={{
@@ -182,12 +182,10 @@ export const FataMorganaMobile = () => {
               muted
               poster="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666086665/posters/zoom_mgajem.png"
               playsInline
-              src={zoomVideo}
             />
-          </LazyLoad>
 
           {/* city without zoom */}
-					<LazyLoad offset={offset} className={classes.videoWrapper}>
+					<div offset={offset} className={classes.videoWrapper}>
             <video
               className={classes.mobileCity}
               autoPlay
@@ -197,7 +195,7 @@ export const FataMorganaMobile = () => {
               playsInline
               src={mobileCity}
             />
-					</LazyLoad>
+					</div>
 				</div>
 			</div>
 		</>
