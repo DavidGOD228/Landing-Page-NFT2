@@ -3,12 +3,16 @@
 
 .footerWrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .footerBg {
   position: absolute;
   width: 100%;
+  top: -50%;
+
+  @media screen and (max-width: $s-tablet) {
+    top: -23%;
+  }
 }
 
 .footer {

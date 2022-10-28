@@ -3,10 +3,14 @@
 .container {
   padding: 96px 0 67px;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 
+
   @media screen and (min-width: $desktop){
+    position: relative;
     padding: 120px 0 120px;
+    z-index: 1;
   }
 }
 

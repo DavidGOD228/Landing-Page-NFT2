@@ -16,7 +16,7 @@ export const Footer = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.footerWrapper}>
-      <img className={classes.footerBg} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666620164/splashes/footer_gkrfiw.jpg" alt="" />
+      <img className={classes.footerBg} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666954486/splashes/back_footer_sqvmun.png" alt="" />
       <footer className={classes.footer}>
         <div className={classes.footerTopBlock}>
           <LazyLoad offset={offset}>
