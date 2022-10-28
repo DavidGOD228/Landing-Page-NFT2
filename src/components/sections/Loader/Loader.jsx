@@ -39,8 +39,8 @@ const LoaderText = ({
         key={topText}
         {...inAnimation}
         transition={{
-          duration: 1,
-          ease: 'easeInOut',
+          duration: .3,
+          ease: 'easeOut',
         }}
       >
         {topText}
@@ -55,8 +55,8 @@ const LoaderText = ({
         key={topText}
         {...outAnimation}
         transition={{
-          duration: 1,
-          ease: 'easeInOut'
+          duration: .3,
+          ease: 'easeOut'
         }}
       >
         {topText}
@@ -71,9 +71,9 @@ const LoaderText = ({
         key={bottomText}
         {...inAnimation}
         transition={{
-          duration: 1,
-          ease: 'easeInOut',
-          delay: 1,
+          duration: .3,
+          ease: 'easeOut',
+          delay: .3,
         }}
       >
         {bottomText}
@@ -88,8 +88,8 @@ const LoaderText = ({
         key={bottomText}
         {...outAnimation}
         transition={{
-          duration: 1,
-          ease: 'easeInOut'
+          duration: .3,
+          ease: 'easeOut'
         }}
       >
         {bottomText}
@@ -108,11 +108,12 @@ const LoaderText = ({
 export function Loader({setIsloading}) {
   const [activeSlide, setActiveSlide] = useState(0)
 
-
   useEffect(() => {
+
+    const time = activeSlide % 2 === 0 ? 300 : 1500
     const slideInterval = setInterval(() => {
       setActiveSlide(activeSlide + 1);
-    }, 2000);
+    }, time);
 
     if (activeSlide === 10) {
       clearInterval(slideInterval)
@@ -138,7 +139,7 @@ export function Loader({setIsloading}) {
         }
       }}
       transition={{
-        duration: 1, ease: 'easeInOut'
+        duration: 1, ease: 'easeOut'
       }}
     />
   }
