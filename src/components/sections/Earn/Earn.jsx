@@ -88,10 +88,10 @@ export const Earn = () => {
 
 
   const coinVideoMobile = isMobileSafari()
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4"
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666790600/videos/Coin_dnpllz.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
   const coinVidoeDesktop = window.safari
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082154/videos/coin.video_y89akz.mp4"
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666790600/videos/Coin_dnpllz.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
 
   const comparingVideoDesktop =  window.safari

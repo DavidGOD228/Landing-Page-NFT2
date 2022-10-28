@@ -1,12 +1,12 @@
 @import '~assets/styles/media.scss';
 
 .topContainer {
-  padding: 79px 20px 0;
+  padding: 20px 20px 0;
   @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 150px 127px 0;
+    padding: 0 127px 0;
     position: relative;
     z-index: 1;
   }
@@ -17,11 +17,6 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 100px;
-
-  @media screen and (max-width: $desktop){
-    padding-bottom: 220px;
-  }
 }
 
 .title {

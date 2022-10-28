@@ -40,9 +40,10 @@ export function FirstLiveSimulatorDesktop() {
 		<div className={classes.wrapper}>
 			<div className={classes.flsDesktop}>
 				<h2 className={classes.title}>
-					First{' '}
+					First
 					<br />
-					live simulator on web 3
+					live simulator
+          <br />on web 3
 				</h2>
 				<Paragraph className={classes.paragraph}>
 					{paragraphAnimation(textPar)}
