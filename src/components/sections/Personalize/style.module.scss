@@ -91,11 +91,11 @@
     margin-left: -4px;
     display: flex;
     flex-direction: column;
-    padding: 30px 50px 233px;
+    padding: 30px 50px 0;
   }
 
   @media screen and (min-width: $m-desktop) {
-    padding: 30px 191px 0 233px;
+    padding: 30px 191px 0;
   }
 }
 
