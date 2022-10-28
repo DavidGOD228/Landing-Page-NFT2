@@ -94,7 +94,7 @@ export const Earn = () => {
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666790600/videos/Coin_dnpllz.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
 
-  const comparingVideoDesktop =  window.safari
+  const comparingVideoMobile = isMobileSafari()
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082156/videos/comp.video_tymrsj.webm"
 
@@ -182,7 +182,7 @@ export const Earn = () => {
 							playsInline
 							loop
 							muted
-              src={comparingVideoDesktop}
+              src={comparingVideoMobile}
 						/>
 					</LazyLoad>
 				)}
