@@ -12,8 +12,9 @@ const frankMurphy = {
 	type: 'classique',
 	code: 'S2144AAXE772LSAWFZ3ZQ0',
 	birth: '23.04.1995',
-	location: 'Atlanta | United States',
-	parametrs: '1.86 cm, 85 kg',
+	city: 'Atlanta',
+	country: 'United States',
+	parametrs: '1.86 cm 85 kg',
 	skills: ['strength.png', 'dragons.png', 'skull.png', 'human.png'],
 	attributes: [
 		{

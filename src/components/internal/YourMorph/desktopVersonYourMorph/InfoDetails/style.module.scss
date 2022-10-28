@@ -1,7 +1,6 @@
 @import '~assets/styles/media.scss';
 
 .titleDetail {
-  font-family: 'Poppins';
   color: #50545A;
   letter-spacing: 2px;
   margin-bottom: 5px;
@@ -12,6 +11,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.location {
+  display: flex;
+  gap: 24px;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    gap: 4px;
+  }
 }
 
 
@@ -94,6 +103,12 @@
   .containerAbout {
     grid-template-columns: 1fr;
   }
+
+  .aboutItem {
+    &:nth-child(2) {
+      order: -1;
+    }
+  }
   .titleDetail {
     margin-bottom: 0;
   }
@@ -132,7 +147,7 @@
 
   .titleDetail {
     font-size: 12px;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
   }
 
   .aboutData {
@@ -152,7 +167,7 @@
   .skillsContainer {
     img {
       height: 100%;
-      max-height: 29px;
+      max-height: 33px;
     }
   }
 

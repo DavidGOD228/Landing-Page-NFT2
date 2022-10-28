@@ -12,8 +12,9 @@ const canE = {
 	type: 'classique',
 	code: 'U1201JXI512XDYPAZ1ZF21',
 	birth: '10.07.1994',
-	location: 'Los Angeles | United States',
-	parametrs: '1.74 cm, 69 kg',
+	city: 'Los Angeles',
+	country: 'United States',
+	parametrs: '1.74 cm 69 kg',
 	skills: ['shurikens.png', 'ruler.png', 'eye-2.png', 'puzzle.png'],
 	attributes: [
 		{

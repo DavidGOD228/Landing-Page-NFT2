@@ -12,8 +12,9 @@ const omarTrejo = {
 	type: 'classique',
 	code: 'H9577LYI310LJHWEQ1SS6W',
 	birth: '23.12.1990',
-	location: 'León | Mexico',
-	parametrs: '1.83 cm, 79 kg',
+	city: 'León',
+	country: 'Mexico',
+	parametrs: '1.83 cm 79 kg',
 	skills: ['cap.png', 'drops.png', 'legs.png', 'handcuffs.png'],
 	attributes: [
 		{

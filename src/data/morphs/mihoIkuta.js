@@ -12,8 +12,9 @@ const mihoIkuta = {
 	type: 'classique',
 	code: 'F3521NDDK802LGZXYS9NV4',
 	birth: '12.04.2003',
-	location: 'Osaka | Japan',
-	parametrs: '1.66 cm, 45 kg',
+	city: 'Osaka',
+	country: 'Japan',
+	parametrs: '1.66 cm 45 kg',
 	skills: ['salt.png', 'fish.png', 'stone.png', 'lollipop.png'],
 	attributes: [
 		{

@@ -7,7 +7,8 @@ export function InfoDetails({ className, morph, ...props }) {
 		name,
 		code,
 		birth,
-		location,
+		country,
+		city,
 		parametrs,
 		skills,
 		fingerPrintImg,
@@ -32,7 +33,7 @@ export function InfoDetails({ className, morph, ...props }) {
 				<div className={classes.fingerPrintWrapper}>
 					<div className={classes.fingerPrint}>
 						<img src={importfingerPrintImg} alt='fingerprint' />
-						<Arrows />
+						<Arrows isEternal={isEternal}/>
 					</div>
 				</div>
 			</div>
@@ -48,7 +49,10 @@ export function InfoDetails({ className, morph, ...props }) {
 				</div>
 				<div className={classes.aboutItem}>
 					<p className={classes.titleDetail}>Location</p>
-					<p className={classes.aboutData}>{location}</p>
+					<div className={classes.location}>
+						<p className={classes.aboutData}>{city}</p>
+						<p className={classes.aboutData}>{country}</p>
+					</div>
 				</div>
 				<div className={classes.aboutItem}>
 					<p className={classes.titleDetail}>Parametres</p>
