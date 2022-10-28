@@ -19,6 +19,7 @@ import classes from './style.module.scss'
 
 
 import { Parallax } from 'react-scroll-parallax';
+import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
 const speedParallax = 20;
 
 export const TopBlock = () => {
@@ -42,8 +43,8 @@ export const TopBlock = () => {
           {/*<Orb/>*/}
           {/*<Orb top={0} left={1400}/>*/}
           {/*<Orb top={900} left={500}/>*/}
-          {isDesktop &&
-            <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" />}
+          {isDesktop ?
+            <img className={classes.sphasesTopBlock} src="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg" alt="" /> : <MobileSplashes/>}
            <div className={classes.container}>
             <div className={classes.mainBlock}>
               {
