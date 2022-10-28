@@ -12,8 +12,9 @@ const svenAronsson = {
 	type: 'classique',
 	code: 'F2124AJXE772LSAWFZ3ZF9',
 	birth: '28.02.1999',
-	location: 'Copenhagen | Denmark',
-	parametrs: '1.83 cm, 78 kg',
+	city: 'Copenhagen',
+	country: 'Denmark',
+	parametrs: '1.83 cm 78 kg',
 	skills: ['crouching.png', 'marionette.png', 'twoLines.png', 'eye.png'],
 	attributes: [
 		{

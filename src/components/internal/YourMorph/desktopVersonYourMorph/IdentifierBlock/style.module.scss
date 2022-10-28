@@ -8,15 +8,7 @@
 }
 
 @mixin eternalTextStyle {
-  background: linear-gradient(
-    90deg,
-    #fbbf9a -4.09%,
-    #ffe876 9.96%,
-    #12f9f8 28.24%,
-    #9cfd82 55.1%,
-    #fcf16e 78.52%,
-    #fed292 105.6%
-  );
+  background: linear-gradient(270.97deg, #FFE876 -13.18%, #12F9F8 24.05%, #9CFD82 83.91%, #FCF16E 113.12%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -110,7 +102,6 @@
   }
   
   .identifierBlock {
-    flex-direction: column;
     gap: 15px;
   }
 }

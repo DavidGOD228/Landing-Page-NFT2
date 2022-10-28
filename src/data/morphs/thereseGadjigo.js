@@ -12,8 +12,9 @@ const thereseGadjigo = {
 	type: 'eternal',
 	code: 'Y0144AAXE272LSAWFY3TQ8',
 	birth: '11.07.2000',
-	location: 'Dakar | Senegal',
-	parametrs: '1.82 cm, 55 kg',
+	city: 'Dakar',
+	country: 'Senegal',
+	parametrs: '1.82 cm 55 kg',
 	skills: ['decoration.png', 'vector.png', 'woman.png', 'cross.png', 'pearl.png'],
 	attributes: [
 		{

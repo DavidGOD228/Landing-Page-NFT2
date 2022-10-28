@@ -6,6 +6,8 @@
     display: flex;
     gap: 35px;
     justify-content: center;
+    border-top: 1px solid #343A3D;
+    padding-top: 44px;
   }
 
   .imgMorphChooseMobile {
@@ -24,13 +26,14 @@
 
 @media screen and (max-width: $tablet) {
   .infoMorphMobile {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    padding: 0 20px 0 0;
+    display: flex;
+    align-items: flex-start;
+    padding: 44px 20px 0 0;
   }
 
   .infoBlockMobile {
     width: 100%;
+    margin-top: 8px;
   }
 
   .infoTitleAttr {
@@ -42,6 +45,8 @@
   .imgMorphChooseMobile {
     position: relative;
     width: 100%;
+    margin-left: -30px;
     max-width: 149px;
   }
 }
+

@@ -12,8 +12,9 @@ const knutMoberg = {
 	type: 'classique',
 	code: 'Y8104AJXE572LSAZJZ3ZT3',
 	birth: '02.09.1979',
-	location: 'Dublin | Ireland',
-	parametrs: '1.81 cm, 86 kg',
+	city: 'Dublin',
+	country: 'Ireland',
+	parametrs: '1.81 cm 86 kg',
 	skills: ['comet.png', 'shark.png', 'shield.png', 'anarchism.png'],
 	attributes: [
 		{

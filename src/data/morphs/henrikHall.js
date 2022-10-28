@@ -12,8 +12,9 @@ const henrikHall = {
 	type: 'eternal',
 	code: 'X1101AJXE572XJOPAZ1ZF5',
 	birth: '20.05.1998',
-	location: 'Los Angeles | United States',
-	parametrs: '1.79 cm, 76 kg',
+	city: 'Los Angeles',
+	country: 'United States',
+	parametrs: '1.79 cm 76 kg',
 	skills: ['candle.png', 'parrot.png', 'jump.png', 'mask.png', 'silence.png'],
 	attributes: [
 		{

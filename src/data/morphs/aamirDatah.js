@@ -12,8 +12,9 @@ const aamirDatah = {
 	type: 'classique',
 	code: 'X1012CRVA472LSCWFF5ZX5',
 	birth: '08.10.2001',
-	location: 'Colombo | Sri Lanka',
-	parametrs: '1.74 cm, 67 kg',
+	city: 'Colombo',
+	country: 'Sri Lanka',
+	parametrs: '1.74 cm 67 kg',
 	skills: ['skill-1.png', 'skill-2.png', 'skill-3.png', 'skill-4.png'],
 	attributes: [
 		{
