@@ -3,7 +3,7 @@
 @import '~assets/styles/mixins.scss';
 
 .container {
-	padding: 150px 0;
+	padding: 180px 0;
 }
 
 .greenText {
@@ -79,7 +79,7 @@
   }
 
   .titleChooseMorph {
-    margin-top: 120px;
+    margin-top: 180px;
   }
 
   .titleLeftSide {
@@ -118,6 +118,16 @@
 
   .titleRightSide {
     display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .container {
+    padding: 120px 0 90px 0;
+  }
+
+  .titleChooseMorph {
+    margin-top: 0;
   }
 }
 

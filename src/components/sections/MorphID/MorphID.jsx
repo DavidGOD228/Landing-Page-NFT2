@@ -120,6 +120,7 @@ export const MorphId = () => {
             {isDesktop && (
               <Title
                 classname={classes.title}
+                isHiddenLine
                 style={{
                   display: 'flex',
                   flexWrap: 'wrap',

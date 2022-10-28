@@ -76,6 +76,10 @@
 	transform: scaleY(0);
 }
 
+.hiddenLine.line {
+  width: 0;
+}
+
 .animShadow {
 	animation-duration: 6s;
 	animation-name: shadowLineAnim;
