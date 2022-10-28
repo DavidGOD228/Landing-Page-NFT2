@@ -5,10 +5,10 @@ import {motion} from 'framer-motion'
 
 const outAnimation = {
   initial: {
-    opacity: 0,
+    opacity: 1,
   },
   whileInView: {
-    opacity: 1
+    opacity: 0
   },
 }
 
@@ -21,6 +21,9 @@ const inAnimation = {
   },
 }
 
+const progress = [0, 4, 9, 14, 19]
+
+const checkValue = (value) => value === 2 || value === 7 || value === 12 || value === 17 || value === 22
 const LoaderText = ({
                       isBottomStatic,
                       isTopStatic,
@@ -29,7 +32,8 @@ const LoaderText = ({
                       topText,
                       bottomText,
                       isTopOut,
-                      isBottomOut
+                      isBottomOut,
+                      bottomTextStyle
                     }) => {
 
   const renderTopText = () => {
@@ -73,23 +77,22 @@ const LoaderText = ({
         transition={{
           duration: .3,
           ease: 'easeOut',
-          delay: .3,
         }}
       >
         {bottomText}
       </motion.p>
     } else if (isBottomStatic) {
-      return <p className={`${classes.loaderText} ${classes.grayText}`}>
+      return <p style={bottomTextStyle} className={`${classes.loaderText} ${classes.grayText}`}>
         {bottomText}
       </p>
-    } else if(isBottomOut) {
+    } else if (isBottomOut) {
       return <motion.p
         className={`${classes.loaderText} ${classes.grayText}`}
         key={bottomText}
         {...outAnimation}
         transition={{
           duration: .3,
-          ease: 'easeOut'
+          ease: 'easeOut',
         }}
       >
         {bottomText}
@@ -107,15 +110,13 @@ const LoaderText = ({
 
 export function Loader({setIsloading}) {
   const [activeSlide, setActiveSlide] = useState(0)
-
   useEffect(() => {
-
-    const time = activeSlide % 2 === 0 ? 300 : 1500
+    const time = checkValue(activeSlide) ? 1500 : 300
     const slideInterval = setInterval(() => {
       setActiveSlide(activeSlide + 1);
     }, time);
 
-    if (activeSlide === 10) {
+    if (activeSlide === 23) {
       clearInterval(slideInterval)
       setIsloading(false)
     }
@@ -126,17 +127,17 @@ export function Loader({setIsloading}) {
   }, [activeSlide]);
 
 
-  const renderLine = (idx) => {
+  const renderLine = (value) => {
     return <motion.span
       className={classes.bottomLine}
-      key={idx}
       initial={{
         backgroundColor: "#2F3339"
       }}
       animate={() => {
-        if (idx * 2 <= activeSlide) return {
-          backgroundColor: "#fff",
-        }
+        if (value <= activeSlide)
+          return {
+            backgroundColor: "#fff",
+          }
       }}
       transition={{
         duration: 1, ease: 'easeOut'
@@ -161,19 +162,31 @@ export function Loader({setIsloading}) {
 
   return (<div className={classes.loaderWrapper}>
     <div className={classes.loaderContainer}>
-      {renderWrapper(0, <LoaderText isNewTopText isNewBottomText topText="Watch your thoughts" bottomText="they become words."/>)}
-      {renderWrapper(1, <LoaderText isTopStatic isBottomStatic topText="Watch your thoughts" bottomText="they become words."/>)}
-      {renderWrapper(2, <LoaderText isTopOut isBottomStatic topText="Watch your words" bottomText="they become words."/>)}
-      {renderWrapper(3, <LoaderText isTopStatic isBottomOut topText="Watch your words" bottomText="they become actions."/>)}
-      {renderWrapper(4, <LoaderText isTopOut isBottomStatic topText="Watch your actions" bottomText="they become actions."/>)}
-      {renderWrapper(5, <LoaderText isTopStatic isBottomOut topText="Watch your actions" bottomText="they become habits."/>)}
-      {renderWrapper(6, <LoaderText isTopOut isBottomStatic topText="Watch your habits" bottomText="they become habits."/>)}
-      {renderWrapper(7, <LoaderText isTopStatic isBottomOut topText="Watch your habits" bottomText="they become character."/>)}
-      {renderWrapper(8, <LoaderText isTopOut isBottomStatic topText="Watch your character" bottomText="they become character."/>)}
-      {renderWrapper(9, <LoaderText isTopStatic isBottomOut topText="Watch your character" bottomText="it becomes your destiny."/>)}
-      {renderWrapper(10, <LoaderText isTopStatic isBottomStatic topText="Watch your character" bottomText="it becomes your destiny."/>)}
+      {renderWrapper(0, <LoaderText isNewTopText isBottomStatic topText="Watch your thoughts" bottomTextStyle={{visibility: 'hidden'}} bottomText="they become words."/>)}
+      {renderWrapper(1, <LoaderText isTopStatic isNewBottomText topText="Watch your thoughts" bottomText="they become words."/>)}
+      {renderWrapper(2, <LoaderText isTopStatic isBottomStatic topText="Watch your thoughts" bottomText="they become words."/>)}
+      {renderWrapper(3, <LoaderText isTopOut isBottomStatic topText="Watch your thoughts" bottomText="they become words."/>)}
+      {renderWrapper(4, <LoaderText isNewTopText isBottomStatic topText="Watch your words" bottomText="they become words."/>)}
+      {renderWrapper(5, <LoaderText isTopStatic isBottomOut topText="Watch your words" bottomText="they become words."/>)}
+      {renderWrapper(6, <LoaderText isTopStatic isNewBottomText topText="Watch your words" bottomText="they become actions."/>)}
+      {renderWrapper(7, <LoaderText isTopStatic isBottomStatic topText="Watch your words" bottomText="they become actions."/>)}
+      {renderWrapper(8, <LoaderText isTopOut isBottomStatic topText="Watch your words" bottomText="they become actions."/>)}
+      {renderWrapper(9, <LoaderText isNewTopText isBottomStatic topText="Watch your actions" bottomText="they become actions."/>)}
+      {renderWrapper(10, <LoaderText isTopStatic isBottomOut topText="Watch your actions" bottomText="they become actions."/>)}
+      {renderWrapper(11, <LoaderText isTopStatic isNewBottomText topText="Watch your actions" bottomText="they become habits."/>)}
+      {renderWrapper(12, <LoaderText isTopStatic isBottomStatic topText="Watch your actions" bottomText="they become habits."/>)}
+      {renderWrapper(13, <LoaderText isTopOut isBottomStatic topText="Watch your actions" bottomText="they become habits."/>)}
+      {renderWrapper(14, <LoaderText isNewTopText isBottomStatic topText="Watch your habits" bottomText="they become habits."/>)}
+      {renderWrapper(15, <LoaderText isTopStatic isBottomOut topText="Watch your habits" bottomText="they become habits."/>)}
+      {renderWrapper(16, <LoaderText isTopStatic isNewBottomText topText="Watch your habits" bottomText="they become character."/>)}
+      {renderWrapper(17, <LoaderText isTopStatic isBottomStatic topText="Watch your habits" bottomText="they become character."/>)}
+      {renderWrapper(18, <LoaderText isTopOut isBottomStatic topText="Watch your habits" bottomText="they become character."/>)}
+      {renderWrapper(19, <LoaderText isNewTopText isBottomStatic topText="Watch your character" bottomText="they become character."/>)}
+      {renderWrapper(20, <LoaderText isTopStatic isBottomOut topText="Watch your character" bottomText="they become character."/>)}
+      {renderWrapper(21, <LoaderText isTopStatic isNewBottomText topText="Watch your character" bottomText="it becomes your destiny."/>)}
+      {renderWrapper(22, <LoaderText isTopStatic isBottomStatic topText="Watch your character" bottomText="it becomes your destiny."/>)}
       <div className={classes.bottomContainer}>
-        {Array.from({length: 5}).map((line, index) => renderLine(index))}
+        {progress.map((value) => renderLine(value))}
       </div>
     </div>
   </div>)
