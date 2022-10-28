@@ -56,10 +56,7 @@ export function FirstLiveSimulator() {
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm" */
   const morphVideoDesktop = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
-  const morphVideoMobile = isMobileSafari()
-  ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
-  : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm"
-
+  const morphVideoMobile = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
 	return (
 		<div className={classes.wrapper}>
 			{isDesktop && <video
