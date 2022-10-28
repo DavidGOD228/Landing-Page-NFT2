@@ -2,8 +2,8 @@ import React from 'react'
 import {motion} from "framer-motion";
 
 const AnimatedTextCharacter = ({text, className, delay}) => {
-// splitting text into letters
-  const letters = Array.from(text);
+// splitting text into word
+  const words = text.split(' ');
 
 // Variants for Container
   const container = {
@@ -41,13 +41,18 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
       whileInView="visible"
       viewport={{once: true}}
     >
-      {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
-      ))}
+      {words.map((word, index) => {
+        return (
+            <>
+              <motion.span variants={child} key={index}>
+                {word}
+              </motion.span>
+              {index !== (words.length - 1) && <span>{'\u00A0'}</span>}
+            </>
+        )
+      })}
     </motion.div>
   );
 };
 
-export default AnimatedTextCharacter
+export default AnimatedTextCharacter;

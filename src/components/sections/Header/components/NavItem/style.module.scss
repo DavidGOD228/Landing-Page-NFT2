@@ -14,10 +14,16 @@
   &:before {
     content: '';
     position: absolute;
+    border-radius: 10px;
     top: -19px;
     right: 0;
     left: 0;
     height: 2px;
     background: #B7F201;
   }
+}
+
+.navItem:hover {
+  color: white;
+  text-shadow: white 0 0 10px;
 }
