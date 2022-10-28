@@ -9,13 +9,11 @@ import {
   YourMorph,
   Personalize,
   MorphId,
-  MorphsUnique,
   Wizard,
   Foto,
   CombinedGame,
   Roadmap,
   TypesCards,
-  Privacy,
   FirstLiveSimulatorDesktop
 } from 'components';
 
@@ -32,7 +30,6 @@ export const HomePage = () => {
       <FirstLiveSimulator />
       {isDesktop && <FirstLiveSimulatorDesktop />}
       <LikeHuman />
-      {!isDesktop && <Privacy />}
       <FataMorgana />
       <Freedom />
       <Personalize />
