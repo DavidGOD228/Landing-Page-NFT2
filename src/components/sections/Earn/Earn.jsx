@@ -87,12 +87,8 @@ export const Earn = () => {
 	const GreenText1 = motion(GreenText);
 
 
-  const coinVideoMobile = isMobileSafari()
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666790600/videos/Coin_dnpllz.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
-  const coinVidoeDesktop = window.safari
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666790600/videos/Coin_dnpllz.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/coin.video_p7l9be.webm"
+  const coinVideoMobile = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666975312/Coin_BlackBackground_agd6oi.mp4"
+  const coinVidoeDesktop = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666975312/Coin_BlackBackground_agd6oi.mp4"
 
   const comparingVideoMobile = isMobileSafari()
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082162/videos/comp.video_ov2zh9.mp4"
