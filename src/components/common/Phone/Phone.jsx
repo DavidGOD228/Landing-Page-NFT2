@@ -33,7 +33,7 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   }, [isActive])
 
-  const morphVideoDesktop = window.safari 
+ /*  const morphVideoDesktop = window.safari 
     ? videos[idx - 1].mp4
     : videos[idx - 1].webm
 
@@ -41,7 +41,7 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
     ? videos[idx - 1].mp4
     : videos[idx - 1].webm
 
-  const videoSrc = isDesktop ? morphVideoDesktop : morphVideoMobile;
+  const videoSrc = isDesktop ? morphVideoDesktop : morphVideoMobile; */
 
 	return (
     <video
@@ -51,7 +51,7 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
       loop
       muted
       playsInline
-      src={videoSrc}
+      src={videos[idx - 1].mp4}
     />
   );
 };
