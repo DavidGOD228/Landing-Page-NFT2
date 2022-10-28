@@ -21,7 +21,7 @@ import { useWindowWidth } from '../../../hooks/useWindowWidth';
 import DesktopSplashes from './components/DesktopSplashes/DesktopSplashes';
 import { offset } from 'utils/lazyload';
 import MobileSplashes from './components/MobileSplashes/MobileSplashes';
-
+import { media } from 'utils/media';
 import { isMobileSafari, isSafariNavigator } from 'utils/isMobileSafari.js'
 import Slider from "../Personalize/Slider/Slider";
 import NavSlider from "../Personalize/navSlider/navSlider";
@@ -55,13 +55,11 @@ export function FirstLiveSimulator() {
   const morphVideoMobile = isSafari
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm" */
-  const morphVideoDesktop = isSafariNavigator
-  ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
-  : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
-  const morphVideoMobile = isSafariNavigator
+  const morphVideoDesktop = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
+  const morphVideoMobile = isMobileSafari()
   ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
   : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm"
-  console.log("user navigator", isSafariNavigator);
+
 	return (
 		<div className={classes.wrapper}>
 			{isDesktop && <video
