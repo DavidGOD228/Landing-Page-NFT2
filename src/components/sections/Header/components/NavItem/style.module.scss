@@ -14,12 +14,19 @@
   &:before {
     content: '';
     position: absolute;
-    border-radius: 10px;
     top: -19px;
     right: 0;
     left: 0;
-    height: 2px;
-    background: #B7F201;
+    height: 3px;
+		background: linear-gradient(
+			90deg,
+			#ffe876 -2.92%,
+			#12f9f8 17.93%,
+			#9cfd82 62.9%,
+			#fcf16e 85.83%,
+			#fed292 105.6%
+		);
+		border-radius: 50px;
   }
 }
 

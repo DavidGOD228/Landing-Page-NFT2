@@ -51,6 +51,7 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
       loop
       muted
       playsInline
+      autoPlay
       src={videos[idx - 1].mp4}
     />
   );
