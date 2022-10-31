@@ -21,7 +21,7 @@ const inAnimation = {
   },
 }
 
-const progress = [0, 4, 9, 14, 19]
+const progress = [1, 5, 10, 15, 20]
 
 const checkValue = (value) => value === 2 || value === 7 || value === 12 || value === 17 || value === 22
 const LoaderText = ({
