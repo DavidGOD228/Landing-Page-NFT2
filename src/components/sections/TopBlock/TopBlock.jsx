@@ -35,7 +35,7 @@ export const TopBlock = () => {
               <img src={Close} alt=""/>
             </LazyLoad>
           </button>
-          <video className={classes.videoBlock} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']}
+          <video className={classes.video} autoPlay loop controls={['PlayPause', 'Seek', 'Time', 'Volume']}
           src={'https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082242/videos/teaser.video_dcb2ez.mp4'} />
         </div> :
         <div className={classes.topBlock}>
