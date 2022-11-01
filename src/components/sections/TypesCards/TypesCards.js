@@ -16,6 +16,7 @@ import { morphIDText } from 'data/morphID/text';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
+import {isMobileSafari} from "utils/isMobileSafari";
 
 
 
@@ -81,7 +82,8 @@ export function TypesCards() {
 		viewport: { once: true }
 	};
 
-  const isSafari = window.safari !== undefined;
+	const isSafari = isMobileSafari()
+
   const whiteCard = isSafari 
     ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4"
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm"
