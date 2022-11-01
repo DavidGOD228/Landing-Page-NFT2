@@ -46,8 +46,8 @@ export const FataMorganaMobile = () => {
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
     
   const mobileCity = isMobileSafari()
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082167/videos/city-mobile.video_vcuitj.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082141/videos/city-mobile.video_kcomob.webm"
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293931/videos/Mobile_City_oens1f.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293924/videos/Mobile_City_snlaz6.webm"
 
 
   return (

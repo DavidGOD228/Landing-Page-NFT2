@@ -48,15 +48,13 @@ export function FirstLiveSimulator() {
 		setActiveSlide(prevSlide => prevSlide - 1);
 	};
 
-  /* const isSafari = isMobileSafari()
-  const morphVideoDesktop = window.safari 
-   ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
-   : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082168/videos/morphDesktop.video_gcr3kd.webm"
+  const isSafari = isMobileSafari()
+
   const morphVideoMobile = isSafari
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_uuj9zg.webm" */
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294229/videos/Falling_Mobile_qr8p5z.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294225/videos/Falling_Mobile_xta1jh.webm"
+
   const morphVideoDesktop = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
-  const morphVideoMobile = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082170/videos/morphMobile.video_xnpfer.mp4"
 	return (
 		<div className={classes.wrapper}>
 			{isDesktop && <video

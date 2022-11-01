@@ -47,8 +47,8 @@ export const FataMorganaDesktop = () => {
     : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
 
   const desktopCity = window.safari
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666081885/videos/city-desktop.video_yd4hy9.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082077/videos/city-desktop.video_kcsvgh.webm"
+    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293805/videos/City_Desktop_u8vkb6.mp4"
+    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293798/videos/City_Desktop_xonugd.webm"
   
     return (
 		<>
