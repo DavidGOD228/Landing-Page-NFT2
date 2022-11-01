@@ -1,6 +1,6 @@
 export function isMobileSafari() {
 	return (
-		navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
+		navigator.userAgent.match(/(iPod|iPhone|iPad|iPod Simulator|iPhone Simulator|iPad Simulator)/) &&
 		navigator.userAgent.match(/AppleWebKit/)
 	);
 }
