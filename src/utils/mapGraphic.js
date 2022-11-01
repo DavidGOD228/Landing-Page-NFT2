@@ -1,7 +1,7 @@
 import { Stick } from 'components';
 
-const mapGraphic = (precent, isEternal) => {
-	const maxLength = 25;
+const mapGraphic = (precent, isEternal, isDesktop) => {
+	const stickCount = isDesktop ? 25: 14;
 	/**
 	 * maxLength = max stick in block
 	 * everyone stick has gradient color
@@ -10,14 +10,14 @@ const mapGraphic = (precent, isEternal) => {
 	 * you need add gradint for
 	 * :nth-child(26), :nth-child(27), :nth-child(28)
 	 */
-	const countActiveSticks = Math.round((precent * maxLength) / 100);
+	const countActiveSticks = Math.round((precent * stickCount) / 100);
 
 	const arrSticks = [];
 	let i = 0;
-	while (i < 25) {
+	while (i < stickCount) {
 		i <= countActiveSticks
-			? arrSticks.push(<Stick key={i} isEternal={isEternal} idx={i} />) // fill color stick
-			: arrSticks.push(<Stick key={i} isEmpty idx={i}  />); // empty stick
+			? arrSticks.push(<Stick isDesktop={isDesktop} key={i} isEternal={isEternal} idx={i} />) // fill color stick
+			: arrSticks.push(<Stick isDesktop={isDesktop} key={i} isEmpty idx={i}  />); // empty stick
 		i++;
 	}
 
