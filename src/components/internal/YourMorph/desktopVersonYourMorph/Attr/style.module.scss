@@ -194,7 +194,51 @@ $wStick: 3.5px;
     background: #F1F270;
   }
 
-  &.empty {
+  &.mobileStick.eternal:nth-child(1) {
+    background:linear-gradient(33deg, rgba(175, 238, 162, 1) 0%, rgba(126, 241, 189, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(2) {
+    background:linear-gradient(33deg, rgba(174, 238, 163, 1) 0%, rgba(103, 243, 201, 1) 48%, rgba(24, 249, 243, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(3) {
+    background:linear-gradient(33deg, rgba(100, 242, 202, 1) 0%, rgba(25, 249, 241, 1) 48%, rgba(75, 250, 198, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(4) {
+    background:linear-gradient(33deg, rgba(38, 250, 231, 1) 0%, rgba(78, 251, 197, 1) 50%, rgba(123, 251, 157, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(5) {
+    background:linear-gradient(33deg, rgba(84, 250, 190, 1) 0%, rgba(130, 253, 153, 1) 50%, rgba(171, 251, 126, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(6) {
+    background:linear-gradient(33deg, rgba(131, 237, 136, 1) 0%, rgba(177, 251, 126, 1) 50%, rgba(202, 231, 110, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(7) {
+    background:linear-gradient(33deg, rgba(185, 250, 124, 1) 0%, rgba(206, 231, 110, 1) 50%, rgba(252, 241, 111, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(8) {
+    background:linear-gradient(33deg, rgba(221, 245, 116, 1) 0%, rgba(252, 239, 112, 1) 50%, rgba(253, 230, 123, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(9) {
+    background:linear-gradient(33deg, rgba(252, 237, 114, 1) 0%, rgba(252, 228, 124, 1) 50%, rgba(253, 217, 136, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(10) {
+    background:linear-gradient(33deg, rgba(217, 245, 117, 1) 0%, rgba(244, 242, 112, 1) 50%, rgba(253, 236, 120, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(11) {
+    background:linear-gradient(33deg, rgba(251, 241, 111, 1) 0%, rgba(252, 234, 119, 1) 50%, rgba(239, 216, 128, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(12) {
+    background:linear-gradient(33deg, rgba(252, 232, 121, 1) 1%, rgba(253, 227, 135, 1) 50%, rgba(253, 224, 159, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(13) {
+    background:linear-gradient(33deg, rgba(240, 221, 113, 1) 1%, rgba(237, 212, 123, 1) 50%, rgba(237, 209, 146, 1) 100%);
+  }
+  &.mobileStick.eternal:nth-child(14) {
+    background:linear-gradient(33deg, rgba(243, 224, 112, 1) 1%, rgba(253, 225, 126, 1) 50%, rgba(237, 207, 141, 1) 100%);
+  }
+
+  &.empty,
+  &.mobileStick.empty{
     background: #343A3D;
   }
 }
@@ -253,7 +297,7 @@ $wStick: 3.5px;
     font-size: 14px;
   }
 
-  $wStickAdaptive: 2.2px;
+  $wStickAdaptive: 4px;
 	.graphic {
     gap: $wStickAdaptive;
 	}

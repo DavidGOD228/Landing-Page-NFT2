@@ -4,11 +4,12 @@ import mapGraphic from 'utils/mapGraphic';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import { motion } from 'framer-motion';
+import {useWindowWidth} from "hooks/useWindowWidth";
 
-export const Stick = ({ isEmpty = false, isEternal, idx }) => {
+export const Stick = ({ isEmpty = false, isEternal, isDesktop }) => {
   return (
     <motion.span
-      className={`${classes.stick} ${isEmpty && classes.empty} ${
+      className={`${classes.stick} ${!isDesktop && classes.mobileStick} ${isEmpty && classes.empty} ${
         isEternal && classes.eternal
       }`}
     />)
@@ -16,6 +17,7 @@ export const Stick = ({ isEmpty = false, isEternal, idx }) => {
 
 export const Attr = ({ name, precent, type, ...props }) => {
 	const isEternal = type === 'eternal';
+	const isDesktop = useWindowWidth(1024);
 
 	const [wasAnimate, setWasAnimate] = useState(false);
 
@@ -50,7 +52,7 @@ export const Attr = ({ name, precent, type, ...props }) => {
 					}}
 					className={classes.graphic}
 				>
-					{mapGraphic(precent, isEternal)}
+					{mapGraphic(precent, isEternal, isDesktop)}
 				</motion.div>
 				<div className={classes.percent}>
 					<CountUp
