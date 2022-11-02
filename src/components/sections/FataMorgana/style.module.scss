@@ -17,6 +17,10 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 70px;
+  }
 }
 
 .title {
