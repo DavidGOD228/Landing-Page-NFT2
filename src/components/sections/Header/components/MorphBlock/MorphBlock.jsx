@@ -17,13 +17,12 @@ const isSafari = window.safari !== undefined;
 const MorphBlock = () => {
   const isDesktop = useWindowWidth(1024)
   const isWebpCard = (isWebpSupported() || isSafari) ? TopCardWebp : TopCardJpg;
-  const isWebpMorp = (isWebpSupported() || isSafari) ? TopMorpDesktopWebp : TopMorpDesktopJpg;
 
   return (
     <div className={classes.topBlockImages}>
       {
         isDesktop ? <>
-          <img className={classes.morph} src={isWebpMorp} alt=""/>
+          <img className={classes.morph} src={TopMorpDesktopJpg} alt=""/>
           <img className={classes.morphCard} src={isWebpCard} alt=""/>
         </> : <img className={classes.morphMobile} src={TopMorphMobile} alt=""/>
       }
