@@ -5,7 +5,7 @@ import {isWebpSupported} from 'react-image-webp/dist/utils';
 import TopCardJpg from 'assets/images/topCardDesktop.jpg'
 import TopCardWebp from 'assets/images/topCardDesktop.webp'
 
-import TopMorpDesktopJpg from 'assets/images/topMorphDesktop.jpg'
+import TopMorpDesktopJpg from 'assets/images/topMorphDesktop.png'
 import TopMorpDesktopWebp from 'assets/images/topMorphDesktop.webp'
 import TopMorphMobile from 'assets/images/topBlockMobile.png'
 
