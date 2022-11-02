@@ -26,12 +26,14 @@ export * from './sections/LikeHuman/LikeHuman';
 export * from './sections/MorphID/MorphID';
 export * from './sections/MorphsUnique/MorphsUnique';
 export * from './sections/Personalize/Personalize';
+export * from './sections/Privacy/Privacy';
 export * from './sections/Roadmap/Roadmap';
 export * from './sections/TopBlock/TopBlock';
 export * from './sections/TypesCards/TypesCards';
 export * from './sections/Wizard/Wizard';
 export * from './sections/YourMorph/YourMorph';
 export * from './sections/Loader/Loader';
+export * from './sections/Privacy/Privacy';
 export * from './common/TopBlockInfo/TopBlockInfo';
 
 // section "Choose Your Morph"(desktop)
