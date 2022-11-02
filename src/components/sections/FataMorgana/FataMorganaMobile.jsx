@@ -39,16 +39,10 @@ const data = [
 export const FataMorganaMobile = () => {
 
   const parg1 = 'Fata Morgana is a city on the west coast of Tierra Madre, also known as Spirit Land. It is considered a modern multicultural metropolis, equipped with everything necessary for a utopian existence of 8 million inhabitants.\nAt the beginning of Metamorph.bio Cyber-Trip, Fata Morgana was one of the favourite destinations of cybernetic travellers, considered to be a promising and exciting place to visit, as well as an unbridled and very dynamic placewhere all most restrained desires could be realized, and fears could be challenged for therapeutic purposes.';
+
   const isWebp = isWebpSupported();
 
-  const zoomVideo = isMobileSafari()
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082152/videos/city-zoom.video_woi3pv.webm"
-    
-  const mobileCity = isMobileSafari()
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293931/videos/Mobile_City_oens1f.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293924/videos/Mobile_City_snlaz6.webm"
-
+  const mobileCity = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293931/videos/Mobile_City_oens1f.mp4"
 
   return (
 		<>
@@ -136,6 +130,7 @@ export const FataMorganaMobile = () => {
           <div className={classes.mobileTableWrapper}>
             <Table
               style={{ margin: '50px auto 0', width: '100%', height: 89 }}
+							isGrayTable
               data={data}
             />
           </div>
