@@ -15,32 +15,32 @@ function App() {
   const [isLoading, setIsloading] = useState(true);
 
   const { hash } = useLocation();
-  //
-  // useEffect(() => {
-  //   document.body.style.overflowY = 'hidden';
-  //   document.body.style.height = '100vh';
-  //   document.body.style.pointerEvents = 'none';
-  //
-  //   if(!isLoading) {
-  //     document.body.style.pointerEvents = 'auto';
-  //     document.body.style.overflowY = 'auto';
-  //     document.body.style.height = 'auto';
-  //   }
-  // }, [isLoading]);
-  //
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const id = hash.replace('#', '');
-  //     const element = document.getElementById(id);
-  //     if (element && !isLoading) {
-  //       element.scrollIntoView();
-  //     }
-  //   }, 0);
-  // }, [hash, isLoading]);
+
+  useEffect(() => {
+    document.body.style.overflowY = 'hidden';
+    document.body.style.height = '100vh';
+    document.body.style.pointerEvents = 'none';
+
+    if(!isLoading) {
+      document.body.style.pointerEvents = 'auto';
+      document.body.style.overflowY = 'auto';
+      document.body.style.height = 'auto';
+    }
+  }, [isLoading]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element && !isLoading) {
+        element.scrollIntoView();
+      }
+    }, 0);
+  }, [hash, isLoading]);
 
   return (
     <>
-      {/*{isLoading && <Loader setIsloading={setIsloading}/> }*/}
+      {isLoading && <Loader setIsloading={setIsloading}/> }
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/terms" element={<Terms/>}/>
