@@ -48,11 +48,9 @@ export function FirstLiveSimulator() {
 		setActiveSlide(prevSlide => prevSlide - 1);
 	};
 
-  const isSafari = isMobileSafari()
+  // const isSafari = isMobileSafari()
 
-  const morphVideoMobile = isSafari
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294229/videos/Falling_Mobile_qr8p5z.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294225/videos/Falling_Mobile_xta1jh.webm"
+  const morphVideoMobile = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294229/videos/Falling_Mobile_qr8p5z.mp4"
 
   const morphVideoDesktop = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
 	return (
