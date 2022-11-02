@@ -15,7 +15,8 @@ import {
   Roadmap,
   TypesCards,
   Privacy,
-  FirstLiveSimulatorDesktop
+  FirstLiveSimulatorDesktop,
+  Private
 } from 'components';
 
 import { useWindowWidth } from 'hooks/useWindowWidth';
@@ -39,6 +40,7 @@ export const HomePage = () => {
       <MorphId/>
       <TypesCards />
       <YourMorph />
+      {!isDesktop && <Private />}
       {/* <MorphsUnique /> */}
       <Roadmap />
       <Wizard />

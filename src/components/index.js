@@ -27,6 +27,7 @@ export * from './sections/MorphID/MorphID';
 export * from './sections/MorphsUnique/MorphsUnique';
 export * from './sections/Personalize/Personalize';
 export * from './sections/Privacy/Privacy';
+export * from './sections/Privacy/Private';
 export * from './sections/Roadmap/Roadmap';
 export * from './sections/TopBlock/TopBlock';
 export * from './sections/TypesCards/TypesCards';
