@@ -42,7 +42,7 @@
 
   @media screen and (max-width: $desktop){
     position: relative;
-    background-image: url("~assets/images/bottom-background.webp");
+    background-image: url("~assets/images/bottom-background-desktop.png");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 79px 20px 0;
@@ -50,16 +50,6 @@
 
     & > * {
       z-index: 5;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      height: 200px;
-      right: 0;
-      left: 0;
-      background: linear-gradient(180deg, rgba(11, 11, 12, 0) 0%, #000000 65.94%);
     }
   }
 }
