@@ -5,8 +5,7 @@ import {isWebpSupported} from 'react-image-webp/dist/utils';
 import TopCardJpg from 'assets/images/topCardDesktop.jpg'
 import TopCardWebp from 'assets/images/topCardDesktop.webp'
 
-import TopMorpDesktopJpg from 'assets/images/topMorphDesktop.png'
-import TopMorpDesktopWebp from 'assets/images/topMorphDesktop.webp'
+import TopMorph from 'assets/images/topMorphDesktop.png'
 import TopMorphMobile from 'assets/images/topBlockMobile.png'
 
 import classes from './style.module.scss'
@@ -22,7 +21,7 @@ const MorphBlock = () => {
     <div className={classes.topBlockImages}>
       {
         isDesktop ? <>
-          <img className={classes.morph} src={TopMorpDesktopJpg} alt=""/>
+          <img className={classes.morph} src={TopMorph} alt=""/>
           <img className={classes.morphCard} src={isWebpCard} alt=""/>
         </> : <img className={classes.morphMobile} src={TopMorphMobile} alt=""/>
       }
