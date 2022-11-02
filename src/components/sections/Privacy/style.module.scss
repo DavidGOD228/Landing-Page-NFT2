@@ -13,16 +13,6 @@
   color: #FFFFFF;
 }
 
-
-.privacyContainer:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 193px;
-  bottom: -130px;
-  background-image: url("../../../assets/images/vector1.png");
-}
-
 .videoWrapper {
   position: relative;
   width: 100%;
@@ -54,14 +44,4 @@
 
 .confidenceContainer {
   position: relative;
-}
-
-.confidenceContainer:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 279px;
-  left: 0;
-  bottom: -105px;
-  background-image: url("../../../assets/images/vector2.png");
 }
