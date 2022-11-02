@@ -25,7 +25,8 @@ import { media } from 'utils/media';
 import { isMobileSafari, isSafariNavigator } from 'utils/isMobileSafari.js'
 import Slider from "../Personalize/Slider/Slider";
 import NavSlider from "../Personalize/navSlider/navSlider";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
+import useGetCurrentScroll from "../../../hooks/useGetCurrentScroll";
 const speedParallax = 20;
 
 export function FirstLiveSimulator() {
@@ -37,7 +38,6 @@ export function FirstLiveSimulator() {
   you to feel the life inside the game.`;
 
 	const [activeSlide, setActiveSlide] = useState(1);
-
 	const handleNextSlide = () => {
 		if (activeSlide === 3) return;
 		setActiveSlide(prevSlide => prevSlide + 1);
@@ -53,11 +53,22 @@ export function FirstLiveSimulator() {
   const morphVideoMobile = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294229/videos/Falling_Mobile_qr8p5z.mp4"
 
   const morphVideoDesktop = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082184/videos/morphDesktop.video_ngdyb1.mp4"
+
+	const {scrollPosition} = useGetCurrentScroll()
+	const videoRef = useRef()
+
+	useEffect(() => {
+		const position = isDesktop ? videoRef?.current?.offsetHeight: videoRef?.current?.offsetHeight + 200
+		if(scrollPosition >= position) {
+			videoRef.current.play()
+		}
+	}, [scrollPosition])
+
 	return (
 		<div className={classes.wrapper}>
 			{isDesktop && <video
+				ref={videoRef}
         className={classes.morphVideo}
-        autoPlay
         muted
         playsInline
         src={morphVideoDesktop}
@@ -65,8 +76,8 @@ export function FirstLiveSimulator() {
       {!isDesktop && <div offset={offset} className={classes.videoWrapper}>
         <video
           className={classes.morphVideo}
-          autoPlay
-          muted
+					ref={videoRef}
+					muted
           playsInline
           poster={isSafariNavigator ? MobilePosterPng : MobilePosterWebp}
           src={morphVideoMobile}
