@@ -11,8 +11,10 @@
   width: 100%;
   top: -50%;
 
-  @media screen and (max-width: $s-tablet) {
+  @media screen and (max-width: $desktop) {
     top: -23%;
+    height: 300px;
+    object-fit: cover;
   }
 }
 
