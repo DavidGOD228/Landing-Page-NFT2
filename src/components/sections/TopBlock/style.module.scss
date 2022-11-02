@@ -27,6 +27,10 @@
   opacity: 0.5;
   width: 100%;
   top: -100px;
+
+  @media screen and (max-width: $desktop) {
+    top: 0;
+  }
 }
 
 .videoBlock {
