@@ -136,7 +136,6 @@ export const FataMorganaMobile = () => {
           <div className={classes.mobileTableWrapper}>
             <Table
               style={{ margin: '50px auto 0', width: '100%', height: 89 }}
-              isGrayTable
               data={data}
             />
           </div>
