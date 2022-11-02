@@ -147,17 +147,9 @@ export const Freedom = () => {
                 <motion.span {...animFromRight} className={classes.total}>
                   TOTAL
                 </motion.span>
-
-                <div style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  justifyContent: 'flex-start',
-                  columnGap: '25px'
-                }}>
                   <GreenText1 {...animFromRight} classname={classes.greenText}>
                     FREEDOM OF ACTION
                   </GreenText1>
-                </div>
               </Title>
             )}
 
