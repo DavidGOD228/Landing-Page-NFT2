@@ -193,17 +193,17 @@
   position: absolute;
 }
 
-
-.videoWrapper:before {
-  content: "";
-  position: absolute;
-  height: 350px;
-  z-index: 5;
-  left: 0;
-  top: -1px;
-  width: 100%;
-  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
-}
+//
+//.videoWrapper:before {
+//  content: "";
+//  position: absolute;
+//  height: 350px;
+//  z-index: 5;
+//  left: 0;
+//  top: -1px;
+//  width: 100%;
+//  background: linear-gradient(180deg, #0B0B0C 0%, rgba(0, 0, 0, 0) 96.17%);
+//}
 
 .secondBlockFataMorgana {
   display: flex;
