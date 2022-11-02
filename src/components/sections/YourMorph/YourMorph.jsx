@@ -1,4 +1,4 @@
-import { Title, GreenText, Paragraph, Morph, MorphMobile } from 'components';
+import { Title, Paragraph, Morph, MorphMobile } from 'components';
 import { motion } from 'framer-motion';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import classes from './style.module.scss';

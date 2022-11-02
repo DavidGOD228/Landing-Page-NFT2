@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import loaderTitle from 'assets/images/loader-title.png';
 import classes from './style.module.scss';
 import {motion} from 'framer-motion'
 
@@ -130,6 +129,7 @@ export function Loader({setIsloading}) {
 
   const renderLine = (value) => {
     return <motion.span
+      key={value}
       className={classes.bottomLine}
       initial={{
         backgroundColor: "#2F3339"

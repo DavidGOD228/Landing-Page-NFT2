@@ -43,12 +43,12 @@ const AnimatedTextCharacter = ({text, className, delay}) => {
     >
       {words.map((word, index) => {
         return (
-            <>
+            <div key={index}>
               {index !== (words.length) && index !== 0 && <span>{'\u00A0'}</span>}
-              <motion.span variants={child} key={index}>
+              <motion.span variants={child}>
                 {word}
               </motion.span>
-            </>
+            </div>
         )
       })}
     </motion.div>

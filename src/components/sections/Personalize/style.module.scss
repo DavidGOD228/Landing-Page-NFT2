@@ -59,9 +59,6 @@
 }
 
 .personalizeContainer {
-  /* background-image: url("~assets/images/personalize.webp");
-  background-repeat: no-repeat;
-  background-size: cover; */
   position: relative;
   padding: 130px 20px 0;
 
@@ -87,7 +84,6 @@
   } */
 
   @media screen and (min-width: $desktop) {
-    // background-image: url("~assets/images/marketplaceDesktop.webp");
     margin-left: -4px;
     display: flex;
     flex-direction: column;

@@ -41,7 +41,6 @@ export const HomePage = () => {
       <TypesCards />
       <YourMorph />
       {!isDesktop && <Private />}
-      {/* <MorphsUnique /> */}
       <Roadmap />
       <Wizard />
       {!isTablet && <Foto />}

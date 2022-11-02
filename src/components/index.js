@@ -11,7 +11,6 @@ export * from './common/Table/Table';
 export * from './common/Title/Title';
 export * from './common/GenerateCode/GenerateCode';
 export * from './common/GenerateCodeForMorph/GenerateCodeForMorph';
-export * from './common/Orb/Orb';
 
 // all sections
 export * from './sections/CombinedGame/CombinedGame';
@@ -24,7 +23,6 @@ export * from './sections/Freedom/Freedom';
 export * from './sections/Header/Header';
 export * from './sections/LikeHuman/LikeHuman';
 export * from './sections/MorphID/MorphID';
-export * from './sections/MorphsUnique/MorphsUnique';
 export * from './sections/Personalize/Personalize';
 export * from './sections/Privacy/Privacy';
 export * from './sections/Privacy/Private';

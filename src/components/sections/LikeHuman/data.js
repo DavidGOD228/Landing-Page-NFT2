@@ -9,8 +9,6 @@ import Communication from '../../icons/Communication'
 import Eco from '../../icons/Eco'
 import Shower from '../../icons/Shower'
 
-import classes from './style.module.scss'
-
 export const accordionData = [
   {
     id: 1,

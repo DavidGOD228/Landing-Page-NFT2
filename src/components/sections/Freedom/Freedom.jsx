@@ -16,11 +16,6 @@ import ThirdLine from './components/ThirdLine/ThirdLine';
 
 import { media } from 'utils/media';
 import { useWindowSize } from 'hooks/useWindowDimensions';
-import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
-import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
-import { Parallax } from 'react-scroll-parallax';
-const speedParallax = 20;
 
 export const Freedom = () => {
 
@@ -96,17 +91,6 @@ export const Freedom = () => {
 
 	return (
     <>
-      {/*{isDesktop && */}
-      {/*<Parallax speed={speedParallax / 1.5}>*/}
-      {/*  <DesktopSplashes/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-      {/*{!isDesktop && */}
-      {/*<Parallax speed={speedParallax / 3.5}>*/}
-      {/*  <MobileSplashes />*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-
       <div className={classes.container}>
         <div className={classes.topContent}>
           <div className={classes.content}>

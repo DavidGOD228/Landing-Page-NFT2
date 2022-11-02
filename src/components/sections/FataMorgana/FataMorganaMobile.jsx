@@ -4,19 +4,11 @@ import {motion} from 'framer-motion';
 
 import {Title, GreenText, Paragraph, Table, GenerateCode} from "components";
 
-import LazyLoad from 'react-lazy-load';
-
 import classes from "./style.module.scss";
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
-import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
-import MobileCityPoster from 'assets/images/posters/city_Mobile.webp'
 import {isWebpSupported} from "react-image-webp/dist/utils";
-import TopCardWebp from "../../../assets/images/topCardDesktop.webp";
-import TopCardJpg from "../../../assets/images/topCardDesktop.jpg";
-import { isMobileSafari } from 'utils/isMobileSafari'
 
 const data = [
   {
@@ -45,7 +37,6 @@ export const FataMorganaMobile = () => {
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
-				{/*<MobileSplashes />*/}
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
 						<div>

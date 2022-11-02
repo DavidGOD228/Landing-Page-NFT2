@@ -11,26 +11,11 @@ import Valve from "../../icons/Valve";
 import SuperCell from "../../icons/SuperCell";
 
 import classes from './style.module.scss'
-import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
-import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
-import { Parallax } from 'react-scroll-parallax';
-const speedParallax = 20;
 
 export const CombinedGame = () => {
   const isDesktop = useWindowWidth(1024)
   return (
     <div className={classes.container}>
-      {/*{isDesktop && */}
-      {/*<Parallax speed={-speedParallax / 2}>*/}
-      {/*  <DesktopSplashes/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-      {/*{!isDesktop && */}
-      {/*<Parallax speed={50} translateY={10}>*/}
-      {/*  <MobileSplashes />*/}
-      {/*</Parallax>*/}
-      {/*}*/}
        <div>
         <h4 className={classes.title}>Combined game experience</h4>
         <div className={classes.companies}>
