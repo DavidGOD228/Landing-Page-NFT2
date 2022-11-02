@@ -82,14 +82,10 @@ export function TypesCards() {
 		viewport: { once: true }
 	};
 
-	const isSafari = isMobileSafari()
+	// const isSafari = isMobileSafari()
 
-  const whiteCard = isSafari 
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082174/videos/white_card.video_rlwosd.webm"
-  const greenCard = isSafari 
-    ? "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4"
-    : "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_iwkiqf.webm"
+  const whiteCard = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4"
+  const greenCard = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4"
 
 	return (
 		<div className={classes.wrapper}>
