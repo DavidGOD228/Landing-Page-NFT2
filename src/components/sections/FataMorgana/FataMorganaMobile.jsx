@@ -42,8 +42,6 @@ export const FataMorganaMobile = () => {
 
   const isWebp = isWebpSupported();
 
-  const mobileCity = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667293931/videos/Mobile_City_oens1f.mp4"
-
   return (
 		<>
 			<div id='fataMorgana' className={classes.container}>
@@ -166,20 +164,17 @@ export const FataMorganaMobile = () => {
               autoPlay
               loop
               muted
-              poster="https://res.cloudinary.com/dbbqyqt75/image/upload/v1666086665/posters/zoom_mgajem.png"
               playsInline
             />
-
           {/* city without zoom */}
 					<div offset={offset} className={classes.videoWrapper}>
             <video
               className={classes.mobileCity}
               autoPlay
-              poster={MobileCityPoster}
               loop
               muted
               playsInline
-              src={mobileCity}
+              src="https://res.cloudinary.com/dbbqyqt75/video/upload/v1667405438/videos/Mobile_City_eaorxj.mp4"
             />
 					</div>
 				</div>
