@@ -5,7 +5,7 @@ const nameFolder = 'henrik-hail';
 const henrikHall = {
 	id: 995,
 	cardImg: `${nameFolder}/card-henrik-hail.png`,
-	bodyImg: "https://res.cloudinary.com/dbbqyqt75/image/upload/v1666085797/morphs/body-henrik-hail_rg6k61.png",
+	bodyImg: "https://res.cloudinary.com/dbbqyqt75/image/upload/v1667402614/morphs/Henrik_Hall_rhnpr9.png",
 	bodyMobileImg: `${nameFolder}/mobile-henrik-hail.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-henrik-hail.svg`,
 	name: 'Henrik Hall',
