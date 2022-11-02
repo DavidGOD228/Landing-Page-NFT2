@@ -5,7 +5,7 @@ const nameFolder = 'aamir-datah';
 const aamirDatah = {
 	id: 2933,
 	cardImg: `${nameFolder}/card-aamir-datah.png`,
-	bodyImg: `https://res.cloudinary.com/dbbqyqt75/image/upload/v1666085319/morphs/body-aamir-datah_rqimmw.png`,
+	bodyImg: `https://res.cloudinary.com/dbbqyqt75/image/upload/v1667402613/morphs/Aamir_Datah_rajwhe.png`,
 	bodyMobileImg: `${nameFolder}/mobile-aamir-datah.png`,
 	fingerPrintImg: `${nameFolder}/fingerprint-aamir-datah.svg`,
 	name: 'Aamir Datah',
