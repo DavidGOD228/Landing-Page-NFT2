@@ -29,7 +29,7 @@ export const YourMorph = () => {
 		},
 		transition: {
 			duration: 1,
-			ease: 'easeInOut'
+			ease: 'easeOut'
 		},
 		viewport: { once: true }
 	};
