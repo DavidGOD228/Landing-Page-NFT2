@@ -14,12 +14,6 @@ import { accordionData, tableData } from './data';
 
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
-import DesktopSplashes from './components/DesktopSplashes/DesktopSplashes';
-import MobileSplashes from './components/MobileSplashes/MobileSplashes';
-
-import { Parallax } from 'react-scroll-parallax';
-
-const speedParallax = 20;
 
 export const LikeHuman = () => {
 	const isDesktop = useWindowWidth(1024);
@@ -172,7 +166,6 @@ export const LikeHuman = () => {
 				)}
 
 				{/* title mobile */}
-				{/*{!isDesktop && <MobileSplashes/>}*/}
 				{!isDesktop && (
 					<motion.div>
 						<Title
@@ -195,12 +188,7 @@ export const LikeHuman = () => {
 					</motion.div>
 				)}
 			</div>
-			{/*<Parallax speed={0}>*/}
 			{isDesktop ? table : accordion}
-			{/*</Parallax>*/}
-			{/*{*/}
-			{/*    isDesktop ? <DesktopSplashes/> : null*/}
-			{/*}*/}
 		</div>
 	);
 };

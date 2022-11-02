@@ -14,10 +14,6 @@ import { offset } from 'utils/lazyload';
 import { isMobileSafari } from 'utils/isMobileSafari';
 
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
-import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
-import { Parallax } from 'react-scroll-parallax';
-const speedParallax = 20;
 
 const data = [
 	{
@@ -157,12 +153,6 @@ export const Earn = () => {
               </LazyLoad>
 						)}
 					</div>
-			{/*		{*/}
-			{/*			!isDesktop && */}
-            {/*<Parallax speed={10}>*/}
-            {/*  <MobileSplashes/>*/}
-            {/*</Parallax>*/}
-			{/*		}*/}
 					<div style={{ marginTop: isDesktop ? 100: 50 }}>
 						{!isDesktop &&
 							data.map(({ title, subtitle }, i) => (

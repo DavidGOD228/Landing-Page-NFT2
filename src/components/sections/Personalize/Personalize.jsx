@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import Title from '../../common/Title/Title';
@@ -6,19 +6,11 @@ import GreenText from '../../common/GreenText/GreenText';
 import Table from '../../common/Table/Table';
 
 import classes from './style.module.scss';
-import Slider from './Slider/Slider';
 import Items from './Items/Items';
-import NavSlider from './navSlider/navSlider';
 import { useWindowWidth } from '../../../hooks/useWindowWidth';
 import Paragraph from '../../common/Paragraph/Paragraph';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
-
-import DesktopSplashes from "./DesktopSplashes/DesktopSplashes";
-import MobileSplashes from "./MobileSplashes/MobileSplashes";
-
-import { Parallax } from 'react-scroll-parallax';
-const speedParallax = 20;
 
 const data = [
 	{
@@ -65,68 +57,6 @@ export const Personalize = () => {
 
 	return (
 		<>
-      {/*{isDesktop && */}
-      {/*<Parallax speed={-speedParallax / 1.5}>*/}
-      {/*  <DesktopSplashes/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-      {/*{!isDesktop &&*/}
-      {/*<Parallax speed={speedParallax / 2}>*/}
-      {/*  <MobileSplashes className={classes.topBlockMobileSplashes}/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-
-			{/* <div
-        speed={0}
-				className={`${classes.containerSliderSection} ${classes.desktopVersion}`}
-			>
-				<div className={classes.contentBlock}>
-					<Title
-						classname={classes.personalizeTitle}
-						classnameWrapper={classes.personalizeline}
-						borderHeight="89%"
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-							justifyContent: 'flex-start'
-						}}
-					>
-						<motion.span {...animFromDown}>Personalize{'\u00A0'}</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							and{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							make{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							it{'\u00A0'}
-						</motion.span>
-						<motion.span className={classes.greenText} {...animFromDown}>
-							unique
-						</motion.span>
-					</Title>
-					<p className={classes.personalizeParagraph}>
-						{paragraphAnimation(
-							'Make strategic decisions about how to spend your Morph\'s time to optimize his mood. Make decisions about what he eats, what he learns, what career he chooses, how he entertains, and whom he socializes with.'
-						)}
-					</p>
-
-					<NavSlider
-						className={classes.desktopNavSlider}
-						activeSlide={activeSlide}
-						handleNextSlide={handleNextSlide}
-						handlePrevSlide={handlePrevSlide}
-					/>
-				</div>
-
-				<Slider className={classes.slider} activeSlide={activeSlide} />
-      </div> */}
-			{/*<div className={classes.mobileVersion}>*/}
-			{/*	<div className={classes.contentBlock}>*/}
-
-			{/*	</div>*/}
-			{/*</div>*/}
-
 			<div
 				id='marketplace'
 				className={classes.personalizeContainer}

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import classes from './style.module.scss';
 import Arrow from 'assets/images/mobile-slider/arrow.svg';
 

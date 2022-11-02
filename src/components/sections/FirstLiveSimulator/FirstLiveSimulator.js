@@ -5,12 +5,9 @@ import { GlobalContainer, GreenText, Title, Paragraph } from 'components';
 import LazyLoad from 'react-lazy-load';
 
 import WhiteLine from 'assets/images/whiteLine.svg';
-import ToiletPoster from 'assets/images/posters/toitet.webp'
-import BedPoster from 'assets/images/posters/bed.webp'
 
 import SmileDesktop from 'assets/images/smileDesktop.svg';
 
-import DesktopPoster from 'assets/images/posters/falling_Desktop.png'
 import MobilePosterWebp from 'assets/images/posters/falling_Mobile.webp'
 import MobilePosterPng from 'assets/images/posters/falling_Mobile.png'
 
@@ -18,11 +15,8 @@ import classes from './style.module.scss';
 
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { useWindowWidth } from '../../../hooks/useWindowWidth';
-import DesktopSplashes from './components/DesktopSplashes/DesktopSplashes';
 import { offset } from 'utils/lazyload';
-import MobileSplashes from './components/MobileSplashes/MobileSplashes';
-import { media } from 'utils/media';
-import { isMobileSafari, isSafariNavigator } from 'utils/isMobileSafari.js'
+import { isSafariNavigator } from 'utils/isMobileSafari.js'
 import Slider from "../Personalize/Slider/Slider";
 import NavSlider from "../Personalize/navSlider/navSlider";
 import React, {useEffect, useRef, useState} from "react";
@@ -47,8 +41,6 @@ export function FirstLiveSimulator() {
 		if (activeSlide === 1) return;
 		setActiveSlide(prevSlide => prevSlide - 1);
 	};
-
-  // const isSafari = isMobileSafari()
 
   const morphVideoMobile = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1667294229/videos/Falling_Mobile_qr8p5z.mp4"
 
@@ -83,17 +75,6 @@ export function FirstLiveSimulator() {
           src={morphVideoMobile}
         />
       </div>}
-      {/*{isDesktop && */}
-      {/*<Parallax speed={-speedParallax / 1.5}>*/}
-      {/*  <DesktopSplashes/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-      {/*{!isDesktop &&*/}
-      {/*<Parallax speed={-speedParallax / 3.5}>*/}
-      {/*  <MobileSplashes/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-
 			<GlobalContainer style={{order: 0}}>
 				<div className={classes.flsContainer}>
 

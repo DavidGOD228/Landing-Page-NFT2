@@ -5,14 +5,11 @@ import {
 	AttrsDetails
 } from 'components';
 import classes from './style.module.scss';
-import {isWebpSupported} from 'react-image-webp/dist/utils';
 
 export function InfoMorphMobile({ className, morph, ...props }) {
 	const { id, type, name, attributes, bodyMobileImg } = morph;
 
-  const isWbpImgBody = isWebpSupported() ? bodyMobileImg.replace(".png", '.webp') : bodyMobileImg;
-
-	const importBodyImg = require('assets/images/morphs/' + isWbpImgBody);
+	const importBodyImg = require('assets/images/morphs/' + bodyMobileImg);
 
 	return (
 		<div className={classes.infoMorphMobile} {...props}>

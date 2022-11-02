@@ -8,7 +8,6 @@ import classes from "./style.module.scss";
 import {motion, AnimatePresence, useAnimationControls} from 'framer-motion';
 import LazyLoad from "react-lazy-load";
 import {offset} from 'utils/lazyload';
-import {useEffect} from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 export function InfoMorh({morph}) {

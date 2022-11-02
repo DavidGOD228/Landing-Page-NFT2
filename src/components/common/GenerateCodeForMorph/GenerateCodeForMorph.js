@@ -11,8 +11,9 @@ export function GenerateCodeForMorph({ children }) {
 				<VisibilitySensor
 					onChange={() => seIsStart(true)}
 					delayedCall
+					key={Math.random() + idx + char}
 				>
-				<ItemCodeForMorph key={Math.random() + idx + char} char={char} idx={idx} isStart={isStart} />
+				<ItemCodeForMorph char={char} idx={idx} isStart={isStart} />
 				</VisibilitySensor>
 			))}
 		</div>

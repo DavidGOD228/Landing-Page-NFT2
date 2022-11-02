@@ -5,7 +5,6 @@ import MetaMorphMobile from 'assets/images/metaMorphMobile.webp'
 import MetaMorphMain from 'assets/images/metaMorphMain.webp'
 import Close from 'assets/images/close.svg'
 import MorphBlock from "../Header/components/MorphBlock/MorphBlock";
-import {Orb} from "components";
 
 import UnrealEngine from '../../icons/UnrealEngine'
 import Polygon from '../../icons/Polygon'
@@ -16,10 +15,6 @@ import { offset } from 'utils/lazyload';
 import LazyLoad from 'react-lazy-load';
 
 import classes from './style.module.scss'
-
-
-import { Parallax } from 'react-scroll-parallax';
-const speedParallax = 20;
 
 export const TopBlock = () => {
   const isDesktop = useWindowWidth(1024)
@@ -39,9 +34,6 @@ export const TopBlock = () => {
         </div> :
         <div className={classes.topBlock}>
           <Header />
-          {/*<Orb/>*/}
-          {/*<Orb top={0} left={1400}/>*/}
-          {/*<Orb top={900} left={500}/>*/}
             <img className={classes.sphasesTopBlock} src={isDesktop ? "https://res.cloudinary.com/dbbqyqt75/image/upload/v1666624844/splashes/homepage_op1ccy.jpg": "https://res.cloudinary.com/dbbqyqt75/image/upload/v1667394282/videos/mob_home_ovai63.png"} alt="" />}
            <div className={classes.container}>
             <div className={classes.mainBlock}>

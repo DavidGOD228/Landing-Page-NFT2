@@ -1,5 +1,4 @@
 import {motion} from 'framer-motion';
-import LazyLoad from 'react-lazy-load';
 
 import {Title, Paragraph, GreenText} from 'components';
 
@@ -8,12 +7,6 @@ import {paragraphAnimationFromRight} from 'farmerMotionsAnimations/paragraphAnim
 import classes from './style.module.scss';
 import {useWindowWidth} from 'hooks/useWindowWidth';
 import {morphIDText} from 'data/morphID/text';
-import DesktopSplashes from "./components/DesktopSplashes/DesktopSplashes";
-import { offset } from 'utils/lazyload';
-import MobileSplashes from "./components/MobileSplashes/MobileSplashes";
-
-import { Parallax } from 'react-scroll-parallax';
-const speedParallax = 20;
 
 export const MorphId = () => {
   const isDesktop = useWindowWidth(1024);
@@ -78,17 +71,6 @@ export const MorphId = () => {
 
   return (
     <div >
-      {/*{isDesktop && */}
-      {/*<Parallax speed={-speedParallax / 2}>*/}
-      {/*  <DesktopSplashes/>*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-      {/*{!isDesktop && */}
-      {/*<Parallax speed={-speedParallax / 2}>*/}
-      {/*  <MobileSplashes />*/}
-      {/*</Parallax>*/}
-      {/*}*/}
-
        <div id="morphID" className={classes.container}>
         <div className={classes.cardsImg}>
           {isDesktop && (

@@ -15,10 +15,6 @@ import classes from "./style.module.scss";
 import {paragraphAnimation} from 'farmerMotionsAnimations/paragraphAnimation';
 import { offset } from 'utils/lazyload';
 import {isWebpSupported} from "react-image-webp/dist/utils";
-import TopCardWebp from "../../../assets/images/topCardDesktop.webp";
-import TopCardJpg from "../../../assets/images/topCardDesktop.jpg";
-import {useWindowWidth} from "hooks/useWindowWidth";
-import { isMobileSafari } from 'utils/isMobileSafari'
 
 const data = [
   {
@@ -55,7 +51,6 @@ export const FataMorganaDesktop = () => {
 			<div id='fataMorgana' className={classes.container}>
 				<div className={classes.topContainer}>
 					<div className={classes.content}>
-            {/*<LazyLoad offset={offset}>*/}
 						{isWebp &&
               <video
                 className={classes.zoomRay}
@@ -68,7 +63,6 @@ export const FataMorganaDesktop = () => {
                   type="video/webm"/>
               </video>
 						}
-            {/*</LazyLoad>*/}
 						<div>
 							<Title
 								classname={classes.title}

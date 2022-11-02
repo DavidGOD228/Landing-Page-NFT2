@@ -2,10 +2,6 @@ import {useEffect, useRef} from "react";
 
 import classes from './style.module.scss';
 
-import { isMobileSafari } from 'utils/isMobileSafari'
-
-import {useWindowWidth} from "hooks/useWindowWidth";
-
 const videos = [
   {
     mp4: "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084837/slider/Clothes_trzkil.mp4",
@@ -22,7 +18,6 @@ const videos = [
 ];
 
 export const Phone = ({ idx, classname, isActive, ...props }) => {
-  const isDesktop = useWindowWidth(1024);
 
   const videoRef = useRef()
   useEffect(() => {
@@ -33,15 +28,6 @@ export const Phone = ({ idx, classname, isActive, ...props }) => {
 
   }, [isActive])
 
- /*  const morphVideoDesktop = window.safari 
-    ? videos[idx - 1].mp4
-    : videos[idx - 1].webm
-
-  const morphVideoMobile = isMobileSafari()
-    ? videos[idx - 1].mp4
-    : videos[idx - 1].webm
-
-  const videoSrc = isDesktop ? morphVideoDesktop : morphVideoMobile; */
 
 	return (
     <video

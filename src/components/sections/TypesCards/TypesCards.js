@@ -7,18 +7,13 @@ import first from 'assets/images/first.svg';
 import second from 'assets/images/second.svg';
 
 import MihoMorphMobile from 'assets/images/miho-morph.png';
-import WhiteCardPoster from 'assets/images/posters/whiteCard.webp'
 
 import HenriMorphDesktop from 'assets/images/henri-morph.png';
-import GreenCardPoster from 'assets/images/posters/greenCard.webp'
 import { useWindowWidth } from 'hooks/useWindowWidth';
 import { morphIDText } from 'data/morphID/text';
 import { paragraphAnimation } from 'farmerMotionsAnimations/paragraphAnimation';
 import { useWindowSize } from 'hooks/useWindowDimensions';
 import { media } from 'utils/media';
-import {isMobileSafari} from "utils/isMobileSafari";
-
-
 
 export function TypesCards() {
 	const isTablet = useWindowWidth(768);
@@ -81,8 +76,6 @@ export function TypesCards() {
 		},
 		viewport: { once: true }
 	};
-
-	// const isSafari = isMobileSafari()
 
   const whiteCard = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082175/videos/white_card.video_pwsi2k.mp4"
   const greenCard = "https://res.cloudinary.com/dbbqyqt75/video/upload/v1666084731/videos/green_card.video_hhuvfz.mp4"
