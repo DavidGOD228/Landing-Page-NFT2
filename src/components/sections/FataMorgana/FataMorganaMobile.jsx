@@ -163,14 +163,6 @@ export const FataMorganaMobile = () => {
             <video
               className={classes.zoomVideo}
               src={"https://res.cloudinary.com/dbbqyqt75/video/upload/v1666082149/videos/city-zoom.video_nnzkhr.mp4"}
-              initial={{ y: 150 }}
-              whileInView={{ y: 0 }}
-              transition={{
-                duration: 1,
-                delay: 0.3,
-                ease: 'easeInOut'
-              }}
-              viewport={{ once: true }}
               autoPlay
               loop
               muted
